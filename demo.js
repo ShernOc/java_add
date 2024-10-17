@@ -172,7 +172,9 @@
 
 // console.log(greeting);
 
-// // WHILE LOOP 
+// /* WHILE LOOP : repeats an action in a loop based on a condition. while ([condition]) { [loop body]} */
+
+
 // // the code will run infinitely 
 // // while(true){
 // //   console.log("say this forever..")
@@ -399,16 +401,16 @@
 //     "Nine of Diamonds",
 //     "Three of Hearts",
 //   ];
-  
+
 //   // "Nine of Clubs", will be removed due to [2], and only one element will be removed. 
 //   cards.splice(2, 1, "Ace of Clubs");
 //   // => ["Nine of Clubs"]
-  
+
 //   console.log(cards);
 //   // => ["Ace of Spades", "Jack of Clubs", "Ace of Clubs", "Nine of Diamonds", "Three of Hearts"]
 
 /*FOR LOOP : 
-- Write a repeated action once: and perform the action on every items in the collection: */ 
+- Write a repeated action once: and perform the action on every items in the collection: */
 
 // for (counter =1; counter <=10; counter+1){
 //     console.log("Good morning")
@@ -434,24 +436,24 @@ const todo = [
 // goodJob(todo);
 
 // The array; 
-const majina=["sherlyne", "daniel","rahab","Alice"];
+const majina = ["sherlyne", "daniel", "rahab", "Alice"];
 // let event="birthday";
 
-function writeCards(majina,event){
-    const newArray = []; 
-    for(counter=0; counter<majina.length; counter++){
+function writeCards(majina, event) {
+    const newArray = [];
+    for (counter = 0; counter < majina.length; counter++) {
         // instead of console.log we create another const that holds what is needed to be executed.
-        const message= (`Thank you ${majina[counter]} for a wonderful ${event} it was a blast`);
+        const message = (`Thank you ${majina[counter]} for a wonderful ${event} it was a blast`);
 
         newArray.push(message); // The newArray holds the messages. uses the array.push
-       
-    } 
-  
+
+    }
+
     return newArray; // returns the new Array. 
 
 }
 
-console.log(writeCards(majina," Birthday"));
+console.log(writeCards(majina, " Birthday"));
 
 /*Using array.forEach(): takes two parameter,(callbackfn, thisArg)
 - callbackfn =  (element, index of the element, or the array)
@@ -459,19 +461,38 @@ console.log(writeCards(majina," Birthday"));
 
 //Array is declared: 
 
-const life=["Maluki", "daniel","rahab","Alice"]; 
+const life = ["Maluki", "daniel", "rahab", "Alice"];
 
 // function deathwish is defined with two parameter(life,events)
 
-function Deathwish(life, events){
-    const nowArray= []; // empty array to store the messages; 
-    
+function Deathwish(life, events) {
+    const nowArray = []; // empty array to store the messages; 
+
     // used for each to iterarate or go through the array; 
-    life.forEach((person)=>{nowArray.push(`Thank you ${person} for a wonderful ${events} your ${events} was a blast`); });
-    
+    life.forEach((person) => { nowArray.push(`Thank you ${person} for a wonderful ${events} your ${events} was a blast`); });
+
     return nowArray;
 
 }
 
-console.log(Deathwish(life,"Death"));
+console.log(Deathwish(life, "Death"));
+
+/* Using while loop ( in array): the initilization is outside the body of the loop. iteration moves inside the body
+
+let i = 0; initialization 
+while ([condition]) {
+    [loop body]; i++ interation 
+  }
+    */ 
+const items = ["Laptop","Java", "Am not sure"]
+// funtion 
+function lifeCrazy(){
+    let y = 0;// initilization 
+    while(y<items.length) // the condition 
+    {console.log(`What is this ? it's a ${items[y]} Lord have mercy`); y++ }
+       
+return items;
+}
+
+lifeCrazy(items);
 
