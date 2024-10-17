@@ -16,5 +16,8 @@ List.unshift("Wakeup")// adds the element to the beginning of an array
 console.log(ToDo(List))
 
 List.slice(2)
-console.log(Todo(List)); 
+// console.log(Todo(List)); 
 
+
+
+console.log(goodJob(todo));
