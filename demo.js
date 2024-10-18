@@ -483,16 +483,142 @@ let i = 0; initialization
 while ([condition]) {
     [loop body]; i++ interation 
   }
-    */ 
-const items = ["Laptop","Java", "Am not sure"]
+    */
+const items = ["Laptop", "Java", "Am not sure"]
 // funtion 
-function lifeCrazy(){
+function lifeCrazy() {
     let y = 0;// initilization 
-    while(y<items.length) // the condition 
-    {console.log(`What is this ? it's a ${items[y]} Lord have mercy`); y++ }
-       
-return items;
+    while (y < items.length) // the condition 
+    { console.log(`What is this ? it's a ${items[y]} Lord have mercy`); y++ }
+
+    return items;
 }
 
 lifeCrazy(items);
 
+//For..of loop 
+/*
+for (const element of object) {
+    
+}
+
+*/
+
+// using for...of loop
+const item = ["Books", "pen", "laptop", "notepad"]
+
+for (const element of item) {
+    console.log("a " + element + " is a great tool to use in school ")
+}
+
+// adding element using for..of
+const numbers = [1, 2, 3, 4, 5];
+for (const element of numbers) {
+    console.log(element + 10);
+}// 11,12,13,14,15 
+
+// to interate through every element we can also create a function that iterates/ or goes through the number array using for .. in loop 
+function nm(nms) {
+    for (const key in nms) {
+        console.log(nms[key]);
+    }
+}
+
+console.log(nm(numbers))// 1,2,3,4, 
+
+/* for ... in = iterates through the properties of an object: 
+
+for (const key in object) {
+    if (Object.prototype.hasOwnProperty.call(object, key)) {
+        const element = object[key];
+        
+    }
+}
+*/
+
+// show what each person will recieve for a birthday
+// object = presents 
+// key = alice 
+// value = shoe box 
+const presents = {
+    alice: "Shoe box",
+    rahab: "Beautiful Dog",
+    daniel: "Television",
+    sherlyne: "Pajamas ",
+
+    friends: [
+        {
+            firstName: "Nancy",
+            lastName: "Burgess",
+            company: {
+                name: "Flatbook Labs",
+                jobTitle: "Developer Apprentice",
+            },
+        }
+    ]
+};
+
+
+for (const key in presents) {
+    console.log(key + " " + "will get" + " " + presents[key] + " " + "for christmas");
+}
+
+// to review a value in an object we use (object.key) 
+console.log(presents.alice);
+
+// to get the nested propertied in an array. object.key[index].element
+console.log(presents.friends[0].firstName);
+
+
+// to iterate through the object using for in . we want to get everything in that present / to get the array content we 
+
+function bird(target) {
+    for (const key in target) {
+        if (typeof target[key] === "object") {
+            for (const nestedKey in target[key]) {
+                console.log(target[key][nestedKey]);
+            }// displays the first nested object friends
+        } else {
+            console.log(target[key]);
+        }
+    }
+}
+bird(presents);
+
+// or we can RECURSE: RECURSION: A function that calls itself(function): used when we have a bunch of nested. 
+
+function b2(life) {
+    if (typeof life === "object") {
+        for (const key in life) {
+            b2(life[key]); // functio calling itself 
+        }
+    } else {
+        console.log("life is great", life);
+    }
+}
+
+b2(presents);
+
+// We can reverse the action by using: for...of and for in for object 1. check if an object has an array, if not work on achieving the work. handle arrays/  
+function lf(wow) {
+    if (Array.isArray(wow)) { // checking in if there is an array
+        for (const element of wow) {
+            lf(element)// return the function of the element recursion
+        }
+    } else if (typeof wow === "object") {
+        for (const key in wow) {
+            lf(wow[key])// return the keys
+        }
+
+    } else {
+        console.log(wow)
+    }
+
+}
+
+lf(presents); 
+
+
+//DOM : Document Object Model: 
+
+// To make it easier: the metadata: ID, CLASS attributes: are used as tools to find the html elements

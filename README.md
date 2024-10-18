@@ -1,10 +1,14 @@
-# Javascript basic math
+# JAVASCRIPT STUDY NOTES: 
 
-The code uses the basic javascript functions to do basic math. 
+This are javascript notes and exercises. 
 
-# Basic Math 
-Functions (+,-,*,/) two numbers 
+The files include: 
+demo file: notes 
+while-loop file: excercises 
+image: javascript array methods
+index.js : more exercises 
+todo.js: a to do project. 
 
-# Math + Assignment (increament/decreament)
+
 
 
