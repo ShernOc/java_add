@@ -8,7 +8,7 @@ body{
 }
 
 .h1header{
-    background-color: rgb(27, 16, 1);
+    /* background-color: rgb(27, 16, 1); */
     align-content: center;
     padding:20px;
     font-size:40px;
@@ -20,8 +20,15 @@ body{
 }
 
 .psection{
-    background-color:#f765b8;
+    /* background-color:#f765b8; */
     text-align: center;
     
+}
+
+.newpara{
+    color: #f765b8;
+    font-weight:bold ;
+    font-size: 60px;
+
 }
 

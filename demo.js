@@ -678,8 +678,6 @@ logo(); // calling the logo
 
 // footer element with class of footer 
 
-
-
 // 2. Another way to add element to the DOM: 
 // element.innerHTML  
 const main = document.getElementById("alice");
@@ -688,4 +686,29 @@ main.innerHTML = "<h1>Poodles!</h1><h3>An Essay into the Pom-Pom as Aesthetic Re
 //USING element.innerHTML = to write what we want. 
 const mainZ = document.getElementById("alice");
 mainZ.innerHTML = "<header><h1>HAPPY BIRTHDAY ALICE </h1></header><main><p>It must feel nice to be 29 years old Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis maiores minima itaque magnam quaerat sit reprehenderit quae assumenda in, repudiandae quam nam laborum dolore repellendus, consectetur qui sed explicabo earum.</p></main><div><img src=IMAGE OF ALICE ></img></div><footer><p>life is good </p></footer>"; 
+
+//CHANGING STYLE: PROPERTY- 
+
+//1. Element.classList.remove or add. = works with the collection of classes/ a 
+
+// remove or add 
+className.classList.remove("banner");
+className.classList.add("Yess");
+
+// add or remove multiple classes 
+
+className.classList.remove("banner","sherlyne", "adthiambo");
+className.classList.add("Yess", "what",bar);
+
+// remove id of alice: 
+div.classList.remove("alice"); 
+
+//add a different id of birthday
+div.classList.add("birthday"); 
+
+
+//To replace a className from alice to birthday element.classList.replace 
+alice.classList.replace("alice","birthday");
+
+
 

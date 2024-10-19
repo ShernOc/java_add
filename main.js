@@ -45,19 +45,7 @@ Change properties on DOM nodes
 Remove elements from the DOM 
 */
 
-/*
 
-div element with a  class id alice.
-
-main element with id of main 
-
-p element with id of info
-
-div element with id of logo 
-
-footer element with class of footer 
-
-*/
 
 // header section
 // create a div. 
@@ -112,6 +100,10 @@ mainsection();
 
 // const footer = document.createElement("footer.footer");
 
+//Element.classList / remove/add 
+
+className.classList.remove("banner");
+className.classList.add("Yess");
 
 
 
