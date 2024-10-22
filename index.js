@@ -162,6 +162,32 @@ function normalNumber(){
         console.log(`${n} .Wow you are now understanding the concept`); n++
     }
 }
-
 normalNumber(); // 1. Wow Wow you are now understanding the concept
 
+// Math: 
+const Arrays=["1","2","3","6","7","5"]
+
+function max(target){
+    const inter = target.map(Number);// converts each string in the array to number 
+        return Math.max(...inter);// use the spread operator to pass the elements as arguments
+}
+
+console.log(max(Arrays));
+
+// multiplication 
+const num1=31;
+const num2 = 2; 
+const times = num1 * num2; 
+
+console.log(times);
+
+// remainder % 
+const num3 =20;
+const num4 = 8; 
+
+const mod = function(){
+   return num3 % num4 ; 
+ 
+}
+
+console.log(mod());
