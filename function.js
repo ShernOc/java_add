@@ -127,3 +127,65 @@ const wrapAdjective = function(fn=`*`){
 }
 
 console.log(wrapAdjective("dedicated girl")())
+
+// ARROW FUNCTION 
+/*1.Not hoisted 
+2. Not invoked before its called 
+3. No need of parenthesis in parameters 
+4. No implicit return/ or no need of return value 
+5. You can remove curly braces in function body, and also replace the curly with the paranthesis  
+6. The arrow function is on the right of the parameter not before 
+
+Syntax.
+const life = wow  => wow 
+console.log(life("life is beatiful"))*/
+
+// 
+const life = wow  => wow ; // paranthesis is ommited, if there is only one single argument //wow 
+console.log(life("life is beatiful")); 
+
+// Sum of a+b
+const sumz = (a,b)=>a+b; // we use paranthesis if there is more than one parameter 
+console.log(sumz(7,8));
+
+//.map() = The .map() method is called on an Array and takes a function as an argument.It iterates through the array, passing each element in turn to the function.
+
+// calculate the array *2 
+// const marays=["1","2","3","6","7","5"]
+// const maxs = marays.map(marays=>marays *2)
+
+// console.log(maxs());
+// console.log(Arrays());
+
+//CALLBACK FUNCTIONS: Functions passed as arguments into or to a function 
+// function
+// callback function
+function callback(){
+    console.log("am supposed to be a callback function");
+}
+
+
+function greet(name,callback) {
+    console.log('Hi' + ' ' + name);
+    return callback
+}
+
+function callMe() {
+    console.log('I am callback function');
+}
+
+// passing function as an argument
+greet('Peter', callMe);
+
+//An inline function/ anonymous function that will be called. it still a callback function.  instead of CallMe. 
+greet((()=>console.log("am an inline function peter")));
+
+
+// function main (cb) {
+//     console.log(cb());
+//   }
+  
+// main(function () { return "After I get passed to the main() function as the only argument, I'm stored in the local 'cb' variable!"});
+//   // LOG: After I get passed to the main() function as the only argument, I'm stored in the local 'cb' variable!
+
+

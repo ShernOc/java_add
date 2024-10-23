@@ -18,6 +18,35 @@ console.log(ToDo(List))
 List.slice(2)
 // console.log(Todo(List)); 
 
+// schedule: 
+
+const schedule = [
+    "Pray", "BrushTeeth", "WashFace", "MakeBed", "Shower", "Breakfast", "Study", "CleanRoom"
+];
+
+function workout(){
+    console.log("Do your jumps"); 
+}
+
+function pray(){
+    console.log("Prayer time ");
+}
+
+function study(lesson){
+    console.log(`Today you are studying ${lesson}`);
+}
 
 
-console.log(goodJob(todo));
+// to cut down the information we need to summarize by each day: 
+
+function Monday(){
+    workout();
+    pray(); 
+    study(); 
+}
+
+// taking an function as a parameter 
+function exerciseRoutine(postRunActivity) {
+    runFiveMiles();
+    postRunActivity();
+  }
