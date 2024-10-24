@@ -217,23 +217,26 @@ const selectingDrivers = function (){
 
 /*createFareMultiplier() — This is a higher-order function that takes in one argument, an integer, and returns a function that will multiply a fare for a ride accordingly. For example, if createFareMultiplier() receives an argument of 4, it will return a function that takes in a fare as an argument and quadruples the fare.*/
 
-const createFareMultiplier = function(integer){
-    return function(fare){
-        return fare **4; 
+const createFareMultiplier = integer => {
+    return fare => fare*integer; // arrow function 
     };  
-}
 
-const numc = createFareMultiplier(4); 
-console.log(numc);
+const numc = (createFareMultiplier(4)); 
+console.log(numc(10));
  
-
-
 /*fareDoubler() — Declare a variable with const and assign a function returned by createFareMultiplier() to it. Invoke createFareMultiplier() in such a way that the new fareDoubler() function accepts a fare as its lone argument and doubles it.*/
 
+const fareDoubler = createFareMultiplier (2); 
+console.log(fareDoubler(2)); 
 
 /*fareTripler() — Declare a variable with const and assign a function returned by createFareMultiplier() to it. Invoke createFareMultiplier() in such a way that the new fareTripler() function accepts a fare as its lone argument and triples it.*/
-
+const fareTripler = createFareMultiplier (3); 
+console.log(fareTripler(4)); 
 
 /*selectDifferentDrivers() — This function takes two arguments, an array of the names of Scuber's drivers and either the returnFirstTwoDrivers() or returnLastTwoDrivers() function. Based on these two arguments, selectDifferentDrivers() will return either the first two drivers or the last two drivers.*/
 
 
+const selectDifferentDrivers = (arr,returnLastTwoDrivers)=> {return returnLastTwoDrivers(arr)}; 
+
+console.log(selectDifferentDrivers(arr,returnLastTwoDrivers));
+//you can change how drivers are selected simply by passing different functions.  The function can be reused in diffrent circumstances. 
