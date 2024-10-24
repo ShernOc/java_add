@@ -314,12 +314,12 @@
 // }
 
 
-// //ARRAY= A collection of that hold multiple pieces of data under a single name eg: Groceries =["bread", "milk","eggs"] , always wrapped in []
-// // An array is used to store a collection of data 
+ //ARRAY= A collection of that hold multiple pieces of data under a single name eg: Groceries =["bread", "milk","eggs"] , always wrapped in []
+// An array is used to store a collection of data 
 
-// groceries = ["bread", "eggs", "milk", "banana"] // this is an array list of groceries. 
+groceries = ["bread", "eggs", "milk", "banana"] // this is an array list of groceries. 
 
-// //Objects are like tables that have a name that is a piece of data, typically a Symbol or a String. This identifier is called a key.
+//Objects are like tables that have a name that is a piece of data, typically a Symbol or a String. This identifier is called a key.
 // // key: value objects 
 // const englishBandsByCity = {
 //     liverpool: "The Beatles",
@@ -364,63 +364,9 @@
 // 32 index = 0, 9 = 1, 14 =2, 33 =3 .. 
 // To access the element or the data eg 14 we use the bracket notation. */
 
-// console.log(winningNumbers[2]); // 14
 
-// const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",]
 
-// console.log(alphabet)// execute all the alphabets. 
-// console.log(alphabet.length);// find the lenght of array //26 
-// console.log(alphabet[9]);//j
-// console.log(alphabet.length - 2); // looks at the element we want to access  = y 
-// console.log(alphabet[alphabet.length -2]);//y therefore to show the [alphabe.length -2] it will display y 
-
-// // UPDATING THE VALUE OF AN ELEMENT
-// alphabet[0] = "sherlyne" // this will update/ we are reasign the element [0] to sherlyne 
-// console.log(alphabet)
-// //The .shift() method removes the first element in an Array:
-// alphabet.shift();// removes sherlyne 
-// console.log(alphabet) // will start with "b"
-// //The .unshift() method adds the first element in an Array:
-// alphabet.unshift("a")
-// console.log(alphabet); // " a" is added 
-
-// // Spread Operator: 
-// const Newal =[...alphabet]; // want to add integers (1,2,)
-// console.log(Newal); // copy of the alphabet 
-// // Spread operator can be used to add element at the end beginning or middle
-// const mainArray = ["one", "two","three","four", "five"] // 
-// const newArray=["1","2","3",...mainArray, "4","5"] ; //"1","2","3","one", "two","three","four" "4","5"
-
-// console.log(newArray); 
-
-// //Splice; used to remove,replace and add 
-// const cards = [
-//     "Ace of Spades",
-//     "Jack of Clubs",
-//     "Nine of Clubs", // will be removed due to [2]
-//     "Nine of Diamonds",
-//     "Three of Hearts",
-//   ];
-
-//   // "Nine of Clubs", will be removed due to [2], and only one element will be removed. 
-//   cards.splice(2, 1, "Ace of Clubs");
-//   // => ["Nine of Clubs"]
-
-//   console.log(cards);
-//   // => ["Ace of Spades", "Jack of Clubs", "Ace of Clubs", "Nine of Diamonds", "Three of Hearts"]
-
-/*FOR LOOP : 
-- Write a repeated action once: and perform the action on every items in the collection: */
-
-// for (counter =1; counter <=10; counter+1){
-//     console.log("Good morning")
-// }
-
-// for(let age = 55; /* initialization*/  age<=55; age++){
-//     console.log(`Good morning you are ${age} years old!`);
-// }
-
-// For loop: says good job once every element is looked upon.  
+//FOR LOOP:   
 const todo = [
     "Pray", "BrushTeeth", "WashFace", "MakeBed", "Shower", "Breakfast", "Study", "CleanRoom", "have no idea"
 ];
@@ -498,11 +444,7 @@ lifeCrazy(items);
 
 //For..of loop 
 /*
-for (const element of object) {
-    
-}
-
-*/
+for (const element of object) {}*/
 
 // using for...of loop
 const item = ["Books", "pen", "laptop", "notepad"]

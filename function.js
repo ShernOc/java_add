@@ -188,4 +188,41 @@ greet((()=>console.log("am an inline function peter")));
 // main(function () { return "After I get passed to the main() function as the only argument, I'm stored in the local 'cb' variable!"});
 //   // LOG: After I get passed to the main() function as the only argument, I'm stored in the local 'cb' variable!
 
+/* SCOPE : 
 
+1. Lexical
+2.Global scope: cannot access the functonal scope 
+3.Functional scope :can access the global scope 
+Block scope : can access the function.  
+*/
+
+const createFareMultiplier = integer => {
+    return fare => fare*integer; // arrow function 
+    };  // Block scope 
+
+const numc = (createFareMultiplier(4)); 
+console.log(numc(10));
+
+//Variables created without a const, let, or var keyword are always globally-scoped, regardless of where they sit in your code. If you create one inside of a block, it's still available globally:
+
+firstName = "Ada"; // is globally available 
+// 
+
+var customerName = "bob"; 
+console.log(customerName)
+
+function upperCaseCustomerName(){
+    return customerName.toUpperCase(); 
+}
+console.log(upperCaseCustomerName());
+
+function setBestCustomer(bestBestCustomer){
+    return bestBestCustomer = "not bob"; 
+
+}
+
+console.log(setBestCustomer());
+
+function overwriteBestCustomer(){
+    return bestBestCustomer = "maybe bob" ; 
+}
