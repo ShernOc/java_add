@@ -208,21 +208,30 @@ console.log(numc(10));
 firstName = "Ada"; // is globally available 
 // 
 
-var customerName = "bob"; 
-console.log(customerName)
+const customerName = "bob"; 
+console.log(customerName);// bob
 
 function upperCaseCustomerName(){
     return customerName.toUpperCase(); 
 }
-console.log(upperCaseCustomerName());
+console.log(upperCaseCustomerName()); //BOB
 
 function setBestCustomer(bestBestCustomer){
     return bestBestCustomer = "not bob"; 
-
 }
 
-console.log(setBestCustomer());
+console.log(setBestCustomer());// not bob
 
 function overwriteBestCustomer(){
     return bestBestCustomer = "maybe bob" ; 
 }
+
+console.log(overwriteBestCustomer(upperCaseCustomerName())) // maybob 
+
+
+// Map(): The method creates a new array 
+//Object)
+
+// Array Objects with books 
+
+
