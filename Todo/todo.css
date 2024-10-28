@@ -40,5 +40,9 @@ input{
 
 p{
     font-size:20px;
-    display:inline-block;
+    display:block;
+}
+
+img{
+    margin:10px; 
 }
