@@ -1,0 +1,40 @@
+*{
+    margin: 10;
+}
+
+body{
+    background: rgb(255, 2, 107);
+
+}
+
+#todos{
+    display:block;
+    background-color: white;
+    padding:15px;
+    border-radius: 10px;
+    
+}
+
+.btn{
+ padding: 5px;
+ color:skyblue;
+ font-size: 16px;
+background: whitesmoke;
+ border-radius: 5px;
+}
+
+input{
+     /* background:rgb(242, 232, 232); */
+     border-radius: 5px;
+     padding: 5px;
+     font-size: 16px;
+
+}
+
+.textholder{
+    padding: 15px;
+   }
+
+p{
+    font-size:20px;
+}

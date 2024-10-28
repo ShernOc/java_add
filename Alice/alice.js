@@ -110,6 +110,12 @@ function main(){
 
 main();
 
+const comment = ()=>{
+    const comments = document.querySelectorAll(".comments");
+    comments.textContent
+
+}
+
 // footer element with class of footer
 
 
