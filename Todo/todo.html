@@ -15,18 +15,25 @@
         <main id="main">
           <div id="days">
             <h2 >Monday</h2>
-            <form action="form">
+            <form  id="todoform">
               <input
                 type="text"
-                name="New to Do"
-                id="textholder"
-                placeholder="New To Do"
-              />
-              <input type="submit" class="submit" />
+                name="Add To Do "
+                id="addtodo"
+                placeholder="Add To Do"
+              /> 
+              <input type="submit" class="submitbtn" placeholder="Add"/>
             </form>
           </div>
         <div id="todo_container">
-            <p>Feed cat</p>
+            <!-- Where the list will to do will be appended -->
+            <p id="p"></p>
+            <div class="image">
+                <img src="" alt="">
+            </div>
+        </div>
+        <div id="done">
+            <h3>Done list</h3>
         </div>
           <br />
           <div id="buttons">

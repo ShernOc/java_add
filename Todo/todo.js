@@ -1,15 +1,129 @@
 // Function that updates the day of the week. 
-const UpdateWeekday = (day)=>{
-    let h2 =  document.querySelector("h2"); 
-    h2.innerText = day 
+const UpdateWeekday = (day) => {
+    let h2 = document.querySelector("h2");
+    h2.innerText = day
     h2.id = "day";
-    h2.className = day.toLowerCase() 
+    h2.className = day.toLowerCase()
 }
-
 console.log(UpdateWeekday("Sunday"))// changes the day from Monday to Sunday
 
 
+const addImage = (img_url) => {
+    let image = document.querySelector("img");
+    image.src = img_url;
+    image.alt = "cow image";
+    image.height = 250;
+    image.width = 300;
+}
+console.log(addImage("/images/pexels-vidalbalielojrfotografia-14457389.jpg"));
 
+
+
+
+// Add an event listerner that takes the submited input text and appends it at the paragraph element feed list;
+
+
+// Callback function : passing an event handling 
+function addtodo(e) {
+    e.preventDefault(); // Stops the form from submitting
+    // grap the input element 
+    const todoInput = document.getElementById("addtodo");
+    const todoText = todoInput.value;
+
+    //grap the p element that will store our inputs 
+    const p = document.getElementById("p");
+
+    // Appends the new text to the existing content 
+    // textContent directly affects updates the text of p element. 
+    const ul = document.createElement("ul")
+    p.append(ul);
+    const li = document.createElement("li")
+    li.textContent = `${todoText.toUpperCase()}`;
+    ul.append(li);
+
+    // clear the input after adding the text 
+    todoInput.value = "";
+  
+    
+    if (todoText.trim()===""){
+        alert("enter text");
+    }else{
+        e.preventDefault();
+    }
+
+
+    // Create a delete button
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Done";
+    deleteButton.className = "delete-btn";
+
+    // click event 
+    deleteButton.addEventListener("click", () => {
+        ul.removechild();
+    })
+
+
+
+
+};
+
+// eventlisterner for the submit button/ 
+
+const submitButton = document.querySelector(".submitbtn");
+submitButton.addEventListener('click', addtodo);
+console.log(submitButton);
+
+function submitnot(){
+    if (todoInput.value ===null){
+            e.preventDefault();
+        }
+        
+    }
+
+// The div element that will have the button
+const addDiv = (addtodo) => {
+    const newAddDiv = document.createElement("div");
+    newAddDiv.className = "todolist";
+
+
+
+
+    //p element to hod the do-list 
+    const newP = document.createElement("p");
+    newP.className = "newP";
+
+    // in order to hold the text 
+    newP.textContent = todoText;
+
+    const addbutton = document.createElement("button");
+    addbutton.classList = "addbutton";
+    addbutton.name = "done";
+    li.append(addbutton);
+}
+
+
+
+const doneTasks = () => {
+    const done = document.getElementById("done");
+    const doneT = document.createElement("div");
+    done.append(doneT);
+    const newUl = document.createElement("ul");
+    // li elements 
+    const newList = () => {
+        for (let i = 0; i < 3; i++) {
+            const li = document.createElement("li");
+            li.textContent = ("I have created a list");
+            newUl.append(li)
+        }
+    };
+    // calling in the newList (li-items) 
+    newList();
+    doneT.append(newUl);
+
+    // remove the ul element: 
+    const secondChild = doneT.querySelector("ul"); doneT.remove(secondChild);
+}
+console.log(doneTasks());
 
 
 
@@ -68,5 +182,4 @@ console.log(UpdateWeekday("Sunday"))// changes the day from Monday to Sunday
 // // taking an function as a parameter 
 // function exerciseRoutine(postRunActivity) {
 //     runFiveMiles();
-//     postRunActivity();
-//   }
+//     postRunActivity();  }
