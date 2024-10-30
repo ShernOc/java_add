@@ -28,7 +28,7 @@ const addImage = (img_url) => {
 }
 console.log(addImage("/images/pexels-vidalbalielojrfotografia-14457389.jpg"));
 
-// Add an event listerner that takes the submited input text and appends it at the paragraph element feed list;
+// Add an event listener that takes the submitted input text and appends it at the paragraph element feed list;
 
     // grap the form 
     const form = document.querySelector("#todoform");
@@ -42,12 +42,12 @@ console.log(addImage("/images/pexels-vidalbalielojrfotografia-14457389.jpg"));
         form.reset();
     })
 
-// create a function that handles toadd list 
+// create a function that handles to add list 
 const ol = document.createElement("ol");
 const AddTodo = (todo) => { // passes 
-    // create the p element that handles the addlist. 
+    // create the p element that handles the add list. 
     let p = document.createElement('p'); // 
-    document.querySelector('#addcontainer').appendChild(p) // appends/ adds p element to the div: todocontainer 
+    document.querySelector('#addcontainer').appendChild(p) // appends/ adds p element to the div: todo container 
   
     p.appendChild(ol);
     const li = document.createElement("li");
@@ -72,7 +72,7 @@ const AddTodo = (todo) => { // passes
 };
 AddTodo;
 
-// created a handledelete event (pass the event, get the parent Node and call in the remove() 
+// created a handle delete event (pass the event, get the parent Node and call in the remove() 
 // This will activate delete action. 
    // create ol/p element to handle the done list. 
 

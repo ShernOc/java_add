@@ -6,7 +6,7 @@ function addtodo(e) {
     const todoInput = document.getElementById("addtodo");
     const todoText = todoInput.value;
 
-    //grap the p element that will store our inputs 
+    //grab the p element that will store our inputs 
     const p = document.getElementById("p");
 
     // Appends the new text to the existing content 

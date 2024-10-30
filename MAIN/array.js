@@ -62,7 +62,7 @@ const Bk = {
     publisher: "Me "
 }
 
-// To acces the title of the book console.log(Object.key )
+// To accesses the title of the book console.log(Object.key )
 console.log(Bk.title); // i love you 
 Bk.title = "python"
 console.log(Bk.title); // "python"
@@ -83,7 +83,7 @@ console.log(Bk);
 ];
 
 const newMenu = [
-  ...menu.slice(0, 1), // include the element index 0, and only 1 element. jalapenon 
+  ...menu.slice(0, 1), // include the element index 0, and only 1 element. jalapeno 
   "Veggie Burger", // add this element following 
   "House Salad",// add this element following 
   "Teriyaki Tofu",// add this element following 
@@ -102,12 +102,12 @@ const object = {
     key1:"value1",
     key2:{
         life: "No life", // this is a nested object 
-        shoes: "addidas"
+        shoes: "Adidas"
     }
 }; 
 
 //Another nested object 
-const address = { // has the keys: street, city,state,zipcode 
+const address = { // has the keys: street, city,state,zip-code 
     street: {
       line1: "11 Broadway",
       line2: "2nd Floor",
@@ -138,7 +138,7 @@ console.log(Object.values(address));
 //MODIFYING OBJECT / Dot / Bracket Notation 
 
 const education = {}; // create an empty object 
-education.girls = ["Rahab","alice","sherlyne"]; // Dot 
+education.girls = ["Rahab","Alice","Sherlyne"]; // Dot 
 education.type = ["science","therapy", "computer"],
 education.school = "Maseno University"
 
