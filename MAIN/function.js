@@ -234,4 +234,11 @@ console.log(overwriteBestCustomer(upperCaseCustomerName())) // maybob
 
 // Array Objects with books 
 
+//EVENT HANDLING 
+
+// removing an element
+// e.target.parentNode.remove(); // grab the parentNode, meaning it will delete anything in the parent element. 
+
+
+
 

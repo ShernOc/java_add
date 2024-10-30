@@ -22,9 +22,15 @@ body{
 .psection{
     /* background-color:#f765b8; */
     text-align: center;
+    color:pink;
+    font-size: 26px;
     
 }
 
+.p2{
+    font-size: 50px;
+
+}
 .newpara{
     color: #f765b8;
     font-weight:bold ;
