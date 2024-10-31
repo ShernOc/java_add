@@ -30,7 +30,7 @@ console.log(addImage("/images/pexels-vidalbalielojrfotografia-14457389.jpg"));
 
 // Add an event listener that takes the submitted input text and appends it at the paragraph element feed list;
 
-    // grap the form 
+    // grab the form 
     const form = document.querySelector("#todoform");
 
     // Event listener for the form 
