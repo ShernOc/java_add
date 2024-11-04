@@ -36,7 +36,7 @@ console.log(addImage("/images/pexels-vidalbalielojrfotografia-14457389.jpg"));
     // Event listener for the form 
     form.addEventListener('submit', (e) => {
         e.preventDefault(); // prevent default behavior 
-        AddTodo(e.target.addtodo.value); // addtodo is the id input that we are grabbing 
+        AddTodo(e.target.addtodo.value); // addtodo is the id input that we are grabbing and targeting the input of the user 
 
         // reset the form 
         form.reset();

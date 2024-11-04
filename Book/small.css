@@ -1,8 +1,10 @@
 body{
     background: wheat;
     display: block;
-    font-size:18px;
     
+}
+header{
+    align-items: center;
 }
 h1,button{
     font-size: bold;
@@ -20,12 +22,35 @@ div{
     border-radius:5px;
 }  
 
-
 form{
     padding: 10px;
     display: grid;
+    font-weight:bold;
+}
+
+input{
+    padding:10px;
+    font-size: 18px;
 }
 
 .card{
     margin:10px;
+}
+
+.content{
+    text-align: center;
+    margin:30px;
+    background: bisque;
+}
+
+li{
+    list-style: none; /*removes the bulleting*/ 
+}
+
+.buy{
+    padding:15px;
+}
+
+button{
+    padding: 5px;
 }
