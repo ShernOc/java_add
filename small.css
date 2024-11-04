@@ -1,0 +1,31 @@
+body{
+    background: wheat;
+    display: block;
+    font-size:18px;
+    
+}
+h1,button{
+    font-size: bold;
+    color: white;
+    background: green;
+    align-items: center;
+    border-radius:5px;
+}
+
+div{
+    justify-content: center;
+    border:solid;
+    background: white;
+    margin:0,auto;
+    border-radius:5px;
+}  
+
+
+form{
+    padding: 10px;
+    display: grid;
+}
+
+.card{
+    margin:10px;
+}
