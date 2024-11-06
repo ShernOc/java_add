@@ -26,6 +26,7 @@ const init = () => {
     };
 
 // created a function that fetches all the books
+//Get
 function fetchAllBooks(){
     fetch("http://localhost:3000/books")
     .then(res=>res.json())
@@ -53,7 +54,7 @@ fetchOneBook(books);
 }
 
 // create a function that fetches the input of a user 
-function fetchOneBook(){
+function fetchOneBook(books){
     fetch('http://localhost:3000/books',{
         method:'POST',
         headers:{
