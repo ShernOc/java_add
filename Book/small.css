@@ -47,6 +47,12 @@ li{
     list-style: none; /*removes the bulleting*/ 
 }
 
+img{
+    width:221px ;
+    height: 342px ;
+}
+
+
 .buy{
     padding:15px;
 }
