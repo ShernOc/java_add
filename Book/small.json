@@ -3,7 +3,7 @@
     {
       "author": "Chinua Achebe",
       "country": "Nigeria",
-      "imagelink": "images/Things fall apart.jpg",
+      "imagelink": "https://upload.wikimedia.org/wikipedia/en/6/65/ThingsFallApart.jpg",
       "language": "English",
       "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart",
       "pages": 209,
@@ -14,7 +14,7 @@
     {
       "author": "Hans Christian Andersen",
       "country": "Denmark",
-      "imagelink": "images/Fairy tales.jpg",
+      "imagelink": "https://m.media-amazon.com/images/I/819KpninuzL._SY342_.jpg",
       "language": "Danish",
       "link": "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.",
       "pages": 784,
@@ -25,7 +25,7 @@
     {
       "author": "Dante Alighieri",
       "country": "Italy",
-      "imagelink": "images/The divine comedy.jpg",
+      "imagelink": "https://m.media-amazon.com/images/I/81SgX6pVaWL._AC_UY327_FMwebp_QL65_.jpg",
       "language": "Italian",
       "link": "https://en.wikipedia.org/wiki/Divine_Comedy",
       "pages": 928,
@@ -36,7 +36,7 @@
     {
       "author": "Unknown",
       "country": "Sumer and Akkadian Empire",
-      "imagelink": "images/The Epic of Gilgamesh.jpg",
+      "imagelink": "https://m.media-amazon.com/images/I/61H359Mb7ZL._AC_UY327_FMwebp_QL65_.jpg",
       "language": "Akkadian",
       "link": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh",
       "pages": 160,
@@ -47,7 +47,7 @@
     {
       "author": "Unknown",
       "country": "Achaemenid Empire",
-      "imagelink": "images/The book of job.jpg",
+      "imagelink": "https://m.media-amazon.com/images/I/7164GitaHfL._SY342_.jpg",
       "language": "Hebrew",
       "link": "https://en.wikipedia.org/wiki/Book_of_Job",
       "pages": 176,
@@ -58,7 +58,7 @@
     {
       "author": "Unknown",
       "country": "India/Iran/Iraq/Egypt/Tajikistan",
-      "imagelink": "images/One Thousand and One Nights.jpg",
+      "imagelink": "https://m.media-amazon.com/images/I/71X78JOXKOL._AC_SX296_SY426_FMwebp_QL65_.jpg",
       "language": "Arabic",
       "link": "https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights",
       "pages": 288,
@@ -69,7 +69,7 @@
     {
       "author": "Unknown",
       "country": "Iceland",
-      "imagelink": "images/Njals Saga.jpg",
+      "imagelink": "https://m.media-amazon.com/images/I/81a-Ov9ksaL._SX342_.jpg",
       "language": "Old Norse",
       "link": "https://en.wikipedia.org/wiki/Nj%C3%A1ls_saga",
       "pages": 384,
