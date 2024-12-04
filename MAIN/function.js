@@ -75,7 +75,7 @@ const mondayWork = function(activity = "Go to the office"){ // default argument 
 console.log(mondayWork("I will Study javascript"));
 console.log(mondayWork());
 
-// Another way to call an anoymous function is by creating (IIFE) :immediately-invoked function expression (IIFE): 
+// Another way to call an anonymous function is by creating (IIFE) :immediately-invoked function expression (IIFE): 
 
 // Function-Level Scope
 function outer(greeting, msg = "It's a fine day to learn") {
@@ -133,19 +133,19 @@ console.log(wrapAdjective("dedicated girl")())
 2. Not invoked before its called 
 3. No need of parenthesis in parameters 
 4. No implicit return/ or no need of return value 
-5. You can remove curly braces in function body, and also replace the curly with the paranthesis  
+5. You can remove curly braces in function body, and also replace the curly with the parenthesis  
 6. The arrow function is on the right of the parameter not before 
 
 Syntax.
 const life = wow  => wow 
-console.log(life("life is beatiful"))*/
+console.log(life("life is beautiful"))*/
 
 // 
-const life = wow  => wow ; // paranthesis is ommited, if there is only one single argument //wow 
-console.log(life("life is beatiful")); 
+const life = wow  => wow ; // parenthesis is omitted, if there is only one single argument //wow 
+console.log(life("life is beautiful")); 
 
 // Sum of a+b
-const sumz = (a,b)=>a+b; // we use paranthesis if there is more than one parameter 
+const sumz = (a,b)=>a+b; // we use parenthesis if there is more than one parameter 
 console.log(sumz(7,8));
 
 //.map() = The .map() method is called on an Array and takes a function as an argument.It iterates through the array, passing each element in turn to the function.
