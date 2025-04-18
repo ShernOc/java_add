@@ -1,0 +1,16 @@
+CLASS NOTES JULY 3RD 2024 (Peter Muturi)
+Arithmetic operators
+- Multiplication * 
+-Subtraction -
+Addition + 
+Division / 
+
+Variable: Containers that stores values, they change 
+let, const, var 
+
+PERSONAL NOTES: 
+const currentUser = 'Sherlyne'; // the '' single quates as a string and everything in between is part of the string. to have variable we have to use the Interpolation ${} and (+) concanation 
+  const WelcomeMessage = currentUser; 
+  // To have the 
+
+
