@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "super",
+			"path": "../../super"
+		},
+		{
+			"name": "java_add",
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

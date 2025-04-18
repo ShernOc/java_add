@@ -1,6 +1,6 @@
 # JAVASCRIPT STUDY NOTES: 
 
-This are javascript notes and exercises. 
+THIS IS A JAVASCRIPT STUDY NOTES AND EXERCISES. 
 
 The files include: 
 demo file: notes 
