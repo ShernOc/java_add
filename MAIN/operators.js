@@ -1,7 +1,6 @@
-
 // String Interpolation - Inject dynamic values into strings
 
-let name = "Mary";
+let names = "Mary";
 let email = "j@gmail.com";
 let occupation = "Engineer";
 
@@ -9,13 +8,16 @@ let occupation = "Engineer";
 let introduction = "Hello, my name is John Doe. I am a technical mentor";
 
 // String interpolation using template literals
-let intIntroduction = `Hello, my name is ${name}. I am a ${occupation}. You can reach me through ${email}. I am ${
+let intIntroduction = `Hello, my name is ${names}. I am a ${occupation}. You can reach me through ${email}. I am ${
   20 + 20
 } years old.`;
 
 console.log(intIntroduction);
 
-// ! Boolean Expressions - Evaluates to either true or false
+
+// Boolean Expressions 
+
+// Boolean- Evaluates to either true or false
 
 // Truthy and falsy values
 // Falsy values in JavaScript: false, 0, '', null, undefined, NaN
@@ -33,7 +35,7 @@ let condition = i < 10;
 
 console.log(condition);
 
-// ! Operators - Symbols used to perform operations on values
+// Operators - Symbols used to perform operations on values
 
 // * Arithmetic Operators
 
@@ -57,7 +59,7 @@ let exponential = 4 ** 2;
 // Modulus - Remainder
 let modulus = 5 % 2;
 
-// ! Assignment Operators
+// Assignment Operators
 
 let a = 5;
 
@@ -68,7 +70,7 @@ a /= 2; // a is now 8
 a **= 10; // a is now 1073741824
 a %= 7; // a is now 2
 
-// ! Comparison Operators - Compare two operands
+//  Comparison Operators - Compare two operands
 
 // * Equality Operators
 

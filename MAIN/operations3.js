@@ -4,7 +4,7 @@
 let x = 10;
 x = 20; // redeclare a variable 
 let y = 10;
-typeof x; // integer 
+typeof x; // integer  shows the datatype
 y;
 console.log(x + y);//
 

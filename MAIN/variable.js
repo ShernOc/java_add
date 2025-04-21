@@ -1,17 +1,26 @@
 /* Variable is a container that stores values. ;
+
 We use const, let, var to declare a variable. 
-const: because it cannot be redeclared. or reassigneed 
-variable are written in camelCase; 
+-const: because it cannot be redeclared. or reassigned 
+-let only when changing the variable later
+-var : not used in javascript
+
+-variable are written in camelCase;
+
+typeof something shows the type of value in 
 */
 
 const myName = "Sherlyne" ; 
+console.log(typeof myName)
 
 // you have to initialize and then assign a variable. 
 let names= "Sherlyne"; 
 console.log(names) // Sherlyne 
 
-// Iterpolation &{}
-//  concanation + using a plus sign 
+// Interpolation &{}
+
+//  concatenation + using a plus sign 
+
 const myString = 'template literal';
 const myNumber = 10;
 const myBoolean = false;
@@ -19,9 +28,9 @@ const myBoolean = false;
 console.log(`This is a string interpolation ${myString}`) // this is a template literal having a value inside a string.
 
 // JAVASCRIPT KEYWORDS 
-// var	Declares a variable
-// let	Declares a block variable
-// const	Declares a block constant
+// var- Declares a variable
+// let-Declares a block variable
+// const- Declares a block constant
 // if	Marks a block of statements to be executed on a condition
 // switch	Marks a block of statements to be executed in different cases
 // for	Marks a block of statements to be executed in a loop

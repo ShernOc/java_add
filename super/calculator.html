@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body >
+
+
+  <div style="justify-items:center;">
+  <h1>Calculator</h1>
+
+  <p> <!-- 7 -->
+    <button title="7" onclick="
+    calculation +='7';
+    console.log(calculation);
+    ">7</button>
+  
+  <!-- 8 -->
+    <button title="8"
+    onclick="
+     calculation +='8';
+    console.log(calculation)">8</button>
+  
+    <!-- 9 -->
+    <button title="9" onclick="
+    calculation += '9';
+    console.log(calculation)">9</button>
+  
+    <!-- multiplication -->
+    <button title="multiply" onclick="
+   calculation *= '*'
+    console.log(calculation)">x</button>
+  </p>
+  
+  <p>
+  
+  <!-- 4-->
+    <button title="4" onclick="
+    calculation +='4';
+    console.log(calculation)">4</button>
+  
+  <!--5-->
+    <button title="5" onclick="
+    calculation +='5';
+    console.log(calculation)">5</button>
+  
+  <!-- 6 -->
+    <button title="6" onclick="
+    calculation +='6';
+    console.log(calculation)" >6</button>
+  
+    <!-- minus  -->
+    <button title="minus"
+    onclick="
+    calculation -= '-';
+    console.log(calculation)">-</button>
+  
+  </p>
+  
+  <p>
+      <!-- 1 -->
+      <button title="1" onclick="
+      calculation += '1';
+      console.log(calculation)">1</button>
+    
+    <!-- 2 -->
+      <button title="2" onclick="
+     calculation += '2';
+      console.log(calculation)">2</button>
+    
+      <!-- 3 -->
+      <button title="3" onclick="
+      calculation +='3';
+      console.log(calculation)">3</button>
+    
+      <!-- add button  -->
+      <button title="add" onclick="
+      calculation += '+'
+      console.log(calculation)">+</button>
+  </p>
+  
+  <p>
+  <!-- zero button -->
+    <button title="0" onclick="
+    calculation =+'0';
+    console.log(calculation)">0</button>
+    
+    <!-- divide -->
+    <button title="divide" onclick="
+    calculation /= '/';
+    console.log(calculation)">/</button>
+  
+  <!-- delete button -->
+    <button title="delete" onclick="
+    if 
+    calculation = calculation;
+    console.log(calculation)
+    ">AC</button>
+  
+  
+    <button title="percentage" onclick="
+    calculation %= '%';
+    console.log(calculation)
+    
+    ">%</button>
+  
+  </p>
+  <p style="justify-content:left;">
+    <!-- Finds the total -->
+    <button title="total"  onclick="
+    calculation = eval(calculation)
+    console.log(`Total= ${calculation}`)">=</button>
+  </p>
+</div>
+  
+
+<br>
+
+</body>
+<script> 
+  // let calculation=0; 
+  let calculation = ""; 
+
+  console.log(calculation)
+
+</script>
+</html>
