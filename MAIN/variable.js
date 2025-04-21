@@ -1,11 +1,11 @@
-/* Variable is a container that stores values. ;
+    /* Variable is a container that stores values. ;
 
-We use const, let, var to declare a variable. 
--const: because it cannot be redeclared. or reassigned 
--let only when changing the variable later
--var : not used in javascript
+    We use const, let, var to declare a variable. 
+    -const: because it cannot be redeclared. or reassigned 
+    -let only when changing the variable later
+    -var : not used in javascript
 
--variable are written in camelCase;
+    -variable are written in camelCase;
 
 typeof something shows the type of value in 
 */

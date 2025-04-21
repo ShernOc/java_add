@@ -62,8 +62,10 @@
   <p>
       <!-- 1 -->
       <button title="1" onclick="
-      calculation += '1';
+      //calculation += '1';
+      calculation -= '1';
       console.log(calculation)">1</button>
+      
     
     <!-- 2 -->
       <button title="2" onclick="
@@ -84,29 +86,33 @@
   <p>
   <!-- zero button -->
     <button title="0" onclick="
-    calculation =+'0';
+    calculation +='0';
     console.log(calculation)">0</button>
     
     <!-- divide -->
     <button title="divide" onclick="
-    calculation /= '/';
-    console.log(calculation)">/</button>
+    divisor = parseFloat(devisor)
+    if (!isNaN(devisor) && devisor !==0){
+     calculation /= divisor;
+     console.log(calculation)
+    }
+    //calculation /= calculation;
+    //calculation /= '/' // output as none
+    ">/</button>
   
   <!-- delete button -->
     <button title="delete" onclick="
-    if 
     calculation = calculation;
     console.log(calculation)
     ">AC</button>
   
-  
+  <!-- percentage -->
     <button title="percentage" onclick="
     calculation %= '%';
-    console.log(calculation)
-    
-    ">%</button>
+    console.log(calculation)">%</button>
   
   </p>
+
   <p style="justify-content:left;">
     <!-- Finds the total -->
     <button title="total"  onclick="
@@ -114,9 +120,6 @@
     console.log(`Total= ${calculation}`)">=</button>
   </p>
 </div>
-  
-
-<br>
 
 </body>
 <script> 

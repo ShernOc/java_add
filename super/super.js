@@ -41,6 +41,41 @@ const totalCost = cost +tax;
 console.log(` Total cost:$$ ${totalCost}`);
 
 
+// Calculator  
+ let calculation = "";
+
+ if (calculation == '-';
+  re
+ )
+
+
+ calculation += "1"
+ calculation += "2"
+ calculation += "3"
+ calculation += "4";
+ calculation += "5";
+ calculation += "6";
+
+ calculation += "+";
+ calculation -= "-";
+
+console.log(calculation)
+
+
+
+
+console.log()
+// if statement/boolean 
+
+if (30>16){
+  console.log("you can drive")
+
+}else{
+  console.log("You cannot drive")
+}
+ 
+
+
 
 
 

@@ -43,6 +43,7 @@ let example11 =
     : "Drop them";
 
 // Check the temperature to see if someone should carry a jacket
+
 let temperature = 20;
 
 let checkTemperature =

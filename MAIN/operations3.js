@@ -38,7 +38,7 @@ const mage = 5; // age is of type `Number`
 let life = fact + mage.toString() + tail; // using the toString() method 
 console.log(life)
 
-// Boolean; used in conditional expression if the condition is true/false (false, null, undefined, NaN, 0 are all false 
+// Boolean; used in conditional expression if the condition / data is  is true/false (false, null, undefined, NaN, 0 are all false 
 Boolean("Hello world ");
 console.log(Boolean)
 
