@@ -70,8 +70,9 @@ console.log(`This is a string interpolation ${myString}`) // this is a template 
 // function	Declares a function
 // return	Exits a function
 // try	Implements error handling to a block of statements
-// STRINGS 
 
+
+// STRINGS 
 // length = str.length
 // console.log(str.length)
 // console.log([...str].length);

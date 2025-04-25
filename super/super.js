@@ -41,16 +41,16 @@ const totalCost = cost +tax;
 console.log(` Total cost:$$ ${totalCost}`);
 
 
+
 // Calculator  
- let calculation = "";
 
- if (calculation == '-';
-  re
- )
+function calculator(){
+  let calculation = "";
+  let calc;
 
-
- calculation += "1"
- calculation += "2"
+ if (calculation === calculation){
+  calc =  calculation += "1"
+   calculation += "2"
  calculation += "3"
  calculation += "4";
  calculation += "5";
@@ -58,13 +58,11 @@ console.log(` Total cost:$$ ${totalCost}`);
 
  calculation += "+";
  calculation -= "-";
+ }
+}
 
-console.log(calculation)
+console.log(calculator)
 
-
-
-
-console.log()
 // if statement/boolean 
 
 if (30>16){
@@ -73,7 +71,66 @@ if (30>16){
 }else{
   console.log("You cannot drive")
 }
+
+
+// If statements 
+let age = 2; // condition 
+if (age>18){
+  console.log("you can drive")
+}else{
+  console.log("You cannot drive")
+}
+
+
+function nameCat(cat){
+  if(cat === "rose"){
+    return "Hi Rose"
+  }else if (typeof cat === "string"){
+    return `Hi ${cat} your cat name is cute`
+  }else {
+    return "sorry pass in a cat name"
+  }
+ } 
+
+console.log(nameCat("sherlyne"))
+
+// switch 
+function switchName(name){
+  switch(name){
+    case "sherlyne":
+      return "Hi sherlyne"
+    case "james":
+      return "Hi james nice to meet you"
+    default: 
+    return `Hi ${name}`
+  }
+ }
+
+// EXAMPLE OF SWITCH
+ const order = 'cheeseburger';
+ 9/12
+let ingredients;
+ switch (order) {
+    case 'cheeseburger':
+        ingredients = 'bun, burger, cheese, lettuce, tomato, onion';
+        break;
+    case 'hamburger':
+        ingredients = 'bun, burger, lettuce, tomato, onion';
+        break;
+    case 'malted':
+        ingredients = 'milk, ice cream, malted milk powder';
+        break;
+    default:
+        console.log("Sorry, that's not on the menu right now.");
+        break;
+ }
+
+
  
+ 
+
+
+
 
 
 

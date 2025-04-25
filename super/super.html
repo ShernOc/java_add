@@ -11,7 +11,6 @@
   <!-- DATA TYPES -->
 <h2>VARIABLES AND DATA TYPES </h2>
 
-
    <h3>VARIABLES</h3>
    <p>VARIABLES(Identifiers) : this that contain/stores the values. <br>
     We use const, let, var to declare a variable. 
@@ -69,31 +68,83 @@
 <br>
 
 <h2>COMPARISON IN JS</h2>
-<p>we have <b>loose equality</b> and <b>strict equality operator</b></p>
 
-
-
-    <H3>3. Booleans </H3>
-    <p><b>Booleans</b>-checks if the condition/s is true or false</p>
+<H3>3. Booleans </H3>
+  <p><b>Booleans</b>-checks if the condition/s is true or false</p>
  <!-- Booleans : checks if the conditions are true or false:  -->
+ <br>
+<p>we have <b>loose equality</b> and <b>strict equality operator</b></p>
+<br> 
 
+<h3>equality operators</h3>
+<li>strict equality operator ( = = = )</li>
+<li>strict inequality operator ( != = )</li>
+<br>
+<h4>This are not recommended when using js</h4>
+<li>loose equality operator ( = = )</li>
+<li>loose inequality operator ( != )</li>
+<br>
+
+<!-- comparison -->
 <h3>Comparison Operator</h3>
- <li>greater than ></li>
+ <li>greater than > </li>
  <li>less than < </li>
  <li>greater than or equal to >=</li>
  <li>less than or equal to <= </li>
  <li> equal to ===</li> 
  <li>not equal to !==</li>
-<br> 
 
- <h3>IF STATEMENT</h3>
- if (if the condition is true ){
+ <p>nb: <br> dont use compare numbers with string numbers because js with type converse the string number to a number 
+ eg 88 > "9" will return true
+<br> </p>
+
+<p> Strings are compared with other strings lexicographically, meaning character-by-character from
+  left-to-right. The following returns false because the Unicode value of 8 , the first character in
+  88 , is less than the Unicode value of 9 .
+  "88" > "9";
+  // => false
+</p>
+
+<br>
+
+<h2>CONDITIONALS </h2>
+<br>
+ <h3>IF, ELSE, AND ELSE IF STATEMENT</h3>
+ <br>
+ <p><b>if (if the condition is true ){
   return this statement
- } else { return this if the statement is false or otherwise this; 
- }
+ } else if { return this if the statement is false or otherwise this; 
+ } else{
+  return this as the final work 
+ }</b></p>
+
+<br>
+<h3>Ternary: shortcut for ifelse</h3>
+<br>
+<p>
+function isCat(cat){
+  return cat === "tiger"?"Hi tiger you are cute": `Hi ${cat}`; 
+  }
+</p>
+<br>
+<h3>SWITCH</h3>
+<b>
+  function switchName(name){
+    switch(name){
+      case "sherlyne":
+        return "Hi sherlyne"
+      case "james":
+        return "Hi james nice to meet you"
+      default: 
+      return `Hi ${name}`
+    }
+   }
+</b>
+<br>
 
  <h4>example 2</h4>
- let age = 50; // condition 
+ <p>
+  let age = 50; // condition 
  <br> 
     if (age>18){
       console.log("you can drive")
@@ -102,18 +153,67 @@
     } else {
       console.log("You are old")
     }
-
     <b>will return "you cannot drive"</b>
+ </p>
 
+    <br>
+    <h4>example 3</h4>
+    <p>function isRose(cat){
+  if(cat === "rose")// con{
+    return "Hi rose"
+  }else if (cat typeof cat ==="string"){
+    return `Hi &{cat}`
+  }else {
+    return "sorry pass in a cat name"
+  }
+ }
+</p>
+ 
 
 <!-- Javascript code -->
   <script > 
-    let age = 2; // condition 
+    
+    function ages(age){
     if (age>18){
-      console.log("you can drive")
+      return ("You are allowed to drive")
     }else{
-      console.log("You cannot drive")
+      return("You cannot drive")
     }
+    }
+
+  
+
+  function isRose(cat){
+      if(cat === "rose"){
+        return "Hi Rose"
+      }else if (typeof cat === "string"){
+        return `Hi ${cat} your cat name is cute`
+      }else {
+        return "sorry pass in a cat name"
+      }
+     } 
+
+     function isCat(cat){
+     return cat === "tiger"?"Hi tiger you are cute": `Hi ${cat}`; 
+     }
+
+     // switch 
+     function switchName(name){
+      switch(name){
+        case "sherlyne":
+          return "Hi sherlyne"
+        case "james":
+          return "Hi james nice to meet you"
+        default: 
+        return `Hi ${name.toUpperCase()}`
+      }
+     }
+
+  console.log(isRose("sherlyne"))
+  console.log(isCat("tiger"));
+  console.log(switchName("Mary"))
+  console.log(ages(5))
+
   </script>
 
 
