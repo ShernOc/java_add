@@ -1,3 +1,36 @@
+    //VARIABLES AND VALUES 
+
+    DATATYPES = VALUES 
+    PRIMITIVE DATATYPES
+    -Numbers = 1, 
+    -typeof returns the datatype of a value 
+
+    -string = anything between single or double quotes = "sherlyne ", "1" , 
+
+    -Boolean - either one of two values true or false
+    - undefined = is a empty values 
+    -BigInt
+    -Symbol
+
+    STRUCTURED DATATYPES 
+    - Objective 
+    - Functions 
+    STRUCTURED ROOT PRIMITIVE 
+    -Null = is the absent of a value 
+
+    2 . VARIABLES(Identifiers) : this that contain the values 
+
+    -let : can allows the reassigment of values 
+    eg: 
+    
+   let cat = "rose" // this is a statement 
+   cat = "ted"
+
+    1. expression : anything that returns a value
+    2. Statement : a set of instructions does not return a value 
+    -var 
+    -const : protects the variables 
+
     /* Variable is a container that stores values. ;
 
     We use const, let, var to declare a variable. 
