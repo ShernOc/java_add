@@ -209,6 +209,58 @@ function isCat(cat){
       }
      }
 
+
+/* LOGICAL OPERATORS 
+
+NOT(!)
+AND(&&)
+OR(||)
+
+NOT (!): 
+     - Converts a truthy value to false and a falsy value to true.
+- Using double NOT (!!) converts a value to its boolean equivalent.(true/false)
+
+We can use two (!!) to convert an expression to a boolean .
+
+AND (&&): takes two expression
+expression1 && expression 2
+looks at one of the two expressions:
+false && false = false 
+false && truthy = false 
+true &7 true = true 
+true && false = false 
+
+OR(||):
+The logical OR ( || ) operator also takes two expressions:
+ expression1 || expression2 ;
+ NB: It returns the first expression that is true, either or the left or the right. 
+
+ There are three different ways the || operator can be evaluated:
+ Left side  Right side   Return value   True/return value
+ Truthy     Doesn't matter Left side    Truthy
+ Falsey     Truthy         Right side   Truthy
+ Falsey     Falsey         Right side   Falsey
+ 
+NOTE:: 
+ 1. If the left-side expression is truthy, the right-side expression doesn't matter at all. The ||
+ operator returns the left side's truthy value and completes.
+ 2. If the left-side expression is falsey, the || operator returns the right side's value (regardless
+ of whether it's truthy or falsey) and completes
+
+
+
+
+
+
+
+*/
+
+    
+
+
+
+
+     
   console.log(isRose("sherlyne"))
   console.log(isCat("tiger"));
   console.log(switchName("Mary"))

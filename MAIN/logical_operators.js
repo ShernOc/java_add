@@ -91,7 +91,7 @@ console.log(displayedAbout); // Output: "Hello, I am using WhatsApp"
 
 */
 
-// * negating
+// * negating ; Stops the action from happening
 
 let example10 = 3 !== 3; // false (because 3 is equal to 3)
 

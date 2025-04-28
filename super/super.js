@@ -119,11 +119,18 @@ let ingredients;
         break;
     case 'malted':
         ingredients = 'milk, ice cream, malted milk powder';
-        break;
+        break;//  stop the switch or running the loop. 
     default:
+      //default is similar to else 
         console.log("Sorry, that's not on the menu right now.");
         break;
  }
+
+ /*LOGICAL OPERATORS 
+ NOT(!)
+ AND(&&)
+ OR(||)
+ */
 
 
  
