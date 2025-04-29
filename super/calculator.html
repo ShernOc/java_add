@@ -43,7 +43,7 @@
   
   <!--5-->
     <button title="5" onclick="
-    calculation +='5';
+   calculation +='5';
     console.log(calculation)">5</button>
   
   <!-- 6 -->
@@ -60,6 +60,7 @@
   </p>
   
   <p>
+
       <!-- 1 -->
       <button title="1" onclick="
       //calculation += '1';
@@ -121,12 +122,35 @@
   </p>
 </div>
 
+
+
+
 </body>
 <script> 
   // let calculation=0; 
   let calculation = ""; 
+Math.max(34,45)
+  //console.log(calculation)
+  
+  if (true){
+    console.log("hello")
+  }
+  
+  
+  function addFive(number){
+    let result;
+    if(number%2!==0){
+      result = number +5;
+      return result
+    }else{
+      console.log("number is not divisible by 2")
+    }
+  }
 
-  console.log(calculation)
+  
+console.log(Math.floor(Math.random()*6)+5);
+
+console.log(addFive(15))
 
 </script>
 </html>
