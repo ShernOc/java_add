@@ -31,9 +31,9 @@ let cartQuantity=0;
 const name = "sherlyne";
 console.log(`my name is ${name}` ) ;
 const coffee = 5 
-const baggels = 2*3;
+const bagels = 2*3;
 const soup = 9
-const cost = coffee + baggels + soup;
+const cost = coffee + bagels + soup;
 const tax = cost * 0.1
 console.log(cost);
 console.log(tax); 
@@ -131,6 +131,10 @@ let ingredients;
  AND(&&)
  OR(||)
  */
+
+ // You can store a variable in 
+ const cat = "Tiger" ? "Hi tiger":"What a cat"
+ console.log(cat)
 
 
  

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div class="rock">
+      <h2>ROCK PAPER SCISSORS GAMES</h2>
+
+      <p>
+        <b>rules of the game is that rock beats scissor,paper beats rocks, scissor beats paper : </b> <br>Therefore is you pick rock and computer picks scissors, you win
+      </p>
+
+      <p>ROCK PAPER SCISSOR
+        <br>
+      steps: to complete a task: convert to code: the computer randomly selects
+      the move compare the moves to the the results display the results in a
+      popup
+
+
+
+      </p>
+      
+      <!-- rock -->
+
+      <!-- 
+      b>Options: generate a random number </b>
+        <li>if randomNumber is between 0-1/3 = rock</li>
+        <li>if randomNumber is between 1/3-2/3 = paper</li>
+        <li>if randomNumber is between 2/3-1 = scissor</li>
+      -->
+    <button
+        onclick="
+
+  const rockRandomNumber =Math.random();
+  let rockComputerMove = ``;
+  
+  if (RockRandomNumber >= 0 && RockRandomNumber<1/3){
+// Have the computer move : 
+    rockComputerMove = `rock`;
+
+  }else if (RockRandomNumber>=1/3 && RockRandomNumber<2/3){
+   rockComputerMove =`paper`;
+
+  } 
+  else if(RockRandomNumber >=2/6 && RockRandomNumber<1){
+    rockComputerMove =`scissor`;
+  } 
+
+//This is what the computer choose 
+  console.log(rockComputerMove);
+
+  //if the computer move is rock and button is rock the results equals 
+
+   let rockResult = ``; 
+  if (rockComputerMove  === `rock`){
+  rockResult = `  Its a tie`;
+  }else if (rockComputerMove === `paper`){
+  rockResult = `You loose, Computer wins`;}
+  else if (rockComputerMove === `scissor`){
+  rockResult = `You win`; 
+  }
+
+  // create a popup
+  alert(`You picked rock, Computer picked ${rockComputerMove}. Results=${rockResult}`);
+    
+  " > Rock</button>
+
+  <!-- paper-->
+  <button class="paper"
+  onclick="
+      const paperRandomNumber =Math.random();
+      let paperComputerMove = '';
+  
+      if (paperRandomNumber >= 0 && paperRandomNumber<1/3){
+    // Have the computer move : 
+        paperComputerMove = 'rock';
+
+      }else if (paperRandomNumber>=1/3 && paperRandomNumber<2/3){
+      paperComputerMove ='paper';
+
+      } 
+      else if(paperRandomNumber >=2/6 && paperRandomNumber<1){
+        paperComputerMove ='scissor';
+      } 
+
+//This is what the computer choose 
+  console.log(paperComputerMove);
+
+  //if the computer move is rock and button is rock the results equals 
+  
+   let PaperResult = ''; 
+  if (paperComputerMove  === 'rock'){
+  PaperResult = 'You win';
+  }else if (paperComputerMove === 'paper'){
+  PaperResult = 'Its a tie';}
+  else if (paperComputerMove === 'scissor'){
+  PaperResult = 'You loose, Computer wins'; 
+  }
+
+  // create a popup
+  alert(`You picked paper, Computer picked ${paperComputerMove}. Results=${PaperResult}`);
+  "
+
+  >Paper</button>
+
+  <!-- scissors -->
+  <button
+  class="scissor" 
+  onclick="
+      const scissorRandomNumber =Math.random();
+      let computerMove = '';
+  
+      if (scissorRandomNumber >= 0 && scissorRandomNumber<1/3){
+    // Have the computer move : 
+        computerMove = 'rock';
+
+      }else if (scissorRandomNumber>=1/3 && scissorRandomNumber<2/3){
+      computerMove ='paper';
+
+      } 
+      else if(scissorRandomNumber >=2/6 && scissorRandomNumber<1){
+        computerMove ='scissor';
+      } 
+
+//This is what the computer choose 
+  console.log(computerMove);
+
+  //if the computer move is rock and button is rock the results equals 
+  
+   let result = ''; 
+  if (computerMove  === 'rock'){
+  result = 'You loose, Computer wins';
+  }else if (computerMove === 'paper'){
+  result = 'You win';}
+  else if (computerMove === 'scissor'){
+  result = 'Its a tie'; 
+  }
+
+  // create a popup
+  alert(`You picked scissors, Computer picked ${computerMove}. Results=${result}`);
+  "
+  >Scissor</button>
+  
+</div>
+
+    <script>
+     
+    </script>
+  </body>
+</html>
+

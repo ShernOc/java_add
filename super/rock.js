@@ -1,19 +1,33 @@
-const names = "sherlyne "
-const randomNumber = Math.floor(Math.random());
+// Rock Paper Scissor 
 
 
-// function life(randomNumber){
-  
-//   if (randomNumber >= 0 && randomNumber<3){
-//   console.log(`rock`)}
-//   else if (randomNumber>=3 && randomNumber<6 ){
-//   console.log(`paper`);
-//   } 
-//   else if(randomNumber>= 6 && randomNumber<9){
-//    console.log(`scissor`);
-//   }
-// }
-   
-console.log(names)
+const randomNumber = (Math.random());
+let computerMove = '';
+let results ='';
+
+function rock(){
+  if (randomNumber >= 0 && randomNumber<1/3){
+    computerMove = 'rock';
+}
+  else if (randomNumber>=1/3 && randomNumber<2/3){
+    computerMove='paper';
+  }
+  else if(randomNumber>= 2/3 && randomNumber<1){
+  computerMove=('scissor');
+  }
+
+if (computerMove === 'rock'){
+    results = 'Its a tie '
+}else if (computerMove === 'paper'){
+    results = 'Computer wins/ You loose'
+} else if (computerMove === 'scissor'){
+    results = 'You win'
+}
+
+}
+
+
+
+console.log(rock(randomNumber))
 
 
