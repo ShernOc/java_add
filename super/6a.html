@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean/if-statements</title>
+</head>
+<body>
+    <h1>Boolean/if-statements Exercise</h1>
+
+    <P>create a variable called hour and save the current hour of the day(use 24hours) 
+        if hour is between 6 and 12 display: good morning.
+        if hour is between 13 and 17 display good afternoon
+        otherwise display goodnight in the console. 
+    <br>
+    Create a variable name and save your name inside a string. update the if statement above to display your name i each message : Good morning "Sherlyne"
+    <br>
+    (6d)
+    Imagine an park with discount for children (6yrs and younger or seniors 65yrs and older)
+    - create a variable age and save a persons age. Create an if-statement the checks if the person qualifies for a discount: if they do display discount otherwise no discount. 
+    Not try to use (||)
+    <br>
+    (6e)
+    continue from (6d)
+    discount is only available if its not a holiday. create a variable : const isHoliday = true; 
+    update the code so that in order to get a discount people must meet the age requirement and is also not a holiday.
+    Note:&& has a higher priority than || so you may need to use brackets to control which code gets done first. Nb try changing the value of isHoliday to display different messages. 
+
+    Challenge: Try using the ternary operator(Condition?A:B)
+
+    </P>
+   
+<script>
+   const hours=20; 
+   const name = 'Sherlyne' 
+   let display = '';
+
+        if(hours>6 && hours<12){
+            display = `Good morning ${name}!`;
+        }else if(hours>13 && hours<17){
+            display = `Good afternoon ${name}!`;
+        }else{
+            display =`Good night ${name}!`;
+        }
+
+    console.log(display)
+
+    /* Ternary operator
+    const newHours = 6<hours<12? `good morning ${name}`: 13>hours<17? `good afternoon ${name}` :`Goodnight ${name}`;
+    console.log(newHours)*/
+    
+    
+
+    // AGE: 
+    const age =90;
+    let ageDisplay = '';
+    const isHoliday =true;
+
+    /*if(isHoliday && (age<=6 || age>=65)){
+        ageDisplay = `Discount`
+        }else{
+        ageDisplay = `No discount`
+        }
+
+    console.log(ageDisplay)*/
+
+    // ternary operator 
+    const discountTime = isHoliday && (age<=6 || age>=65)?`Discount`:`No discount`
+
+    console.log(discountTime)
+
+
+
+
+    
+   
+
+
+
+
+    
+</script>  
+</body>
+
+</html>

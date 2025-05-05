@@ -1,11 +1,11 @@
 // Rock Paper Scissor 
+// global variable 
+const randomNumber = Math.random();
 
 
-const randomNumber = (Math.random());
-let computerMove = '';
-let results ='';
-
-function rock(){
+//computer move/ constant functions
+function pickComputerMove(){
+  let computerMove = '';
   if (randomNumber >= 0 && randomNumber<1/3){
     computerMove = 'rock';
 }
@@ -16,18 +16,58 @@ function rock(){
   computerMove=('scissor');
   }
 
-if (computerMove === 'rock'){
+  return computerMove;
+}
+// call the function
+console.log(pickComputerMove())
+
+// My choice/
+function playGame(playerMove){
+  const computerMove = pickComputerMove()
+
+  let results ='';
+  if (playerMove===`rock`){
+    if (computerMove === 'rock'){
     results = 'Its a tie '
-}else if (computerMove === 'paper'){
+    }else if (computerMove === 'paper'){
     results = 'Computer wins/ You loose'
-} else if (computerMove === 'scissor'){
+  } else if (computerMove === 'scissor'){
     results = 'You win'
 }
 
+  }else if (playerMove === `paper`){
+    if (computerMove === 'rock'){
+      results = 'You win '
+  }else if (computerMove === 'paper'){
+      results = 'Its a tie'
+  } else if (computerMove === 'scissor'){
+      results = 'You loose, Computer wins'
+  }
+  
+  }else if(playerMove ===`scissor`){
+    if (computerMove === 'rock'){
+      results =  'You loose, Computer wins';
+  }else if (computerMove === 'paper'){
+      results = 'You win ';
+  } else if (computerMove === 'scissor'){
+      results = 'Its a tie';
+  }
+
+  }
+
+  // create a popup/ an alert function 
+   alert(`You picked ${playerMove}, Computer picked ${computerMove}. Results=${result}`);
+
+return results;
 }
 
+console.log(playGame())
 
 
-console.log(rock(randomNumber))
+
+
+
+
+
 
 

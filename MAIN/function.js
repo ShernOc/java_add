@@ -23,7 +23,7 @@ function greet(firstName, secondName) {
   console.log(`Good morning, ${firstName} ${secondName}`);
 }
 
-// Example of calling the greet function with arguments;
+// Example of calling the greet function with 2 arguments;
 
 greet("John", "Doe");
 
@@ -60,7 +60,7 @@ let doorDimensions = height + width;
 
 console.log(doorDimensions); // Output will be 15 meters
 
-// ! Function expressions;
+// Function expressions;
 
 const areaOfSquare = function (side) {
   return side * side;
@@ -70,7 +70,7 @@ const areaOfSquare = function (side) {
 const square1Area = areaOfSquare(4); // 16
 const square2Area = areaOfSquare(7); // 49
 
-// ! Arrow function;
+//  Arrow function;
 
 // Arrow function for calculating the area of a rectangle
 const areaOfRectangle = (length, width) => {

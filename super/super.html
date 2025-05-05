@@ -194,6 +194,14 @@ We can use two (!!) to convert an expression to a boolean .</p>
 expression1 && expression 2
 looks at one of the two expressions:
 false && false = false 
+GUARD OPERATOR: checks for the left side is the value is false and stops the expression. 
+<!-- short circuit evaluation // guar operator
+ you can use the guard message to start with a false value and end with a true value' 
+ const message = false && `hello`;
+ console.log(message)
+ it will display false. -->
+
+
 false && truthy = false 
 true &7 true = true 
 true && false = false </p>
@@ -204,7 +212,11 @@ true && false = false </p>
 <h3>OR(||):</h3>
 <p>The logical OR ( || ) operator also takes two expressions:
  expression1 || expression2 ;
+ // DEFAULT OPERATOR -checks for the left side is true/ and stops early. :
+
  NB: It returns the first expression that is true, either or the left or the right. 
+
+// Its the Default Operator 
 
  There are three different ways the || operator can be evaluated:</p>
 
@@ -241,8 +253,7 @@ true && false = false </p>
  operator returns the left side's truthy value and completes.
  2. If the left-side expression is falsey, the || operator returns the right side's value (regardless
  of whether it's truthy or falsey) and completes</b>
-
- B
+ 
 
 <h2> ARITHMETIC IN JAVASCRIPT</h2>
 
@@ -250,6 +261,12 @@ true && false = false </p>
 
 <!-- Javascript code -->
   <script > 
+    // this are shortcuts for it statements 
+    const message = false && `hello`;
+    const result = 0? `truthy`:`falsy`;
+
+    console.log(message)
+    console.log(result)
     
     function ages(age){
     if (age>18){
@@ -258,6 +275,8 @@ true && false = false </p>
       return("You cannot drive")
     }
     }
+
+    const catAge = 18? 
 
   function isRose(cat){
       if(cat === "rose"){
@@ -293,9 +312,6 @@ true && false = false </p>
       return result; 
     }
 
-
-    4512.
-    h
   console.log(isRose("sherlyne"))
   console.log(isCat("tiger"));
   console.log(switchName("Mary"))
