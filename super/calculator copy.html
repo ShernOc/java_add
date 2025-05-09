@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div style="justify-items: center">
+      <h1>Calculator</h1>
+
+      <p>
+        <!-- 7 -->
+        <button
+          title="7"
+          onclick="
+     //calculation +='7';
+   console.log(calculator(`7`)) 
+    "
+        >
+          7
+        </button>
+
+        <!-- 8 -->
+        <button
+          title="8"
+          onclick="
+    //calculation +='8';
+    console.log(calculator(`8`))"
+        >
+          8
+        </button>
+
+        <!-- 9 -->
+        <button
+          title="9"
+          onclick="
+    //calculation +='9';
+    console.log(calculator(`9`))"
+        >
+          9
+        </button>
+
+        <!-- multiplication -->
+        <button
+          title="multiply"
+          onclick="
+   //calculation *= '*'
+    console.log(calculator('*'))"
+        >
+          x
+        </button>
+      </p>
+
+      <p>
+        <!-- 4-->
+        <button
+          title="4"
+          onclick="
+    //calculation +='4';
+    console.log(calculator(`4`))"
+        >
+          4
+        </button>
+
+        <!--5-->
+        <button
+          title="5"
+          onclick="
+  //calculation +='5';
+    console.log(calculator(`5`))"
+        >
+          5
+        </button>
+
+        <!-- 6 -->
+        <button
+          title="6"
+          onclick="//calculation +='6';
+    console.log(calculator(`6`))"
+        >
+          6
+        </button>
+
+        <!-- minus  -->
+        <button
+          title="minus"
+          onclick="
+    //calculation -= '-';
+    console.log(calculator(`-`))"
+        >
+          -
+        </button>
+      </p>
+
+      <p>
+        <!-- 1 -->
+        <button
+          title="1"
+          onclick="
+      //calculation += '1';
+      console.log(calculator(`1`))"
+        >
+          1
+        </button>
+
+        <!-- 2 -->
+        <button
+          title="2"
+          onclick="
+     //calculation += '2';
+      console.log(calculator(`2`))"
+        >
+          2
+        </button>
+
+        <!-- 3 -->
+        <button
+          title="3"
+          onclick="
+      //calculation +='3';
+      console.log(calculator(`3`))"
+        >
+          3
+        </button>
+
+        <!-- add button  -->
+        <button
+          title="add"
+          onclick="
+      //calculation +='+'
+      console.log(calculator
+(`+`))"
+        >
+          +
+        </button>
+      </p>
+
+      <p>
+        <!-- zero button -->
+        <button
+          title="0"
+          onclick="
+    //calculation +='0';
+    console.log(calculator(`0`))"
+        >
+          0
+        </button>
+
+        <!-- divide -->
+        <button
+          title="divide"
+          onclick="
+    /*divisor = parseFloat(devisor)
+    if (!isNaN(devisor) && devisor !==0){
+     calculation /= divisor;*/
+    //calculation /= calculation;
+    //calculation /= '/' // output as none
+      console.log(calculator('/'))"
+        >
+          /
+        </button>
+
+        <!-- delete button -->
+        <button
+          title="delete"
+          onclick="
+    calculation = calculation;
+    console.log(calculation)
+    "
+        >
+          AC
+        </button>
+
+        <!-- percentage -->
+        <button
+          title="percentage"
+          onclick="
+    //calculation %= '%';
+    console.log(calculator('%'))"
+        >
+          %
+        </button>
+      </p>
+
+      <p style="justify-content: left">
+        <!-- Finds the total -->
+        <button
+          title="total"
+          onclick="
+    calculation = eval(calculation)
+    console.log(`Total= ${calculation}`)
+    "
+        >
+          =
+        </button>
+      </p>
+    </div>
+  </body>
+  <script>
+    //  let number = "";
+    let calculation = "";
+
+    function calculator(number) {
+      const adds = calcAdd(number);
+      //const mins = calcMinus(number);
+      // const multip = calcMultiply(number)
+
+      return adds;
+    }
+
+    
+    function calcAdd(number) {
+      return (calculation += number);
+    }
+
+    function calcMinus(number) {
+      return (calculation -= number);
+   }
+
+    function calcMultiply(number) {
+      return (calculation *= number);
+    }
+
+    function calcModulus(number) {
+      return (calculation %= number);
+    }
+
+    function calcMultiply(number) {
+      return (calculation *= number);
+    }
+
+    function calcDivide(number) {
+      return (calculation /= number);
+    }
+
+
+
+  /* let calculation=0; 
+   
+Math.max(34,45)
+  //console.log(calculation)
+  
+  if (true){
+    console.log("hello")
+  }
+  
+  
+  function addFive(number){
+    let result;
+    if(number%2!==0){
+      result = number +5;
+      return result
+    }else{
+      console.log("number is not divisible by 2")
+    }
+  }
+
+  
+console.log(Math.floor(Math.random()*6)+5);
+
+console.log(addFive(15))*/
+  </script>
+</html>
