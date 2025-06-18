@@ -3,17 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <style>
+    .addtocart{background-color: yellow;
+
+    }
+    .buynow{
+      background-color: orange;
+    }
+
+  
+  </style>
+  <title>Buttons</title>
 </head>
 <body>
   <h1>Exercise1</h1>
   <br>
   <!-- Exercise -->
-   <h2>Adults Plain Cotton T-shirts</h2>
+   <h2>Items (1+1)</h2>
+
+   <h3> T-shirts</h3>
    <br>
    <p>Price: $7.99</p>
-   <button class="addtocart" title="Added"   onclick="alert('Added')">Add to Cart</button>
-   <button  class="buynow"    onclick="alert('Purchased')">Buy Now</button>
+
+   <h3>Basketball </h3>
+   <p>Price: $ 20.95 </p>
+
+   <h3>Toaster</h3>
+   <p>Price: $ 56.89 </p>
+
+   items : 
+   shipping and handling = 4.99
+
+   total before tax: 
+   tax (10%) of the total: 
+
+   Order total: 
+
+   <button class="addtocart" title="Add to cart"   onclick="alert('Added')">Add to Cart</button>
+   <br>
+   <button  class="buynow" 
+    onclick=" console.log('Loading')
+    alert('Purchased') ">Buy Now</button>
   <!-- Show quantity: shows the total of the quantity-->
 <button onclick="
 console.log(`Cart total quantity:${cartQuantity}`);">Show Quantity</button>
@@ -71,6 +101,9 @@ console.log(`Cart quantity:${cartQuantity}`);">-3</button>
 
 
 <script>
+  console.log("Welcome")
+
+
    let cartQuantity = 0 ; 
     /* let cartQuantity=0;
     const name = "sherlyne";

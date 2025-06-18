@@ -8,6 +8,11 @@
 </head>
 <body>
   <h1> JAVASCRIPT RECAP</h1>
+  <h3>giving instruction to a computer </h3>
+<li>string =  text or anything between single 'sherlyne' or double quotes  "sherlyne", or in backticks `sherlyne`, </li>
+<li><b>template strings</b> are string created by backticks : used in interpolation </li>
+<li>`items (${sherlyne}) Nb insterting value into a string.  </li>
+
   <!-- DATA TYPES -->
 <h2>VARIABLES AND DATA TYPES </h2>
 
@@ -26,7 +31,8 @@
       
       <li> <b>const</b>: because it cannot be redeclared. or reassigned it  protects the variables </li>
       <li><b>let</b> -  only when changing the variable later</li>
-      <li><b>var</b> - not used in javascript but is seen in og javascript code </li>
+      <li><b>var</b> - not used in javascript but is seen in original javascript code / not used now in js </li>
+
 
       <h3>Variables Names in JavaScript</h3>
       <li>Variables should start in lower case</li>
@@ -48,10 +54,17 @@
 
     
    <h3>DATA TYPES</h3>
+   <h4>Order of operation/operation precedence= BODMAS </h4>
+  brackets of division multiplication addition and subtraction 
    <br>
    <h4>PRIMITIVE DATA-TYPES</h4>
    <li>Numbers = 1, </li>
-   <li>string = anything between single or double quotes = "sherlyne ", "1" , </li>
+   <li>integers = 1,2,3</li>
+   <li>floats = decimals = 3.2 </li>
+   <li>computer can only store 0 and 1. 
+   </li>
+   <li>Math.round(2.2) = used to round to the nearest integer </li>
+   
    <li>Boolean - either one of two values true or false</li>
    <li>undefined = is a empty values </li>
    <li>Symbol</li>
@@ -69,8 +82,9 @@
 
 <h2>COMPARISON IN JS</h2>
 
-<H3>3. Booleans </H3>
+<H3>3. BOOLEANS</H3>
   <p><b>Booleans</b>-checks if the condition/s is true or false</p>
+
  <!-- Booleans : checks if the conditions are true or false:  -->
  <br>
 <p>we have <b>loose equality</b> and <b>strict equality operator</b></p>
@@ -103,6 +117,12 @@
   88 , is less than the Unicode value of 9 .
   "88" > "9";
   // => false
+  you can use the <b>Escape character \ which allows for one to use characters like i'm when coding. 
+
+  \n = multi line string. takes the string into a new line 
+    new line or an escape character
+
+  </b>
 </p>
 
 <br>
@@ -179,8 +199,7 @@ console.log(cat)
 <li>NOT(!)</li>
 <li>AND(&&)</li>
 <li>OR(||)</li>
-
-
+  
 <h3>NOT (!): </h3>
 <p>NOT(!)- Converts/flips the   a truthy value to false and a falsy value to true.
 - Using double NOT (!!) converts a value to its boolean equivalent.(true/false)
@@ -203,7 +222,7 @@ GUARD OPERATOR: checks for the left side is the value is false and stops the exp
 
 
 false && truthy = false 
-true &7 true = true 
+true && true = true 
 true && false = false </p>
 
 
@@ -257,8 +276,6 @@ true && false = false </p>
 
 <h2> ARITHMETIC IN JAVASCRIPT</h2>
 
-
-
 <!-- Javascript code -->
   <script > 
     // this are shortcuts for it statements 
@@ -278,7 +295,7 @@ true && false = false </p>
 
     const catAge = 18? 
 
-  function isRose(cat){
+    function isRose(cat){
       if(cat === "rose"){
         return "Hi Rose"
       }else if (typeof cat === "string"){
@@ -286,14 +303,14 @@ true && false = false </p>
       }else {
         return "sorry pass in a cat name"
       }
-     } 
+    } 
 
-     function isCat(cat){
+    function isCat(cat){
      return cat === "tiger"?"Hi tiger you are cute": `Hi ${cat}`; 
-     }
+     };
 
      // switch 
-     function switchName(name){
+    function switchName(name){
       switch(name){
         case "sherlyne":
           return "Hi sherlyne"

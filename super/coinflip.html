@@ -17,31 +17,34 @@
         (6j) In the previous if statements()
     </p>
     <script>
-        const numRan = Math.random();
+        const randomNumber = Math.random();
         let result = '';
-        const guess = 'heads';
+        const guess ='heads' ;
 
-        /*if(numRan<0.5){
-            result = ('heads')
+        if(randomNumber < 0.5){
+            result = 'heads'
         }else{
             result =('tails')
         }
+
         console.log(result)
 
-        const guessCoin = guess === result?'You win':'You loose'*/
-        
-        /* if (guess === result){
-            console.log("You win")
+        if(guess === results){
+            console.log("You win");
         }else{
-            console.log("You loose")
-        }*/
+            console.log("You lose");
+        }
+
+        // Ternary expression 
+        const guessCoin = guess === result?'You win':'You loose';
+       
 
         //Ternary 
-        const randomNumber = Math.random()<0.5?'heads':'tails'; 
+        /*const randomNumber = Math.random()<0.5?'heads':'tails'; 
         console.log(randomNumber)
 
         const guessCoin = randomNumber === 'heads' ?'You win':'You loose'
-        console.log(guessCoin)
+        console.log(guessCoin)*/
 
     </script>
 </body>

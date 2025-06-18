@@ -135,17 +135,3 @@ let ingredients;
  // You can store a variable in 
  const cat = "Tiger" ? "Hi tiger":"What a cat"
  console.log(cat)
-
-
- 
- 
-
-
-
-
-
-
-
-
-
-

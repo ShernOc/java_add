@@ -15,9 +15,9 @@ function pickComputerMove(){
   else if(randomNumber>= 2/3 && randomNumber<1){
   computerMove=('scissor');
   }
-
   return computerMove;
 }
+
 // call the function
 console.log(pickComputerMove())
 
