@@ -73,13 +73,82 @@
 
  console.log(product2.books()); // Avengers 
 
-
 const education = {}; // create an empty object 
 education.girls = ["Rahab","Alice","Sherlyne"]; // Dot 
 education.type = ["science","therapy", "computer"],
 education.school = ["Maseno University"]
 
-console.log(education.school); 
+console.log(education); 
+
+//JSON: 
+
+/*JSON = javascript Object Notation
+The key/properties must all use the double quotes. 
+"name": "sherlyne",
+- does not support functions. 
+-Why use it? Because it's understood in many languages 
+-Used to store data 
+
+To convert JS object to JSON use 
+JSON.stringify(object) = method(takes an object we want to convert to json)
+*/ 
+
+console.log(JSON.stringify(product2.rating))
+
+// Convert the JSON string to JS object - JSON.parse(JSON.stringify(product2))
+
+const jsonString = JSON.stringify(product2.rating);
+
+console.log(JSON.parse(jsonString)); 
+console.log(typeof JSON.parse(jsonString))// object 
+
+const num = 123
+const myJSON = JSON.stringify(num);
+console.log(myJSON)
+console.log(typeof myJSON);
+
+
+const family = {
+    mother: {
+      firstName: "Susan",
+      lastName: "Doyle",
+      age: 32,
+    },
+    father: {
+      firstName: "John",
+      lastName: "Doyle",
+      age: 33,
+    },
+    daughter: {
+      firstName: "Lily",
+      lastName: "Doyle",
+      age: 5,
+    },
+    son: {
+      firstName: "Mike",
+      lastName: "Doyle",
+      age: 8,
+    },
+  };
+
+  console.log(typeof family) // family object
+  const familyJSON = JSON.stringify(family)// converts family to json
+  console.log(familyJSON);
+  const familyOb = JSON.parse(familyJSON)
+  // back to js object 
+  console.log(familyOb)
+
+    //LOCAL STORAGE: = saves the values more permanently: 
+    // Allows the word to be saved permanently. 
+    // You are going to pass a name and value string we want to save in the local storage: name = message, value = hello 
+      localStorage.setItem('message','hello')
+
+    // To get the string out of local storage, 
+    localStorage.getItem('message')
+    console.log(localStorage.getItem('message'));
+
+    
+
 
 
 

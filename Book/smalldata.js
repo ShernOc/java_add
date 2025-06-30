@@ -1,4 +1,6 @@
 
+    // Built in JS Object - helps convert Js Object to JSON 
+    
     const books = [
       {
         "author": "Chinua Achebe",
@@ -80,3 +82,4 @@
     ]; 
 
     console.log("bottom of the data")
+    console.log(books)

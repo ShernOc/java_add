@@ -196,8 +196,10 @@ const family = {
     },
   };
 
-  console.table(family); 
+  console.table(family); //  
   console.error("This is an error in this code ")
   console.warn("This a warning slow down")
+
+  
 
 

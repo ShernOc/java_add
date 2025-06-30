@@ -55,20 +55,27 @@
     // resets the scores to zero
       score.wins = 0;
       score.losses = 0;
-      score.ties = 0 "
+      score.ties = 0 ;
+      "
     >Reset the score</button>
 
   </div>
 
   <script>
-    //  this is an object save the score  make it equal to an object 
+    //  this is an object named score save the score  make it equal to an object 
     //wins starts at zero
-    const score = {
+    /*const score = {
       wins:0,
       losses:0,
-      ties: 0 
-    };
+      ties:0,
+    }; */
 
+    // You can also now remove the top  code and add, the following
+    
+    // Access/get the scores
+    const score = JSON.parse(localStorage.getItem('score'));
+    // this will convert the score to an object. 
+   console.log(score)
 
     function pickComputerMove(){
       const scissorRandomNumber= Math.random();
@@ -126,9 +133,21 @@
           score.wins += 1;
         }else if (result=== 'You loose'){
           score.losses += 1;
-        }else if (result ==='its a tie'){
+        }else if (result === 'its a tie'){
           score.ties += 1;
         };
+
+// store / saved into the local storage the scores, and stringify the work using JSON.stringify
+// This will save the game into the local storage 
+        localStorage.setItem('score', JSON.stringify(score));
+
+   
+
+
+
+
+
+
 
       // create a popup/ an alert function displays the scores and the wins.  
         alert(`You picked ${playerMove}, Computer picked ${computerMove}. Results= ${result}, 
