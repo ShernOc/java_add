@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body> 
+</body>
+<script>
+    /*
+    // this is an object name products
+
+    const product = {
+        name:'socks',
+        price:1090
+    }
+
+    console.log(product)
+    console.log(product.name);
+     console.log(product.price);
+
+      const fullName = {
+        name:'sherlyne',  // name is a property, 'sherlyne is the value '
+        title:'SoftDev' // this is property value pair
+    }
+
+    console.log(fullName)
+
+    // to run the property, console.log(product.property) will access the value, 
+    console.log(fullName.name);
+
+ // we can also you the property to change the value of an object, using the property name. 
+ product.name="shoes"
+ console.log(product.name); // this is called dot.notation
+
+ // To add another property, 
+ product.house= "lambo"
+ console.log(product);
+
+ // Delete the property (house)
+ delete product.house;
+ console.log(product)// this 
+ */
+
+ // SQUARE BRACKET NOTATION 
+
+ const product2 = {
+    name:'shirt',
+    // You can add a bracket notation to add a property number 
+    ['full-names']:'sherlyne Ochieng',
+
+    // you can also have a nested object, meaning an object inside an object
+    rating:{
+        stars:4.5,
+        count:87
+    },
+
+    // you can also add a function inside an object which is called a method
+    books:function book(){
+        console.log('Avengers');
+    }
+ };
+
+ console.log(product2.name);
+
+ // how to access the product, is using the [] square bracket Notation - Its used 
+ // Its used get properties that are not there or properties that do not work. 
+    console.log(product2['delivery']);
+    console.log(product2['full-names']); // sherlyne ochieng
+// to access a nested object, 
+ console.log(product2.rating.count); // 87
+
+ console.log(product2.books()); // Avengers 
+
+
+const education = {}; // create an empty object 
+education.girls = ["Rahab","Alice","Sherlyne"]; // Dot 
+education.type = ["science","therapy", "computer"],
+education.school = ["Maseno University"]
+
+console.log(education.school); 
+
+
+
+ 
+</script>
+</html>
+

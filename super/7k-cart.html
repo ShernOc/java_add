@@ -11,6 +11,8 @@
   <br>
 
 <button onclick="
+
+updateCartQuantity('+=1')
 console.log(`Cart quantity:${cartQuantity}`)
   "
   >Show Quantity</button>
@@ -109,7 +111,18 @@ console.log(`Cart quantity:${cartQuantity}`);">-3</button>
   /*saves the quantity*/ 
 
   // lets carts holds a quantity of 10:Check if if the quantity is greater than 10: 
+  
   let cartQuantity =0;
+  function updateCartQuantity(cartQuantity){
+  
+
+    if (cartQuantity<=10){
+      if()
+    console.log(`Cart quantity:${cartQuantity}`) 
+      }else{
+        alert('The Cart is full')
+      }
+}
 
   
   

@@ -1,50 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>functions</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>FUNCTIONS</h1>
-    <P>Functions allows us to reuse code 
-        - functions allows us to update the work
-        return statement lets us get a value out of a function
-    </P>
+    <p>
+      Functions allows us to reuse code - functions allows us to update the work
+      return statement lets us get a value out of a function You use the
+      camelCase to write the name of the function - Call/run the function -
+    </p>
 
-    function function1(){
-        console.log("hello")
-        console.log(2+2)
-    }
+    function function1(){ console.log("hello") console.log(2+2) }
 
     <h3>Return</h3>
-    Return: gets a value out of a function
-    // return something from a function.
-    // when this function gets called will result in the value;  
-    // return ends the function that is being called 
-    <br>
+    Return: gets a value out of a function // return something from a function.
+    // when this function gets called will result in the value; // return ends
+    the function that is being called
+    <br />
 
-    <h3>Parameters: </h3>
-    parameter: puts a value into the function 
-    parameter works the same as the variable: we can save a value inside the parameter
-    -Use the camelCase
+    <h3>Parameters:</h3>
+    parameter: puts a value into the function parameter works the same as the
+    variable: we can save a value inside the parameter -Use the camelCase
     -Parameter only exist inside the function scope
+    <div class="rock">
+      <h2>ROCK PAPER SCISSORS GAMES</h2>
 
+      <p>
+        <b
+          >rules of the game is that rock beats scissor,paper beats rocks,
+          scissor beats paper :
+        </b>
+        <br />Therefore is you pick rock and computer picks scissors, you win
+      </p>
 
+      <p>
+        ROCK PAPER SCISSOR
+        <br />
+        steps: to complete a task: convert to code: the computer randomly
+        selects the move compare the moves to the the results display the
+        results in a popup
+      </p>
 
+      <!-- rock -->
+      <!-- 
+      b>Options: generate a random number </b>
+        <li>if randomNumber is between 0-1/3 = rock</li>
+        <li>if randomNumber is between 1/3-2/3 = paper</li>
+        <li>if randomNumber is between 2/3-1 = scissor</li>
+      -->
+
+      <!-- rock button -->
+      <button
+        onclick="
+      // this calls the playGame function 
+      playGame('rock')"
+      >
+        Rock
+      </button>
+
+      <!-- paper-->
+      <button
+        class="paper"
+        onclick="
+        playGame('paper');"
+      >
+        Paper
+      </button>
+
+      <!-- scissors -->
+      <button
+        class="scissor"
+        onclick="
+      playGame('scissors'); "
+      >
+        Scissor
+      </button>
+    </div>
+
+    <!-- java script -->
     <script>
-        function function1(){
-            return("hello")
-            console.log(2+2)
-        }
-        function1()// calling the function/running the function
+      function function1() {
+        return "hello";
+        console.log(2 + 2);
+      }
+      function1(); // calling the function/running the function
 
-        // This functions takes a parameter named tax1
-        function tax(tax1){
-            console.log(tax1*1)
-        }
-        tax(200); // passing a value into the function= parameter, is an argument(200), 
+      // This functions takes a parameter named tax1
+      function tax(tax1) {
+        console.log(tax1 * 1);
+      }
+      tax(200); // passing a value into the function= parameter, is an argument(200),
 
+      // Rock paper, scissors work
+      // this variable is a global scope and can now be used anywhere
+      function playGame(playerMove) {
+        const computerMove = pickComputerMove();
+
+        //if the computer move is rock and button is rock the results equals
+
+        let results = "";
+
+        if (playerMove === "scissors") {
+          if (computerMove === "rock") {
+            results = "You loose, Computer wins";
+          } else if (computerMove === "paper") {
+            results = "You win";
+          } else if (computerMove === "scissor") {
+            results = "Its a tie";
+          }
+        } else if (playerMove === "paper") {
+          if (computerMove === "rock") {
+            results = "You win";
+          } else if (computerMove === "paper") {
+            results = "Its a tie";
+          } else if (computerMove === "scissors") {
+            results = "You loose, Computer wins";
+          }
+        } else if (playerMove === "rock") {
+          if (computerMove === "rock") {
+            results = "its a tie";
+          } else if (computerMove === "paper") {
+            results = "You loose, Computer wins";
+          } else if (computerMove === "scissor") {
+            results = "You win";
+          }
+        }
+
+        // create a popup
+        alert(
+          `You picked ${playerMove}, Computer picked ${computerMove}. Results=${results}`
+        );
+      }
+
+      // computer move
+      function pickComputerMove() {
+        const randomNumber = Math.random();
+        let compMove = "";
+
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          // Have the computer move :
+          compMove = "rock";
+        } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+          compMove = "paper";
+        } else if (randomNumber >= 2 / 6 && randomNumber < 1) {
+          compMove = "scissor";
+        }
+        return compMove;
+      }
     </script>
-</body>
+  </body>
 </html>

@@ -1,4 +1,3 @@
-
 // ARRAY 
 // console.log(winningNumbers[2]); // 14
 
@@ -62,7 +61,7 @@ const Bk = {
     publisher: "Me "
 }
 
-// To accesses the title of the book console.log(Object.key )
+// To accesses the title of the book console.log(Object.key/property )
 console.log(Bk.title); // i love you 
 Bk.title = "python"
 console.log(Bk.title); // "python"
@@ -97,11 +96,12 @@ newMenu;
 // => ["Jalapeno Poppers", "Veggie Burger", "House Salad", "Teriyaki Tofu", "French Fries", "Onion Rings"]
 
 
-//OBJECTS: collection of data that consist of (Key-value bounded by curly braces {})
+//OBJECTS: collection of data that consist of (Key/property-value bounded by curly braces {})
 const object = {
     key1:"value1",
+    // this is a nested object : an object inside an object
     key2:{
-        life: "No life", // this is a nested object 
+        life: "No life", 
         shoes: "Adidas"
     }
 }; 
