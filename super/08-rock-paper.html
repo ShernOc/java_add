@@ -56,6 +56,9 @@
       score.wins = 0;
       score.losses = 0;
       score.ties = 0 ;
+
+      // this will reset the local storage score to 0; 
+      localStorage.removeItem('score')
       "
     >Reset the score</button>
 
@@ -73,9 +76,13 @@
     // You can also now remove the top  code and add, the following
     
     // Access/get the scores
-    const score = JSON.parse(localStorage.getItem('score'));
+    let score = JSON.parse(localStorage.getItem('score'));
     // this will convert the score to an object. 
    console.log(score)
+
+   if (score === null){
+    score = {wins:0,ties:0,losses:0}
+   };
 
     function pickComputerMove(){
       const scissorRandomNumber= Math.random();
