@@ -66,8 +66,6 @@
 
   <script>
 
-
-
     //  this is an object named score save the score  make it equal to an object 
     //wins starts at zero
     /*const score = {
@@ -78,29 +76,34 @@
 
     // You can also now remove the top  code and add, the following
     
-    // Access/get the scores
-    let score = JSON.parse(localStorage.getItem('score'));
+    /* Access/get the scores
+    let score = JSON.parse(localStorage.getItem('score'));*/
+
+
     // this will convert the score to an object. 
-   console.log(score)
-
+    
     /* if (score === null){
-    score = {wins:0,ties:0,losses:0}
-   };
-
-   */
-
-   if (!score){
-    score = {
-      wins:0,
-      ties:0,
-      losses:0
-    }
-   };
-
-   // Another shortcut which is the default operator;
-
+      score = {wins:0,ties:0,losses:0}
+      };
+      
+      if (!score){
+        score = {
+          wins:0,
+          ties:0,
+          losses:0
+          }
+          }; 
+          
+          */
+          
+          // default operator || if the wins is there it will work with that else, it will input the default value score wins:0. 
+      let score = JSON.parse(localStorage.getItem('score')) || {
+            wins:0,
+            ties:0,
+            losses:0
+          }
+          console.log(score)
    
-
 
     function pickComputerMove(){
       const scissorRandomNumber= Math.random();
