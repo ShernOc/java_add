@@ -65,6 +65,9 @@
   </div>
 
   <script>
+
+
+
     //  this is an object named score save the score  make it equal to an object 
     //wins starts at zero
     /*const score = {
@@ -80,9 +83,24 @@
     // this will convert the score to an object. 
    console.log(score)
 
-   if (score === null){
+    /* if (score === null){
     score = {wins:0,ties:0,losses:0}
    };
+
+   */
+
+   if (!score){
+    score = {
+      wins:0,
+      ties:0,
+      losses:0
+    }
+   };
+
+   // Another shortcut which is the default operator;
+
+   
+
 
     function pickComputerMove(){
       const scissorRandomNumber= Math.random();
@@ -147,6 +165,13 @@
 // store / saved into the local storage the scores, and stringify the work using JSON.stringify
 // This will save the game into the local storage 
         localStorage.setItem('score', JSON.stringify(score));
+
+      
+
+
+
+
+
 
    
 
