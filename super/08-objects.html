@@ -7,9 +7,60 @@
 </head>
 <body> 
 </body>
+
+<h1>OBJECTS</h1>
+
+<p>
+Objects: group multiple values together
+<br>
+this is an object name products
+<br>
+
+    const product = {
+        name:'socks', 
+        price:1090
+    }
+
+    <br>
+    const fullName = {
+        name:'sherlyne',  // name is a property, 'sherlyne is the value '
+        <br>
+        title:'SoftDev' // this is property value pair
+    }
+</p>
+
+<h2>JSON BUILT OBJECT</h2>
+JSON.stringify(Object): used to convert an object to a JSON BUILT OBJECT 
+JSON.parse(JSON): used to covert JSON OBJECT to a javascript object
+
+</ul><h3>LOCAL STORAGE</h3>
+LOCAL STORAGE: Used to <b> permanently store data</b>
+- The data stored in local storage is accessible
+<br><br>
+- 1. To store/set data use 
+<b>localStorage.setItem("key/message","value")
+</b>
+<br> 
+<br>
+To get the items
+<b>localStorage.getItem("key/message"): 
+</b>
+<br>
+<br>
+To delete items/ single items
+<b>localStorage.removeItem("key");
+</b>
+<br>
+<br>
+To clear the all the items 
+<br>
+<b>localStorage.clear(key):
+</b>
+
+
 <script>
-    /*
-    // this is an object name products
+/*
+// this is an object name products
 
     const product = {
         name:'socks',
@@ -44,6 +95,8 @@
  */
 
  // SQUARE BRACKET NOTATION 
+
+ /*
 
  const product2 = {
     name:'shirt',
@@ -93,6 +146,8 @@ To convert JS object to JSON use
 JSON.stringify(object) = method(takes an object we want to convert to json)
 */ 
 
+/*
+
 console.log(JSON.stringify(product2.rating))
 
 // Convert the JSON string to JS object - JSON.parse(JSON.stringify(product2))
@@ -138,7 +193,9 @@ const family = {
   // back to js object 
   console.log(familyOb)
 
-    //LOCAL STORAGE: = saves the values more permanently: 
+
+
+//LOCAL STORAGE: = saves the values more permanently: 
     // Allows the word to be saved permanently. 
     // You are going to pass a name and value string we want to save in the local storage: name = message, value = hello 
       localStorage.setItem('message','hello')
@@ -147,12 +204,66 @@ const family = {
     localStorage.getItem('message')
     console.log(localStorage.getItem('message'));
 
+    */
+
+    const family = {
+      firstName: "Susan",
+      lastName: "Doyle",
+      age: 32,
+    }
+
+    // OBJECT SHORTCUTS
+// destructuring shortcut: take properties out of an object
+    const {firstName} = family; // this will get the FirstName of susan
+    console.log(firstName);
+
+    //Will take the property out, 
+
+  const {age,lastName} = family; // this will get the FirstName of susan
+    console.log(age,lastName);
+
+  // Shorthand property 
+
+  const object5 ={
+     //firstName:firstName  // we are borrowing the name
+
+
+    // if the property and the value are the same you just type it once:
+    firstName  
+  }
+
+  console.log(object5)
+
+  // Shorthand method 
+
+    const object6 ={
+     //firstName:firstName  // we are borrowing the name
+
+
+    // if the property and the value are the same you just type it once:
+    firstName, 
+    method: function function1(){
+      console.log("method");
+    }
+
+    method(){
+      console.log()
+    }
+
+  };
+
+  console.log(object6)
+  object6.method();
+
+
+
+
+
+  
+
     
 
 
-
-
- 
 </script>
 </html>
 

@@ -57,7 +57,7 @@
       score.losses = 0;
       score.ties = 0 ;
 
-      // this will reset the local storage score to 0; 
+      // this will reset the local storage score to 0; // removeItem
       localStorage.removeItem('score')
       "
     >Reset the score</button>
@@ -103,8 +103,9 @@
             wins:0,
             ties:0,
             losses:0
-          }
-          console.log(score)
+          };
+
+        console.log(score)
    
 
     function pickComputerMove(){
@@ -175,19 +176,8 @@
 
 
 
-
-
-
-   
-
-
-
-
-
-
-
-      // create a popup/ an alert function displays the scores and the wins.  
-        alert(`You picked ${playerMove}, Computer picked ${computerMove}. Results= ${result}, 
+// create a popup/ an alert function displays the scores and the wins.  
+    alert(`You picked ${playerMove}, Computer picked ${computerMove}. Results= ${result}, 
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
 
       }
