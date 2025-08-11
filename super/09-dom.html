@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body> 
+</body>
+<h1>DOCUMENT OBJECT MODEL</h1>
+
+<p>The document object: represents or models the webpage</p>
+
+<h3>Properties and Methods of DOM</h3>
+<p>
+<ul> 
+    <li>document: changes the content of document/website and it has properties and methods.</li>
+    <li>document.title</li>
+    <li>document.body</li>
+    <li>document.body.innerHTML 
+        <br> 
+        innerHTML = changes all the html code. 
+        <br>
+    </li>
+</ul>
+</p>
+    
+    <!-- demo buttons -->
+
+    <button class="b1 "> first Button</button>
+    
+    <button class="b2"> second Button</button>
+
+
+    <h3>METHODS = function saved inside an object</h3>
+    <p>To <b>get an element</b>  in the page/or body use: this methods</p>
+    <ul>
+        <li>document.querySelector('element'):allows us to get any element in page:</li>
+    </ul>
+
+    <p>To <b>change/alter</b> an element in the page/or body use: this methods</p>
+    <ul>
+        <li>document.querySelector('element') <b>.innerHTML</b>:allows us to change/update any element in the page using innerHTML</li>
+
+    </ul>
+
+    <p>To <b>change/alter more than one element</b> an element in the page/or body use: this methods</p>
+    <ul>
+        <li>Use the <b>class attribute (.button3)</b> such as <b>button class="button3">Button3</b> button to identify the button you want to alter/or target</li>
+        <li>document.querySelector('.').innerHTML:allows us to change/update any element in the page using innerHTML</li>
+    </ul>
+
+
+
+<script>
+   /* document.title
+    document.body
+    document.body.innerHTML
+
+    document.body.innerHTML = "NEW HTML BODY";
+    document.title = "DOM CHANGE"
+    console.log(document.title)
+    console.log(document.body)
+    console.log(document.body.innerHTML)
+    console.log(document.body.innerHTML = '<h1> NEW WORDS </h1><p> This is a new website created from script javascript</p>')*/
+
+    // METHODS are functions  to get an html element
+   console.log(document.querySelector('button')) 
+   
+   // every HTML element has a property called .innerHTML which is used to control/alter the content/html inside the element/ 
+
+     console.log(document.querySelector('p').innerHTML='life is great') 
+
+    //Alter more than one elements eg: two buttons but you want to change one. 
+    //Use the (class attribute (.))
+   console.log(document.querySelector('.b2').innerHTML='Button-2')
+   console.log(document.querySelector('.b1').innerHTML='Button-1')
+
+
+   //console.log(document.body.innerHTML="<div> <button>Good job</button> <br> Another div</div>")
+    
+       
+</script>
+
+
+</body>
+
+</html>
