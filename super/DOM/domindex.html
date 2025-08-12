@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  
+</head>
+<body>
+  <h1>
+    <p>Its a very Cold Day </p></p>
+  </h1>
+
+  <img src="./home/sherl/Development/code/class_work/f1/image/image1.png" alt="image1">
+  <!-- 
+  DOM- (Documet Object Model) -       
+  - allows for dynamic values to be created. 
+  js- helps manipulate elements 
+  - create and remove elements using java script 
+  -allows to access the html elements 
+  -->
+  <!-- ACCESS OR SELECTING ELEMENTS USING JAVA SCRIPT 
+   1. Select Using ID
+   const square = document.getElementId ("square");
+
+   2. Select Using Class
+   const circle = document.getElementsClassName("circle"); 
+
+   3. Select Using the CSS Selectors 
+   const square2 = document.querySelector("#square"); 
+   
+   
+   -->
+
+  <h1>Hello world!</h1>
+   <div id="square"></div> <!-- ID, is unique and specifi We created a id square, pass the document, call the object (document.getElementId is the method (square is the argument being passed))-->
+   <div class="circle"></div> <!-- Class is used to add multiple elements. -->
+
+  <div id="finance"> Reject the finance bill 2024
+  </div>
+  <div class="bill"></div>
+  <div class="bill"></div>
+  <br>
+  <button>Click me</button>
+
+
+<!-- connectchange.innerHTML += <newButton>Clickme -->  
+
+  <!-- SELECTIONG ELEMENTS USING THEIR RELATIONSHIP 
+   - Access the element for reference, we select the parent , and the chidl  
+  ARRAY  -->
+
+  <div id="parent"> To call on child1  
+    <div id=" child1">Child1</div> <!--const child1 = document.querySelector ("child1")-->
+
+    <div id="child2">Child2</div>
+  </div>
+  <di id="child3">child3</di></div> // To select child 3 you use the bracket notation  by using console.log(child [2])
+
+
+<!-- To change the style make a new div  -->
+ <div id ="rect"> </div>
+
+<div id="child4">Child4 </div>
+  <script src="main.js"></script>
+  <script src="/main2.js"></script>
+
+</body>
+</html>

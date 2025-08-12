@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM PROJECT</title>
+</head>
+<body>
+<P>Youtube Subscribe Button</P>
+<!--Algorithm-->
+<!-- want to change the button from subscribe to subscribe using js when clicked 
+ 
+Other wise -->
+
+
+<button  class="js-subscribe" onclick="
+// call the function 
+subscribe()
+" 
+>Subscribe</button>
+<br>
+
+<!-- <h4>Rock Paper Scissor</h4>
+
+<h4>Amazon Shipping Calculator</h4>
+ 
+<li>Order under $40 =+10 Shipping</li>
+<br>
+<li>Order under $40 = FREE Shipping</li>
+
+<form action="cost of order">Cost of order</form>
+<button>Calculate</button> -->
+<script>
+    function subscribe(){
+    const subButton=document.querySelector('.js-subscribe');
+
+    if(subButton.innerText==='Subscribe'){
+    subButton.innerText = 'Subscribed'
+    }else {
+    subButton.innerText = 'Subscribe'
+    }
+    }
+    
+
+</script>
+</body>
+</html>
