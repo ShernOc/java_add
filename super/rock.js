@@ -56,14 +56,14 @@ function playGame(playerMove){
   }
 
   // create a popup/ an alert function 
-   alert(`You picked ${playerMove}, Computer picked ${computerMove}. Results=${result}`);
+   alert(`You picked ${playerMove}, Computer picked ${computerMove}. Results=${results}`);
 
 return results;
 }
 
 console.log(playGame())
 
-document.body.innerHTML = 
+
 
 
 

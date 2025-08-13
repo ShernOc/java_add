@@ -32,10 +32,13 @@
         -display the result in a popup
 
         </p>
+
+<!-- Show the score on the page: 
+ - When you click rock paper and scissor, it will show the results in the screen and the moves that we picked. 
+- -->
         <!-- rock -->
-      <button
-          onclick="
-          // calling the playGame function
+      <button onclick="
+      // calling the playGame function
           playGame(`rock`)
     " > Rock</button>
 
@@ -57,11 +60,10 @@
       score.losses = 0;
       score.ties = 0 ;
 
-      // this will reset the local storage score to 0; // removeItem
+    // this will reset the local storage score to 0; // removeItem
       localStorage.removeItem('score')
       "
     >Reset the score</button>
-
   </div>
 
   <script>
@@ -78,7 +80,6 @@
     
     /* Access/get the scores
     let score = JSON.parse(localStorage.getItem('score'));*/
-
 
     // this will convert the score to an object. 
     
@@ -97,8 +98,12 @@
           }; 
           
           */
-          
-          // default operator || if the wins is there it will work with that else, it will input the default value score wins:0. 
+        
+//  get the scores that was saved from local storage and converted back to object using Parse 
+
+// const score = JSON.parse(localStorage.getItem('score')
+
+// default operator || if the wins is there it will work with that else, it will input the default value score wins:0. 
       let score = JSON.parse(localStorage.getItem('score')) || {
             wins:0,
             ties:0,
@@ -142,7 +147,6 @@
 
         }
         
-        
         else if(playerMove===`paper`){
           if (computerMove === 'rock'){
             result = 'You win';
@@ -175,13 +179,16 @@
 // This will save the game into the local storage 
         localStorage.setItem('score', JSON.stringify(score));
 
-      
+// create a popup/ an alert function displays the scores and the wins. 
 
 
-
-// create a popup/ an alert function displays the scores and the wins.  
     alert(`You picked ${playerMove}, Computer picked ${computerMove}. Results= ${result}, 
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+
+// Pop up 
+    /*alert(`You picked ${userMove}, Computer picked ${compPick} : 
+    Results = ${results}
+    Wins: ${score.wins} Losses: ${score.losses}  Ties:${score.ties}`)*/
 
       }
 
