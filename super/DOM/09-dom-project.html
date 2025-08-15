@@ -6,7 +6,7 @@
     <title>DOM PROJECT</title>
 </head>
 <body>
-
+<h1> DOM PROJECT</h1>
 <h1>Youtube Subscribe Button</h1>
 <!--Algorithm-->
 <!-- change the button from subscribe to subscribe using js when clicked 
@@ -19,6 +19,8 @@ subscribe()
 " 
 >Subscribe</button>
 <br>
+<br>
+<hr>
 
 <h1>Rock Paper Scissor</h1>
 <h3>PLAY THE GAME</h3>
@@ -50,18 +52,95 @@ subscribe()
     // the update function.
     updateScore();
       ">Reset Score</button>
+<hr>
+<br>
 
       
 <h1>Amazon Shipping Calculator</h1>
- 
-<li>Order under $40 =+10 Shipping</li>
+<p>Order under $40 =+10 Shipping</p>
+
+<p>Order over $40 = FREE Shipping</p>
+
+<input placeholder="Cost of order" 
+class="js-cost-input" onkeydown="handleKeydown(event);"
+ >
+
+<button onclick ="amazonShip();
+">Calculate</button>
+
+<!-- display the amount  -->
+ <br>
+ <br>
+ <b>Total Amount: </b>
+<p class="js-total-cost">Total Amount displayed here:</p>
+
+<hr>
+<h3>DOM PROJECT 2</h3>
+<p>9a. Create a button, Use document.querySelector to get the button from the page, and the display it in the console. 
+    <br>
+    <br>
+9b. Create another button 9b. below. Using JS change the text in the second button to 9b done
 <br>
-<li>Order under $40 = FREE Shipping</li>
+<button class="a"></button>
+<button class = "b"></button>
+<br>
+<br>
 
-<form action="cost of order">Cost of order</form>
-<button>Calculate</button>
+9c. create 2 buttons heads and tail: when clicking heads button, display "You choose:heads or tails "
+<br>
+<button onclick="headsTails('Heads')">Heads </button>
+<button onclick="headsTails('Tails')">Tails</button>
+<p class="js-choice"></p>
 
+9d. Create a textbox(input) and a submit button. When clicking submit display "Your name is: "name";  
+
+<input type="name"class="js-input-button" placeholder="Name" onkeydown=handleNamedown(event)>
+
+<button class="js-submit" onclick="nameText()">Submit</button>
+
+<p class = "js-display-name"></p>
+</p>
+
+ 
 <script>
+    // 9a,b : Button 
+    const button1 = document.querySelector('.a').innerHTML= 'Button1 9a';
+    console.log(button1)
+    const button2 = document.querySelector('.b').innerHTML= 'Button2 9b';
+
+// 9c. Heads and tails
+function headsTails(move){
+    if(move === 'Head'){
+        return move
+    }else if (move === 'Tail'){
+        return move;
+    }
+    console.log(move)
+
+    const optionChosen = document.querySelector('.js-choice').innerHTML = `You chose:$ ${move}`;
+
+}
+
+// Input and Submit button 
+function nameText(){
+    // get the input button
+    const inputBt = document.querySelector('.js-input-button');
+let nameTag = inputBt.value ;
+console.log(nameTag)
+// get and display the  paragraph:
+document.querySelector('.js-display-name').innerHTML = `Your name is:${nameTag}`
+
+}
+
+// handle the keydown
+function handleNamedown(event){
+   if(event.key ==='Enter'){
+    nameText()
+   }
+}
+
+// Subscribe button
+
     function subscribe(){
     const subButton=document.querySelector('.js-subscribe');
 
@@ -72,10 +151,7 @@ subscribe()
     }
     }
 
-
-
 // rock paper game
-
 // Computer pick 
 const randomNumber = Math.random();
 let results = '';
@@ -154,7 +230,6 @@ function playerMove(userMove) {
 
 }
 
-
 //Update the score: 
 
 //Score Storage  the results/Win 
@@ -182,7 +257,32 @@ updateScore();
 function updateScore() {
     document.querySelector('.js-score')
         .innerHTML = `Wins: ${score.wins} Losses: ${score.losses}  Ties:${score.ties}`;
- 
+}
+
+// Amazon Calculator
+function amazonShip(){
+    // get the input into the js: 
+    const inputEle = document.querySelector('.js-cost-input');
+    // allow for the value of input to be created
+    //let costs =(inputEle.value)
+    // Number() converts string to a number. 
+    let costValue = Number(inputEle.value);
+    console.log(costValue)
+    
+    //Calculations
+    if(costValue <= 40){
+        costValue +=10;
+    }
+
+    // display the total on the page.
+    document.querySelector('.js-total-cost').innerHTML = `$ ${costValue}`; 
+}
+
+// this will allow the enter key to calculated. looking at the event.key. and adding it. 
+// key down function to allow user to use the keydown
+function handleKeydown(event){
+    if (event.key === 'Enter'){
+    amazonShip()}
 }
 
 

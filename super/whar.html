@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-<title>Cart Quantity</title>
-</head>
-<body>
-  <h1>Cart Quantity</h1>
-  <br>
+<button onclick="
 
-<button onclick=" updateCartQuantity('+=1')
-  console.log(`Cart quantity:${cartQuantity}`)
+updateCartQuantity('+=1')
+console.log(`Cart quantity:${cartQuantity}`)
   "
   >Show Quantity</button>
 
 <!-- Add to cart increases the quantity  and displays it in the console -->
-
-
 <button onclick="
 // this is a js code: takes the code and adds it to the already quantity. 
 cartQuantity +=1;
@@ -34,7 +22,7 @@ cartQuantity +=1;
 <button onclick="
 cartQuantity +=2; 
 
- if(cartQuantity<=10){
+ if (cartQuantity<=10){
     console.log(`Cart quantity:${cartQuantity}`) 
   }else{
     alert('The Cart is full')
@@ -107,29 +95,30 @@ cartQuantity-=3;
 console.log(`Cart quantity:${cartQuantity}`);">-3</button>
 
 
+<!-- function calculateCal(cartQuantity){
+    if(cartQuantity<=10){
+        if(cartQuantity ==='1'){
+            cartQuantity +=1;
+        }else if (cartQuantity ==='2'){
+            Number(cartQuantity +=2)
+            console.log(cartQuantity)
+        }else if(cartQuantity ==='3'){
+            cartQuantity +=3
+        }else if (cartQuantity ==='4'){
+            cartQuantity +=4
+        }else if(cartQuantity ==='5'){
+            cartQuantity +=5
+        }else if (cartQuantity ==='0'){
+            cartQuantity=0
+        }else if(cartQuantity==='-1'){
+            cartQuantity -=1
+        }else if (cartQuantity ==='-2'){
+            cartQuantity -=2
+        }else if(cartQuantity ==='-3'){
+            cartQuantity -=3
+        }else if (cartQuantity>10){
+            alert('cart is full')
+            }
+    }else {'what is this'}
 
-
-
-<script>
-  /*saves the quantity*/ 
-
-  // lets carts holds a quantity of 10:Check if if the quantity is greater than 10: 
-  
-  let cartQuantity =0;
-
-  function updateCartQuantity(cartQuantity){
-    if (cartQuantity<=10){
-    console.log(`Cart quantity:${cartQuantity}`) 
-      }else{
-        alert('The Cart is full')
-      }
-}
-
-
-</script>
-
-</body>
-</html>
-
-
-
+} -->

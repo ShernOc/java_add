@@ -88,7 +88,6 @@ let isSNotEqual = 4 !== "4"; // true
 
 
 // * Relational Operators
-
 // Greater than
 let greaterThan = 1 > 4; // false
 
@@ -100,7 +99,6 @@ let lessThanOrEqualTo = 1 <= 1; // true
 
 // Greater than or equal to
 let greaterThanOrEqualTo = 10 >= 10; // true
-
 
 // * Logical Operators
 
