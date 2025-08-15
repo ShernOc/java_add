@@ -35,43 +35,44 @@
 
  <h1>Cart Quantity</h1>
   <br>
+
+<button onclick="
+console.log(updateCalculate())">Show Quantity</button>
     <button onclick=" 
     //calculateCal(cartQuantity +=1); 
-    calculateCal('1')
+    calculateCal(1)
     ">Add to Quantity</button>
 
-    <button onclick=" cartQuantity +=2; calculateCal('2')
-    console.log(cartQuantity)
+    <button onclick=" cartQuantity +=2; calculateCal(2)
     ">+2</button>
 
-    <button onclick=" cartQuantity +=3; calculateCal('3')
+    <button onclick=" cartQuantity +=3; calculateCal(3)
     console.log(cartQuantity)">+3</button>
 
-    <button onclick=" cartQuantity +=4;
-     calculateCal('4')
+    <button onclick="calculateCal(4)
      console.log(cartQuantity)
      ">+4</button>
     
-    <button onclick=" cartQuantity +=5; calculateCal('5')
+    <button onclick="calculateCal(5)
     console.log(cartQuantity)
-
-    const cartP = document.querySelector('.js-cart').innerHTML = `Cart quantity:${cartQuantity}`
-
     ">+5</button>
 
-    <button onclick=" cartQuantity -=1 ; calculateCal('-1')
+    <button onclick=" calculateCal(-1)
     console.log(cartQuantity)
     
     ">-1</button>
-    <button onclick=" cartQuantity -=2; calculateCal('2')
+    <button onclick=" calculateCal(-2)
     console.log(cartQuantity)
     ">-2</button>
 
-    <button onclick=" cartQuantity -=3;calculateCal('-3')
+    <button onclick="calculateCal(-3)
     console.log(cartQuantity)
     ">-3</button>
 
-    <button onclick=" cartQuantity =0; calculateCal('0')
+    <button onclick="
+    cartQuantity =0;
+    console.log('Cart was reset')
+    updateCalculate()
     console.log(cartQuantity)
     ">Reset Cart</button>
 
@@ -84,25 +85,28 @@
   // lets carts holds a quantity of 10:Check if if the quantity is greater than 10: 
 
 let cartQuantity =0;
-function calculateCal(cartQuantity){
-    if(cartQuantity<=20){
-        return cartQuantity +=1
-        console.log(cartQuantity)
-    }else if (cartQuantity>10){
-        return `cart is full`
-    }else if (cartQuantity <=0){
-        return `Not enough items`
+updateCalculate();
+
+function calculateCal(number){
+    if(cartQuantity + number > 10){
+        alert('Cart is full')
+        return ; 
+    }else if (cartQuantity + number<0){
+        alert ('Not enough items in the cart' )
+        return;
     }
-const cartP = document.querySelector('.js-cart').innerHTML = `Cart quantity:${cartQuantity}`
+// number is the Quantity +=1 
+    cartQuantity +=number;
 
-console.log(cartP)
 
+    // display the cart 
+    updateCalculate();
 }
 
-console.log(calculateCal())
 
-
-
+function updateCalculate(){
+    document.querySelector('.js-cart').innerHTML = `Cart quantity:${cartQuantity}`
+}
 
 
 let number = 0;
@@ -157,3 +161,6 @@ function handleKeydown(event){
 </script>
 </body>
 </html>
+
+
+
