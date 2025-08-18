@@ -29,7 +29,7 @@
   
     <!-- multiplication -->
     <button title="multiply" onclick="
-   calculation *= '*'
+   calculation += '*'
     console.log(calculation)">x</button>
   </p>
   
@@ -52,8 +52,7 @@
   
     <!-- minus  -->
     <button title="minus"
-    onclick="
-    calculation -= '-';
+    onclick=" calculation += '-';
     console.log(calculation)">-</button>
   
   </p>
@@ -63,13 +62,13 @@
       <!-- 1 -->
       <button title="1" onclick="
       //calculation += '1';
-      calculation -= '1';
+      calculation += '1';
       console.log(calculation)">1</button>
       
     
     <!-- 2 -->
       <button title="2" onclick="
-     calculation += '2';
+      calculation +='2';
       console.log(calculation)">2</button>
     
       <!-- 3 -->
@@ -91,12 +90,12 @@
     
     <!-- divide -->
     <button title="divide" onclick="
-    divisor = parseFloat(devisor)
-    if (!isNaN(devisor) && devisor !==0){
-     calculation /= divisor;
+    //divisor = parseFloat(devisor)
+
+    // if (!isNaN(devisor) && devisor !==0){calculation /= divisor; 
      console.log(calculation)
-    }
-    //calculation /= calculation;
+    
+    calculation += '/'; 
     //calculation /= '/' // output as none
     ">/</button>
   
@@ -108,7 +107,7 @@
   
   <!-- percentage -->
     <button title="percentage" onclick="
-    calculation %= '%';
+    calculation += '%';
     console.log(calculation)">%</button>
   
   </p>
@@ -121,39 +120,24 @@
     
     /*console.log(`Total= ${calculation}*/
     "
-    
     >=</button>
   </p>
+
+  <p class="js-calc"></p>
 </div>
 
+
 </body>
+
+
 <script> 
   // let calculation=0; 
   let calculation = ""; 
+  console.log(calculation);
+  console.log(document.querySelector('.js-calc').innerHTML =`${calculation}`);
 
-  
-Math.max(34,45)
-  //console.log(calculation)
-  
-  if (true){
-    console.log("hello")
-  }
-  
-  
-  function addFive(number){
-    let result;
-    if(number%2!==0){
-      result = number +5;
-      return result
-    }else{
-      console.log("number is not divisible by 2")
-    }
-  }
 
-  
-console.log(Math.floor(Math.random()*6)+5);
-
-console.log(addFive(15))
+  console.log('Why am i so hard to understand the ')
 
 </script>
 </html>
