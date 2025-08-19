@@ -1,25 +1,26 @@
-//HAPPY BIRTHDAY ALICE 
-
 // DOMContentLoaded event listener 
 document.addEventListener('DOMContentLoaded',()=>{  
     // background color: 
     document.body.style.background = "black";
+    
+    
+    // replacing alice id to birthday id
+    function changeFastDiv(){
+        // header  element with a  class id alice.
+            const alice = document.getElementById("js-main-div");
 
+            alice.id="js-birthday";
+        }
+   
     // grab the header; 
     function header() {
-        // replacing alice id to birthday id
-        function changeIdAlice(){
-            // header  element with a  class id alice.
-            const alice = document.getElementById("alice");
-            alice.id="birthday"
-        }
-        changeIdAlice(); 
+        changeFastDiv(); 
 
-        const divBirthday =document.getElementById("birthday"); 
+        const divBirthday =document.getElementById("js-birthday"); 
     
         // header for alice 
         const header = document.createElement("header");
-        header.id="header";
+        header.id="js-header";
         divBirthday.appendChild(header)
     
         // h1 created
@@ -34,11 +35,15 @@ document.addEventListener('DOMContentLoaded',()=>{
         // appending the work 
         header.appendChild(h1header);
     }
-    header();
+
+
+
+console.log(header());
+
 
 // image/ log section 
 function logo(){
-    const divBirthday = document.getElementById("birthday");
+    const divBirthday = document.getElementById("js-birthday");
     
     // div element with id of logo 
     const logo = document.createElement("div");
@@ -59,7 +64,7 @@ logo(); // calling the logo
 
 // main element
 function main(){
-    const divBirthday = document.getElementById("birthday");
+    const divBirthday = document.getElementById("js-birthday");
     const main = document.createElement("main");
     main.id = "main";
     
