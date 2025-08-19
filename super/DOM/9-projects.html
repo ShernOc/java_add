@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+</head>
+<style>
+    body{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    /*Youtube button*/
+    
+    .subscribe-button{
+        background-color: black;
+        border:none;
+        color:white;
+        font-weight: bold;
+        border-radius:40px;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right:15px;
+        cursor:pointer;
+        margin-bottom: 30px;
+    }
+    .is-subscribed{
+        background-color: rgb(125, 128, 128);
+        color: black;
+    }
+    
+    .css-head{
+        color: blue;
+        text-align:center;
+    }
+
+    /*Amazon button*/
+    .css-cost-input{
+        font-size: 16px;
+        padding: 10px;
+        border-radius:14px;
+    }
+    .calculate-button{
+        background-color:green;
+        color:white;
+        border:none;
+        font-size:15px; 
+        padding: 12px 15px;
+        border-radius: 14px;
+        margin-bottom: 20px;;
+
+    /*create a pointer */
+        cursor:pointer;
+
+    }
+
+
+
+
+</style>
+<body>
+    <h1 class="css-head">DOM PROJECTS</h1>
+    <div class="js-youtube">
+        <h1 >Youtube Subscribe Button</h1>
+        <!--Algorithm-->
+        <!-- change the button from subscribe to subscribe using js when clicked Other wise -->
+
+        <button  class="js-subscribe subscribe-button" onclick="
+        // call the function 
+        subscribe()">Subscribe</button>
+    </div>
+<hr>
+    <!-- Amazon -->
+    <div class="amazon">
+        <h1>Amazon Shipping Calculator</h1>
+        <p>Order under $40 = $10 added on Shipping.</p>
+        <p>Order over $40 = FREE Shipping.</p>
+        
+        <input placeholder="Cost of order" name="cost-order"
+        class="js-cost-input css-cost-input" onkeydown="handleKeydown(event);">
+        <button class="calculate-button" onclick ="amazonShip(); ">Calculate</button>
+
+        <!-- display the amount  -->
+        <br>
+        
+        <b>Display Amount: </b>
+        <p class="js-total-cost">Amount:</p>
+    </div>
+<hr>
+<h1>Cart Quantity</h1>
+  <br>
+
+    <button onclick="
+    console.log(cartQuantity)
+    console.log(updateCalculate()
+    )">Show Quantity</button>
+
+    <button onclick="calculateCal(1)
+    console.log(cartQuantity)
+    ">Add to Quantity</button>
+
+    <button onclick=" calculateCal(2)
+    console.log(cartQuantity)
+    ">+2</button>
+
+    <button onclick=" calculateCal(3)
+    console.log(cartQuantity)">+3</button>
+
+    <button onclick="calculateCal(4)
+     console.log(cartQuantity)
+     ">+4</button>
+    
+    <button onclick="calculateCal(5)
+    console.log(cartQuantity)
+    ">+5</button>
+
+    <button onclick=" calculateCal(-1)
+    console.log(cartQuantity)
+    
+    ">-1</button>
+    <button onclick=" calculateCal(-2)
+    console.log(cartQuantity)
+    ">-2</button>
+
+    <button onclick="calculateCal(-3)
+    console.log(cartQuantity)
+    ">-3</button>
+
+    <button onclick="
+    cartQuantity =0;
+    console.log('Cart was reset')
+    updateCalculate()
+    console.log(cartQuantity)
+    ">Reset Cart</button>
+
+    <p class="js-cart"></p>
+
+<script>
+    // Subscribe button
+    function subscribe(){
+    const subButton=document.querySelector('.js-subscribe');
+
+    if(subButton.innerText==='Subscribe'){
+    subButton.innerText = 'Subscribed';
+    // every time we click it will add a class called is-subcribed
+    subButton.classList.add('is-subscribed');
+    }else {
+    subButton.innerText = 'Subscribe';
+    // to remove a class that we had added
+    subButton.classList.remove('is-subscribed');
+    }
+
+    }
+
+// Amazon Calculator
+function amazonShip(){
+    // get the input into the js: 
+    const inputEle = document.querySelector('.js-cost-input');
+    // allow for the value of input to be created
+    //let costs =(inputEle.value)
+    // Number() converts string to a number. 
+    let costValue = Math.round(Number(inputEle.value));
+    console.log(costValue)
+    
+    //Calculations
+    if(costValue <= 40){
+        costValue +=10;
+    }
+
+    // display the total on the page.
+    document.querySelector('.js-total-cost').innerHTML = ` Amount : $ ${costValue}`; 
+}
+
+// this will allow the enter key to calculated. looking at the event.key. and adding it. 
+// key down function to allow user to use the keydown
+function handleKeydown(event){
+    if (event.key === 'Enter'){
+    amazonShip()}
+}
+
+
+//  Cart 
+/*saves the quantity*/ 
+  // lets carts holds a quantity of 10 items only:Check if if the quantity is greater than 10: 
+  // i want the cart once it reaches more than 10, when i press the button it should not continue adding.
+
+let cartQuantity = 0;
+updateCalculate();
+
+function calculateCal(number){
+    let results =  cartQuantity += number;
+
+    if(cartQuantity >= 10){
+        alert('cart is full')
+
+    }else if(cartQuantity <=0){
+        alert ('Not enough items in the cart' )
+    }
+
+
+    // display the cart 
+    updateCalculate();
+}
+
+
+function updateCalculate(){
+    document.querySelector('.js-cart').innerHTML = `Cart quantity:${cartQuantity}`
+}
+
+
+let number = 0;
+function addMe(number){
+    const M = Number(number) +1
+   return  M}
+   
+//console.log(addMe('1'))
+
+
+//DOM
+
+// Key up 
+function keyUp(){
+    const keyP = document.querySelector('.js-key-up').value;
+    document.querySelector('.p-up').innerHTML=keyP
+}
+
+function handleKey(event){
+    if(event.key === 'Press'){
+        keyUp()
+    }
+}
+
+
+
+</script>
+</body>
+</html>
+
+
+
