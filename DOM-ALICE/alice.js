@@ -1,126 +1,142 @@
 // DOMContentLoaded event listener 
 document.addEventListener('DOMContentLoaded',()=>{  
-    // background color: 
+    // changed the background color: 
     document.body.style.background = "black";
     
-    
-    // replacing alice id to birthday id
-    function changeFastDiv(){
+    // replacing id = js-main-div to js-birthday
+    function changeMainDiv(){
         // header  element with a  class id alice.
-            const alice = document.getElementById("js-main-div");
+            const mainDiv = document.getElementById("js-main-div");
 
-            alice.id="js-birthday";
+            // new div
+            mainDiv.id="js-birthday";
         }
    
     // grab the header; 
     function header() {
-        changeFastDiv(); 
+        // calling the Main div 
+        changeMainDiv(); 
 
-        const divBirthday =document.getElementById("js-birthday"); 
+        // grab the element first div
+        const newDiv =document.getElementById("js-birthday"); 
     
-        // header for alice 
-        const header = document.createElement("header");
-        header.id="js-header";
-        divBirthday.appendChild(header)
-    
-        // h1 created
-        const h1header = document.createElement("h1");
-        h1header.className ="h1header"; 
+        // created a header for the page / by appending a header child
+        const firstHeader = document.createElement("h1");
         
-        h1header.textContent = "GUESS THE DAY!";
+        // header id 
+        firstHeader.id="first-header";
+        firstHeader.className ="js-first-header"; 
+        newDiv.appendChild(firstHeader)
 
-        // Styling the font of header 
-        h1header.style.color = "#f765b8";
-        
-        // appending the work 
-        header.appendChild(h1header);
+        // New Header 
+        firstHeader.textContent = "GUESS THE DAY!";
+
+        // Styling the font color of h1
+        firstHeader.style.color = "#f765b8";
     }
 
-
-
+    // calling the header function 
 console.log(header());
 
 
-// image/ log section 
-function logo(){
-    const divBirthday = document.getElementById("js-birthday");
+// image section 
+function image(){
+    // calling the header: 
+    // header();
+    // get the h1 element
+    const newHeader = document.querySelector('.js-first-header');
+
+    // create an image element
+    const firstImage = document.createElement('img');
+    firstImage.className='js-cake-image';
+    firstImage.src="images/cake.png";
+    firstImage.alt="IMAGE OF A CAKE"; 
+    firstImage.height = "250";
+    firstImage.width= "300"
     
-    // div element with id of logo 
-    const logo = document.createElement("div");
-    logo.id ="logo";
-
-    // image creation 
-    const img = document.createElement("img");
-    img.className="img"; 
-    img.src = "/images/pexels-vidalbalielojrfotografia-14457389.jpg"; 
-    img.alt="IMAGE OF ALICE"; 
-    img.height = "250";
-    img.width= "300"
-
-    logo.append(img); 
-    divBirthday.appendChild(logo);
+    // append the image below the firstHeader
+    newHeader.append(firstImage);
 }
-logo(); // calling the logo 
+
+// calling the image
+image(); 
+
 
 // main element
-function main(){
-    const divBirthday = document.getElementById("js-birthday");
-    const main = document.createElement("main");
-    main.id = "main";
-    
-    // p element with id of info
-    const p = document.createElement("p");
-    p.className ="psection";
-    
-    p.innerHTML = "OMG!! You are 29 years! <br> You don’t understand how special you are for me my sister. You are one of those persons in my life that I with my whole heart trust you."
-    
-    // append the main
-    main.appendChild(p);
-    divBirthday.appendChild(main);  
+function mainInfo(){
+// get the main div
+    const mainDiv = document.getElementById("js-birthday");
+    const newMainElement = document.createElement("main");
+    newMainElement.id = "main";
+    newMainElement.className = 'js-new-main'
 
+    // create an p element with id of info that holds all the info
+    const firstParagraph = document.createElement("p");
+    firstParagraph.className ="js-first-paragraph";
+    firstParagraph.id='info'
     
+    firstParagraph.innerHTML = "OMG!! You are 30 years old! <br> You don’t understand how special you are for me my sister. You are one of those persons in my life that I, with my whole heart trust you."
+    
+    // append the main and the paragraph
+    newMainElement.appendChild(firstParagraph);
+    mainDiv.appendChild(newMainElement);  
+
     //event listener on mouseover/mouseout on the main paragraph 
     // show the paragraph 
-    p.addEventListener("click", showPara);
+    firstParagraph.addEventListener("click", showPara);
 
     function newPara(){
     // New paragraph that holds the birthday text. 
     const p2 = document.createElement("p"); 
-    p2.className= "p2"; 
+    p2.className= "js-second-paragraph"; 
     p2.textContent = "HAPPY BIRTHDAY ALICE"; 
     p2.style.color = "#f765b8"; 
     p2.fontSize = "40px"; 
     p2.fontWeight ="bold";
     p2.style.display = "block"; 
     
-    e.target.appendChild(p2);  //appending the p2 to main
+    e.target.appendChild(p2);  //appending the p2 to main paragraph 
     }
 
+    
     // event handler: 
     function showPara(e){
-        let m = document.querySelector('.p2');
-    for(let m = 0; m<=3;){
+        let m = document.querySelector('.js-second-paragraph');
+        for(let m = 0; m<=3;){
         e.target.ChildNode.remove();
-    } }
+    } 
+}
 
     console.log(showPara(newPara));
     
-    // for(let m=0; m<=1; m++){
-    // return e.target.appendChild(p2)
+    for(let m=0; m<=1; m++){
+    return e.target.appendChild(p2)
 }
 
-main(); //calling now the main. 
+}
 
-});
+//calling now the main. 
+mainInfo(); 
 
 
 const comment = ()=>{
     const comments = document.querySelectorAll(".comments");
-    comments.textContent
-
+    comments.innerHTML='Wow your are amazing'
+    
 }
 
+comment();
+
 // footer element with class of footer
+
+
+
+
+
+});
+
+
+
 
 
 

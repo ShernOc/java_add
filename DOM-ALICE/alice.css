@@ -8,19 +8,25 @@ body{
     color: white;
 }
 
-.h1header{
+.firstHeader{
     /* background-color: rgb(27, 16, 1); */
     align-content: center;
     padding:20px;
     font-size:40px;
     font-weight: bold;
+    justify-content: center;
+    text-align: center;
 }
 
-.img{
-    align-items: center;
+.js-cake-image{
+    align-content: center;
+    margin: 50px;
+    padding: auto;
+    cursor: pointer;
+    
 }
 
-.psection{
+.js-first-paragraph{
     /* background-color:#f765b8; */
     text-align: center;
     color:pink;
@@ -28,14 +34,14 @@ body{
     
 }
 
-.p2{
-    font-size: 50px;
-
-}
-.newpara{
+.js-second-paragraph{
+    font-size: 50px; 
     color: #f765b8;
     font-weight:bold ;
     font-size: 60px;
 
 }
+
+
+
 
