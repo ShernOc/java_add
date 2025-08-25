@@ -36,11 +36,13 @@ document.addEventListener('DOMContentLoaded',()=>{
     }
 
     // calling the header function 
-console.log(header());
+// console.log(header());
+header()
 
 
 // image section 
 function image(){
+
     // calling the header: 
     // header();
     // get the h1 element
@@ -56,10 +58,12 @@ function image(){
     
     // append the image below the firstHeader
     newHeader.append(firstImage);
+    
 }
 
 // calling the image
 image(); 
+
 
 
 // main element
@@ -83,35 +87,34 @@ function mainInfo(){
 
     //event listener on mouseover/mouseout on the main paragraph 
     // show the paragraph 
-    firstParagraph.addEventListener("click", showPara);
+    firstParagraph.addEventListener("click", showPara());
 
     function newPara(){
     // New paragraph that holds the birthday text. 
-    const p2 = document.createElement("p"); 
-    p2.className= "js-second-paragraph"; 
-    p2.textContent = "HAPPY BIRTHDAY ALICE"; 
-    p2.style.color = "#f765b8"; 
-    p2.fontSize = "40px"; 
-    p2.fontWeight ="bold";
-    p2.style.display = "block"; 
+    const secondParagraph = document.createElement("p"); 
+    secondParagraph.className= "js-second-paragraph"; 
+    secondParagraph.textContent = "HAPPY BIRTHDAY ALICE"; 
+    secondParagraph.style.color = "#f765b8"; 
+    secondParagraph.fontSize = "40px"; 
+    secondParagraph.fontWeight ="bold";
+    secondParagraph.style.display = "block"; 
     
-    e.target.appendChild(p2);  //appending the p2 to main paragraph 
+    e.target.appendChild(secondParagraph);  //appending the second-paragraph to main 
     }
 
-    
     // event handler: 
     function showPara(e){
         let m = document.querySelector('.js-second-paragraph');
-        for(let m = 0; m<=3;){
+        for(let m = 0; m<=3;m++ ){
         e.target.ChildNode.remove();
-    } 
+         } 
 }
 
     console.log(showPara(newPara));
     
-    for(let m=0; m<=1; m++){
-    return e.target.appendChild(p2)
-}
+    // for(let m=0; m<=1; ){
+    // return e.target.appendChild(p2)
+
 
 }
 

@@ -1,20 +1,20 @@
 // // grab the div 
-    // const newDiv = document.getElementById("js-birthday");
+    const newDiv = document.getElementById("js-birthday");
     
-    // // div element with id of logo 
-    // const logo = document.createElement("div");
-    // logo.id ="logo";
+    // div element with id of logo 
+    const logo = document.createElement("div");
+    logo.id ="logo";
 
-    // // image creation 
-    // const img = document.createElement("img");
-    // img.className="img"; 
-    // img.src = "/images/pexels-vidalbalielojrfotografia-14457389.jpg"; 
-    // img.alt="IMAGE OF ALICE"; 
-    // img.height = "250";
-    // img.width= "300"
+    // image creation 
+    const img = document.createElement("img");
+    img.className="img"; 
+    img.src = "/images/pexels-vidalbalielojrfotografia-14457389.jpg"; 
+    img.alt="IMAGE OF ALICE"; 
+    img.height = "250";
+    img.width= "300"
 
-    // logo.append(img); 
-    // divBirthday.appendChild(logo);
+    logo.append(img); 
+    divBirthday.appendChild(logo);
 }
 
 
