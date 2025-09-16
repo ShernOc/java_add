@@ -1,0 +1,19 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:4px;
+
+}
+
+li{
+    padding: 4px; 
+    
+}
+
+.js-total{
+    color:red;
+    font-weight: bold;
+    
+}
+
+
