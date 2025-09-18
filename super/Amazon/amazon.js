@@ -116,11 +116,6 @@ console.log(amazonCalculation())
 
 
 
-// console.log(displayQuantity(amazonCart(times)))
-
-
-
-
 
 
 

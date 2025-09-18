@@ -16,12 +16,18 @@ console.log(`Tax(10%):$${tax} `);
 const totalCost = cost + tax; 
 console.log(`Total cost: $${totalCost}`); 
 
+
+
+
+
+
 const age = 56;
 if (age>=18){
     return "you can drive"
 }else{
     return "please learn how to drive"
 }
+
 
 // ROCK PAPER SCISSOR
 // Generate a random number 

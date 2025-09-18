@@ -1,14 +1,23 @@
-let calculation ="";
+// The storage 
 
-function calculator(number) {
-    const adds = calcAdd(number);
-    //const mins = calcMinus(number);
-    // const multip = calcMultiply(number)
-
-    return adds;
+// calculator Switch method: 
+function cal(num1,num2,calculator) {
+  switch(calculator){
+    case "+":
+      return num1 + num2;
+      break;
+    case "-":
+      return num1-num2;
+    default:
+      return "What the fuck"
+      
   }
+}
 
-console.log(calculator('1'))
+console.log(cal(1,5,"+"))
+
+
+
 
 function calcAdd(number) {
     return (calculation += number);
