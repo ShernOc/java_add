@@ -4,22 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="amazon.css">
+    
     <title>Amazon</title>
 </head>
 <body>
-    <h1>Amazon Cart</h1>
-    <h4>ITEMS IN THE STORE</h4>
+    <h1>Amazon Cart</h1> 
+    <p>
+        1. The cart should show automatic the quantity of the products, that is it should show (quantity 1): 
+    </p>
+
+    <h4>ITEMS IN THE STORE: </h4>
     <!-- Selected Items -->
-     <li>Shoes: <span class ="js-shoe-span"></span></li>
+     <p>Shoes:<span class ="js-shoe-span"> </span>
+    </p>
+    <!-- Show the quantity -->
+
+    <p class="js-show-quantity"></p>
+
+    
+    <button 
+     class="cs-add" title="Add to cart" onclick=
+     " console.log(`Cart Quantity ${cartQuantity}`)"
+     >Show Quantity
+    </button>
+
+     <button 
+     class="cs-add" title="Add to cart" onclick="
+     console.log(amazonCart())">Add to Cart
+    </button>
+
+    <button class="cs-order" onclick=" Quantity +=2"
+    >+2</button>
+    
+    <button class="cs-order" onclick="Quantity -=1 
+    alert('Item remove from cart')"
+    >Remove from Cart</button>
+    
+    <button 
+        class="cs-buy" onclick="
+        console.log('Loading')
+        ">
+        Buy now
+    </button>
+
      <li>Basketball: <span class ="js-basket-span"></span></li>
-     <li>Toaster: <span class ="js-toaster-span"></span></li>
+
+     <button class="cs-add"  title="Add to cart"        onclick="
+        alert('Added')">Add to Cart
+    </button>
+    
+    <button class="cs-buy" onclick="
+    console.log('Loading')
+    ">Buy now</button>
+    
+    <button class="cs-order" onclick="Quantity -=1 
+    alert('Item remove from cart')"
+    >Remove from Cart</button>
+
+    <li>Toaster: <span class ="js-toaster-span"></span></li>
+    <button class="cs-add" title="Add to cart" onclick="
+        alert('Added')">Add to Cart</button>
+    
+    <button class="cs-buy" onclick="
+    console.log('Loading')
+    ">Buy now</button>
+    
+    <button class="cs-order" onclick="Quantity -=1 
+    alert('Item remove from cart')"
+    >Remove from Cart</button>
      <li>T-Shirt: <span class ="js-shirt-span"></span></li>
+     <button class="cs-add"  title="Add to cart" onclick="
+        alert('Added')">Add to Cart</button>
+    
+    <button class="cs-buy" onclick="
+    console.log('Loading')
+    ">Buy now</button>
+    
+    <button class="cs-order" onclick="Quantity -=1 
+    alert('Item remove from cart')"
+    >Remove from Cart</button>
 
      <br><br><br>
-    <!-- I want to display the quantity that have pressed on the button  -->
-    <button  class="js-quantity-btn"  onclick="
-    Quantity +=1; 
-    console.log(Quantity)
+
+     
+
+    <!-- I want to display the quantity that have pressed on the button  * the price of the item  -->
+
+    <button  class="js-quantity-btn" onclick="
+    cartQuantity +=1; 
     ">Quantity</button>
 
     <input type="text" class="js-input">
@@ -32,20 +104,23 @@
     <hr>
     <li class="js-total"> </li>
 
-    <button onclick="alert('Your order was made')">Order now</button>
+    <button class="cs-order" onclick="cartQuantity -=1 
+    alert('Item remove from cart')
+        
+    "
+    >Remove from Cart</button>
 
-    <button onclick="
+    <button class="cs-add" onclick="
     alert('Added')">Add to Cart</button>
     
-    <button onclick="
+    <button class="cs-buy" onclick="
     console.log('Loading')
     ">Buy now</button>
 
 
 </body>
 <script src="amazon.js" >
-   
-    
+
 </script>
 
 </html>

@@ -1,42 +1,5 @@
-//LESSON 1. 
-const shirt = 10;
-const socks = 8; 
-const plate = 20;
-
-console.log(typeof(shirt))
-
-function Total_cost(){
-    total = (shirt+socks+plate);
-    return total
-}
-console.log(Total_cost())
-
-// How i spend the money
-const bank = 100; 
-const lunch = 20;
-const dinner = 50; 
-const earn = 200; 
-
-// Use the Array.reduce to add ([].reduce((a+b)=>a+b,0))
-
-function moneyHave(){
-    // const lif= bank+lunch+dinner+earn
-    // return lif
-    const sum = [bank,lunch,dinner,earn].reduce((partialSum,a)=> partialSum +a,0);
-    return sum;
-}
-console.log(moneyHave())//370
-
-function page(){
-   const doc= document.body.innerHTML = alert('blank');
-   return doc
-}
-
-// console.log(page())
-
-//LESSON 2 
-
 // AMAZON CART 
+
 // have 2 socks
 const shoe = 1090;
 const basket = 2095;
@@ -44,27 +7,31 @@ const toaster = 1899;
 const t_shirt = 799;
 const shipping_cost = 499;
 const tax = 0.1
-let Quantity =0;
+
+//Variable for Quantity 
+let cartQuantity =0;
 
 // Function for top section: 
 // Display items: 
  function displayItems(){
-    const basket_span = document.querySelector('.js-basket-span').innerText = `$ ${basket/100}`;
-    const shoe_span = document.querySelector('.js-shoe-span').innerText = `$ ${shoe/100}`;
-    const toaster_span = document.querySelector('.js-toaster-span').innerText =`$ ${toaster/100}`;
-    const t_shirt_span = document.querySelector('.js-shirt-span').innerText = `$ ${t_shirt/100}`;
+    const basket_span = document.querySelector('.js-basket-span').innerText = ` Price: $ ${basket/100}`;
+    const shoe_span = document.querySelector('.js-shoe-span').innerText = ` Price $ ${shoe/100}`;
+    const toaster_span = document.querySelector('.js-toaster-span').innerText =` Price $ ${toaster/100}`;
+    const t_shirt_span = document.querySelector('.js-shirt-span').innerText = `Price $ ${t_shirt/100}`;
 
-    const bt = document.querySelector('.js-input').innerHTML = `${console.log(Quantity)}`
+    const bt = document.querySelector('.js-input').innerHTML = `${console.log(cartQuantity)}`
+
+    return basket_span;
 
  }
 
  console.log(displayItems())
     
 
-function totalItem(){
+function amazonCalculation(){
     //How to add the quantity to the application. 
     // Calculate the quantity
-    const mes = Quantity * shoe
+    const mes = cartQuantity * shoe
     console.log(mes)
    
     let shoe_item = 2*shoe; 
@@ -103,22 +70,40 @@ function totalItem(){
     const taxe = document.querySelector('.js-tax').innerHTML = `Estimated tax(10%): $${total_tax}`; 
     const total_cost = document.querySelector('.js-total').innerHTML =`Order total: $${total_payment}`;
 
-
-
-
-
-
-
     return size_items,ship,b_cost,taxe,total_cost,total_payment ;// 52.51
+}
+
+console.log(amazonCalculation())
 
 
+//SHOW QUANTITY
+
+/*add to cart = (+=1);
++2 
+remove from cart = (-=1)
+*/
+
+function amazonCart(){
+    const item = document.querySelector('.js-show-quantity').innerText = `Quantity ${cartQuantity}`;
+    
+        if(cartQuantity<=10){
+        return cartQuantity +=1;
+        }else if(cartQuantity>=10){
+        return cartQuantity -=1;
+        }else{
+        return alert('cart is full'),
+        console.log(item)
+    
+    }
 
 
 }
+console.log(amazonCart());
 
-console.log(totalItem())
 
 // How to remove the (dots in the li(elements))
+
+
 
 
 

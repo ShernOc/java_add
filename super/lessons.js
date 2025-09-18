@@ -32,7 +32,8 @@ function page(){
    return doc
 }
 
-// console.log(page())
+console.log(page());
+
 
 //LESSON 2 
 // convert temperature to celsius and Fahrenheit; 
@@ -63,6 +64,42 @@ function order(){
 console.log(order())
 
 // LESSON 4 
+function doc(){
+    const bod = document.body.innerHTML = alert('Welcome!');
+    return bod;
+}
+console.log(doc());
+
+// LESSON 5; 
+
+// Variables: 
+let quality = 0; // Allows us to save the variable 
+let results = quality + 1 ; 
+
+console.log(results)
+
+
+//Amazon Cart
+let quantity = 0; // starting
+function amazonCart(){
+    if (quantity>=5){
+      return alert('Cart if full '); 
+    }else if(quantity <=5){
+       return quantity +=1; 
+    }; 
+}; 
+
+console.log(quality())
+
+
+
+
+
+
+
+
+
+
 
 
 
