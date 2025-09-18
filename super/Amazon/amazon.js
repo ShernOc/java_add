@@ -1,6 +1,14 @@
 // AMAZON CART 
 
-// have 2 socks
+// Store the product in an array/object
+let products = [
+    {name:"shoes",price:1090,quantity:0},
+    {name:"basket",price:2090,quantity:0},
+    {name:"t-shirt",price:799,quantity:0},
+    {name:"toaster",price:1899,quantity:0}, 
+    {name:"Television", price:3000,quantity:0}
+]
+
 const shoe = 1090;
 const basket = 2095;
 const toaster = 1899; 
@@ -20,7 +28,7 @@ let cartQuantity =0;
     const toaster_span = document.querySelector('.js-toaster-span').innerText =` Price $ ${toaster/100}`;
     const t_shirt_span = document.querySelector('.js-shirt-span').innerText = `Price $ ${t_shirt/100}`;
 
-    return shoe_span;
+    return basket_span;
  }
 
  console.log(totalItems())
@@ -36,7 +44,6 @@ function displayQuantity(){
 }
 console.log(displayQuantity())
 
-
 const maxItems = 10; // maximum items in the cart
 // times (number of times (+1,-1,) its a parameter that hols +1,-2, ...)
 function amazonCart(times){
@@ -47,11 +54,11 @@ function amazonCart(times){
          alert("Cart cannot be zero");
         return cartQuantity;
     }
-    
     cartQuantity += times ; 
     amazonCalculation(); // the total calculations or quantities
     return cartQuantity;
 }
+
 
 console.log(amazonCart(0))
 
@@ -83,7 +90,7 @@ function amazonCalculation(){
     
     // tax 
     const total_tax = (t_shipping * tax) ;
-    console.log(total_tax)// 477.4000 
+    console.log(total_tax.toFixed(2))// 477.4000 
 
     // Total payment 
     const total_payment = (Math.round(t_shipping + total_tax));
@@ -96,8 +103,8 @@ function amazonCalculation(){
     const size_items = document.querySelector('.js-items').innerHTML = `Items (${quantity}): $${shoe_item/100}`;
     const ship = document.querySelector('.js-ship').innerText = `Shipping & handling: $${shipping_cost/100}`;
     const b_cost = document.querySelector('.js-before-tax').innerText = `Total before tax: $${t_shipping}`;
-    const taxe = document.querySelector('.js-tax').innerHTML = `Estimated tax(10%): $${total_tax}`; 
-    const total_cost = document.querySelector('.js-total').innerHTML =`Order total: $${total_payment}`;
+    const taxe = document.querySelector('.js-tax').innerHTML = `Estimated tax(10%): $${total_tax.toFixed(2)}`; 
+    const total_cost = document.querySelector('.js-total').innerHTML =`Order total: $${total_payment.toFixed(2)}`;
 
     return total_payment ;// 52.51
 }
