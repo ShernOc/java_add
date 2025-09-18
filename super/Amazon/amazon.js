@@ -27,6 +27,9 @@ let cartQuantity = 0;
 
  console.log(displayItems())
     
+// I want to display the quantity that have pressed on the button  * the price of the item  
+// once an item is selected it now able be added as an item.
+
 
 function amazonCalculation(){
     //How to add the quantity to the application. 
@@ -105,11 +108,9 @@ function amazonCart(times){
     return cartQuantity +=times ; 
 }
 
-console.log(displayQuantity(amazonCart(times)))
+// console.log(displayQuantity(amazonCart(times)))
 
 
-
-// How to remove the (dots in the li(elements))
 
 
 
