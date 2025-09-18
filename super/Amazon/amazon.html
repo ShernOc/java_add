@@ -21,24 +21,35 @@
 
     <p class="js-show-quantity"></p>
 
-    
+
     <button 
-     class="cs-add" title="Add to cart" onclick=
-     " console.log(`Cart Quantity ${cartQuantity}`)"
+     class="cs-add" title="Add to cart" onclick= 
+     " console.log(displayQuantity())"
+     
      >Show Quantity
     </button>
 
+    <!-- console.log(`Cart Quantity ${cartQuantity}`)" -->
+
      <button 
      class="cs-add" title="Add to cart" onclick="
-     console.log(amazonCart())">Add to Cart
+     console.log(amazonCart(+1))">Add to Cart
     </button>
 
-    <button class="cs-order" onclick=" Quantity +=2"
+    <button class="cs-order" onclick=" 
+    console.log(amazonCart(+2))"
     >+2</button>
     
-    <button class="cs-order" onclick="Quantity -=1 
-    alert('Item remove from cart')"
-    >Remove from Cart</button>
+    <button class="cs-order" onclick=" 
+    console.log(amazonCart(-1))"
+    >Remove from cart</button>
+
+    <button 
+     class="cs-add" title="Add to cart" onclick=
+     "cartQuantity=0; amazonCart(0)"
+     >Reset Cart
+    </button>
+
     
     <button 
         class="cs-buy" onclick="

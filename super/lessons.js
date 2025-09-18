@@ -81,15 +81,18 @@ console.log(results)
 
 //Amazon Cart
 let quantity = 0; // starting
-function amazonCart(){
-    if (quantity>=5){
-      return alert('Cart if full '); 
-    }else if(quantity <=5){
-       return quantity +=1; 
-    }; 
+const maxItems = 10; // the Maximum items in a cart 
+// times = number or increase or decrease (+1, -1) // parameter
+function amazonCart(times){
+    if (quantity + times> maxItems ){
+        return alert('Cart is full')
+    }else if (quantity + times <0){
+        return alert('add an item')
+    }else{
+        return quantity += times }
 }; 
 
-console.log(quality())
+console.log(amazonCart(times))
 
 
 

@@ -7,25 +7,29 @@
   <title>Variables</title>
 </head>
 <body>
-  <h1>Lesson4:/Buttons</h1>
-  <br>
+  <h1>Lesson4</h1>
    <h2>Items</h2>
 
-   <h3> T-shirts</h3>
-   <p>Price: $7.99</p>
+  <h3> T-shirts</h3>
+   <p>Price: $7.99 </p>
+   <p>shipping and handling = 4.99</p>
+
+   <p>total before tax:(10%) of the total amount</p> 
+  
+   Order total: 
+   <br><br><br>
 
    <button onclick="
     console.log(`Cart quantity:${cartQuantity}`);">Show Quantity</button>
 
-    <button class="cs-add"  title="Add to cart" onclick="
-        alert('Added')">Add to Cart</button>
+    <button class="cs-add"  title="Add to cart" onclick="console.log(amazonCart(+1))">Add to Cart</button>
     
     <button onclick="
     cartQuantity= cartQuantity +2; 
-    console.log(`Cart quantity:${cartQuantity}`);">+2</button>
+    console.log(amazonCart(+2));">+2</button>
     
-    <button class="cs-order" onclick="Quantity -=1 
-    alert('Item remove from cart')"
+    <button class="cs-order" onclick="
+    console.log(amazonCart(-1))"
     >Remove from Cart</button>
     
     <button class="cs-buy" onclick="
@@ -33,15 +37,9 @@
     ">Buy now</button>
     <br><br>
  
-   shipping and handling = 4.99
+<!-- TO USE AT THE BEGINNING  -->
 
-   total before tax: 
-   tax (10%) of the total: 
-
-   Order total: 
-
-
- 
+<p>The first version(beginner)</p>
 <!-- Show quantity: shows the total of the quantity-->
 <button onclick="
 console.log(`CartQuantity:${cartQuantity}`);">Show Quantity</button>
@@ -49,16 +47,18 @@ console.log(`CartQuantity:${cartQuantity}`);">Show Quantity</button>
 <!-- Add to cart -->
 <button onclick="
 // this is a js code: takes the code and adds it to the already quantity. 
- console.log(amazonCart());
+cartQuantity = cartQuantity + 1; 
+console.log(`Cart quantity:${cartQuantity}`);
  ">Add to Cart</button>
  <!-- +2 -->
 <button onclick="
 cartQuantity+=2; 
-console.log(amazonCart());">+2</button>
+console.log(`Cart quantity:${cartQuantity}`);">+2</button>
+
 <!-- +3 -->
 <button onclick="
 cartQuantity+=3; 
-console.log(amazonCart());">+3</button>
+console.log(`Cart quantity: ${cartQuantity}`);">+3</button>
 
 <!-- +4 -->
 <button onclick="
@@ -98,33 +98,21 @@ console.log(`Cart quantity:${cartQuantity}`);">-3</button>
 
 <script>
   console.log("Welcome")
-  let cartQuantity =0; 
-    /* let cartQuantity=0;
-    const name = "sherlyne";
-    console.log(`my name is ${name}` ) ;
-    const coffee = 5 
-    const baggels = 2*3;
-    const soup = 9
-    const cost = coffee + baggels + soup;
-    const tax = cost * 0.1
-    console.log(cost);
-    console.log(tax); 
-    const totalCost = cost +tax;
-    console.log(`Total cost : ${totalCost}`); -->
+  let cartQuantity=0; 
+  const maxStuff = 10; 
 
-    //console.log(sum(baggels,coffee))*/
-
-  function amazonCart(){
-    if(cartQuantity<=9){
-      return cartQuantity+=1;
-    }else if(cartQuantity>=9){
-      return alert('Cart if full')
-      
-    }; 
+  function amazonCart(times){
+    // This stops the calculation from continuing
+    if(cartQuantity + times > maxStuff){
+      return alert('Cart is full')
+    }else if(cartQuantity + times < 0){
+      return alert('add items in cart')
+    }else{
+      return cartQuantity += times}
 }; 
 
-//console.log(amazonCart());
-// I want it so that when you immediately reach  more that 10 it stops the calculation 
+//console.log(amazonCart(+7));
+
 
 </script>
 

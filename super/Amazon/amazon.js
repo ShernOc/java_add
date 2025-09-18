@@ -9,7 +9,7 @@ const shipping_cost = 499;
 const tax = 0.1
 
 //Variable for Quantity 
-let cartQuantity =0;
+let cartQuantity = 0;
 
 // Function for top section: 
 // Display items: 
@@ -82,23 +82,31 @@ console.log(amazonCalculation())
 +2 
 remove from cart = (-=1)
 */
+// console.log(amazonCart());
 
-function amazonCart(){
-    const item = document.querySelector('.js-show-quantity').innerText = `Quantity ${cartQuantity}`;
-    
-        if(cartQuantity<=10){
-        return cartQuantity +=1;
-        }else if(cartQuantity>=10){
-        return cartQuantity -=1;
-        }else{
-        return alert('cart is full'),
-        console.log(item)
-    
+
+function displayQuantity(){
+    const item = document.querySelector('.js-show-quantity').innerText = `Cart quantity: ${cartQuantity}`;
+     return item
+}
+
+console.log(displayItems())
+
+const maxItems = 10; // maximum items in the cart
+// times (number of times (+1,-1,) its a parameter that hols +1,-2, ...)
+function amazonCart(times){
+    displayQuantity() // updates the quantity in the paragraph, 
+    if(cartQuantity + times > maxItems){
+        return alert('Cart is full maximum items = 10')
+    }else if (cartQuantity + times < 0){
+        return alert("Cart cannot be zero")
     }
 
-
+    return cartQuantity +=times ; 
 }
-console.log(amazonCart());
+
+console.log(displayQuantity(amazonCart(times)))
+
 
 
 // How to remove the (dots in the li(elements))
