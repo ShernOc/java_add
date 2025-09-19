@@ -1,4 +1,13 @@
-// The storage 
+// Calculator; 
+
+let calculation = ""; 
+  console.log('You are awesome');
+
+  // Display the results
+  console.log(document.querySelector('.js-calc').innerHTML =`${calculation}`);
+
+
+  console.log('Why')
 
 // calculator Switch method: 
 function cal(num1,num2,calculator) {
