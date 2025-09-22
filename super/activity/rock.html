@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rock.css">
+    <title>Rock game</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+<!-- steps -->
+ <!-- 
+1. Create the 3 buttons ( rocks, paper , scissors)
+2. create a pop up ( to say you have picked the button of choice)
+3. 
+
+game rule: 
+rock beats scissor 
+paper beats rocks 
+scissor beats paper 
+ -->
+
+ <h2> Rules of the Game</h2>
+ <li>Rock beats scissors</li>
+ <li>Paper beats rocks </li>
+ <li>Scissors beats paper</li>
+
+ <h2>Player: </h2>
+ <p>It's You and the Computer</p>
+
+    <button onclick="
+    compMove('rock')">Rock</button>
+    
+    <button onclick="
+    compMove('paper')">Paper</button>
+    
+    <button onclick="compMove('scissors')">Scissors</button>
+
+    <p class="js-results"></p>
+
+
+<script src="rock.js"></script>
+</body>
+</html>

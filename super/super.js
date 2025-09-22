@@ -28,8 +28,8 @@ console.log(`Cart quantity:${Quantity}`)
 
 // Variables
 let cartQuantity=0;
-const name = "sherlyne";
-console.log(`my name is ${name}` ) ;
+const names = "sherlyne";
+console.log(`my name is ${names}` ) ;
 const coffee = 5 
 const bagels = 2*3;
 const soup = 9
@@ -41,9 +41,8 @@ const totalCost = cost +tax;
 console.log(` Total cost:$$ ${totalCost}`);
 
 
-
+//IF ELSE STATEMENT 
 // Calculator  
-
 function calculator(){
   let calculation = "";
   let calc;
@@ -64,8 +63,8 @@ function calculator(){
 console.log(calculator)
 
 // if statement/boolean 
-
-if (30>16){
+const age = 15; 
+if (age >=16){
   console.log("you can drive")
 
 }else{

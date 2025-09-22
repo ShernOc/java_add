@@ -91,3 +91,17 @@ function displayResults(){
 }
 
 console.log(displayResults())
+
+
+// IF ELSE STATEMENT 
+if(condition === true ){
+    console.log('Run this statement')
+}else if (condition === false ){
+    console.log('Run this condition')
+}else{console.log('You are amazing'
+)}
+
+// ROCK PAPER SCISSOR SHOOT: 
+Math.random()
+
+
