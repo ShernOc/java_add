@@ -54,6 +54,7 @@ function amazonCart(times){
          alert("Cart cannot be zero");
         return cartQuantity;
     }
+    
     cartQuantity += times ; 
     amazonCalculation(); // the total calculations or quantities
     return cartQuantity;

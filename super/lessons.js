@@ -151,10 +151,12 @@ console.log(randomNumber())
 
 //Ternary Work:
 const num  = randomNu <= 0.5? 'heads':'tails';
-
 const newCoin = num==='tails'? `You win`:`You lose`; 
-
 console.log(newCoin)
+
+//LESSON 7
+
+
 
 
 
