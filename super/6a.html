@@ -31,6 +31,7 @@
     </P>
    
 <script>
+
    const hours=15; 
    const name = 'Tiger';
 
@@ -46,29 +47,22 @@
 
     console.log(display)
 
-    /* Ternary operator
+    //  Ternary operator
+    condition ? 'truthy': 'falsy'; 
+    // its the same as 
+    if(true){
+        'truthy';
+    }else{
+        'falsy'
+    }
+    /*
     const newHours = 6<hours<12? `good morning ${name}`: 13>hours<17? `good afternoon ${name}` :`Goodnight ${name}`;
     console.log(newHours)*/
     
     
-//AMUSEMENT PARK
-    // AGE: 
-    const age =90;
-    let ageDisplay = '';
-    const isHoliday =true;
 
-    /*if(isHoliday && (age<=6 || age>=65)){
-        ageDisplay = `Discount`
-        }else{
-        ageDisplay = `No discount`
-        }
 
-    console.log(ageDisplay)*/
 
-    // ternary operator 
-    const discountTime = isHoliday && (age<=6 || age>=65)?`Discount`:`No discount`
-
-    console.log(discountTime)
    
 </script>  
 </body>

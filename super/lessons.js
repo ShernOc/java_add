@@ -92,16 +92,77 @@ function displayResults(){
 
 console.log(displayResults())
 
-
 // IF ELSE STATEMENT 
-if(condition === true ){
-    console.log('Run this statement')
-}else if (condition === false ){
-    console.log('Run this condition')
-}else{console.log('You are amazing'
-)}
+function elseIf(){
+    if(condition === true ){
+        console.log('Run this statement')
+    }else if (condition === false ){
+        console.log('Run this condition')
+    }else{console.log('You are amazing'
+    )}
+};
 
-// ROCK PAPER SCISSOR SHOOT: 
-Math.random()
+
+//LESSON 6: 
+//AMUSEMENT PARK
+    let ages = 0;  // create a constant work. 
+    const isHoliday = true;
+    //((ages<= 6 || ages>=65) && isHoliday ) 
+
+    function amusement(ages){
+        if(isHoliday && (ages<= 6 || ages>=65) ){
+            return 'Discount';
+        }else{
+            return 'No discount' ;
+        }
+    }; 
+    
+    console.log(amusement(70));
+
+    // ternary operator
+    let age = 70; 
+    const discountTime = isHoliday && (age<=6 || age>=65)?`No Discount`:`Discount`
+
+    console.log(discountTime)
+
+// coins; 
+    const randomNu = Math.random(); 
+    let results = '';
+    let guess = 'tails';
+    
+ // having two conditions: if number is < 0.5 and if the guess == 'tails' results = 'you win'; 
+
+// return results;
+function randomNumber(){   
+    console.log(randomNu);
+    if(randomNu <=0.5){
+        results = 'heads'; 
+        return 'You loose';
+    }else if(guess === 'tails'){ 
+        results = 'tails'
+        return 'You win'
+    }else{
+        results = 'tails';
+        return 'Lose';
+        }
+}; 
+
+console.log(randomNumber())
+
+//Ternary Work:
+const num  = randomNu <= 0.5? 'heads':'tails';
+
+const newCoin = num==='tails'? `You win`:`You lose`; 
+
+console.log(newCoin)
+
+
+
+
+
+
+
+
+
 
 
