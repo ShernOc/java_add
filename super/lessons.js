@@ -3,6 +3,8 @@ const shirt = 10;
 const socks = 8; 
 const plate = 20;
 
+
+
 console.log(typeof(shirt))
 
 function Total_cost(){
@@ -74,12 +76,10 @@ function doc(){
 
 // Variables: 
 let calculator ='';
-
 function calCulation(number){
     if(calculator){
         calculator +=number;
     }else{calculator -= number}
-
 }
 console.log(3<5);
 
@@ -154,7 +154,140 @@ const num  = randomNu <= 0.5? 'heads':'tails';
 const newCoin = num==='tails'? `You win`:`You lose`; 
 console.log(newCoin)
 
-//LESSON 7
+//LESSON 7 : functions 
+
+// Pick computer move
+function pickCompMove(){
+    let computerMove = ''
+    const randomNumber = Math.random()
+    if(randomNumber>=0 && randomNumber<1/3){
+        computerMove = 'rock';
+    }else if(randomNumber >=1/3 && randomNumber <2/3){
+        computerMove = 'paper';
+    }else if(randomNumber >=2/3 && randomNumber <1){
+        computerMove = 'scissors';
+    }else{
+        console.log('Pick a move')
+    }
+
+    //return a value 
+    return computerMove;
+}; 
+
+
+// calling a function : pickCompMove(); 
+console.log(pickCompMove())
+
+// userPick= parameter of what the user will insert
+function playGame(userPick){
+    // we picked the computer function
+    const computerMove = pickCompMove(); 
+    // console.log(computerMove)
+    let results = ''; 
+    // user pick = rock 
+    if(userPick ==='rock'){
+        if(computerMove ==='rock'){
+            results = 'You tie ';
+        }else if(computerMove ==='paper'){
+                results = 'You loose';
+        }else if(computerMove ==='scissors'){
+                results = 'You win' ; 
+        }
+    }
+    // user pick = paper
+    else if(userPick === 'paper'){
+        if(computerMove === 'paper'){
+            results = 'You tie';
+        }else if (computerMove ==='rock'){
+            results = 'You win';
+        }else if(computerMove === 'scissors'){
+            results = 'You loose'; 
+        }
+    } // user pick = scissors
+    else if(userPick ==='scissors'){
+        if(computerMove ==='scissors'){
+            results = 'You tie';
+        }else if (computerMove === 'rock'){
+            results = 'You loose'; 
+        }else if (computerMove ==='paper')
+            results ='You win';
+    };
+
+    alert(`You picked ${userPick},\n Computer picked ${computerMove},\n ${results}`);
+    // return results; 
+}
+
+// call this function
+// console.log(playGame('rock'));
+// console.log(playGame('scissor'))
+
+// learn about, functions, parameter
+function greet(name){
+    if(name){
+       console.log(`Hello!${name}`) 
+    }else{
+        console.log('Hi there!')
+    }
+    
+}
+
+// call the function
+greet();
+
+
+function convertBothFahrenheitAndCelsius(number){
+    const F = (number * 9/5) +32;
+    const C = (number-32)*5/9; 
+    return C; 
+}
+
+console.log(convertBothFahrenheitAndCelsius(90));
+
+//convert miles to 
+
+// 7g. create a function convertLenght(length,from,to) that takes a number and unit(km or miles)and convert the length to another unit(km,miles) noteL 1 mile = 1.6 km 
+// function convertLenght(length,from,to){ 
+//       km = length * 1.61 
+//     miles = length * 0.62;
+
+//     let from = km; 
+//     return km;
+// }
+
+// console.log(convertLenght(50,'km', ))
+
+/* 7h. Update convertLength to support convert between km,miles, and also feet. Note: 1 mile = 5280ft, 1 km = 3281ft. eg: 5 miles = 8km */
+/* 7i. Update convertLength so that if you give it an invalid unit, it will return 'Invalid unit:${unit}.
+*/ 
+
+// convert to length to ft 
+// function convertLengthFt(length, from, to){
+//     mile = length * 5280 
+//     km = length * 3281 
+//     // converts the number to 
+//     //return miles + `${unit}`;
+    
+//     if(length){
+//         return miles + `${from}`;
+//     }else{
+//         return `Invalid unit:${unit}`; 
+//     }
+
+// }
+// console.log(convertLengthFt(5, 'km', ))
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

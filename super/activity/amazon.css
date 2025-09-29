@@ -6,8 +6,7 @@ body{
 }
 
 li{
-    padding: 4px; 
-    
+    padding: 4px;    
 }
 
 .js-total{
@@ -22,14 +21,10 @@ button{
 .cs-order{
     background-color: green;
     color:black
-
-
 }
 
 .cs-buy{
     background-color: orange;
-
-
 }
 
 .cs-add{

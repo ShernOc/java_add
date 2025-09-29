@@ -75,6 +75,7 @@ console.log(convertTemperature(25,'F')); //
 
 /* 7g. Create a function convertLength(length,from,to) that takes a number and a unit (km, or miles ) and converts the length to another unit (km or miles) Note: i mile = 1.6 km(approximately). 50 miles = 80 km */
 
+
 // convert to length
 function convertLenght(length, from){  miles = length * 1.6 
     km = length/1.6 
