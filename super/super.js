@@ -40,8 +40,19 @@ console.log(3<5)// true because 3 is less than 5.
 
 //IF ELSE STATEMENTS
 
+// IF ELSE STATEMENT 
+function elseIf(){
+    if(condition === true ){
+        console.log('Run this statement')
+    }else if (condition === false ){
+        console.log('Run this condition')
+    }else{console.log('You are amazing'
+    )}
+};
+
+// explain the code . 
 // if (if the condition is true ){
-//   return this statement
+//   return' this statement'
 //  } else if { return this if the statement is false or otherwise this; 
 //  } else{
 //   return this as the final work 
@@ -105,21 +116,8 @@ function nameCat(cat){
 
 console.log(nameCat("Mogaka"))
 
-// Switch Statement 
-function switchName(name){
-  switch(name){
-    case "sherlyne":
-      return "Hi sherlyne"
-    case "james":
-      return "Hi james nice to meet you"
-    default: 
-    return `Hi ${name}`
-  }
- }
 
-
-
-// EXAMPLE OF SWITCH
+// EXAMPLE OF SWITCH STATEMENT 
  const order = 'cheeseburger';
  9/12
 let ingredients;
@@ -152,13 +150,7 @@ let ingredients;
     }
 
 
- /*LOGICAL OPERATORS 
- NOT(!)
- AND(&&)
- OR(||)
- */
-
- // You can store a variable in 
+ // Ternary operator: 
  const cat = "Tiger" ? "Hi tiger":"What a cat"
  console.log(cat)
 
@@ -193,7 +185,6 @@ let ingredients;
       return cat === "tiger"?"Hi tiger you are cute": `Hi ${cat}`; 
      };
 
-
     function addFive(number){
       let result 
       if(number>0){
@@ -209,8 +200,9 @@ let ingredients;
 
   // LESSON 7 : FUNCTIONS 
    function function1() {
-        return "hello";
-        console.log(2 + 2);
+         console.log(2 + 2); 
+         return "hello";
+      
       }
       function1(); // calling the function/running the function
 
@@ -219,4 +211,3 @@ let ingredients;
         console.log(tax1 * 1);
       }
       tax(200); // passing a value into the function= parameter, is an argument(200),
-

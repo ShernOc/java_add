@@ -71,82 +71,6 @@ function Total_cost(){
 }
 console.log(Total_cost())
 
-
-// LESSON 7: FUNCTIONS
-
-
-
-
-
-// How i spend the money
-const bank = 100; 
-const lunch = 20;
-const dinner = 50; 
-const earn = 200; 
-// Use the Array.reduce to add ([].reduce((a+b)=>a+b,0))
-function moneyHave(){
-    // const lif= bank+lunch+dinner+earn
-    // return lif
-    const sum = [bank,lunch,dinner,earn].reduce((partialSum,a)=> partialSum +a,0);
-    return sum;
-}
-console.log(moneyHave())//370
-
-function page(){
-   const doc= document.body.innerHTML = alert('blank');
-   return doc
-}
-
-// console.log(page());
-
-
-
-
-// console.log(string())
-
-function order(){
-    let coffee = 5.99;
-    let bag = 3.98; 
-    const total = alert(`Total cost: $${coffee + bag}\n Thank you, come again!`);
-    return total
-}
-
-// console.log(order())
-
-
-
-// LESSON 4  
-function doc(){
-    const bod = document.body.innerHTML = alert('Welcome!');
-    return bod;
-}
-// console.log(doc());
-
-
-
-
-
-// LESSON 9 DOM 
-
-function displayResults(){
-    const results = document.querySelector('.js-results').innerText =`Results = ${calculator}`;
-    return results
-}
-
-console.log(displayResults())
-
-// IF ELSE STATEMENT 
-function elseIf(){
-    if(condition === true ){
-        console.log('Run this statement')
-    }else if (condition === false ){
-        console.log('Run this condition')
-    }else{console.log('You are amazing'
-    )}
-};
-
-
-//LESSON 6: 
 //AMUSEMENT PARK
     let ages = 0;  // create a constant work. 
     const isHoliday = true;
@@ -197,8 +121,9 @@ const num  = randomNu <= 0.5? 'heads':'tails';
 const newCoin = num==='tails'? `You win`:`You lose`; 
 console.log(newCoin)
 
-//LESSON 7 : functions 
+// LESSON 7: FUNCTIONS
 
+//ROCK PAPER SCISSORS: 
 // Pick computer move
 function pickCompMove(){
     let computerMove = ''
@@ -209,25 +134,22 @@ function pickCompMove(){
         computerMove = 'paper';
     }else if(randomNumber >=2/3 && randomNumber <1){
         computerMove = 'scissors';
-    }else{
-        console.log('Pick a move')
     }
 
     //return a value 
     return computerMove;
 }; 
 
-
 // calling a function : pickCompMove(); 
-console.log(pickCompMove())
+console.log(pickCompMove()) // Return either rock,scissor,or paper
 
 // userPick= parameter of what the user will insert
 function playGame(userPick){
     // we picked the computer function
-    const computerMove = pickCompMove(); 
-    // console.log(computerMove)
+    const computerMove = pickCompMove(); // called the function 
+    console.log(computerMove)
     let results = ''; 
-    // user pick = rock 
+
     if(userPick ==='rock'){
         if(computerMove ==='rock'){
             results = 'You tie ';
@@ -256,27 +178,26 @@ function playGame(userPick){
             results ='You win';
     };
 
+    // popup
     alert(`You picked ${userPick},\n Computer picked ${computerMove},\n ${results}`);
     return results;
 }
 
-// console.log(playGame('rock')) 
+console.log(playGame('rock')) // user pressed rock: 
 
-// call this function
+// call this functions
 // console.log(playGame('rock'));
 // console.log(playGame('scissor'))
 
 
-// learn about, functions, parameter
+// Challenge: learn about, functions, parameter
 function greet(name){
     if(name){
        console.log(`Hello!${name}`) 
     }else{
         console.log('Hi there!')
     }
-    
 }
-
 // call the function
 greet();
 
@@ -321,9 +242,55 @@ console.log(convertBothFahrenheitAndCelsius(90));
 // console.log(convertLengthFt(5, 'km', ))
 
 
-// LESSON 8: OBJECTS 
+// MISSELENOUS: 
 
-//Learn 
+// How i spend the money
+const bank = 100; 
+const lunch = 20;
+const dinner = 50; 
+const earn = 200; 
+// Use the Array.reduce to add ([].reduce((a+b)=>a+b,0))
+function moneyHave(){
+    // const lif= bank+lunch+dinner+earn
+    // return lif
+    const sum = [bank,lunch,dinner,earn].reduce((partialSum,a)=> partialSum +a,0);
+    return sum;
+}
+console.log(moneyHave())//370
+
+function page(){
+   const doc= document.body.innerHTML = alert('blank');
+   return doc
+}
+
+// console.log(page());
+
+function order(){
+    let coffee = 5.99;
+    let bag = 3.98; 
+    const total = alert(`Total cost: $${coffee + bag}\n Thank you, come again!`);
+    return total
+}
+
+// console.log(order())
+
+// LESSON 8: OBJECTS : 
+
+
+// LESSON 9 DOM: 
+function doc(){
+    const bod = document.body.innerHTML = alert('Welcome!');
+    return bod;
+}
+// console.log(doc());
+
+function displayResults(){
+    const results = document.querySelector('.js-results').innerText =`Results = ${calculator}`;
+    return results
+}
+
+console.log(displayResults())
+
 
 
 
