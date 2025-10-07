@@ -5,8 +5,6 @@ let calculation = "";
 
   // Display the results
   console.log(document.querySelector('.js-calc').innerHTML =`${calculation}`);
-
-
   console.log('Why')
 
 // calculator Switch method: 

@@ -33,7 +33,6 @@ console.log(Quantity)//5
 
 
 //LESSONS 6: BOOLEANS AND IF STATEMENTS
-
 // Booleans: 
 true
 false; 
@@ -59,7 +58,6 @@ function elseIfStatement(){
 
   console.log('Yeah we did it')
 }
-
 
 //Ternary Statement
 
@@ -138,8 +136,20 @@ let ingredients;
     default:
       //default is similar to else 
         console.log("Sorry, that's not on the menu right now.");
-        break;
- }
+      break;
+    }
+    
+    // Another switch function 
+    function switchName(name){
+     switch(name){
+       case "sherlyne":
+         return "Hi sherlyne"
+       case "james":
+         return "Hi james nice to meet you"
+       default: 
+       return `Hi ${name.toUpperCase()}`
+     }
+    }
 
 
  /*LOGICAL OPERATORS 
@@ -183,17 +193,6 @@ let ingredients;
       return cat === "tiger"?"Hi tiger you are cute": `Hi ${cat}`; 
      };
 
-     // switch 
-    function switchName(name){
-      switch(name){
-        case "sherlyne":
-          return "Hi sherlyne"
-        case "james":
-          return "Hi james nice to meet you"
-        default: 
-        return `Hi ${name.toUpperCase()}`
-      }
-     }
 
     function addFive(number){
       let result 
@@ -207,4 +206,17 @@ let ingredients;
   console.log(isCat("tiger"));
   console.log(switchName("Mary"))
   console.log(ages(5))
+
+  // LESSON 7 : FUNCTIONS 
+   function function1() {
+        return "hello";
+        console.log(2 + 2);
+      }
+      function1(); // calling the function/running the function
+
+      // This functions takes a parameter named tax1
+      function tax(tax1) {
+        console.log(tax1 * 1);
+      }
+      tax(200); // passing a value into the function= parameter, is an argument(200),
 

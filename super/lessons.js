@@ -1,10 +1,23 @@
+//LESSON 2  STRINGS 
+// convert temperature to celsius and Fahrenheit; 
+let temperature= 0; 
+function celsius(temperature){
+    const F = (temperature* 9/5) + 32; 
+    const C = (temperature-32)*5/9
+    return F;
+}
+console.log(celsius(-5))
 
-//LESSON 3: strings / 
-const names = "sherlyne";
-// use concatenation
-console.log(`My name is ${names}`);
+//LESSON 3: STRINGS 
+function string(names){
+    // use concatenation
+    alert(`my name is ${names}`);
+    return names;
+} 
 
-// Items:
+console.log(string('sherlyne'))
+
+// Items In Cart :
 const coffee2 = 5.99;
 const bagel2 = 2.95; 
 const soup = 9
@@ -37,8 +50,13 @@ console.log(tax);
 const totalCosts = cost +tax;
 console.log(` Total cost:$$ ${totalCosts}`);
 
-
-
+// Variables: 
+let calculator ='';
+function calCulation(number){
+    if(calculator){
+        calculator +=number;
+    }else{calculator -= number}
+}
 
 //LESSON 6. BOOLEANS AND IF STATEMENTS/: 
 const shirt = 10;
@@ -53,14 +71,19 @@ function Total_cost(){
 }
 console.log(Total_cost())
 
+
+// LESSON 7: FUNCTIONS
+
+
+
+
+
 // How i spend the money
 const bank = 100; 
 const lunch = 20;
 const dinner = 50; 
 const earn = 200; 
-
 // Use the Array.reduce to add ([].reduce((a+b)=>a+b,0))
-
 function moneyHave(){
     // const lif= bank+lunch+dinner+earn
     // return lif
@@ -77,22 +100,7 @@ function page(){
 // console.log(page());
 
 
-//LESSON 2  STRINGS 
-// convert temperature to celsius and Fahrenheit; 
-let temperature= 0; 
-function celsius(temperature){
-    const F = (temperature* 9/5) + 32; 
-    const C = (temperature-32)*5/9
-    return F;
-}
-console.log(celsius(-5))
 
-//LESSON 3: STRINGS 
-function string(){
-    const names ='Sherlyne';
-    alert(`my name is ${names}`);
-    return names;
-} 
 
 // console.log(string())
 
@@ -114,18 +122,11 @@ function doc(){
 }
 // console.log(doc());
 
-// LESSON 5 IF ELSE STATEMENT 
 
-// Variables: 
-let calculator ='';
-function calCulation(number){
-    if(calculator){
-        calculator +=number;
-    }else{calculator -= number}
-}
-console.log(3<5);
 
-console.log(calCulation('2')) ;
+
+
+// LESSON 9 DOM 
 
 function displayResults(){
     const results = document.querySelector('.js-results').innerText =`Results = ${calculator}`;
