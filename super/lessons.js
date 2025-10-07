@@ -15,23 +15,32 @@ const totalCost = totalTax + cost;
 console.log(`Total Cost: $${totalCost}`);
 // alert(`Total Cost: $${totalCost}`);
 
-
 //LESSON 4. HTML /: 
 console.log('Welcome to the lessons page!')
 
-
 //LESSON 5. VARIABLES 
+// Use of interpolation and backticks.
+// calculator 
+// amazon cart
+
+const name = "Elephant";
+console.log(`my name is ${names}` ) ;
+
+// restaurant order
+const coffee = 5 
+const bagels = 2*3;
+const ting = 9
+const costs = coffee + bagels + ting;
+const tax = cost * 0.1
+console.log(cost);
+console.log(tax); 
+const totalCosts = cost +tax;
+console.log(` Total cost:$$ ${totalCosts}`);
 
 
 
 
-
-
-
-
-
-
-//LESSON 4. ORDER OF OPERATIONS /: 
+//LESSON 6. BOOLEANS AND IF STATEMENTS/: 
 const shirt = 10;
 const socks = 8; 
 const plate = 20;

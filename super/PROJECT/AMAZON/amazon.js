@@ -9,6 +9,7 @@ let products = [
     {name:"Television", price:3000,quantity:0}
 ]
 
+// products
 const shoe = 1090;
 const basket = 2095;
 const toaster = 1899; 
@@ -46,20 +47,19 @@ console.log(displayQuantity())
 
 const maxItems = 10; // maximum items in the cart
 // times (number of times (+1,-1,) its a parameter that hols +1,-2, ...)
-function amazonCart(times){
+function amazonCart(items){
     displayQuantity();// updates the quantity in the paragraph, 
-    if(cartQuantity + times > maxItems){
+    if(cartQuantity + items > maxItems){
         return alert('Cart is full maximum items = 10')
-    }else if (cartQuantity + times < 0){
+    }else if (cartQuantity + items < 0){
          alert("Cart cannot be zero");
         return cartQuantity;
     }
     
-    cartQuantity += times ; 
+    cartQuantity += items ; 
     amazonCalculation(); // the total calculations or quantities
     return cartQuantity;
 }
-
 
 console.log(amazonCart(0))
 

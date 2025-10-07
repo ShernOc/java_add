@@ -23,7 +23,7 @@ function cal(num1,num2,calculator) {
   }
 }
 
-console.log(cal(1,5,"+"))
+// console.log(cal(1,5,"+"))
 
 
 

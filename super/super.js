@@ -1,94 +1,91 @@
+//LESSON 5: Variables
 //Variables: is a container that holds data or values; 
 
 let variables1 =3; 
 console.log(variables1);// 3
 
 const Day = "Tuesday";
-console.log(word,variables1);// 
+console.log(Day,variables1);// 
 
 // resign a variable*
 let calculation = 2+2;
-console.log(calculation *6);
-let results = calculation + 5
-console.log(results)
+console.log(calculation *6);//24
+let results = calculation + 5; 
+console.log(results) /9
 
 let mine1 = 10;
 mine1 = mine1 +1;
-console.log(mine1)
+console.log(mine1) //11
 
 mine1= 56 // re-assigning a value. 
-
-
+console.log(mine1)//56
 
 // Start Quantity = 0 
 let Quantity = 0; 
+const animal = 'Tiger' // const variable used 
 
 // add the value of Quantity to two and then reasign it to that quantity
-Quantity = Quantity +2; 
+Quantity = Quantity +2; //2
+Quantity = Quantity +3; // 5
 
-Quantity = Quantity +3;  
-
-
-
-// string interpolation the use of back ticks.
-/*to make the quantity to be seen we have to do use a backticks for the work */
-// string interpolation 
-console.log(`Cart quantity:${Quantity}`)
-
-// Variables
-let cartQuantity=0;
-const names = "sherlyne";
-console.log(`my name is ${names}` ) ;
-const coffee = 5 
-const bagels = 2*3;
-const soup = 9
-const cost = coffee + bagels + soup;
-const tax = cost * 0.1
-console.log(cost);
-console.log(tax); 
-const totalCost = cost +tax;
-console.log(` Total cost:$$ ${totalCost}`);
+console.log(typeof(Quantity)) // type of number
+console.log(Quantity)//5
 
 
-//IF ELSE STATEMENT 
+//LESSONS 6: BOOLEANS AND IF STATEMENTS
+
+// Booleans: 
+true
+false; 
+console.log(3<5)// true because 3 is less than 5. 
+
+//IF ELSE STATEMENTS
+
+// if (if the condition is true ){
+//   return this statement
+//  } else if { return this if the statement is false or otherwise this; 
+//  } else{
+//   return this as the final work 
+//  }
+
+if(true){
+  console.log('run this code');
+}else {
+  console.log('run this code');
+}
+
+//Ternary Statement
+
+function isCat(cat){
+    return cat === "tiger"?"Hi tiger you are cute": `Hi ${cat}`; 
+    }
+
+console.log(isCat('tiger')); 
+
+
 // Calculator  
 function calculator(){
-  let calculation = "";
-  let calc;
-
- if (calculation === calculation){
-  calc =  calculation += "1"
-   calculation += "2"
- calculation += "3"
- calculation += "4";
- calculation += "5";
- calculation += "6";
-
- calculation += "+";
- calculation -= "-";
- }
+  let calculation = 0; 
+  if (calculation){
+    results = calculation += 19;}
+    return results;
 }
 
-console.log(calculator)
+console.log(calculator())
 
+// IF ELSE STATEMENTS 
+function ageLimit(){
 // if statement/boolean 
-const ages = 15; 
-if (age >=16){
-  console.log("you can drive")
+    const currentAge = 15; 
+    if (currentAge>16 && currentAge<21){
+      console.log("you can drive")
+    }else if (currentAge> 21 && currentAge <70){
+      console.log("You can drink ")
+    }else{
+      console.log('Wait you cannot drink and drive')
+    }
 
-}else{
-  console.log("You cannot drive")
 }
-
-
-// If statements 
-let age = 2; // condition 
-if (age>18){
-  console.log("you can drive")
-}else{
-  console.log("You cannot drive")
-}
-
 
 function nameCat(cat){
   if(cat === "rose"){
@@ -96,13 +93,14 @@ function nameCat(cat){
   }else if (typeof cat === "string"){
     return `Hi ${cat} your cat name is cute`
   }else {
-    return "sorry pass in a cat name"
-  }
+    alert("sorry pass in a cat name") 
  } 
+ return cat;
+}
 
-console.log(nameCat("sherlyne"))
+console.log(nameCat("Mogaka"))
 
-// switch 
+// Switch Statement 
 function switchName(name){
   switch(name){
     case "sherlyne":
@@ -113,6 +111,8 @@ function switchName(name){
     return `Hi ${name}`
   }
  }
+
+
 
 // EXAMPLE OF SWITCH
  const order = 'cheeseburger';
@@ -160,7 +160,7 @@ let ingredients;
     }
     }
 
-    const catAge = 18? 
+    const catAge = 18 ; 
 
     function isRose(cat){
       if(cat === "rose"){
@@ -172,8 +172,8 @@ let ingredients;
       }
     } 
 
-    function isCat(cat){
-     return cat === "tiger"?"Hi tiger you are cute": `Hi ${cat}`; 
+    function ternaryCat(cat){
+      return cat === "tiger"?"Hi tiger you are cute": `Hi ${cat}`; 
      };
 
      // switch 

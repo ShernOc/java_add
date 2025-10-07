@@ -41,52 +41,33 @@
 <h2>VARIABLES AND DATA TYPES </h2>
   
 <p> <b>VARIABLE:</b> is a container that contains or stores the values <br>
-    We use <b>const, let, var to declare a variable.</b>
+    We use <b>const, let, var to declare and assign a variable.</b>
     <br>
-    <b>Syntax rules:</b>
+    <h3>Syntax rules and Variable Names in Javascript:</h3>
+    <br>
     <li>No naming a variable with let, var, or const as a variable names</li>
     <li>No naming or starting a variable with a number eg let 1 = sf: </li>
     <li>Cant use special characters such as <b>$@$%</b></li>
+    <li>Variables should start in lower case</li>
+    <li>Use the camelCase to name variables</li>
+    <li>caseMatters this are all different javascript is also different</li>
     <br>
     <b>let</b> 
     <br>
-    <li>creates a new variable that van be changed or altered.</li> 
+    <li>Creates a new variable that can be changed later in the code. .</li> 
     <li>Allows the reassignment of values  eg:  let cat = "rose" </li>
    <li>expression : anything that returns a value</li>
    <li> Statement : a set of instructions does not return a value </li>
    <br>
-
-
-
-   </p> 
-   
-   <p>
-    <b>Variables</b> are containers thats stores the values 
-    Variable is a container that stores values.
-    <p>We use const, let, var to declare a variable and assign a value to it. 
-      
-      <li> <b>const</b>: because it cannot be redeclared. or reassigned it  protects the variables </li>
-      <li><b>let</b> -  only when changing the variable later</li>
-      <li><b>var</b> - not used in javascript but is seen in original javascript code / not used now in js </li>
-
-
-      <h3>Variables Names in JavaScript</h3>
-      <li>Variables should start in lower case</li>
-      <li>Use the camelCase</li>
-      <li>caseMatters this are all different javascript is also different</li>
-
-      <b>variable are written in camelCase in javascript;</b>
-    </p>
-    <br>
-    eg: 
-    const name = "Sherlyne" ;
-    You can also <br> Interpolate ${Interpolate} and <b>concatenate +</b>
-   </p>
+   <b>const</b>
+   <li> Creates an new variable and it cannot be redeclared. or reassigned it since it protects the variables </li>
+   <li>Used by default</li>
    <br>
+   <b>var</b>
+   <li> Not used in javascript but is seen in original javascript code / not used now in js </li>
 
-   <!-- Variable: a string:  -->
-    <!-- Variables are written in - camelCase:  
-    -->
+   <b>typeof = tells what the type of value is   </b>
+   </p> 
 
   <!-- DATA TYPES -->
  <h3>DATA TYPES</h3>
@@ -116,40 +97,39 @@
    <li>Null = is the absent of a value </li>
 <br>
 </div>
+<br>
+<div class="cs-six">
+  <h2> LESSON 6:BOOLEANS AND IF STATEMENTS </h2>
 
-<div class="cs-six"><h2> LESSON 6: COMPARISON IN JS</h2>
-
-  <H3>3. BOOLEANS</H3>
-    <p><b>Booleans</b>-checks if the condition/s is true or false</p>
-
-  <!-- Booleans : checks if the conditions are true or false:  -->
+  <h3> BOOLEANS</h3>
+  <p><b>Booleans</b>-checks if the condition/s or value is true or false;  
+    <br>
   <br>
-  <p>we have <b>loose equality</b> and <b>strict equality operator</b></p>
-  <br> 
-
-  <h3>equality operators</h3>
-  <li>strict equality operator ( = = = )</li>
-  <li>strict inequality operator ( != = )</li>
-  <br>
-  <h4>This are not recommended when using js</h4>
-  <li>loose equality operator ( = = )</li>
-  <li>loose inequality operator ( != )</li>
-  <br>
-
   <!-- comparison -->
-  <h3>Comparison Operator</h3>
+  <h3>Comparison Operators</h3>
   <li>greater than > </li>
   <li>less than < </li>
   <li>greater than or equal to >=</li>
   <li>less than or equal to <= </li>
-  <li> equal to ===</li> 
   <li>not equal to !==</li>
+  <li> equals to ===</li> 
+  <br> 
+  
+  We have <b>loose equality</b> and <b>strict equality operator</b>
 
-  <p>nb: <br> don't use compare numbers with string numbers because js with type converse the string number to a number 
+  <h3>equality operators</h3>
+  <li>strict equality operator (===)</li>
+  <li>strict inequality operator (!==)</li>
+  <br>
+  <h4>This are not recommended when using js</h4>
+  <li>loose equality operator (==)</li>
+  <li>loose inequality operator (!=)</li>
+  <br>
+  <b>nb:</b> <br> don't use compare numbers with string numbers because js with type converse the string number to a number 
   eg 88 > "9" will return true
-  <br> </p>
-
-  <p> Strings are compared with other strings lexicographically, meaning character-by-character from
+  <br> 
+  <br>
+    Strings are compared with other strings lexicographically, meaning character-by-character from
     left-to-right. The following returns false because the Unicode value of 8 , the first character in
     88 , is less than the Unicode value of 9 .
     "88" > "9";
@@ -157,29 +137,29 @@
     you can use the <b>Escape character \ which allows for one to use characters like i'm when coding. 
 
     \n = multi line string. takes the string into a new line 
-      new line or an escape character
+      new line or an escape character</b>
+  </p>
 
-    </b>
-  </p></div>
-<div  class="cs-seven">
-<h2>CONDITIONALS </h2>
-<br>
- <h3>IF, ELSE, AND ELSE IF STATEMENT</h3>
- <br>
- <p><b>if (if the condition is true ){
-  return this statement
- } else if { return this if the statement is false or otherwise this; 
- } else{
-  return this as the final work 
- }</b></p>
 
+<h2>CONDITIONALS AND IF ELSE STATEMENTS  </h2>
 <br>
-<h3>Ternary: shortcut for ifelse</h3>
+ <h3>IF, ELSE, AND ELSE-IF STATEMENTS</h3>
+
+ <p>If statements: allows us to write multiple groups of code and decides which code gets to run
+
+  <br>
+
+  <h3>Ternary: shortcut for ifelse</h3>
+
+  function isCat(cat){
+    return cat === "tiger"?"Hi tiger you are cute": `Hi ${cat}`; 
+    }
+
+ </p>
+
+ 
 <br>
 <p>
-function isCat(cat){
-  return cat === "tiger"?"Hi tiger you are cute": `Hi ${cat}`; 
-  }
 
 You can store the ternary in a variable 
 const cat = "tiger"? "Hi tiger": "Hi cat person";
