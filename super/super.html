@@ -7,43 +7,59 @@
   <link rel="stylesheet" href="./super.css">
 </head>
 <body>
-  <h1> JAVASCRIPT RECAP</h1>
-<h2>LESSON 1-3</h2>
-  <h3>giving instruction to a computer </h3>
-<li>string =  text or anything between single 'sherlyne' or double quotes  "sherlyne", or in backticks `sherlyne`, </li>
-<li><b>template strings</b> are string created by backticks : used in interpolation </li>
-<li>`items (${sherlyne}) Nb inserting value into a string.  </li>
+  <h1> JAVASCRIPT REVIEW</h1>
+<div class="cs-one-three">
+  <h2>LESSON 1-3</h2>
+  <b>coding:</b> is giving instruction to a computer 
 
-escape characters: 
-"i/'m leaning js"; 
-'/n'= creates a new line: 
-some\ntext; 
-3 ways of creating string
-<li>'...' = </li>
-<li>"...."</li>
-<li>`....` = template string use of backticks (where you have <b>interpolation)</b></li>
+  <li><b>String</b>is a text or anything between single 'sherlyne' or double quotes  "sherlyne", or in backticks `sherlyne`, </li>
+  <li><b>Template strings</b> are string created by backticks and are used in interpolation</li>
+  <b>Escape characters</b> 
+    <li>"i/'m leaning js"; </li> 
+    <li> <b>'/n'</b>=creates a new line: 
+    some\ntext;</li>
+    <br>
+    <b>ways of creating string</b>3 
+    <li>'...' = 'Single quotes'</li>
+    <li>"...." = "Double quotes"</li>
+    <li>`....` = template string use of backticks (where you have <b>interpolation) `interpolation`</b></li>
+</div>
+<br>
+<div class="cs-four" ><h2>LESSON 4:  html/css/javaScript recap</h2>
+   <h2>Example</h2>
 
-<h2>LESSON 4:  html recap</h2>
-   <h2>Items</h2>
-
-  <h3> T-shirts</h3>
+  <h3> T-shirts has a h3 heading element</h3>
    <p>Price: $7.99 </p>
    <p>shipping and handling = 4.99</p>
    <p>total before tax:(10%) of the total amount</p> 
-
    Order total: 
-  <hr>
+   <button style="background-color:cadetblue; color:azure; border-radius:4px;" onclick="alert('Your purchase is in the process')">BuyNow</button>
 
-<h2>LESSON 5:</h2>
+</div>
+<br>
+<div class="cs-five"><h2>LESSON 5:</h2>
 <h2>VARIABLES AND DATA TYPES </h2>
-  <h3>VARIABLES</h3>
-  <p>VARIABLES(Identifiers) : this that contain/stores the values. <br>
-    We use const, let, var to declare a variable. 
-   </p> 
-   <li> -let : can allows the reassignment of values  eg:  let cat = "rose" </li>
+  
+<p> <b>VARIABLE:</b> is a container that contains or stores the values <br>
+    We use <b>const, let, var to declare a variable.</b>
+    <br>
+    <b>Syntax rules:</b>
+    <li>No naming a variable with let, var, or const as a variable names</li>
+    <li>No naming or starting a variable with a number eg let 1 = sf: </li>
+    <li>Cant use special characters such as <b>$@$%</b></li>
+    <br>
+    <b>let</b> 
+    <br>
+    <li>creates a new variable that van be changed or altered.</li> 
+    <li>Allows the reassignment of values  eg:  let cat = "rose" </li>
    <li>expression : anything that returns a value</li>
    <li> Statement : a set of instructions does not return a value </li>
    <br>
+
+
+
+   </p> 
+   
    <p>
     <b>Variables</b> are containers thats stores the values 
     Variable is a container that stores values.
@@ -99,55 +115,53 @@ some\ntext;
    <h4>STRUCTURED ROOT PRIMITIVE </h4>
    <li>Null = is the absent of a value </li>
 <br>
+</div>
 
-<hr>
-<h2> LESSON 6: COMPARISON IN JS</h2>
+<div class="cs-six"><h2> LESSON 6: COMPARISON IN JS</h2>
 
-<H3>3. BOOLEANS</H3>
-  <p><b>Booleans</b>-checks if the condition/s is true or false</p>
+  <H3>3. BOOLEANS</H3>
+    <p><b>Booleans</b>-checks if the condition/s is true or false</p>
 
- <!-- Booleans : checks if the conditions are true or false:  -->
- <br>
-<p>we have <b>loose equality</b> and <b>strict equality operator</b></p>
-<br> 
+  <!-- Booleans : checks if the conditions are true or false:  -->
+  <br>
+  <p>we have <b>loose equality</b> and <b>strict equality operator</b></p>
+  <br> 
 
-<h3>equality operators</h3>
-<li>strict equality operator ( = = = )</li>
-<li>strict inequality operator ( != = )</li>
-<br>
-<h4>This are not recommended when using js</h4>
-<li>loose equality operator ( = = )</li>
-<li>loose inequality operator ( != )</li>
-<br>
+  <h3>equality operators</h3>
+  <li>strict equality operator ( = = = )</li>
+  <li>strict inequality operator ( != = )</li>
+  <br>
+  <h4>This are not recommended when using js</h4>
+  <li>loose equality operator ( = = )</li>
+  <li>loose inequality operator ( != )</li>
+  <br>
 
-<!-- comparison -->
-<h3>Comparison Operator</h3>
- <li>greater than > </li>
- <li>less than < </li>
- <li>greater than or equal to >=</li>
- <li>less than or equal to <= </li>
- <li> equal to ===</li> 
- <li>not equal to !==</li>
+  <!-- comparison -->
+  <h3>Comparison Operator</h3>
+  <li>greater than > </li>
+  <li>less than < </li>
+  <li>greater than or equal to >=</li>
+  <li>less than or equal to <= </li>
+  <li> equal to ===</li> 
+  <li>not equal to !==</li>
 
- <p>nb: <br> don't use compare numbers with string numbers because js with type converse the string number to a number 
- eg 88 > "9" will return true
-<br> </p>
+  <p>nb: <br> don't use compare numbers with string numbers because js with type converse the string number to a number 
+  eg 88 > "9" will return true
+  <br> </p>
 
-<p> Strings are compared with other strings lexicographically, meaning character-by-character from
-  left-to-right. The following returns false because the Unicode value of 8 , the first character in
-  88 , is less than the Unicode value of 9 .
-  "88" > "9";
-  // => false
-  you can use the <b>Escape character \ which allows for one to use characters like i'm when coding. 
+  <p> Strings are compared with other strings lexicographically, meaning character-by-character from
+    left-to-right. The following returns false because the Unicode value of 8 , the first character in
+    88 , is less than the Unicode value of 9 .
+    "88" > "9";
+    // => false
+    you can use the <b>Escape character \ which allows for one to use characters like i'm when coding. 
 
-  \n = multi line string. takes the string into a new line 
-    new line or an escape character
+    \n = multi line string. takes the string into a new line 
+      new line or an escape character
 
-  </b>
-</p>
-
-<br>
-
+    </b>
+  </p></div>
+<div  class="cs-seven">
 <h2>CONDITIONALS </h2>
 <br>
  <h3>IF, ELSE, AND ELSE IF STATEMENT</h3>
@@ -297,69 +311,26 @@ true && false = false </p>
 
 <!-- Questions to ask later: 
  How to remove the (dots in the li(elements)) -->
+<br>
+<br>
+ <div class="cs-notes">
+  <ol>
+    <li>How do you remove the bullet in an li element? </li>
+    <li></li>
+  </ol>
+ </div>
+
+</div>
 
 
- 
-<!-- Javascript code -->
-  <script src="Lessons.js" > 
-    // this are shortcuts for it statements 
-    const message = false && `hello`;
-    const result = 0? `truthy`:`falsy`;
+<div class="cs-eight"></div>
+<div class="cs-nine"></div>
 
-    console.log(message)
-    console.log(result)
-    
-    function ages(age){
-    if (age>18){
-      return ("You are allowed to drive")
-    }else{
-      return("You cannot drive")
-    }
-    }
+<hr>
 
-    const catAge = 18? 
 
-    function isRose(cat){
-      if(cat === "rose"){
-        return "Hi Rose"
-      }else if (typeof cat === "string"){
-        return `Hi ${cat} your cat name is cute`
-      }else {
-        return "sorry pass in a cat name"
-      }
-    } 
-
-    function isCat(cat){
-     return cat === "tiger"?"Hi tiger you are cute": `Hi ${cat}`; 
-     };
-
-     // switch 
-    function switchName(name){
-      switch(name){
-        case "sherlyne":
-          return "Hi sherlyne"
-        case "james":
-          return "Hi james nice to meet you"
-        default: 
-        return `Hi ${name.toUpperCase()}`
-      }
-     }
-
-    function addFive(number){
-      let result 
-      if(number>0){
-        result = number +5;
-      }
-      return result; 
-    }
-
-  console.log(isRose("sherlyne"))
-  console.log(isCat("tiger"));
-  console.log(switchName("Mary"))
-  console.log(ages(5))
-
+  <script src="super.js" > 
   </script>
-
 
 </body>
 </html>

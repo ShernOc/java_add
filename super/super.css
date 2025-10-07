@@ -5,7 +5,6 @@
 
 body{
   padding: 20px;
-  background-color: blue;
 }
 
 
@@ -24,6 +23,33 @@ button{
   padding:5px;
 }
 
+
+.cs-one-three{
+  background-color:antiquewhite;
+  padding-bottom:20px;
+}
+
+.cs-four{
+  background-color: aqua;
+  padding-bottom:20px;
+}
+
+.cs-five{
+  background-color: rgb(236, 145, 33);
+  padding-bottom: 20px;
+}
+
+.cs-six{
+  background-color: burlywood;
+}
+
+.cs-seven{
+  background-color: aquamarine;
+}
+.cs-notes{
+  color: red;
+  font-weight: bold;
+}
 /* property: value */
 
 /*  */
