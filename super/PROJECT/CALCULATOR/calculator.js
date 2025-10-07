@@ -1,101 +1,42 @@
 // Calculator; 
 
+// update calculator function
 let calculation = ""; 
-  console.log('You are awesome');
-
-  // Display the results
-  console.log(document.querySelector('.js-calc').innerHTML =`${calculation}`);
-  console.log('Why')
-
-// calculator Switch method: 
-function cal(num1,num2,calculator) {
-  switch(calculator){
-    case "+":
-      return num1 + num2;
-      break;
-    case "-":
-      return num1-num2;
-    default:
-      return "What the fuck"
-      
-  }
+// sign is the parameter = ('8')
+  // parseFloat(): converts string to numbers 
+function updateCalculator(sign){
+  let number = calculation += sign;
+  return number;
+  
 }
 
-// console.log(cal(1,5,"+"))
+// console.log(updateCalculator('+'))
 
-
-
-
-function calcAdd(number) {
-    return (calculation += number);
-  }
-
-  function calcMinus(number) {
-    return (calculation -= number);
- }
-
-  function calcMultiply(number) {
-    return (calculation *= number);
-  }
-
-  function calcModulus(number) {
-    return (calculation %= number);
-  }
-
-  function calcMultiply(number) {
-    return (calculation *= number);
-  }
-
-  function calcDivide(number) {
-    return (calculation /= number);
-  }
-
-
-
-  // functions
-function calcAdd(number){
-    return calculation += number;
+function equalSign(){
+  let calculations = parseFloat((eval(calculation))); // two decimal points 
+  console.log(`Total= ${calculations}`)
 }
 
-function calcMinus(number){
-    return calculation -= number;
+
+// Display the results // DOM manipulation 
+function display(){
+  const showCalc = document.querySelector('.js-calculator').innerText = `Results:\n Show the calculation down here`
+  return showCalc; 
 }
 
-function calcTimes(){
-    return calculation *=number;
-}
+console.log(display());
 
+// TO DO: 
+// How do i do the delete button: 
+// Display the Calculator on the website; and not the console? 
+
+//Small discovery: 
 function calcDivide(number){
-    number = parseFloat(number)
+  // parseFloat(convert string to number)
+    //.toFixed(3): specifies how many decimal here (3)
+    number = parseFloat(number).toFixed(2)
     if (!isNaN(number) && number !==0){
        return results = calculation /= number;
     }    
 }
-
-// delete button
-function calcDelete(calculation){
-    results = calculation;
-}
-
-function calcPercentage(number){
-    return results = calculation %=number;
-}
-
-// total 
-function calcTotal(calculation){
-    calculation = eval(calculation);
-}
-
-
-
-
-// console.log(calcAdd(2));//17
-// console.log(calcMinus(2));//13
-// console.log(calcTimes(2));//30
-// console.log(calcDivide(5));//3
-
-
-
-
-
-
+//

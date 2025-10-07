@@ -12,48 +12,41 @@
 
   <p> <!-- 7 -->
     <button title="7" onclick="
-    calculation +='7';
-    console.log(calculation);
+    // calculation +='7';
+    //console.log(calculation);
+    console.log(updateCalculator('7'))
     ">7</button>
   
   <!-- 8 -->
     <button title="8"
     onclick="
-    calculation +='8';
-    console.log(calculation)">8</button>
+     console.log(updateCalculator('8'))">8</button>
   
     <!-- 9 -->
     <button title="9" onclick="
-    calculation +='9';
-    console.log(calculation)">9</button>
+     console.log(updateCalculator('9'))">9</button>
   
     <!-- multiplication -->
     <button title="multiply" onclick="
-   calculation += '*'
-    console.log(calculation)">x</button>
+    console.log(updateCalculator(' * '))">x</button>
   </p>
   
   <p>
-  
   <!-- 4-->
     <button title="4" onclick="
-    calculation +='4';
-    console.log(calculation)">4</button>
+     console.log(updateCalculator('4'))">4</button>
   
   <!--5-->
     <button title="5" onclick="
-   calculation +='5';
-    console.log(calculation)">5</button>
+    console.log(updateCalculator('5'))">5</button>
   
   <!-- 6 -->
     <button title="6" onclick="
-    calculation +='6';
-    console.log(calculation)" >6</button>
+     console.log(updateCalculator('6'))" >6</button>
   
     <!-- minus  -->
     <button title="minus"
-    onclick=" calculation += '-';
-    console.log(calculation)">-</button>
+    onclick="  console.log(updateCalculator(' - '))">-</button>
 
   </p>
   
@@ -61,41 +54,33 @@
 
       <!-- 1 -->
       <button title="1" onclick="
-      calculation += '1';
-      console.log(calculation)">1</button>
+       console.log(updateCalculator('1'))">1</button>
       
-    
     <!-- 2 -->
       <button title="2" onclick="
-      calculation +='2';
-      console.log(calculation)">2</button>
+     console.log(updateCalculator('2'))">2</button>
     
       <!-- 3 -->
       <button title="3" onclick="
-      calculation +='3';
-      console.log(calculation)">3</button>
+       console.log(updateCalculator('3'))">3</button>
     
       <!-- add button  -->
       <button title="add" onclick="
-      calculation += '+';
-      console.log(calculation)">+</button>
+       console.log(updateCalculator(' + '))">+</button>
   </p>
   
   <p>
   <!-- zero button -->
     <button title="0" onclick="
-    calculation +='0';
-    console.log(calculation)">0</button>
+     console.log(updateCalculator('0'))">0</button>
     
     <!-- divide -->
     <button title="divide" onclick="
     //divisor = parseFloat(devisor)
 
     // if (!isNaN(devisor) && devisor !==0){calculation /= divisor; 
-     console.log(calculation)
-    
-    calculation += '/'; 
-    //calculation /= '/' // output as none
+      console.log(updateCalculator(' / '))
+  
     ">/</button>
   
   <!-- delete button -->
@@ -106,30 +91,25 @@
   
   <!-- percentage -->
     <button title="percentage" onclick="
-    calculation += '%';
-    console.log(calculation)">%</button>
+     console.log(updateCalculator(' % '))">%</button>
   
   </p>
 
   <p style="justify-content:left;">
+
     <!-- Finds the total -->
     <button title="total"  onclick="
-    calculation = eval(calculation)
-    console.log(`Total= ${calculation}`)
-    
-    /*console.log(`Total= ${calculation}*/
-    "
+    //calculation = eval(calculation)
+    console.log(equalSign(' = '))"
     >=</button>
-    <!-- Display the results in  -->
-  </p>
 
-  <p class="js-calc"></p>
+  </p>
+  
+  <!-- Display the results in  -->
+  <p class="js-calculator"></p>
 </div>
 
-
 </body>
-
-
 <script src="calculator.js"> 
 </script>
 </html>

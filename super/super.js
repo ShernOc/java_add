@@ -206,8 +206,15 @@ let ingredients;
       }
       function1(); // calling the function/running the function
 
-      // This functions takes a parameter named tax1
-      function tax(tax1) {
-        console.log(tax1 * 1);
+      // This functions takes a parameter named cost
+      // taxPercent = 0.3 = default value 
+      function calculateTax(cost,taxPercent = 0.3) {
+        console.log(cost* taxPercent);
       }
-      tax(200); // passing a value into the function= parameter, is an argument(200),
+      calculateTax(200,0.2); // passing a value into the function= parameter, is an argument(200),
+      calculateTax(5000) // 500 is an argument or a value
+
+      // alert('hell0') // is a function that takes: 
+
+// LESSON 8: OBJECTS: 
+
