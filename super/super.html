@@ -154,19 +154,59 @@
   function isCat(cat){
     return cat === "tiger"?"Hi tiger you are cute": `Hi ${cat}`; 
     }
-
+  <br>
+    You can store the ternary in a variable 
+    const cat = "tiger"? "Hi tiger": "Hi cat person";
+    console.log(cat)
  </p>
-
  
 <br>
 <p>
+<h3>LOGICAL OPERATORS</h3>  
 
-You can store the ternary in a variable 
-const cat = "tiger"? "Hi tiger": "Hi cat person";
-console.log(cat)
+<li>NOT(!)</li>
+<li>AND(&&)</li>
+<li>OR(||)</li>
+  
+<h4>NOT (!): </h4>
+<p>NOT(!)- Converts/flips the a truthy value to false and a falsy value to true.
+- Using double NOT (!!) converts a value to its boolean equivalent.(true/false)
+
+We can use two (!!) to convert an expression to a boolean .
+<br>
+<h4>AND (&&)</h4>
+: takes two expression
+expression1 && expression 2
+looks at one of the two expressions:
+false && false = false 
+GUARD OPERATOR: checks for the left side is the value is false and stops the expression. 
+<!-- short circuit evaluation // guar operator
+ you can use the guard message to start with a false value and end with a true value' 
+ const message = false && `hello`;
+ console.log(message)
+ it will display false. -->
+
+
+false && truthy = false 
+true && true = true 
+true && false = false </p>
+
+<br>
+<h4>OR(||):</h4>
+
+The logical OR ( || ) operator also takes two expressions:
+ expression1 || expression2 ;
+ // DEFAULT OPERATOR -checks for the left side is true/ and stops early. :
+
+ <b>NB: It returns the first expression that is true, either or the left or the right side . </b>
+
+// Its the Default Operator 
+
+ There are three different ways the || operator can be evaluated:
 
 </p>
-<br>
+
+
 <h3>SWITCH</h3>
 <b>
   function switchName(name){
@@ -209,50 +249,6 @@ console.log(cat)
  }
 </p>
 
-<h2>LOGICAL OPERATORS</h2>  
-
-<li>NOT(!)</li>
-<li>AND(&&)</li>
-<li>OR(||)</li>
-  
-<h3>NOT (!): </h3>
-<p>NOT(!)- Converts/flips the   a truthy value to false and a falsy value to true.
-- Using double NOT (!!) converts a value to its boolean equivalent.(true/false)
-
-We can use two (!!) to convert an expression to a boolean .</p>
-
-<br>
-<h3>AND (&&)</h3>
-<p>AND(&&)
-: takes two expression
-expression1 && expression 2
-looks at one of the two expressions:
-false && false = false 
-GUARD OPERATOR: checks for the left side is the value is false and stops the expression. 
-<!-- short circuit evaluation // guar operator
- you can use the guard message to start with a false value and end with a true value' 
- const message = false && `hello`;
- console.log(message)
- it will display false. -->
-
-
-false && truthy = false 
-true && true = true 
-true && false = false </p>
-
-
-
-<br>
-<h3>OR(||):</h3>
-<p>The logical OR ( || ) operator also takes two expressions:
- expression1 || expression2 ;
- // DEFAULT OPERATOR -checks for the left side is true/ and stops early. :
-
- NB: It returns the first expression that is true, either or the left or the right. 
-
-// Its the Default Operator 
-
- There are three different ways the || operator can be evaluated:</p>
 
  <table>
   <tr>
@@ -289,8 +285,7 @@ true && false = false </p>
  of whether it's truthy or falsey) and completes</b>
  
 
-<!-- Questions to ask later: 
- How to remove the (dots in the li(elements)) -->
+
 <br>
 <br>
  <div class="cs-notes">

@@ -48,11 +48,18 @@ console.log(3<5)// true because 3 is less than 5.
 //   return this as the final work 
 //  }
 
-if(true){
-  console.log('run this code');
-}else {
-  console.log('run this code');
+function elseIfStatement(){
+  if(true===1){
+    console.log('run this code');
+  }else if(false){
+    console.log('Return this code')
+  } else {
+    console.log('run this code as the last resort');
+  }
+
+  console.log('Yeah we did it')
 }
+
 
 //Ternary Statement
 
