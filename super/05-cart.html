@@ -8,225 +8,118 @@
 </head>
 <body>
   <div>
-    <h3>CART QUANTITY</h3>
+   <h2>CART QUANTITY EXERCISE</h2>
+  <div class="mediate">
+  <h3>Beginner Friendly</h3>
 
+    <!-- Add to cart -->
+    <button onclick=" 
+    cartQuantity = cartQuantity + 1; 
+    console.log(`Cart quantity:${cartQuantity}`);
+    ">Add to Cart</button>
     
-
-
-
-    
-  </div>
-  <button onclick="
-    console.log(`Cart quantity:${cartQuantity}`);">Show Quantity</button>
-
-    <button class="cs-add"  title="Add to cart" onclick="console.log(amazonCart(+1))">Add to Cart</button>
-    
+    <!-- Add to cart by +2 -->
     <button onclick="
-    cartQuantity= cartQuantity +2; 
-    console.log(amazonCart(+2));">+2</button>
-    
-    <button class="cs-order" onclick="
-    console.log(amazonCart(-1))"
-    >Remove from Cart</button>
-    
-    <button class="cs-buy" onclick="
-    console.log('Loading')
-    ">Buy now</button>
-    <br><br>
- 
+    cartQuantity+=2; 
+    console.log(`Cart quantity:${cartQuantity}`);">+2</button>
 
+    <!-- +3 -->
+    <button onclick="
+    cartQuantity+=3; 
+    console.log(`Cart quantity: ${cartQuantity}`);">+3</button>
 
-    <!-- TO USE AT THE BEGINNING  -->
+    <!-- +4 -->
+    <button onclick="
+    cartQuantity+=3; 
+    console.log(`Cart quantity:${cartQuantity}`);">+4</button>
 
-<p>The first version(beginner)</p>
-<!-- Show quantity: shows the total of the quantity-->
-<button onclick="
-console.log(`CartQuantity:${cartQuantity}`);">Show Quantity</button>
+    <!-- +5 -->
+    <button onclick="
+    cartQuantity+=5; 
+    console.log(`Cart quantity:${cartQuantity}`);">+5</button>
 
-<!-- Add to cart -->
-<button onclick="
-// this is a js code: takes the code and adds it to the already quantity. 
-cartQuantity = cartQuantity + 1; 
-console.log(`Cart quantity:${cartQuantity}`);
- ">Add to Cart</button>
- <!-- +2 -->
-<button onclick="
-cartQuantity+=2; 
-console.log(`Cart quantity:${cartQuantity}`);">+2</button>
+    <!-- Reset items to zero -->
+    <button onclick="
+    cartQuantity=0;
+    alert(`Cart was reset to zero`); 
+    console.log(`Cart quantity:${cartQuantity}`);">Reset Cart</button>
 
-<!-- +3 -->
-<button onclick="
-cartQuantity+=3; 
-console.log(`Cart quantity: ${cartQuantity}`);">+3</button>
+    <!-- Remove items from cart -->
+    <button onclick="
+      cartQuantity-=1;
+      alert(`Items removed removed`);
+      console.log(`Remaining quantity:${cartQuantity}`);">Remove from Cart</button>
 
-<!-- +4 -->
-<button onclick="
-cartQuantity+=3; 
-console.log(`Cart quantity:${cartQuantity}`);">+4</button>
+    <!-- Remove items from cart by -2  -->
 
-<!-- +5 -->
-<button onclick="
-cartQuantity+=5; 
-console.log(`Cart quantity:${cartQuantity}`);">+5</button>
+    <button onclick="
+    cartQuantity-=2; 
+    console.log(`Cart quantity:${cartQuantity}`);">-2</button>
 
-<!-- Reset to zero -->
-<button onclick="
-// trying to reset the button to zero
-cartQuantity=0;
-console.log(`Cart was reset`) 
-console.log(`Cart quantity:${cartQuantity}`);">Reset Cart</button>
+    <!-- Remove items from cart by -3 -->
+    <button onclick="
+    cartQuantity-=3; 
+    console.log(`Cart quantity:${cartQuantity}`);">-3</button>
+    <hr>
+</div>
 
-<!-- Remove from Cart -->
-<button onclick="
-// trying to reset the button to zero
-cartQuantity-=1;
-console.log(`Item removed removed`) 
-console.log(`Remaining quantity:${cartQuantity}`);">Remove from Cart</button>
+<div class="best">
+  <h2>Mediate Friendly</h2>
+    <p>Here a function is created, to allow for the reuse of the code. </p>
 
-<!-- Removes from the cart  -->
-<!-- -2-->
-<button onclick="
-cartQuantity-=2; 
-console.log(`Cart quantity:${cartQuantity}`);">-2</button>
+    <button onclick=" 
+    //show the items in the Cart
+      console.log(`Cart Quantity: ${cartQuantity}`); 
+      "
+    >Show Quantity</button>
 
-<!-- -3 -->
-<button onclick="
-cartQuantity-=3; 
-console.log(`Cart quantity:${cartQuantity}`);">-3</button>
+    <button onclick="
+      console.log(`Cart Quantity: ${maxCartItems(+1)}`);
+    ">Add to Cart</button>
 
+    <!-- +2 -->
+    <button onclick="
+    console.log(`Cart Quantity: ${maxCartItems(+2)}`);
+    ;">+2</button>
 
-<script>
-  console.log("Welcome")
-  let cartQuantity=0; 
-  const maxStuff = 10; 
+    <!-- +3 -->
+    <button onclick="
+    console.log(`Cart Quantity: ${maxCartItems(+3)}`);">+3</button>
 
-  function amazonCart(times){
-    // This stops the calculation from continuing
-    if(cartQuantity + times > maxStuff){
-      return alert('Cart is full')
-    }else if(cartQuantity + times < 0){
-      return alert('add items in cart')
-    }else{
-      return cartQuantity += times}
-}; 
+    <!-- +4 -->
+    <button onclick="
+    console.log(`Cart Quantity: ${maxCartItems(+4)}`);
 
-//console.log(amazonCart(+7));
+    ;">+4</button>
 
+    <!-- +5 -->
+    <button onclick="
+    console.log(`Cart Quantity: ${maxCartItems(+5)}`);">+5</button>
 
-</script>
+    <!-- Reset quantity back to 0 -->
+    <button onclick="
+    cartQuantity=0;
+    console.log(`Cart Quantity:${maxCartItems(0)}`)
+    ">Reset Cart</button>
 
-  <h1>Cart Quantity</h1>
-  <br>
+    <!-- Remove from cart by -1 -->
+    <button onclick="
+      console.log(`Cart Quantity: ${maxCartItems(-1)}`);
+    ">Remove from Cart</button>
 
-<button onclick="
-console.log(`Cart quantity:${cartQuantity}`)
-  "
-  >Show Quantity</button>
+    <!-- Remove from cart by -2  -->
+    <button onclick="
+    console.log(`Cart Quantity: ${maxCartItems(-2)}`);">-2</button>
 
-<!-- Add to cart increases the quantity  and displays it in the console -->
-<button onclick="
-// this is a js code: takes the code and adds it to the already quantity. 
-cartQuantity +=1;
-
- if (cartQuantity<=10){
-    console.log(`Cart quantity:${cartQuantity}`) 
-  }else{
-    alert('The Cart is full')
-  }
-   
-  ">Add to Cart</button>
-
- <!-- +2 -->
-<button onclick="
-cartQuantity +=2; 
-
- if (cartQuantity<=10){
-    console.log(`Cart quantity:${cartQuantity}`) 
-  }else{
-    alert('The Cart is full')
-  }
-;">+2</button>
-
-<!-- +3 -->
-<button onclick="
-cartQuantity= cartQuantity +3; 
- if (cartQuantity<=10){
-    console.log(`Cart quantity:${cartQuantity}`) 
-  }else{
-    alert('The Cart is full')
-  };">+3</button>
-
-<!-- +4 -->
-<button onclick="
-cartQuantity +=4; 
- if (cartQuantity<=10){
-    console.log(`Cart quantity:${cartQuantity}`) 
-  }else{
-    alert('The Cart is full')
-  }
-;">+4</button>
-
-<!-- +5 -->
-<button onclick="
-cartQuantity +=5; 
- if (cartQuantity<=10){
-    console.log(`Cart quantity:${cartQuantity}`) 
-  }else{
-    alert('The Cart is full')
-  };">+5</button>
-
-
-<!-- Reset quantity back to zero -->
-<button onclick="
-cartQuantity=0;
-//display the message
-console.log('Cart was reset');
-
-console.log(`Cart quantity:${cartQuantity}`);">Reset Cart</button>
-
-<!-- Remove from Cart -->
-<button onclick="
-// trying to reset the button to zero
-cartQuantity-=1;
-if (cartQuantity<=0){
-  alert('Not enough items in the cart to remove')
-  }else{console.log(`Remaining quantity:${cartQuantity}`)
-    
-  } 
-;">Remove from Cart</button>
-
-<!-- Removes from the cart  -->
-<!-- -2-->
-<button onclick="
-cartQuantity-=2; 
-
- if (cartQuantity<=0){
-  alert('Not enough items in the cart to remove')
-  }else{console.log(`Remaining quantity:${cartQuantity}`)
-    
-  } 
-;">-2</button>
-
-<!-- -3 -->
-<button onclick="
-cartQuantity-=3; 
-console.log(`Cart quantity:${cartQuantity}`);">-3</button>
-
-
-<script>
-  /*saves the quantity*/ 
-
-  // lets carts holds a quantity of 10:Check if if the quantity is greater than 10: 
-  let cartQuantity =0;
-
+    <!-- Remove from cart by -3  -->
+    <button onclick="
+    console.log(`Cart Quantity: ${maxCartItems(-3)}`);">-3</button>
+</div>
   
-  
- 
-  
-</script>
+</div>
+
+
+<script src="05-cart.js"></script>
 
 </body>
 </html>
-
-
-
