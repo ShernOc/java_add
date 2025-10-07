@@ -274,7 +274,7 @@ greet((()=>console.log("am an inline function peter")));
 /* SCOPE : 
 
 1. Lexical
-2.Global scope: cannot access the functonal scope 
+2.Global scope: cannot access the functional scope 
 3.Functional scope :can access the global scope 
 Block scope : can access the function.  
 */

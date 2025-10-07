@@ -48,7 +48,7 @@ let isValid = number > 100 && number < 200 && number % 2 === 0;
 console.log(isValid); // Output: true (because 150 is between 100 and 200 and is even)
 
 /*
-// ! OR - || Operator
+/ ! OR - || Operator
 
 expression1 || expression2 || expression3 || expression4;
 
