@@ -3,23 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Variables</title>
+ 
+  <title>CartQuantity</title>
 </head>
 <body>
-  <h1>Lesson4</h1>
-   <h2>Items</h2>
+  <div>
+    <h3>CART QUANTITY</h3>
 
-  <h3> T-shirts</h3>
-   <p>Price: $7.99 </p>
-   <p>shipping and handling = 4.99</p>
+    
 
-   <p>total before tax:(10%) of the total amount</p> 
-  
-   Order total: 
-   <br><br><br>
 
-   <button onclick="
+
+    
+  </div>
+  <button onclick="
     console.log(`Cart quantity:${cartQuantity}`);">Show Quantity</button>
 
     <button class="cs-add"  title="Add to cart" onclick="console.log(amazonCart(+1))">Add to Cart</button>
@@ -37,7 +34,9 @@
     ">Buy now</button>
     <br><br>
  
-<!-- TO USE AT THE BEGINNING  -->
+
+
+    <!-- TO USE AT THE BEGINNING  -->
 
 <p>The first version(beginner)</p>
 <!-- Show quantity: shows the total of the quantity-->
@@ -116,9 +115,118 @@ console.log(`Cart quantity:${cartQuantity}`);">-3</button>
 
 </script>
 
+  <h1>Cart Quantity</h1>
+  <br>
+
+<button onclick="
+console.log(`Cart quantity:${cartQuantity}`)
+  "
+  >Show Quantity</button>
+
+<!-- Add to cart increases the quantity  and displays it in the console -->
+<button onclick="
+// this is a js code: takes the code and adds it to the already quantity. 
+cartQuantity +=1;
+
+ if (cartQuantity<=10){
+    console.log(`Cart quantity:${cartQuantity}`) 
+  }else{
+    alert('The Cart is full')
+  }
+   
+  ">Add to Cart</button>
+
+ <!-- +2 -->
+<button onclick="
+cartQuantity +=2; 
+
+ if (cartQuantity<=10){
+    console.log(`Cart quantity:${cartQuantity}`) 
+  }else{
+    alert('The Cart is full')
+  }
+;">+2</button>
+
+<!-- +3 -->
+<button onclick="
+cartQuantity= cartQuantity +3; 
+ if (cartQuantity<=10){
+    console.log(`Cart quantity:${cartQuantity}`) 
+  }else{
+    alert('The Cart is full')
+  };">+3</button>
+
+<!-- +4 -->
+<button onclick="
+cartQuantity +=4; 
+ if (cartQuantity<=10){
+    console.log(`Cart quantity:${cartQuantity}`) 
+  }else{
+    alert('The Cart is full')
+  }
+;">+4</button>
+
+<!-- +5 -->
+<button onclick="
+cartQuantity +=5; 
+ if (cartQuantity<=10){
+    console.log(`Cart quantity:${cartQuantity}`) 
+  }else{
+    alert('The Cart is full')
+  };">+5</button>
+
+
+<!-- Reset quantity back to zero -->
+<button onclick="
+cartQuantity=0;
+//display the message
+console.log('Cart was reset');
+
+console.log(`Cart quantity:${cartQuantity}`);">Reset Cart</button>
+
+<!-- Remove from Cart -->
+<button onclick="
+// trying to reset the button to zero
+cartQuantity-=1;
+if (cartQuantity<=0){
+  alert('Not enough items in the cart to remove')
+  }else{console.log(`Remaining quantity:${cartQuantity}`)
+    
+  } 
+;">Remove from Cart</button>
+
+<!-- Removes from the cart  -->
+<!-- -2-->
+<button onclick="
+cartQuantity-=2; 
+
+ if (cartQuantity<=0){
+  alert('Not enough items in the cart to remove')
+  }else{console.log(`Remaining quantity:${cartQuantity}`)
+    
+  } 
+;">-2</button>
+
+<!-- -3 -->
+<button onclick="
+cartQuantity-=3; 
+console.log(`Cart quantity:${cartQuantity}`);">-3</button>
+
+
+<script>
+  /*saves the quantity*/ 
+
+  // lets carts holds a quantity of 10:Check if if the quantity is greater than 10: 
+  let cartQuantity =0;
+
+  
+  
+ 
+  
+</script>
+
 </body>
 </html>
-
 
 
 

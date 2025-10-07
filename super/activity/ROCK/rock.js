@@ -70,11 +70,13 @@ function playTheGame(userPick){
     console.log(`User picked,${userPick}`);
 
     //Display on the paragraph below 
-    const displayDown = document.querySelector('.js-results').innerText = `Computer Pick: ${computerMove}\n Your Pick:${userPick}\n Results:${results}`
+    const displayDown = document.querySelector('.js-results').innerText = `Computer Pick:${computerMove}\n Your Pick:${userPick}\n Results:${results}`
     return displayDown;
 }
 
 console.log(playTheGame('paper'));
+
+// score: 
 
 
 

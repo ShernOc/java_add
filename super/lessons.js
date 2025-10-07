@@ -1,9 +1,40 @@
-//LESSON 1. 
+
+//LESSON 3: strings / 
+const names = "sherlyne";
+// use concatenation
+console.log(`My name is ${names}`);
+
+// Items:
+const coffee2 = 5.99;
+const bagel2 = 2.95; 
+const soup = 9
+tax = 0.1
+const cost= Math.round(coffee2 + bagel2 + soup); 
+const totalTax = cost * tax; 
+const totalCost = totalTax + cost; 
+console.log(`Total Cost: $${totalCost}`);
+// alert(`Total Cost: $${totalCost}`);
+
+
+//LESSON 4. HTML /: 
+console.log('Welcome to the lessons page!')
+
+
+//LESSON 5. VARIABLES 
+
+
+
+
+
+
+
+
+
+
+//LESSON 4. ORDER OF OPERATIONS /: 
 const shirt = 10;
 const socks = 8; 
 const plate = 20;
-
-
 
 console.log(typeof(shirt))
 
@@ -37,7 +68,7 @@ function page(){
 // console.log(page());
 
 
-//LESSON 2 
+//LESSON 2  STRINGS 
 // convert temperature to celsius and Fahrenheit; 
 let temperature= 0; 
 function celsius(temperature){
@@ -47,7 +78,7 @@ function celsius(temperature){
 }
 console.log(celsius(-5))
 
-//LESSON 3: 
+//LESSON 3: STRINGS 
 function string(){
     const names ='Sherlyne';
     alert(`my name is ${names}`);
@@ -65,14 +96,16 @@ function order(){
 
 // console.log(order())
 
-// LESSON 4 
+
+
+// LESSON 4  
 function doc(){
     const bod = document.body.innerHTML = alert('Welcome!');
     return bod;
 }
 // console.log(doc());
 
-// LESSON 5; 
+// LESSON 5 IF ELSE STATEMENT 
 
 // Variables: 
 let calculator ='';
@@ -214,12 +247,15 @@ function playGame(userPick){
     };
 
     alert(`You picked ${userPick},\n Computer picked ${computerMove},\n ${results}`);
-    // return results; 
+    return results;
 }
+
+// console.log(playGame('rock')) 
 
 // call this function
 // console.log(playGame('rock'));
 // console.log(playGame('scissor'))
+
 
 // learn about, functions, parameter
 function greet(name){
@@ -234,7 +270,6 @@ function greet(name){
 // call the function
 greet();
 
-
 function convertBothFahrenheitAndCelsius(number){
     const F = (number * 9/5) +32;
     const C = (number-32)*5/9; 
@@ -244,7 +279,6 @@ function convertBothFahrenheitAndCelsius(number){
 console.log(convertBothFahrenheitAndCelsius(90));
 
 //convert miles to 
-
 // 7g. create a function convertLenght(length,from,to) that takes a number and unit(km or miles)and convert the length to another unit(km,miles) noteL 1 mile = 1.6 km 
 // function convertLenght(length,from,to){ 
 //       km = length * 1.61 
@@ -275,6 +309,15 @@ console.log(convertBothFahrenheitAndCelsius(90));
 
 // }
 // console.log(convertLengthFt(5, 'km', ))
+
+
+// LESSON 8: OBJECTS 
+
+//Learn 
+
+
+
+
 
 
 

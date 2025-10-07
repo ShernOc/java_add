@@ -1,20 +1,5 @@
 // Variables
 
-const catName = "Tiger"
-console.log(`My name is ${catName}`)
-const coffee = 5;
-const bagels = 3 ;
-const soup = 9 ;
-
-const cost = (2 * bagels) + coffee +soup;
-
-console.log(`Cost of food:$ ${cost} `);
-
-const tax= (coffee + (2 * bagels) + soup) * 0.1;
-console.log(`Tax(10%):$${tax} `);
-
-const totalCost = cost + tax; 
-console.log(`Total cost: $${totalCost}`); 
 
 
 
