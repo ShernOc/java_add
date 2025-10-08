@@ -216,5 +216,94 @@ let ingredients;
 
       // alert('hell0') // is a function that takes: 
 
-// LESSON 8: OBJECTS: 
+// LESSON 8: OBJECTS:
+// This is an object: 
+
+ const object1 = {
+  property: 'value', 
+  price: '1090'
+
+ }
+
+ const fullName = {
+        name:'sherlyne',  // name is a property/key, 'sherlyne is the value 
+
+        title:'SoftDev' // this is property value pair
+    }
+
+console.log(object1)
+console.log( typeof(object1)); // object 
+
+
+// CREATE 
+const newObject = new Object();
+newObject.naming = 'Sherlyne'
+newObject.school = 'St.Mary';
+newObject.age='55';
+
+console.log(newObject); // will return 
+// newObject = {age: "55" , names: "Sherlyne", school: "St.Mary"}
+
+// CONSTRUCTION FUNCTION 
+// Another way to create an object by a function 
+// pass the properties
+function Products(name,price,quantity){
+  this.name = name;
+  this.price = price;
+  this.quantity=quantity
+}
+
+// create the values by creating the object
+// we are now assigning the property to it's value. 
+const amazonProducts = new Products('Shoes','2909','3'); 
+
+console.log(Products.amazonProducts.name)
+
+//GET // ACCESS 
+// to access object: (Object.property) // dot notation 
+console.log(object1.naming) // alice
+console.log(object1['school']) // St.Mary
+
+//Object.key(Object itself) // returns an array of given key properties
+console.log(Object.keys(newObject))//  ['names', 'school', 'age'] 
+
+// Object.values() // returns the values of the object: 
+console.log(Object.values(newObject)) // ['Sherlyne', 'St.Mary', '55']
+
+const arr = ["a", "b", "c"];
+console.log(Object.keys(arr)); // ['0', '1', '2']
+
+// ADD 
+
+//UPDATE 
+naming = 'Sherlyne' // accessing the property name: sherlyne
+
+object1['naming'] = 'Tiger' // changed the name from sherlyne to Tiger
+console.log(object1)//
+
+
+// REMOVE 
+// delete object.property // dot notation 
+// delete object[property] // bracket notation 
+
+delete newObject.age;
+console.log(newObject) // this removed the age from the newObject property. {name:'sherlyne', school:'St.Mary}
+
+// bracket notation
+delete newObject['name'];
+console.log(newObject);
+
+// DELETE 
+//delete object.property
+//delete object[property] // bracket notation 
+
+
+
+
+
+
+
+
+
+
 

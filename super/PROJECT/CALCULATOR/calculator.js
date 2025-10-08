@@ -20,7 +20,7 @@ function equalSign(){
 
 // Display the results // DOM manipulation 
 function display(){
-  const showCalc = document.querySelector('.js-calculator').innerText = `Results:\n Show the calculation down here`
+  const showCalc = document.querySelector('.js-calculator').innerText = `Results:\n Show the calculation down here such as \n 2+3 = 5: `
   return showCalc; 
 }
 
