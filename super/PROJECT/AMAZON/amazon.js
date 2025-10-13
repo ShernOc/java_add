@@ -2,12 +2,13 @@
 
 // Store the product in an array/object
 let products = [
-    {name:"shoes",price:1090,quantity:0},
-    {name:"basket",price:2090,quantity:0},
-    {name:"t-shirt",price:799,quantity:0},
-    {name:"toaster",price:1899,quantity:0}, 
-    {name:"Television", price:3000,quantity:0}
+    {id: 1, product:"shoes",price:1090,quantity:0},
+    {id: 2, product:"basket",price:2090,quantity:0},
+    {id: 2, product:"t-shirt",price:799,quantity:0},
+    {id: 2, product:"toaster",price:1899,quantity:0}, 
+    {id: 2, product:"Television", price:3000,quantity:0}
 ]
+
 
 // products
 const shoe = 1090;

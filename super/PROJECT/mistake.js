@@ -76,6 +76,16 @@ remove from cart = (-=1)
 */
 // console.log(amazonCart());
 
+// Get to have this on the books: for blog creation: 
+const products = [
+    {id: 1, Subjet:"shoes",price:1090,quantity:0},
+    {id: 2, product:"basket",price:2090,quantity:0},
+    {id: 2, product:"t-shirt",price:799,quantity:0},
+    {id: 2, product:"toaster",price:1899,quantity:0}, 
+    {id: 2, product:"Television", price:3000,quantity:0}
+]
+
+
 
 
 
