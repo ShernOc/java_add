@@ -14,6 +14,15 @@ Random numbers:
 2/3-1= scissor
 */ 
 
+// scores calculation : OBJECTS
+// Update the score: 
+// 1. create a variable for score outside the function 
+const score = {
+    wins: 0, 
+    losses: 0, 
+    ties: 0 
+}
+
 function pickCompMove(){
     let computerMove = ''; 
     const randomNumber =Math.random();
@@ -41,7 +50,7 @@ function playTheGame(userPick){
         if (computerMove === 'rock'){
             results = 'You tie';
         }else if(computerMove === 'paper'){
-            results = 'You Loose';
+            results = 'You loose';
         }else if(computerMove ==='scissors'){
             results = 'You win';
         }
@@ -67,16 +76,31 @@ function playTheGame(userPick){
         }
     }
 
+    // Update the score:
+    if(results === 'You win'){
+        score.wins +=1; 
+     }else if (results === 'You loose'){
+        score.losses +=1;
+     }else if (results === 'You tie'){
+        score.ties +=1;
+     }
+
     console.log(`User picked,${userPick}`);
 
     //Display on the paragraph below 
-    const displayDown = document.querySelector('.js-results').innerText = `Computer Pick:${computerMove}\n Your Pick:${userPick}\n Results:${results}`
+    const displayDown = document.querySelector('.js-results').innerText = `Computer Pick:${computerMove}\n Your Pick:${userPick} \n Results:${results}
+    Wins ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`; 
+
     return displayDown;
 }
 
-console.log(playTheGame('paper'));
+//console.log(playTheGame('paper'));
 
-// score: 
+
+
+
+
+
 
 
 

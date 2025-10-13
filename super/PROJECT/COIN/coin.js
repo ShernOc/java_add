@@ -9,6 +9,12 @@
 // if heads are more than 5 you win. else you loose 
 // Count the number of tails from 
 
+// Update the score 
+
+const score = {
+    win:0,
+    losses:0
+}
 
 function compPick(){
     let results = '';
@@ -46,7 +52,7 @@ function playGame(){
         if(comp === 'Heads'){
             results = 'You win';
         }else if(comp === 'Tails'){
-            results = 'You Win';
+            results = 'You win';
         }
     }else if(user === 'Tails'){
         if(comp === 'Heads'){
@@ -56,9 +62,18 @@ function playGame(){
         }
     }
 
-    const choice = document.querySelector('.js-user-pick').innerText = `You picked: ${user} and \n Computer picked : ${comp} \n results : ${results}`
+    // Update the score 
+    if(results === 'You win'){
+        score.win +=1;
+    }else if(results === 'You loose'){
+        score.losses +=1;
+    }
 
-    return results; 
+    const choice = document.querySelector('.js-user-pick').innerText = `You picked: ${user} \n Computer picked : ${comp} \n Results : ${results} 
+    Win: ${score.win}, Losses : ${score.losses}
+    `
+
+    return choice; 
 
 }
 
