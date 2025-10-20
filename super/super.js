@@ -257,7 +257,7 @@ function Products(name,price,quantity){
 // we are now assigning the property to it's value. 
 const amazonProducts = new Products('Shoes','2909','3'); 
 
-console.log(Products.amazonProducts.name)
+// console.log(Products.amazonProducts.name)
 
 //GET // ACCESS 
 // to access object: (Object.property) // dot notation 
@@ -298,13 +298,48 @@ console.log(newObject);
 //delete object[property] // bracket notation 
 
 
+// Update the score:create a objects 
 
+// Heads or tails
+const scores = {
+  wins:0,
+  losses:0
+}
 
+function headTails(){
+  number = Math.floor(Math.random()*10 +1); 
+  console.log(number)
+  let headTails = ''; 
+  if (number>0 && number<=5){
+    headTails = 'Heads';
+  }else if (number>5 && number <=10){
+    headTails = 'Tails'
+  }
 
+  return headTails;
+}
 
+function playHeadTails(){
+  const headT = headTails();
+  let results = '';
+  if (headT === 'Heads'){
+    results = 'You win'; 
+  }else if(headT === 'Tails'){
+    results = 'You loose';
+  }
 
+  // update the score
+  if (results === 'You win'){
+    // increase the wins by +1
+    scores.wins +=1; 
+  }else if (results === 'You loose'){
+    scores.losses +=1;
+  }
 
+ alert (`Your picked: ${headT} \n results: ${results} \n Wins:${scores.wins} \n Losses:${scores.losses}`)
 
+ return results; 
+}
 
-
-
+// run the code 
+// console.log(playHeadTails())

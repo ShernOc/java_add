@@ -4,7 +4,9 @@
 1. Computer randomly picks a move 
     if number between 1-1/3 = 
 2. You pick a move and the results are compared
-3. Display the results in a pop-up 
+4. Update the score 
+3. Display the results and score in a pop-up 
+
 */ 
 
 /*
@@ -16,7 +18,7 @@ Random numbers:
 
 // scores calculation : OBJECTS
 // Update the score: 
-// 1. create a variable for score outside the function 
+// 1. create a variable object for score outside the function 
 const score = {
     wins: 0, 
     losses: 0, 
@@ -78,6 +80,7 @@ function playTheGame(userPick){
 
     // Update the score:
     if(results === 'You win'){
+        // increase the win by 1. 
         score.wins +=1; 
      }else if (results === 'You loose'){
         score.losses +=1;

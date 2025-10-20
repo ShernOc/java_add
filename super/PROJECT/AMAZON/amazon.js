@@ -2,12 +2,15 @@
 
 // Store the product in an array/object
 let products = [
-    {id: 1, product:"shoes",price:1090,quantity:0},
-    {id: 2, product:"basket",price:2090,quantity:0},
-    {id: 2, product:"t-shirt",price:799,quantity:0},
-    {id: 2, product:"toaster",price:1899,quantity:0}, 
-    {id: 2, product:"Television", price:3000,quantity:0}
+    {id: 1, item:"shoes",price:1090,quantity:0},
+    {id: 2, item:"basket",price:2090,quantity:0},
+    {id: 2, item:"t-shirt",price:799,quantity:0},
+    {id: 2, item:"toaster",price:1899,quantity:0}, 
+    {id: 2, item:"Television", price:3000,quantity:0}
 ]
+
+
+// Want to get the products, 1, 
 
 
 // products

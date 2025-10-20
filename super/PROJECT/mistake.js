@@ -78,7 +78,7 @@ remove from cart = (-=1)
 
 // Get to have this on the books: for blog creation: 
 const products = [
-    {id: 1, Subjet:"shoes",price:1090,quantity:0},
+    {id: 1, product:"shoes",price:1090,quantity:0},
     {id: 2, product:"basket",price:2090,quantity:0},
     {id: 2, product:"t-shirt",price:799,quantity:0},
     {id: 2, product:"toaster",price:1899,quantity:0}, 

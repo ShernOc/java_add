@@ -13,44 +13,45 @@
 
 const score = {
     win:0,
-    losses:0
+    losses:0,
+    ties:0
 }
 
 function compPick(){
-    let results = '';
-    const randomNumber = Math.random();
-    console.log(randomNumber)
-    if(randomNumber > 0 && randomNumber <= 2/4){
-        results = 'Heads';
-     }else if(randomNumber > 2/4 && randomNumber <=1){
-        results = 'Tails';
+    const randomNumber = Math.floor(Math.random()*10 +1);
+    let headTails= '';
+    console.log(randomNumber) // run the numbers
+    if(randomNumber > 0 && randomNumber <=5){
+        headTails = 'Heads';
+     }else if(randomNumber > 5 && randomNumber <=10){
+        headTails = 'Tails';
     }
-    return results;
+    return headTails; // tails or heads 
 }
 
 function userPick(){
-    const randomNumber = Math.random();
-    console.log(randomNumber)
-    
-    if(randomNumber > 0 && randomNumber <= 2/4){
-        results = 'Heads';
-     }else if(randomNumber > 2/4 && randomNumber <=1){
-        results = 'Tails';
+    const randomNumber = Math.floor(Math.random()*10 +1);
+    let headTails= '';
+    console.log(randomNumber) // run the numbers
+    if(randomNumber > 0 && randomNumber <=5){
+        headTails = 'Heads';
+     }else if(randomNumber > 5 && randomNumber <=10){
+        headTails = 'Tails';
     }
-    return results;
+    return headTails;
 }
 
 
 function playGame(){
-    let user = userPick();
-    let comp = compPick();
+    let user = userPick(); // calling the userPick function 
+    let comp = compPick(); // calling the compPick function 
 
     console.log(`user: ${user}`)
     console.log(`computer: ${comp}`)
 
     if(user === 'Heads'){
         if(comp === 'Heads'){
-            results = 'You win';
+            results = 'You tie';
         }else if(comp === 'Tails'){
             results = 'You win';
         }
@@ -58,7 +59,7 @@ function playGame(){
         if(comp === 'Heads'){
             results ='You loose'
         }else if(comp === 'Tails'){
-            results = 'You loose';
+            results = 'You tie';
         }
     }
 
@@ -67,15 +68,17 @@ function playGame(){
         score.win +=1;
     }else if(results === 'You loose'){
         score.losses +=1;
+    }else if (results === 'You tie'){
+        score.ties +=1; 
     }
 
-    const choice = document.querySelector('.js-user-pick').innerText = `You picked: ${user} \n Computer picked : ${comp} \n Results : ${results} 
-    Win: ${score.win}, Losses : ${score.losses}
+    const choice = document.querySelector('.js-user-pick').innerText = `You picked: ${user}, \n Computer picked : ${comp} \n Results : ${results}, \n Win: ${score.win}, Losses : ${score.losses}, \nTies: ${score.ties}
     `
-
     return choice; 
 
 }
+
+
 
 // console.log(playGame())
 
