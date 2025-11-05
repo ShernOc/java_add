@@ -289,7 +289,7 @@ console.log(object1)//
 delete newObject.age;
 console.log(newObject) // this removed the age from the newObject property. {name:'sherlyne', school:'St.Mary}
 
-// bracket notation
+// bracket notation lets us use when the property don't work with dot notation
 delete newObject['name'];
 console.log(newObject);
 
@@ -299,14 +299,15 @@ console.log(newObject);
 
 
 // Update the score:create a objects 
-
-// Heads or tails
+// Heads or tails object that stores wins or tails
+// wins:0 starts with zero 
 const scores = {
   wins:0,
   losses:0
 }
 
 function headTails(){
+  // choses a random number that indicates if a number is greater or less than 5 its a heads, otherwise tails.
   number = Math.floor(Math.random()*10 +1); 
   console.log(number)
   let headTails = ''; 
@@ -319,6 +320,7 @@ function headTails(){
   return headTails;
 }
 
+// The function is called when the button is clicked
 function playHeadTails(){
   const headT = headTails();
   let results = '';
@@ -330,7 +332,7 @@ function playHeadTails(){
 
   // update the score
   if (results === 'You win'){
-    // increase the wins by +1
+    // increase the wins by +1; 
     scores.wins +=1; 
   }else if (results === 'You loose'){
     scores.losses +=1;
