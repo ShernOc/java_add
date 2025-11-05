@@ -1,14 +1,39 @@
 // AMAZON CART 
 
 // Store the product in an array/object
+// added a nested objects that checks the rating of items
 let products = [
-    {id: 1, item:"shoes",price:1090,quantity:0},
-    {id: 2, item:"basket",price:2090,quantity:0},
-    {id: 2, item:"t-shirt",price:799,quantity:0},
-    {id: 2, item:"toaster",price:1899,quantity:0}, 
-    {id: 2, item:"Television", price:3000,quantity:0}
+    {id: 1, item:"shoes",price:1090,quantity:0, 
+        rating:{
+        stars:4.5,
+        count:87
+    }},
+
+    {id: 2, item:"basket",price:2090,quantity:0, 
+        rating:{
+        stars:3.2,
+        count:30
+    }},
+    {id: 2, item:"t-shirt",price:799,quantity:0, 
+        rating:{
+        stars:2.1,
+        count:20
+    }},
+    {id: 2, item:"toaster",price:1899,quantity:0, 
+        rating:{
+        stars:3.2,
+        count:60
+    }}, 
+    {id: 2, item:"Television", price:3000,quantity:0, 
+        rating:{
+        stars:5,
+        count:100
+    }}
 ]
 
+// To access the products we use the dot notation in an array 
+
+console.log(products.rating.count)
 
 // Want to get the products, 1, 
 

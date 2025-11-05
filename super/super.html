@@ -309,12 +309,52 @@ Block scope : can access the function.
 
 <br><br>
 
-<h3>JSON BUILT OBJECT</h3>
+<p>You can also have nested objects
+  const products = {
+    name: 'shirt',
+    'delivery-time': '1 day'
+    rating:{
+      stars:4.5,
+      count:87
+    }, 
+    fun: function  function1(
+      console.log('function inside an object')
+    )
+  }
 
-<p>JSON.stringify(Object): used to convert an object to a JSON BUILT OBJECT 
-JSON.parse(JSON): used to covert JSON OBJECT to a javascript object</p>
+  // a function is a type of value
+  <br> 
+  You can also add a function in an object, in the property: function
+</p>
+<br>
+<h3>JSON BUILT-IN OBJECT</h3>
 
+<p>JSON Built-in Object: helps work with JSON. 
+  <br>
+  JSON= Javascript Object Notation:
+  <br>
+  <li>It uses less syntax </li>
+  <li>The key/properties must all use the double quotes for the strings ."name": "sherlyne", </li>
+  <li>does not support functions. </li>
+  <li>It's used to store data</li>
+  <br>
+  
+  Why use JSON? Because it's understood in many languages 
 
+<br><br>
+  <b>HOW TO STORE DATA </b>
+  <br> <br>
+  <b>CONVERTING JS object to JSON</b>
+  <br>
+  We use the method: 
+  <b> JSON.stringify(Object): used to convert an object to a JSON </b>
+  <br><br>
+  <b>CONVERTING JSON to JS Object</b>
+  <br>
+  We use: 
+  <b>JSON.parse(JSON): used to covert JSON OBJECT to a javascript object</b></p>
+
+  <br>
 </ul><h3>LOCAL STORAGE</h3>
 LOCAL STORAGE: Used to <b> permanently store data</b>
 - The data stored in local storage is accessible

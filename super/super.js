@@ -236,6 +236,20 @@ console.log( typeof(object1)); // object
 
 
 // CREATE 
+// The first way. 
+const education = {}; // create an empty object 
+
+// created a property named girls and added the names. 
+education.girls = ["Rahab","Alice","Sherlyne"]; 
+
+// another property named type 
+education.type = ["science","therapy", "computer"],
+
+education.school = ["Maseno University"]
+
+console.log(education); 
+
+// the next way
 const newObject = new Object();
 newObject.naming = 'Sherlyne'
 newObject.school = 'St.Mary';
@@ -303,8 +317,14 @@ console.log(newObject);
 // wins:0 starts with zero 
 const scores = {
   wins:0,
-  losses:0
+  losses:0,
+  fun:function life1(){
+    console.log('Function inside an object')
+
+  }
 }
+
+// when a function is inside a object it's called a method
 
 function headTails(){
   // choses a random number that indicates if a number is greater or less than 5 its a heads, otherwise tails.
@@ -343,5 +363,148 @@ function playHeadTails(){
  return results; 
 }
 
+  // you can also add a function inside an object which is called a method
+const books = {
+  books:function book(){
+        console.log('Avengers');
+    },
+   // you can also have a nested object, meaning an object inside an object
+    rating:{
+        stars:4.5,
+        count:87
+    },
+}
 // run the code 
 // console.log(playHeadTails())
+
+// 1. JSON BUILT-OBJECTS: 
+//JSON = javascript Object Notation
+// - It uses less syntax 
+//- must use the string
+//-used to store data 
+
+// Normal Objects 
+const JSONb = {
+  books:"Harry potter",
+    rating:"44"
+}
+
+//2.  HOW TO STORE DATA </b>
+
+/*CONVERTING JS object to JSON
+
+To convert JS object to JSON use 
+JSON.stringify(object) = method(takes an object we want to convert to json) which results in a string
+*/ 
+console.log(JSON.stringify(JSONb)) 
+// will return 
+/* const JSONb = {
+  books:"Harry potter",
+    rating:"44"
+}*/
+
+// Convert the JSON string to JS object - JSON.parse(JSON.stringify(product2))
+
+const jsonString = JSON.stringify(product2.rating);
+
+console.log(JSON.parse(jsonString)); 
+console.log(typeof JSON.parse(jsonString))// object 
+
+const num = 123
+const myJSON = JSON.stringify(num);
+console.log(myJSON)
+console.log(typeof myJSON);
+
+
+const family = {
+    mother: {
+      firstName: "Susan",
+      lastName: "Doyle",
+      age: 32,
+    },
+    father: {
+      firstName: "John",
+      lastName: "Doyle",
+      age: 33,
+    },
+    daughter: {
+      firstName: "Lily",
+      lastName: "Doyle",
+      age: 5,
+    },
+    son: {
+      firstName: "Mike",
+      lastName: "Doyle",
+      age: 8,
+    },
+  };
+
+  console.log(typeof family) // family object
+  const familyJSON = JSON.stringify(family)// converts family to json
+  console.log(familyJSON);
+  const familyOb = JSON.parse(familyJSON)
+  // back to js object 
+  console.log(familyOb)
+
+
+
+//LOCAL STORAGE: = saves the values more permanently: 
+    // Allows the word to be saved permanently. 
+    // You are going to pass a name and value string we want to save in the local storage: name = message, value = hello 
+      localStorage.setItem('message','hello')
+
+    // To get the string out of local storage, 
+    localStorage.getItem('message')
+    console.log(localStorage.getItem('message'));
+
+  
+
+    const familyS = {
+      firstName: "Susan",
+      lastName: "Doyle",
+      age: 32,
+    }
+
+    // OBJECT SHORTCUTS
+// destructuring shortcut: take properties out of an object
+    const {firstName} = familyS; // this will get the FirstName of susan
+    console.log(firstName);
+
+    //Will take the property out, 
+
+  const {age,lastName} = family; // this will get the FirstName of susan
+    console.log(age,lastName);
+
+  // Shorthand property 
+
+  const object5 ={
+     //firstName:firstName  // we are borrowing the name
+
+    // if the property and the value are the same you just type it once:
+    firstName  
+  }
+
+  console.log(object5)
+
+  // Shorthand method
+    const object6 ={
+     //firstName:firstName  // we are borrowing the nam
+
+    // if the property and the value are the same you just type it once:
+    firstName, 
+   // method: function function1(){
+      //console.log("method");
+    //}
+
+   // The shorthand method
+    // shortcut for the above method. the function name is not needed from the above method. 
+    method(){
+      console.log('method')
+    }
+
+  };
+
+  // this will run/ output the method in the console. 
+  console.log(object6)
+  object6.method();
+
