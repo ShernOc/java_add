@@ -7,9 +7,6 @@
 4. Update the score 
 3. Display the results and score in a pop-up 
 
-*/ 
-
-/*
 Random numbers: 
 0-1/3 = rock 
 1/3-2/3 = paper 
@@ -19,11 +16,26 @@ Random numbers:
 // scores calculation : OBJECTS
 // Update the score: 
 // 1. create a variable object for score outside the function 
-const score = {
-    wins: 0, 
-    losses: 0, 
-    ties: 0 
+// const scores= {
+//     wins: 0, 
+//     losses: 0, 
+//     ties: 0 
+// }
+
+// get the items saved and convert string to JS Object 
+let score= JSON.parse(localStorage.getItem('score'))
+// if the score is null, give a default score which is the object.
+if (score === null ){
+    score={
+        wins:0,
+        losses:0,
+        ties:0
+    }
 }
+console.log(score) 
+//returns  back to object {wins: 4, losses: 2, ties: 3}
+
+
 
 function pickCompMove(){
     let computerMove = ''; 
@@ -87,15 +99,23 @@ function playTheGame(userPick){
      }else if (results === 'You tie'){
         score.ties +=1;
      }
+    
+     //Saved score in the localStorage.setItem() permanently  and convert object a string  using JSON.stringify(object)
+    localStorage.setItem('score',JSON.stringify(score)); 
+
 
     console.log(`User picked,${userPick}`);
 
     //Display on the paragraph below 
     const displayDown = document.querySelector('.js-results').innerText = `Computer Pick:${computerMove}\n Your Pick:${userPick} \n Results:${results}
-    Wins ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`; 
+    Wins ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}
+    `
+    ; 
 
     return displayDown;
 }
+
+
 
 //console.log(playTheGame('paper'));
 

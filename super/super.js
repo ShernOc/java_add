@@ -377,8 +377,9 @@ const books = {
 // run the code 
 // console.log(playHeadTails())
 
+
 // 1. JSON BUILT-OBJECTS: 
-//JSON = javascript Object Notation
+//JSON = javascript Object Notation, which is a syntax 
 // - It uses less syntax 
 //- must use the string
 //-used to store data 
@@ -391,31 +392,35 @@ const JSONb = {
 
 //2.  HOW TO STORE DATA </b>
 
-/*CONVERTING JS object to JSON
+/* 1. CONVERTING JS object to JSON built object 
 
 To convert JS object to JSON use 
 JSON.stringify(object) = method(takes an object we want to convert to json) which results in a string
 */ 
+// JSONb is a JS object
 console.log(JSON.stringify(JSONb)) 
-// will return 
-/* const JSONb = {
-  books:"Harry potter",
-    rating:"44"
-}*/
+// will return a string 
+/* {
+  "books":"Harry potter",
+   " rating":"44"}
+   */
+console.log(typeof JSON.stringify(JSONb) ) // will return a string 
 
-// Convert the JSON string to JS object - JSON.parse(JSON.stringify(product2))
+// 2. Convert the JSON BUILT OBJECT string to JS object we use = JSON.parse(JSON OBJECT))
 
-const jsonString = JSON.stringify(product2.rating);
+const jsonString = JSON.stringify(JSONb);
+const jsonObject = JSON.parse(jsonString); 
 
-console.log(JSON.parse(jsonString)); 
-console.log(typeof JSON.parse(jsonString))// object 
+console.log(JSON.parse(jsonString)); // 44 
+console.log(typeof jsonObject)// object 
 
+// Example two 
 const num = 123
-const myJSON = JSON.stringify(num);
-console.log(myJSON)
-console.log(typeof myJSON);
+const myJSON = JSON.stringify(num); // 
+console.log(myJSON) // 123 but it's a string 
+console.log(typeof myJSON); // string 
 
-
+// Example 3 Object 
 const family = {
     mother: {
       firstName: "Susan",
@@ -440,33 +445,79 @@ const family = {
   };
 
   console.log(typeof family) // family object
-  const familyJSON = JSON.stringify(family)// converts family to json
+  const familyJSON = JSON.stringify(family)// converts family to JSON OBJECT 
   console.log(familyJSON);
   const familyOb = JSON.parse(familyJSON)
+  
   // back to js object 
   console.log(familyOb)
 
 
-
+// ANOTHER BUILT OBJECT 
 //LOCAL STORAGE: = saves the values more permanently: 
     // Allows the word to be saved permanently. 
-    // You are going to pass a name and value string we want to save in the local storage: name = message, value = hello 
-      localStorage.setItem('message','hello')
+    // You are going to pass a name and value string we want to save in the local storage: name = message, value = hello a string 
+    //we use the localStorage.setItem(name=value,value="string")
+
+  // There are steps to storing data permanently one you have to 
+  // 1. Set or name what you are going set (setItem)
+  // 2. Get, getting a value out of the local storage,  what you had set ealier, get (getItem)
+
+  localStorage.setItem('message','hello') // put it in. 
+  localStorage.getItem('message') // get it out (You pass the string that you had set "message ")
+
 
     // To get the string out of local storage, 
     localStorage.getItem('message')
-    console.log(localStorage.getItem('message'));
+    console.log(localStorage.getItem('message')); // hello 
 
+    //Example  object 
+    const score = {
+    wins: 0, 
+    losses: 0, 
+    ties: 0 
+  }
+
+  // localStorage only accepts strings
+
+  //Save the scores permanently (localstorage.setItem)
+     // convert the score object to string 
+     const scoreString = JSON.stringify(score)
+     console.log(scoreString) // string
+
+     // save score in the localStorage
+    localStorage.setItem('score', scoreString); 
   
+     // We are now going to get what we stored out of local storage
+     console.log(localStorage.getItem('score')) // name 
 
-    const familyS = {
+     // 2. Covert the local storage back to JSON OBJECT (JSON.parse)
+     const backJs = JSON.parse(localStorage.getItem('score')); 
+     console.log(backJs)
+     console.log(typeof backJs) // object 
+
+     // if the score is null, give a default score which is the object.
+    if (score=== null ){
+        score={
+            wins:0,
+            losses:0,
+            ties:0
+        }
+    }
+
+    // button  
+
+     // to remove scores from the local storage too, 
+     localStorage.removeItem('score') // 
+
+// OBJECT SHORTCUTS
+// destructuring shortcut: take properties out of an object
+
+  const familyS = {
       firstName: "Susan",
       lastName: "Doyle",
       age: 32,
     }
-
-    // OBJECT SHORTCUTS
-// destructuring shortcut: take properties out of an object
     const {firstName} = familyS; // this will get the FirstName of susan
     console.log(firstName);
 
@@ -507,4 +558,7 @@ const family = {
   // this will run/ output the method in the console. 
   console.log(object6)
   object6.method();
+
+
+
 

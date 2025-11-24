@@ -41,6 +41,8 @@ scissor beats paper
      score.wins = 0;
      score.losses = 0; 
      score.ties = 0; 
+     // remove the score from the local storage 
+    localStorage.removeItem('score')
      ">Reset score </button>
 
     <p class="js-results"></p>
