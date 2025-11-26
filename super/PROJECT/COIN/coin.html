@@ -9,11 +9,14 @@
     <h1>COIN FLIP</h1>
     <h3>Guess the coin flip</h3>
 
-    <button onclick="console.log(playGame())">Head or Tails</button>
+    <!-- Two buttons created -->
+    <button onclick="console.log(playGame('Heads'))">Head</button>
+     <button onclick="console.log(playGame('Tails'))">Tails</button>
       <!-- Reset button -->
      <button onclick="
         score.win = 0;
         score.losses = 0; 
+        score.ties = 0; 
      ">Reset Button</button>
 
     <h3>Results: </h3>

@@ -218,12 +218,9 @@ let ingredients;
 
 // LESSON 8: OBJECTS:
 // This is an object: 
-
  const object1 = {
   property: 'value', 
-  price: '1090'
-
- }
+  price: '1090'}
 
  const fullName = {
         name:'sherlyne',  // name is a property/key, 'sherlyne is the value 
@@ -235,7 +232,7 @@ console.log(object1)
 console.log( typeof(object1)); // object 
 
 
-// CREATE 
+// CREATE AN OBJECT
 // The first way. 
 const education = {}; // create an empty object 
 
@@ -391,7 +388,6 @@ const JSONb = {
 }
 
 //2.  HOW TO STORE DATA </b>
-
 /* 1. CONVERTING JS object to JSON built object 
 
 To convert JS object to JSON use 
@@ -505,12 +501,33 @@ const family = {
         }
     }
 
-    // button  
+    // Not score they are all the same. 
+    // The default operator,
+    // All this score are doing the same thing 
+    // if left side is truth, we use that else we do the right side. 
+    let newScore = JSON.parse(localStorage.getItem('score'))|| {
+  
+            wins:0,
+            losses:0,
+            ties:0  }
 
-     // to remove scores from the local storage too, 
+    if(!score){
+     score={
+            wins:0,
+            losses:0,
+            ties:0
+        }
+
+    }
+  
+// to remove scores from the local storage too, 
      localStorage.removeItem('score') // 
 
-// OBJECT SHORTCUTS
+//AUTO BOXING: 
+console.log('hello'.length)
+console.log('hello'.toUpperCase())
+
+// OBJECT SHORTCUTS/REFERENCES
 // destructuring shortcut: take properties out of an object
 
   const familyS = {
@@ -522,15 +539,12 @@ const family = {
     console.log(firstName);
 
     //Will take the property out, 
-
   const {age,lastName} = family; // this will get the FirstName of susan
     console.log(age,lastName);
 
   // Shorthand property 
-
   const object5 ={
      //firstName:firstName  // we are borrowing the name
-
     // if the property and the value are the same you just type it once:
     firstName  
   }
@@ -538,27 +552,25 @@ const family = {
   console.log(object5)
 
   // Shorthand method
+  //  Creating a new object, 
     const object6 ={
      //firstName:firstName  // we are borrowing the nam
-
+     message:message,
     // if the property and the value are the same you just type it once:
-    firstName, 
-   // method: function function1(){
-      //console.log("method");
-    //}
+    firstName,
 
-   // The shorthand method
-    // shortcut for the above method. the function name is not needed from the above method. 
+  // Shorthand Method 
+    // method: function function1(){
+    //   console.log("A method function inside an object ");
+    // }
+// This method is the same as the one above, // Shorthand method. 
     method(){
       console.log('method')
     }
+  }
 
-  };
+    console.log(object6); 
+    object6.method();  // this will run the object and display the "method"
 
-  // this will run/ output the method in the console. 
-  console.log(object6)
-  object6.method();
-
-
-
-
+  // LESSON 9 DOM: 
+  

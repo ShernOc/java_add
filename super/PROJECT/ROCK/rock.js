@@ -22,10 +22,11 @@ Random numbers:
 //     ties: 0 
 // }
 
-// get the items saved and convert string to JS Object 
+//Load the page by getting the items saved and convert string to JS Object (JSON.parse)
 let score= JSON.parse(localStorage.getItem('score'))
 // if the score is null, give a default score which is the object.
 if (score === null ){
+    // You bring the JSON Object to the if statement 
     score={
         wins:0,
         losses:0,
@@ -34,8 +35,6 @@ if (score === null ){
 }
 console.log(score) 
 //returns  back to object {wins: 4, losses: 2, ties: 3}
-
-
 
 function pickCompMove(){
     let computerMove = ''; 
@@ -102,7 +101,6 @@ function playTheGame(userPick){
     
      //Saved score in the localStorage.setItem() permanently  and convert object a string  using JSON.stringify(object)
     localStorage.setItem('score',JSON.stringify(score)); 
-
 
     console.log(`User picked,${userPick}`);
 

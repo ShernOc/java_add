@@ -83,27 +83,45 @@ const amazonProducts =
         }
     }
 
-// console.log(amazonProducts.item)
+/*MAIN AMAZON PRODUCT 
+ I want to display the quantity that have pressed on the button  * the price of the item  
+// once an item is selected it now able be added as an item.
+
+*/
+
+
+
+//Variable for Quantity 
+let cartQuantity = 0;
 
 // simple storeProduct Object 
-const storeProducts = {
+
+// const storeProducts = {
+//     shoe:1090/100,
+//     basket:2095/100,
+//     toaster:1899/100,
+//     t_shirt:799/100,
+   
+// }
+
+// store the items permanently
+
+let storeProducts = JSON.parse(localStorage.getItem('items'))
+
+if (storeProducts === null){
+    storeProducts = {
     shoe:1090/100,
     basket:2095/100,
     toaster:1899/100,
     t_shirt:799/100,
    
-}
+} }
 
-console.log(storeProducts.shoe) // 10.9 
+console.log(storeProducts) // 10.9 
 
-//Variable for Quantity 
-let cartQuantity = 0;
-   
-// I want to display the quantity that have pressed on the button  * the price of the item  
-// once an item is selected it now able be added as an item.
 
 // Display items:
- function totalItems(){
+ function displayItems(){
     const basket_span = document.querySelector('.js-basket-span').innerText = `Price:$ ${storeProducts.basket}`;
     const shoe_span = document.querySelector('.js-shoe-span').innerText = ` Price $ ${storeProducts.shoe}`;
     const toaster_span = document.querySelector('.js-toaster-span').innerText =` Price $ ${storeProducts.toaster}`;
@@ -112,10 +130,10 @@ let cartQuantity = 0;
     return basket_span,shoe_span,toaster_span,t_shirt_span;
  }
 
- console.log(totalItems())
+ console.log(displayItems())
 
 
-//BUTTONS CALCULATION 
+//This shows the quantity 
 function displayQuantity(){
     const item = document.querySelector('.js-show-quantity').innerText = `Cart quantity: ${cartQuantity}`;
     return item;
@@ -136,23 +154,42 @@ function amazonCart(items){
     }
     
     cartQuantity += items ; 
+
     amazonCalculation(); // the total calculations or quantities
     return cartQuantity;
 }
 
 console.log(amazonCart(0))
 
-
+// Calculate the prices 
 // Take the number of quantity in the amazon cart, 
 function amazonCalculation(){
-    // Pass the amazon cart that updates the items; 
-    // Calculate the quantity
+  // Pass the quantity from amazon cart
     const quantity = cartQuantity;
+    // const quantity = cartQuantity;
     console.log(quantity) // 
+
+    const shipping_cost = 499/100; 
+    const tax = 0.1
    
-    // calculate the items * amount of the item 
-    let shoe_item =quantity*storeProducts.shoe; 
-    console.log(shoe_item);
+ // calculate the items * amount of the item 
+//  let items = ''; 
+//     if (items === storeProducts.shoe){
+//         quantity*storeProducts.shoe; 
+//     }else if (items === storeProducts.basket){
+//         quantity*storeProducts.basket; 
+//     }else if (items === storeProducts.toaster){
+//         quantity*storeProducts.toaster; 
+//     }else if(items=== storeProducts.t_shirt){
+//        quantity*storeProducts.t_shirt; 
+//     }; 
+
+// save the score permanently 
+localStorage.setItem('storeProducts', JSON.stringify(storeProducts))
+
+// Main Code 
+    let items =quantity*storeProducts.shoe; 
+    console.log(items);
 
     // //Array of items
     // const items_array = [shoe_item] 
@@ -163,11 +200,10 @@ function amazonCalculation(){
     // // Show items in an array 
     // const size = items_array.length 
     // console.log(size)
-    const shipping_cost = 499/100; 
-    const tax = 0.1
-
+    
+// Main Calculation 
 // Total + shipping 
-    const t_shipping = shoe_item + shipping_cost;
+    const t_shipping = items + shipping_cost;
     console.log(t_shipping)//4774 
     
     // tax 
@@ -182,7 +218,7 @@ function amazonCalculation(){
 //DISPLAY IN THE ORDER SUMMARY IN THE DOM  
     // how to pass the items of a functions to the current function: 
     //totalItem(); 
-    const size_items = document.querySelector('.js-items').innerHTML = `Items (${quantity}): $${shoe_item}`;
+    const size_items = document.querySelector('.js-items').innerHTML = `Items (${quantity}): $${items}`;
     const ship = document.querySelector('.js-ship').innerText = `Shipping & handling: $${shipping_cost}`;
     const b_cost = document.querySelector('.js-before-tax').innerText = `Total before tax: $${t_shipping}`;
     const taxe = document.querySelector('.js-tax').innerHTML = `Estimated tax(10%): $${total_tax.toFixed(2)}`; 
@@ -191,38 +227,4 @@ function amazonCalculation(){
     return size_items ;// 52.51
 }
 
-console.log(amazonCalculation())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(amazonCalculation(storeProducts.shoe))

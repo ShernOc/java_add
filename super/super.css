@@ -50,6 +50,15 @@ button{
   color: red;
   font-weight: bold;
 }
+
+
+.cs-eight{
+  background-color: rgb(217, 255, 127);
+}
+
+.cs-nine{
+  background-color: rgb(255, 204, 127);
+}
 /* property: value */
 
 /*  */

@@ -11,8 +11,10 @@ console.log(celsius(-5))
 //LESSON 3: STRINGS 
 function string(names){
     // use concatenation
-    alert(`my name is ${names}`);
-    return names;
+    // alert(`my name is ${names}`);
+    // return names;
+    const name = `my name is ${names}`
+    return name 
 } 
 
 console.log(string('sherlyne'))
@@ -21,7 +23,7 @@ console.log(string('sherlyne'))
 const coffee2 = 5.99;
 const bagel2 = 2.95; 
 const soup = 9
-tax = 0.1
+const tax = 0.1
 const cost= Math.round(coffee2 + bagel2 + soup); 
 const totalTax = cost * tax; 
 const totalCost = totalTax + cost; 
@@ -36,17 +38,17 @@ console.log('Welcome to the lessons page!')
 // calculator 
 // amazon cart
 
-const name = "Elephant";
-console.log(`my name is ${names}` ) ;
+const elephantName = "Elephant";
+console.log(`my name is ${elephantName}` ) ;
 
 // restaurant order
 const coffee = 5 
 const bagels = 2*3;
 const ting = 9
 const costs = coffee + bagels + ting;
-const tax = cost * 0.1
+const tax2 = cost * 0.1
 console.log(cost);
-console.log(tax); 
+console.log(tax2); 
 const totalCosts = cost +tax;
 console.log(` Total cost:$$ ${totalCosts}`);
 
@@ -179,7 +181,7 @@ function playGame(userPick){
     };
 
     // popup
-    alert(`You picked ${userPick},\n Computer picked ${computerMove},\n ${results}`);
+    // alert(`You picked ${userPick},\n Computer picked ${computerMove},\n ${results}`);
     return results;
 }
 
@@ -259,7 +261,8 @@ function moneyHave(){
 console.log(moneyHave())//370
 
 function page(){
-   const doc= document.body.innerHTML = alert('blank');
+    const doc = 'Doctor'
+//    const doc= document.body.innerHTML = alert('blank');
    return doc
 }
 
@@ -268,7 +271,7 @@ function page(){
 function order(){
     let coffee = 5.99;
     let bag = 3.98; 
-    const total = alert(`Total cost: $${coffee + bag}\n Thank you, come again!`);
+    // const total = alert(`Total cost: $${coffee + bag}\n Thank you, come again!`);
     return total
 }
 
@@ -276,12 +279,46 @@ function order(){
 
 // LESSON 8: OBJECTS : 
 
+// Product. 
+const product1= {
+    name: 'Basketball', 
+    price: 2095/100,
+}
+
+console.log(product1.price) 
+
+// increase the price by 500 
+function priceCalculate(){
+    const products = product1.price*500
+    console.log(products)
+
+}
+
+console.log(priceCalculate())
+// add another property 'delivery-time:'3 days' using bracket notation  
+product1.delivery =['3 days']; 
+
+console.log(product1)
+
+const product2  = {
+    name: 'Sherlyne',
+    price:45
+}
+
+// compare two objects 
+function comparePrice(){
+    const pro = product1 === product2
+    return pro
+}
+
+console.log(comparePrice())
+
 
 // LESSON 9 DOM: 
-function doc(){
-    const bod = document.body.innerHTML = alert('Welcome!');
-    return bod;
-}
+// function doc(){
+//     const bod = document.body.innerHTML = alert('Welcome!');
+//     return bod;
+// }
 // console.log(doc());
 
 function displayResults(){
