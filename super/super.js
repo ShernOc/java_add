@@ -573,33 +573,38 @@ console.log('hello'.toUpperCase())
     object6.method();  // this will run the object and display the "method"
 
   // LESSON 9 DOM: 
-  
-  // document.body.innerHTML = 'Hello'; // This removes everything on the webpage and return 'Hello'
-  document.title = 'DOM MANIPULATION'; // This changes the title of the document, referencing the HTML document. 
-  document.body.h1 = 'LIFE'
-
+  //  DOM: Document Object Model:</b> its a built in object provided by js. that combines javascript and HTML together 
   // PROPERTIES OF DOCUMENT 
-   /*document.title = 'TITLE CHANGED' 
-    document.body = 
-    document.body.innerHTML= controls all the html inside the body // This will return all the HTML inside the body of an html document. 
-    When HTML element is inside the JS,  HTML is converted to a js element. 
-    We can also replace the innerHTML with a new HTML code:  
-    document.body.innerHTML = '<button>New HTML code</button>'
-    // DOM METHODS
-    method = function saved inside an object. 
-    
-
-
-
-
-    */
-   console.log(document.body.innerHTML) // will return all the html code. 
+  document.title = 'DOM MANIPULATION'; // This changes the title of the document, referencing the HTML document. 
+  document.body.innerHTML = 'New Webpage Creation'; // This removes everything on the webpage and returns 'Hello' on the webpage or al the HTML inside the body.
   
+  // We can also replace the innerHTML with a new HTML code:  
+    document.body.innerHTML = '<button>New HTML code</button>';
 
-   // method = function saved inside an object. 
-   document.querySelector() // allows us to get any element from the page and put it inside a javascript
+    // DOM METHODS
+    document.querySelector('html element');   
+    document.querySelectorAll('.js-button')
+
+   document.querySelector('button') //takes the first button element
+  //  document.querySelector('button').innerHTML= 'You are awesome' // This changes the name of the button. 
+
+   // To get the second button, you use the class attribute: class = js-second-button. Here we use the class selectors. 
+   const buttonElement = document.querySelector('.js-second-button').innerHTML = 'Sherlyne'; 
+
+   console.log (buttonElement); 
 
 
+
+
+
+
+
+
+
+
+
+
+ 
 
   
 

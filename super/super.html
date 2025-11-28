@@ -389,14 +389,40 @@ To clear the all the items
   <p><b>DOM: Document Object Model:</b> its a built in object provided by js. that combines javascript and HTML together 
   <br>
   <b>DOM PROPERTIES</b>
-  <li>document.title = </li>
+  <li>document.title = 'DOM MANIPULATION'; // This changes the title of the document, referencing the HTML document. </li>
   <li>document.body</li>
+  <li>document.body.innerHTML: <b>This takes all the HTML elements inside the body</b></li>
+  <br>
+  We can also replace the innerHTML with a new HTML code:
+  <li> document.body.innerHTML = '<button>New HTML code</button>';</li>
 
+  <li>DOM METHODS</li>
+  <b>Methods: function saved inside an object.</b>
+  <li>document.querySelector('html element') // takes any element from the HTML page and put it inside JS
+</li>
+  <li>document.querySelectorAll()</li>
 <br>
-   document.innerHTML = 'Hello'
-  <b>It combines javascript and HTML together.</b>
-  </p>
+<li><b>To change elements in an HTML document we use: </b>
+<br>
+ document.body.innerHTML = 'Hello';
+ document.body.innerText = 'Sherlyne' 
+ <br>
+ This will change the text or string on the HTML element to what you have assigned the element to be. 
+</li>
+<br>
+  document.querySelector('button') //takes the first button element
+  <b> document.querySelector('button').innerHTML= 'You are awesome'</b> // This changes the name of the button. 
+
+   // To get the second button, you use the class attribute: <b>class = 'js-second-button'.</b>  Here we use the class selectors. 
+   const buttonElement = document.querySelector('.js-second-button').innerHTML = 'Sherlyne'; 
+
+   console.log (buttonElement); 
+
+</p>
+
+
   <button>hello</button>
+  <button class="js-second-button">Second button </button>
 
 
 </div>
