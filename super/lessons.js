@@ -315,6 +315,30 @@ console.log(comparePrice())
 
 
 // LESSON 9 DOM: 
+// Youtube button subscription 
+function subscribeButton(){
+    const youtubeB= document.querySelector('.js-subscribe'); // takes the button 
+
+    if (youtubeB.innerText === 'Subscribe'){
+        youtubeB.innerText = 'Subscribed' // changes to subscribed
+    }else{
+        youtubeB.innerText ='Subscribe'
+    }
+    return youtubeB; 
+}
+
+console.log(subscribeButton())
+
+
+// Order button 
+
+// Rock Paper Scissor 
+
+
+
+// Amazon Shipping Calculator 
+
+
 // function doc(){
 //     const bod = document.body.innerHTML = alert('Welcome!');
 //     return bod;

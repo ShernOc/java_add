@@ -3,117 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM PROJECT</title>
 </head>
 <body>
-<h1> DOM PROJECT</h1>
-<h1>Youtube Subscribe Button</h1>
-<!--Algorithm-->
-<!-- change the button from subscribe to subscribe using js when clicked 
- 
-Other wise -->
-
-<button  class="js-subscribe" onclick="
-// call the function 
-subscribe()
-" 
->Subscribe</button>
-<br>
-<br>
-<hr>
-
-<h1>Rock Paper Scissor</h1>
-<h3>PLAY THE GAME</h3>
-
-      <button onclick="playerMove('rock')">Rock</button>
-      <button onclick="playerMove('paper')">Paper</button>
-      <button onclick="playerMove('scissor')">Scissor</button>
-
-    <h3>SCORE BOARD</h3>
-    <!-- results of user  -->
-    <p class="js-results"></p>
-
-    <!-- computer move -->
-    <p class="js-move"></p>
-
-    <!--Show the score under the game --->
-    <p class="js-score"></p>
-    
-    <!-- reset button -->
-      <!-- reset button -->
-      <button onclick="
-      score.wins = 0;
-      score.losses =0;
-      score.ties = 0;
-      
-    // remove the score/local storage
-    localStorage.removeItem('score')
-
-    // the update function.
-    updateScore();
-      ">Reset Score</button>
-<hr>
-<br>
-
-      
-<h1>Amazon Shipping Calculator</h1>
-<p>Order under $40 =+10 Shipping</p>
-
-<p>Order over $40 = FREE Shipping</p>
-
-<input placeholder="Cost of order" 
-class="js-cost-input" onkeydown="handleKeydown(event);"
- >
-
-<button onclick ="amazonShip();
-">Calculate</button>
-
-<!-- display the amount  -->
- <br>
- <br>
- <b>Total Amount: </b>
-<p class="js-total-cost">Total Amount displayed here:</p>
-
-<hr>
-<h3>DOM PROJECT 2</h3>
-<p>9a. Create a button, Use document.querySelector to get the button from the page, and the display it in the console. 
-    <br>
-    <br>
-9b. Create another button 9b. below. Using JS change the text in the second button to 9b done
-<br>
-<button class="a"></button>
-<button class = "b"></button>
-<br>
-<br>
-
-9c. create 2 buttons heads and tail: when clicking heads button, display "You choose:heads or tails "
-<br>
-<button onclick="headsTails('Heads')">Heads </button>
-<button onclick="headsTails('Tails')">Tails</button>
-<p class="js-choice"></p>
-
-9d. Create a textbox(input) and a submit button. When clicking submit display "Your name is: "name"; 
-Also whenever you type in the text box, update the page. 
-
-<input type="name"class="js-input-button" placeholder="Name" onkeyup=handleNameup(event)>
-
-<button class="js-submit" onclick="nameText()">Submit</button>
-
-<p class = "js-display-name"></p>
-
-<!-- Key on / Input -->
- 9h. When you type in the text box, it updates the text on the page
-
- <input  id="up" type="text" class="js-key-up" onkeyup="handleKey(event)">
-
- <p class="p-up"></p>
-
-9i. Improve cart quantity: add a paragraph to display the quantity. When we updated the quantity, also display the quantity when page first loads 
-
-9j. We'll improve the calculator project. 
-- Make a copy of excise 8h(calculator), when we update calculation, display it on the page instead of in the console. 
-- When page loads, if a calculation exist in local storage, display it on the page.47
-</p>
 
  
 <script>
@@ -156,15 +47,8 @@ function handleNameup(event){
 
 // Subscribe button
 
-    function subscribe(){
-    const subButton=document.querySelector('.js-subscribe');
 
-    if(subButton.innerText==='Subscribe'){
-    subButton.innerText = 'Subscribed'
-    }else {
-    subButton.innerText = 'Subscribe'
-    }
-    }
+
 
 // rock paper game
 // Computer pick 
