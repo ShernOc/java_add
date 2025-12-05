@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>LESSONS</h1>
-<h3>Lesson 4: html/css/js recap </h3> 
+<h2>Lesson 4: html/css/js recap </h2> 
 <p>
   <button>Click</button>
   <button>Tiger</button>
@@ -21,7 +21,7 @@
 
 <hr>
 <!-- LESSON 5 VARIABLES -->
-  <h3>Lesson 5: Variables and Data Types:</h3>
+  <h2>Lesson 5: Variables and Data Types:</h2>
   <p>Learning about giving name to variable by using const,let, and var </p>
 
   <button title ="1" onclick="
@@ -52,13 +52,13 @@
 
 <hr>
 
-  <h3>Lesson 6: Booleans/ If else and Logical Operators:</h3>
+<h2>Lesson 6: Booleans/ If else and Logical Operators:</h2>
   <p>Learning about the True/False, greater and less than while using the if else statement</p>
   <br>
 
 <hr>
 <!-- Lesson 7  -->
- <h3>Lesson 7:Functions  </h2>
+ <h2>Lesson 7:Functions  </h2>
 
   <p>Functions: Allows us to reuse and update the code</b></li>
 </p>
@@ -72,56 +72,49 @@
 </p>
 <hr>
 
- <h3>Lesson 9:DOM  </h2>
+ <h2>LESSON 9:DOM PROJECT </h2>
   <p>
-    <h2> DOM PROJECT</h2>
-
-    <h2>Youtube Subscribe Button</h2>
-    <!--Algorithm-->
+    <h3>Youtube Subscribe Button</h3>
+  <!--Algorithm-->
   <!-- Create a youtube button named "Subscribe"
  2. Change the button from subscribe to subscribed using DOM when clicked --->
- <button  class="js-subscribe" onclick="
+ <button  class="js-subscribe-button" onclick="
 // call the function 
       subscribeButton(); "
       >Subscribe</button>
 <br>
 <hr>
+
 <h1>Rock Paper Scissor</h1>
 <h3>PLAY THE GAME</h3>
 
-      <button onclick="playerMove('rock')">Rock</button>
-      <button onclick="playerMove('paper')">Paper</button>
-      <button onclick="playerMove('scissor')">Scissor</button>
+      <button onclick="playerMove('Rock')">Rock</button>
+      <button onclick="playerMove('Paper')">Paper</button>
+      <button onclick="playerMove('Scissor')">Scissor</button>
+
 
     <h3>SCORE BOARD</h3>
     <!-- results of user  -->
-    <p class="js-results"></p>
+    <p class="js-result"></p>
 
-    <!-- computer move -->
-    <p class="js-move"></p>
-
-    <!--Show the score under the game --->
-    <p class="js-score"></p>
-    
     <!-- reset button -->
-      <!-- reset button -->
       <button onclick="
       score.wins = 0;
       score.losses =0;
       score.ties = 0;
       
     // remove the score/local storage
-    localStorage.removeItem('score')
+    localStorage.removeItem('score') 
 
-    // the update function.
-    updateScore();
-      ">Reset Score</button>
+    <!-- // the update function.
+    playerMove() "
+      >Reset Score</button>
 <hr>
 <br>
 
       
 <h1>Amazon Shipping Calculator</h1>
-<p>Order under $40 =+10 Shipping</p>
+<p>Order under $40 = $10 added Shipping</p>
 
 <p>Order over $40 = FREE Shipping</p>
 

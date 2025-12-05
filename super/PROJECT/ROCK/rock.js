@@ -105,15 +105,12 @@ function playTheGame(userPick){
     console.log(`User picked,${userPick}`);
 
     //Display on the paragraph below 
-    const displayDown = document.querySelector('.js-results').innerText = `Computer Pick:${computerMove}\n Your Pick:${userPick} \n Results:${results}
-    Wins ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}
+    const displayDown = document.querySelector('.js-results').innerText = `Computer Pick:${computerMove}\n Your Pick:${userPick} \n Results:${results} \n Wins:${score.wins} \n Losses:${score.losses} \n Ties:${score.ties}
     `
     ; 
 
     return displayDown;
 }
-
-
 
 //console.log(playTheGame('paper'));
 

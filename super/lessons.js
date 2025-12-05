@@ -1,3 +1,4 @@
+
 //LESSON 2  STRINGS 
 // convert temperature to celsius and Fahrenheit; 
 let temperature= 0; 
@@ -154,7 +155,7 @@ function playGame(userPick){
 
     if(userPick ==='rock'){
         if(computerMove ==='rock'){
-            results = 'You tie ';
+            results = 'You You  ';
         }else if(computerMove ==='paper'){
                 results = 'You loose';
         }else if(computerMove ==='scissors'){
@@ -313,44 +314,113 @@ function comparePrice(){
 
 console.log(comparePrice())
 
-
 // LESSON 9 DOM: 
 // Youtube button subscription 
-function subscribeButton(){
-    const youtubeB= document.querySelector('.js-subscribe'); // takes the button 
+/*if subscribe button === subscribe change change it to subscribed otherwise change it back to subscribe */
 
-    if (youtubeB.innerText === 'Subscribe'){
-        youtubeB.innerText = 'Subscribed' // changes to subscribed
+function subscribeButton(){
+    const youtubeButton = document.querySelector('.js-subscribe-button'); // takes the button 
+
+    if (youtubeButton.innerText ==='Subscribe'){
+        youtubeButton.innerText ='Subscribed'; 
     }else{
-        youtubeB.innerText ='Subscribe'
+        youtubeButton.innerText ='Subscribe'
     }
-    return youtubeB; 
 }
 
-console.log(subscribeButton())
+// console.log(subscribeButton())
 
+// ROCK PAPER SCISSOR SMALL PROJECT 
+// store the scores permanently, 
+let score = JSON.parse(localStorage.getItem('score'))
 
-// Order button 
+if(score === null ){
+    score= {
+    win:0,
+    tie:0, 
+    losses:0
+}
+    }
+ 
+function randomNumber(){
+    const randomNumber = Math.random()
+    let computerMove = '';
 
-// Rock Paper Scissor 
+    if(randomNumber >= 0 && randomNumber<1/3){
+         computerMove = 'Rock';
+    }else if (randomNumber>=1/3 && randomNumber<2/3 ){
+        computerMove ='Paper';
+    }else if(randomNumber>= 2/3 && randomNumber < 1){
+        computerMove = 'Scissor';
+    }
+    
+    return computerMove; 
+}
 
+console.log(randomNumber()) // returns the random object , rock, paper, or scissor
+
+function playerMove(userMove){
+    const compMove = randomNumber();
+    console.log(compMove)
+    let results = '';
+
+    // user picks rocks
+    if(userMove === 'Rock'){
+        if(compMove === 'Rock'){
+            results = 'You tie'; 
+        }else if(compMove === 'Paper'){
+            results = 'You loose'; 
+        }else if(compMove === 'Scissor'){
+            results = 'You win';
+        }
+
+        // user picks paper
+    }else if(userMove === 'Paper'){
+        if(compMove === 'Rock'){
+            results = 'You win'; 
+        }else if(compMove === 'Paper'){
+            results = 'You tie'; 
+        }else if(compMove === 'Scissor'){
+            results = 'You loose';
+        }
+
+        // user picks scissors
+    }else if (userMove === 'Scissor'){
+        if(compMove === 'Rock'){
+            results = 'You loose'; 
+        }else if(compMove === 'Paper'){
+            results = 'You win'; 
+        }else if(compMove === 'Scissor'){
+            results = 'You tie';
+        }
+    }
+
+    // update the score 
+    if(results === 'You win' ){
+        score.win +=1; 
+    }else if(results === 'You tie'){
+        score.tie +=1; 
+    }else if(results === 'You loose'){
+        score.losses +=1; 
+    }
+
+    // store the score in the local storage
+    localStorage.setItem('score', JSON.stringify(score));
+
+    // Display the work at the website
+
+    const displayDom= document.querySelector('.js-result').innerText = `You picked: ${userMove}\n Computer picked: ${compMove} \n Final Results: ${results} \n Wins:${score.win}, \n Ties: ${score.tie}, \n Losses : ${score.losses}`; 
+
+    // upgrade the work 
+    return displayDom; 
+
+}
+
+// console.log(playerMove('rocks'));
 
 
 // Amazon Shipping Calculator 
 
-
-// function doc(){
-//     const bod = document.body.innerHTML = alert('Welcome!');
-//     return bod;
-// }
-// console.log(doc());
-
-function displayResults(){
-    const results = document.querySelector('.js-results').innerText =`Results = ${calculator}`;
-    return results
-}
-
-console.log(displayResults())
 
 
 
