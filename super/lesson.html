@@ -98,7 +98,6 @@
     <p class="js-moves"></p>
     <p class="js-result"></p>
     
-
     <!-- reset button -->
       <button onclick="
       score.win = 0;
@@ -111,17 +110,14 @@
     "
       >Reset Score</button>
 <hr>
-<br>
 
-    
 <h1>Amazon Shipping Calculator</h1>
 <p>Order under $40 = $10 added Shipping</p>
-
 <p>Order over $40 = FREE Shipping</p>
 
 <input placeholder="Cost of order" 
-class="js-cost-input" onkeydown="handleKeydown(event);"
- >
+class="js-cost-input" >
+ <!-- onkeydown="handleKeydown(event) -->
 
 <button onclick ="amazonShip();
 ">Calculate</button>
@@ -130,9 +126,12 @@ class="js-cost-input" onkeydown="handleKeydown(event);"
  <br>
  <br>
  <b>Total Amount: </b>
-<p class="js-total-cost">Total Amount displayed here:</p>
+ <!-- Total Amount displayed here -->
+<p class="js-total-cost"></p>
 
 <hr>
+
+
 <h3>DOM PROJECT 2</h3>
 <p>9a. Create a button, Use document.querySelector to get the button from the page, and the display it in the console. 
     <br>

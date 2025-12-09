@@ -114,7 +114,7 @@ function nameCat(cat){
  return cat;
 }
 
-console.log(nameCat("Mogaka"))
+console.log(nameCat("Tiger"))
 
 
 // EXAMPLE OF SWITCH STATEMENT 
@@ -457,7 +457,7 @@ const family = {
 
   // There are steps to storing data permanently one you have to 
   // 1. Set or name what you are going set (setItem)
-  // 2. Get, getting a value out of the local storage,  what you had set ealier, get (getItem)
+  // 2. Get, getting a value out of the local storage,  what you had set earlier, get (getItem)
 
   localStorage.setItem('message','hello') // put it in. 
   localStorage.getItem('message') // get it out (You pass the string that you had set "message ")
@@ -592,6 +592,9 @@ console.log('hello'.toUpperCase())
    const buttonElement = document.querySelector('.js-second-button').innerHTML = 'Sherlyne'; 
 
    console.log (buttonElement); 
+
+
+   
 
 
 

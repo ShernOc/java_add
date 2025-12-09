@@ -1,0 +1,34 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0;
+    padding:4px;
+
+}
+
+li{
+    padding: 4px;    
+}
+
+.js-total{
+    color:red;
+    font-weight: bold;
+    
+}
+
+button{
+    margin:4px
+}
+.cs-order{
+    background-color: green;
+    color:black
+}
+
+.cs-buy{
+    background-color: orange;
+}
+
+.cs-add{
+    background-color: yellow;
+
+}
+

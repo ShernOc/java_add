@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="amazon.css">
+    
+    <title>Amazon</title>
+</head>
+<body>
+    <h1>Amazon Cart</h1> 
+    <p>
+        1. The cart should show automatic the quantity of the products, that is it should show (quantity 1): 
+    </p>
+
+    <h4>ITEMS IN THE STORE: </h4>
+    <!-- Selected Items -->
+     
+    <p><b>update the items: Check the remove cart, before updating the quantity, check if it will go below 0; if it will create a popup saying Not enough items in the cart, and dont update the quantity; 
+
+<!-- Shoe -->
+ <li>Shoes:<span class ="js-shoe-span"> </span>
+    <li>
+    <!-- Show the quantity -->
+    <p class="js-show-quantity"></p>
+
+    <button 
+     class="cs-add" title="Add to cart" onclick= 
+     " console.log(displayQuantity())"
+     >Show Quantity
+    </button>
+
+    <!-- console.log(`Cart Quantity ${cartQuantity}`)" -->
+     <button 
+     class="cs-add" title="Add to cart" onclick="
+     console.log(amazonCart(+1))">Add to Cart
+    </button>
+
+    <button class="cs-order" onclick=" 
+    console.log(amazonCart(+2))"
+    >+2</button>
+    
+    <button class="cs-order" onclick=" 
+    console.log(amazonCart(-1))"
+    >Remove from cart</button>
+
+    <button 
+     class="cs-add" title="Add to cart" onclick=
+     "cartQuantity=0; amazonCart(0)"
+     >Reset Cart
+    </button>
+
+    <button 
+        class="cs-buy" onclick="
+        console.log('Loading')
+        ">
+        Buy now
+    </button>
+
+    </b></p>
+    
+    <!-- Basket Ball  -->
+     <li>Basketball: <span class ="js-basket-span"></span></li>
+     <button 
+     class="cs-add" title="Add to cart" onclick= 
+     " console.log(displayQuantity())"
+     >Show Quantity
+    </button>
+
+    <!-- console.log(`Cart Quantity ${cartQuantity}`)" -->
+     <button 
+     class="cs-add" title="Add to cart" onclick="
+     console.log(amazonCart(+1))">Add to Cart
+    </button>
+
+    <button class="cs-order" onclick=" 
+    console.log(amazonCart(+2))"
+    >+2</button>
+    
+    <button class="cs-order" onclick=" 
+    console.log(amazonCart(-1))"
+    >Remove from cart</button>
+
+    <button 
+     class="cs-add" title="Add to cart" onclick=
+     "cartQuantity=0; amazonCart(0)"
+     >Reset Cart
+    </button>
+
+    <button 
+        class="cs-buy" onclick="
+        console.log('Loading')
+        ">
+        Buy now
+    </button>
+
+    <!-- Toaster -->
+    <li>Toaster: <span class ="js-toaster-span"></span></li>
+    <button 
+     class="cs-add" title="Add to cart" onclick= 
+     " console.log(displayQuantity())"
+     >Show Quantity
+    </button>
+
+    <!-- console.log(`Cart Quantity ${cartQuantity}`)" -->
+     <button 
+     class="cs-add" title="Add to cart" onclick="
+     console.log(amazonCart(+1))">Add to Cart
+    </button>
+
+    <button class="cs-order" onclick=" 
+    console.log(amazonCart(+2))"
+    >+2</button>
+    
+    <button class="cs-order" onclick=" 
+    console.log(amazonCart(-1))"
+    >Remove from cart</button>
+
+    <button 
+     class="cs-add" title="Add to cart" onclick=
+     "cartQuantity=0; amazonCart(0)"
+     >Reset Cart
+    </button>
+
+    <button 
+        class="cs-buy" onclick="
+        console.log('Loading')
+        ">
+        Buy now
+    </button>
+
+    <!-- T-shirt -->
+     <li>T-Shirt: <span class ="js-shirt-span"></span></li>
+     <button 
+     class="cs-add" title="Add to cart" onclick= 
+     " console.log(displayQuantity())"
+     >Show Quantity
+    </button>
+
+    <!-- console.log(`Cart Quantity ${cartQuantity}`)" -->
+     <button 
+     class="cs-add" title="Add to cart" onclick="
+     console.log(amazonCart(+1))">Add to Cart
+    </button>
+
+    <button class="cs-order" onclick=" 
+    console.log(amazonCart(+2))"
+    >+2</button>
+    
+    <button class="cs-order" onclick=" 
+    console.log(amazonCart(-1))"
+    >Remove from cart</button>
+
+    <button 
+     class="cs-add" title="Add to cart" onclick=
+     "cartQuantity=0; amazonCart(0)"
+     >Reset Cart
+    </button>
+    <button 
+        class="cs-buy" onclick="
+        console.log('Loading')
+        ">
+        Buy now
+    </button>
+
+     <br><br><br>
+
+    <h2> Order Summary </h2>
+    <li class="js-items">      </li>
+    <li class="js-ship"></li>
+    <li class="js-before-tax"></li>
+    <li class="js-tax"></li>
+    <hr>
+    <li class="js-total"> </li>
+
+
+</body>
+<script src="amazon.js" >
+
+</script>
+
+</html>

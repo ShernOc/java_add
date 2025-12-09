@@ -430,10 +430,29 @@ function updateScore(){
     return displayDom; 
 }
 
-
-
-
 // Amazon Shipping Calculator 
+/* When we click the button, 
+1. Get the text in the text box, 
+2. If amount < 40 add 10 
+3. Display Total on the page 
+
+*/ 
+
+function amazonShip(order){
+    const inputElement = document.querySelector('.js-cost-input')  
+    // used Number() to convert the number to a string 
+    let cost = Number(inputElement.value) ; // this will produce and output of the value inside the text box once typed. 
+    
+    if(cost < 40 ){
+        cost +=10; 
+    }
+
+    const display = document.querySelector('.js-total-cost').innerHTML =` Total: $${cost}`; 
+
+    return display; 
+
+}
+
 
 
 
