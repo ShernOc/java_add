@@ -11,22 +11,17 @@
 <!-- steps -->
  <!-- 
 1. Create the 3 buttons ( rocks, paper , scissors)
-2. create a pop up ( to say you have picked the button of choice)
-3. 
+2. Display the User Move, computer Move and the results
 
-game rule: 
+
+rules of the game: 
 rock beats scissor 
 paper beats rocks 
 scissor beats paper 
  -->
-
- <h2> Rules of the Game</h2>
- <li>Rock beats scissors</li>
- <li>Paper beats rocks </li>
- <li>Scissors beats paper</li>
-
- <h2>Player: </h2>
- <p>It's You and the Computer</p>
+    <h2> <i>Rules of the Game</i></h2>
+    <p>Rock beats scissors, Paper beats rocks and Scissors beats paper.</p>
+    <br>
 
     <button onclick="
     playTheGame('rock')">Rock</button>
@@ -36,17 +31,22 @@ scissor beats paper
     
     <button onclick="playTheGame('scissors')">Scissors</button>
 
-    <!-- Reset button -->
-     <button onclick="
+    <!-- Score area  -->
+    <p class="js-results"></p>
+    <p class="js-moves"></p>
+    <p class="js-score"></p>
+
+    <!-- reset button -->
+    <button onclick="
      score.wins = 0;
      score.losses = 0; 
      score.ties = 0; 
      // remove the score from the local storage 
     localStorage.removeItem('score')
+    updateScore()
      ">Reset score </button>
 
-    <p class="js-results"></p>
-
+    
 
 <script src="rock.js"></script>
 </body>

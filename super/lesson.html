@@ -58,13 +58,12 @@
 
 <hr>
 <!-- Lesson 7  -->
- <h2>Lesson 7:Functions  </h2>
-
+ <h2>Lesson 7:Functions</h2>
   <p>Functions: Allows us to reuse and update the code</b></li>
 </p>
 
 <p>
-  <h3>Rock Paper Scissor Game: Example </h3>
+  <h3>Rock Paper Scissor Game:Function </h3>
   <!-- buttons -->
   <button onclick="playGame('rock')">Rock</button >
   <button onclick="playGame('paper')">Paper</button>
@@ -80,7 +79,7 @@
  2. Change the button from subscribe to subscribed using DOM when clicked --->
  <button  class="js-subscribe-button" onclick="
 // call the function 
-      subscribeButton(); "
+    subscribeButton(); "
       >Subscribe</button>
 <br>
 <hr>
@@ -90,29 +89,31 @@
 
       <button onclick="playerMove('Rock')">Rock</button>
       <button onclick="playerMove('Paper')">Paper</button>
-      <button onclick="playerMove('Scissor')">Scissor</button>
+      <button onclick="playerMove('Scissor')">Scissors</button>
 
 
     <h3>SCORE BOARD</h3>
-    <!-- results of user  -->
+      <!-- results of user  -->
+    <p class = "js-final-result"></p>
+    <p class="js-moves"></p>
     <p class="js-result"></p>
+    
 
     <!-- reset button -->
       <button onclick="
-      score.wins = 0;
+      score.win = 0;
       score.losses =0;
-      score.ties = 0;
+      score.tie = 0;
       
     // remove the score/local storage
-    localStorage.removeItem('score') 
-
-    <!-- // the update function.
-    playerMove() "
+    localStorage.removeItem('score')
+     updateScore() // updates the score
+    "
       >Reset Score</button>
 <hr>
 <br>
 
-      
+    
 <h1>Amazon Shipping Calculator</h1>
 <p>Order under $40 = $10 added Shipping</p>
 

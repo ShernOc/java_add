@@ -493,7 +493,7 @@ const family = {
      console.log(typeof backJs) // object 
 
      // if the score is null, give a default score which is the object.
-    if (score=== null ){
+    if (score === null ){
         score={
             wins:0,
             losses:0,

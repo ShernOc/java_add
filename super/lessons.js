@@ -129,9 +129,10 @@ console.log(newCoin)
 //ROCK PAPER SCISSORS: 
 // Pick computer move
 function pickCompMove(){
-    let computerMove = ''
-    const randomNumber = Math.random()
-    if(randomNumber>=0 && randomNumber<1/3){
+    let computerMove = ''; 
+    const randomNumber = Math.random(); 
+
+    if(randomNumber>= 0 && randomNumber< 1/3){
         computerMove = 'rock';
     }else if(randomNumber >=1/3 && randomNumber <2/3){
         computerMove = 'paper';
@@ -139,27 +140,26 @@ function pickCompMove(){
         computerMove = 'scissors';
     }
 
-    //return a value 
+    // return computerMove; 
     return computerMove;
 }; 
 
 // calling a function : pickCompMove(); 
 console.log(pickCompMove()) // Return either rock,scissor,or paper
 
-// userPick= parameter of what the user will insert
+// userPick= parameter of what the user will pick either rock, paper or scissors 
 function playGame(userPick){
-    // we picked the computer function
-    const computerMove = pickCompMove(); // called the function 
+    const computerMove = pickCompMove(); // called the computer pick move ; 
     console.log(computerMove)
+    
     let results = ''; 
-
     if(userPick ==='rock'){
         if(computerMove ==='rock'){
-            results = 'You You  ';
+            results = 'You tie';
         }else if(computerMove ==='paper'){
-                results = 'You loose';
+            results = 'You loose';
         }else if(computerMove ==='scissors'){
-                results = 'You win' ; 
+            results = 'You win' ; 
         }
     }
     // user pick = paper
@@ -172,7 +172,7 @@ function playGame(userPick){
             results = 'You loose'; 
         }
     } // user pick = scissors
-    else if(userPick ==='scissors'){
+    else if(userPick === 'scissors'){
         if(computerMove ==='scissors'){
             results = 'You tie';
         }else if (computerMove === 'rock'){
@@ -181,28 +181,27 @@ function playGame(userPick){
             results ='You win';
     };
 
-    // popup
+    // popup alert 
     // alert(`You picked ${userPick},\n Computer picked ${computerMove},\n ${results}`);
     return results;
 }
 
-console.log(playGame('rock')) // user pressed rock: 
-
 // call this functions
 // console.log(playGame('rock'));
-// console.log(playGame('scissor'))
+// console.log(playGame('scissors')); 
+// console.log(playGame('paper')); 
 
 
 // Challenge: learn about, functions, parameter
 function greet(name){
-    if(name){
-       console.log(`Hello!${name}`) 
+    if(name ==='Sherlyne'){
+       console.log(`Hello! ${name}`) 
     }else{
         console.log('Hi there!')
     }
 }
 // call the function
-greet();
+greet('Mary');
 
 function convertBothFahrenheitAndCelsius(number){
     const F = (number * 9/5) +32;
@@ -279,7 +278,6 @@ function order(){
 // console.log(order())
 
 // LESSON 8: OBJECTS : 
-
 // Product. 
 const product1= {
     name: 'Basketball', 
@@ -326,6 +324,7 @@ function subscribeButton(){
     }else{
         youtubeButton.innerText ='Subscribe'
     }
+    return youtubeButton; 
 }
 
 // console.log(subscribeButton())
@@ -341,6 +340,9 @@ if(score === null ){
     losses:0
 }
     }
+
+    // update the score ; 
+updateScore(); 
  
 function randomNumber(){
     const randomNumber = Math.random()
@@ -361,7 +363,7 @@ console.log(randomNumber()) // returns the random object , rock, paper, or sciss
 
 function playerMove(userMove){
     const compMove = randomNumber();
-    console.log(compMove)
+    console.log(compMove);
     let results = '';
 
     // user picks rocks
@@ -407,19 +409,32 @@ function playerMove(userMove){
     // store the score in the local storage
     localStorage.setItem('score', JSON.stringify(score));
 
-    // Display the work at the website
+    // will call the update function. 
+    updateScore(); 
+    // results: 
+    document.querySelector('.js-final-result').innerHTML = `${results}`;
+    document.querySelector('.js-moves').innerHTML=`You:${userMove} -- \n Computer:${compMove}`
 
-    const displayDom= document.querySelector('.js-result').innerText = `You picked: ${userMove}\n Computer picked: ${compMove} \n Final Results: ${results} \n Wins:${score.win}, \n Ties: ${score.tie}, \n Losses : ${score.losses}`; 
+    //alert 
+    //  alert(`You picked:${userMove}.\n Computer picked: ${compMove}. \n Final Results: ${results} \n Wins:${score.win}, \n Ties: ${score.tie}, \n Losses : ${score.losses}`) ; 
+
+}
+// run playMove function 
+// console.log(playerMove('rocks'));
+
+function updateScore(){
+    // Display the work at the website
+    const displayDom = document.querySelector('.js-result').innerText =`Wins:${score.win}, \n Ties: ${score.tie} \n Losses : ${score.losses}`; 
 
     // upgrade the work 
     return displayDom; 
-
 }
 
-// console.log(playerMove('rocks'));
+
 
 
 // Amazon Shipping Calculator 
+
 
 
 

@@ -35,6 +35,8 @@ if (score === null ){
 }
 console.log(score) 
 //returns  back to object {wins: 4, losses: 2, ties: 3}
+// function displays the DOM element
+updateScore(); 
 
 function pickCompMove(){
     let computerMove = ''; 
@@ -99,20 +101,27 @@ function playTheGame(userPick){
         score.ties +=1;
      }
     
-     //Saved score in the localStorage.setItem() permanently  and convert object a string  using JSON.stringify(object)
+    //Saved score in the localStorage.setItem() permanently  and convert object a string  using JSON.stringify(object)
     localStorage.setItem('score',JSON.stringify(score)); 
 
-    console.log(`User picked,${userPick}`);
+    // update score function being called. 
+    updateScore();
+    document.querySelector('.js-results').innerHTML = results; 
+    document.querySelector('.js-moves').innerHTML = `You:${userPick} \n Computer: ${computerMove}`; 
 
+    return results; 
+}
+
+//console.log(playTheGame('paper'));
+
+// function to update 
+function updateScore(){
     //Display on the paragraph below 
-    const displayDown = document.querySelector('.js-results').innerText = `Computer Pick:${computerMove}\n Your Pick:${userPick} \n Results:${results} \n Wins:${score.wins} \n Losses:${score.losses} \n Ties:${score.ties}
-    `
-    ; 
+    const displayDown = document.querySelector('.js-score').innerHTML = `Wins:${score.wins}, \n Losses:${score.losses}, \n Ties:${score.ties}`; 
 
     return displayDown;
 }
 
-//console.log(playTheGame('paper'));
 
 
 
