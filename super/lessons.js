@@ -19,7 +19,7 @@ function celsius(temperature){
 console.log(celsius(-5))
 
 //LESSON 3: STRINGS 
-function string(names){
+function strings(names){
     // use concatenation
     // alert(`my name is ${names}`);
     // return names;
@@ -27,18 +27,19 @@ function string(names){
     return name 
 } 
 
-console.log(string('sherlyne'))
+console.log(strings('sherlyne'))
 
 // Items In Cart :
-const coffee2 = 5.99;
-const bagel2 = 2.95; 
+const coffee2 = 599/100;
+const bagel2 = 295/100; 
 const soup = 9
 const tax = 0.1
 const cost= Math.round(coffee2 + bagel2 + soup); 
 const totalTax = cost * tax; 
 const totalCost = totalTax + cost; 
-console.log(`Total Cost: $${totalCost}`);
-// alert(`Total Cost: $${totalCost}`);
+console.log(`Total Cost: $ ${totalCost}`);
+alert(`Total Cost: $${totalCost} \n Thank you, come again!`);
+
 
 const items = '$' + burger; 
 console.log(items); 
