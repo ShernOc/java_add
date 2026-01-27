@@ -1,5 +1,14 @@
+// LESSON 2 : NUMBERS AND MATH
+// items 
+const chicken_soup = 10;
+const burger = (8*3); 
+const ice_cream = 5; 
 
-//LESSON 2  STRINGS 
+// calculate the order 
+const people = 3; 
+const orders = (chicken_soup + burger + ice_cream)/ people 
+console.log(orders); // each person pays 13 shillings
+
 // convert temperature to celsius and Fahrenheit; 
 let temperature= 0; 
 function celsius(temperature){
@@ -30,6 +39,11 @@ const totalTax = cost * tax;
 const totalCost = totalTax + cost; 
 console.log(`Total Cost: $${totalCost}`);
 // alert(`Total Cost: $${totalCost}`);
+
+const items = '$' + burger; 
+console.log(items); 
+`some 
+text` // multiline string. 
 
 //LESSON 4. HTML /: 
 console.log('Welcome to the lessons page!')
