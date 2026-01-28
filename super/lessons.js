@@ -43,11 +43,11 @@ alert(`Total Cost: $${totalCost} \n Thank you, come again!`);
 
 const items = '$' + burger; 
 console.log(items); 
-`some 
-text` // multiline string. 
+
 
 //LESSON 4. HTML /: 
-console.log('Welcome to the lessons page!')
+console.log('Welcome to the lessons page!');
+console.log('Welcome');
 
 //LESSON 5. VARIABLES 
 // Use of interpolation and backticks.
@@ -467,37 +467,3 @@ function amazonShip(order){
     return display; 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,65 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LESSONS LEARNT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="lessons.css">
+<title>LESSONS LEARNT</title>
 </head>
-<body>
-  <h1>LESSONS</h1>
-  <h2>Lesson 2 : NUMBERS AND MATH </h2>
-  <B>Order of operations </B>
-  <p>BODMAS:It's starts from the Brackets, Division, Multiplication, Addition and Subtractions
+  <body>
+    <h1>LESSONS</h1>
+    <h2>Lesson 2 : NUMBERS AND MATH </h2>
+    <B>Order of operations </B>
+    <p>BODMAS:It's starts from the Brackets, Division, Multiplication, Addition and Subtractions
     <br>
     <br> 
-    (20.95 + 7.99 *2)*0.1  = 3.693
-  <h3>Weird behavior of Maths in Javascript</h3>
+      (20.95 + 7.99 *2)*0.1  = 3.693
+    <h3>Weird behavior of Maths in    Javascript</h3>
     2,3,4 = Integers 
     <br>
     2.2, 2.5 = floating numbers/ floats
-<br>
+    <br>
     <b>Computers can only store 0 and 1. while humans can store = 0-9 numbers</b></p>
 
-<h2>Lesson 3: STRINGS</h2>
-<p><b>String = Text</b>
-  <br>
-  'some'+ 'more'+ 'text' this is called <b>concatenation ; breaking down a string </b>
-  typeof(2) = number 
-  typeof('some') = string
+    <h2>Lesson 3: STRINGS</h2>
+    <p><b>String = Text</b>
+    <br>
+    'some'+ 'more'+ 'text' this is called <b>concatenation ; breaking down a string </b>
+    typeof(2) = number 
+    typeof('some') = string
 
-  'hello' + 2 = string = hello2 java converts number to a string. which is a <b>Type coercion</b> 
+    'hello' + 2 = string = hello2 java converts number to a string. which is a <b>Type coercion</b> 
 
-  <B>Strings also follow the order of operations just like numbers, thus we use BRACKETS</B>
-  '$' + (2095 + 799)/100 = $28.94. 
+    <B>Strings also follow the order of operations just like numbers, thus we use BRACKETS</B>
+    '$' + (2095 + 799)/100 = $28.94. 
+
+    <b>Escape characters \ used to allow characters like ('),  \" = am not sure  \n = newline </b>
+    <br>
+    strings = "strings" , '', 
+    <br> `interpolation` = ` ${2+2}: used to add values ` 
+    `some 
+    text` // multiline string. 
+    </p>
   
-  <b>Escape characters \ used to allow characters like ('),  \" = am not sure  \n = newline </b>
-  <br>
-  strings = "strings" , '', 
-  <br> `interpolation` = ` ${2+2}: used to add values ` 
+
+    <h2>Lesson 4: HTML, CSS AND JS RECAP </h2> 
+    <p>Create two buttons "Add to cart' and 'Buy now' </p>
+    
+    <button  title = "Buttons " class="cart" onclick="alert('Added')">Add to cart</button>
+    <button title = "Buttons " class=" buy" onclick="console.log('Loading...'); alert('Purchased')" >Buy now </button>
+    <style> 
+      .cart{
+        background-color: yellow;
+        border-radius: black;
+      }
+      .buy{
+        background-color: orange;
+        border-radius:black;
+      }
+
+    </style>
+    
+    <button class="add-button" onclick = "alert('Added')">Add to Cart </button>
+    <button class="buy-button" onclick="console.log('Loading...'); alert('Purchased')">Buy now</button>
+    </p>
+
   
-
-
-
-
-</p>
-
-
-
-  <br>
-  <h2>Lesson 4: html/css/js recap </h2> 
-  <p>
-    <button>Click</button>
-    <button>Tiger</button>
-    <button>Pork</button>
-    <p>Hello,world! This is just a recap of the lessons,</p> 
-    <p>Adults Plain Cotton T-shirt</p>
-
-    <button onclick = "alert('Added')">Add to Cart </button>
-    <button onclick="console.log('Loading...'); alert('Purchased')">Buy now</button>
-  </p>
-
-  <hr>
-  <!-- LESSON 5 VARIABLES -->
+    <hr>
+    <!-- LESSON 5 VARIABLES -->
     <h2>Lesson 5: Variables and Data Types:</h2>
     <p>Learning about giving name to variable by using const,let, and var </p>
 
@@ -72,16 +78,16 @@
     calculator+='2'
     console.log(calculator)"
     >2</button>
-    
+
     <button title="3" onclick="calculator +='3';
     console.log(calculator)
     ">3</button>
-    
+
     <button title="+" onclick="
     calculator+= ' + ';
     console.log(calculator)
     ">+</button>
-    
+
     <button title="=" class="js-button" onclick="
     calculators = eval(calculator);
     console.log(`${calculators}`)
@@ -89,132 +95,133 @@
 
     <p class="js-results"></p>
 
-  <hr>
+    <hr>
 
-  <h2>Lesson 6: Booleans/ If else and Logical Operators:</h2>
+    <h2>Lesson 6: Booleans/ If else and Logical Operators:</h2>
     <p>Learning about the True/False, greater and less than while using the if else statement</p>
     <br>
 
-  <hr>
-  <!-- Lesson 7  -->
-  <h2>Lesson 7:Functions</h2>
+    <hr>
+    <!-- Lesson 7  -->
+    <h2>Lesson 7:Functions</h2>
     <p>Functions: Allows us to reuse and update the code</b></li>
-  </p>
+    </p>
 
-  <p>
+    <p>
     <h3>Rock Paper Scissor Game:Function </h3>
     <!-- buttons -->
     <button onclick="playGame('rock')">Rock</button >
     <button onclick="playGame('paper')">Paper</button>
     <button onclick="playGame('scissors')">Scissors</button>
-  </p>
-  <hr>
+    </p>
+    <hr>
 
-  <h2>LESSON 9:DOM PROJECT </h2>
+    <h2>LESSON 9:DOM PROJECT </h2>
     <p>
-      <h3>Youtube Subscribe Button</h3>
+    <h3>Youtube Subscribe Button</h3>
     <!--Algorithm-->
     <!-- Create a youtube button named "Subscribe"
-  2. Change the button from subscribe to subscribed using DOM when clicked --->
-  <button  class="js-subscribe-button" onclick="
-  // call the function 
-      subscribeButton(); "
-        >Subscribe</button>
-  <br>
-  <hr>
+    2. Change the button from subscribe to subscribed using DOM when clicked --->
+    <button  class="js-subscribe-button" onclick="
+    // call the function 
+    subscribeButton(); "
+    >Subscribe</button>
+    <br>
+    <hr>
 
-  <h1>Rock Paper Scissor</h1>
-  <h3>PLAY THE GAME</h3>
+    <h1>Rock Paper Scissor</h1>
+    <h3>PLAY THE GAME</h3>
 
-        <button onclick="playerMove('Rock')">Rock</button>
-        <button onclick="playerMove('Paper')">Paper</button>
-        <button onclick="playerMove('Scissor')">Scissors</button>
-
-
-      <h3>SCORE BOARD</h3>
-        <!-- results of user  -->
-      <p class = "js-final-result"></p>
-      <p class="js-moves"></p>
-      <p class="js-result"></p>
-      
-      <!-- reset button -->
-        <button onclick="
-        score.win = 0;
-        score.losses =0;
-        score.tie = 0;
-        
-      // remove the score/local storage
-      localStorage.removeItem('score')
-      updateScore() // updates the score
-      "
-        >Reset Score</button>
-  <hr>
-
-  <h1>Amazon Shipping Calculator</h1>
-  <p>Order under $40 = $10 added Shipping</p>
-  <p>Order over $40 = FREE Shipping</p>
-
-  <input placeholder="Cost of order" 
-  class="js-cost-input" >
-  <!-- onkeydown="handleKeydown(event) -->
-
-  <button onclick ="amazonShip();
-  ">Calculate</button>
-
-  <!-- display the amount  -->
-  <br>
-  <br>
-  <b>Total Amount: </b>
-  <!-- Total Amount displayed here -->
-  <p class="js-total-cost"></p>
-
-  <hr>
+    <button onclick="playerMove('Rock')">Rock</button>
+    <button onclick="playerMove('Paper')">Paper</button>
+    <button onclick="playerMove('Scissor')">Scissors</button>
 
 
-  <h3>DOM PROJECT 2</h3>
-  <p>9a. Create a button, Use document.querySelector to get the button from the page, and the display it in the console. 
-      <br>
-      <br>
-  9b. Create another button 9b. below. Using JS change the text in the second button to 9b done
-  <br>
-  <button class="a"></button>
-  <button class = "b"></button>
-  <br>
-  <br>
+    <h3>SCORE BOARD</h3>
+    <!-- results of user  -->
+    <p class = "js-final-result"></p>
+    <p class="js-moves"></p>
+    <p class="js-result"></p>
 
-  9c. create 2 buttons heads and tail: when clicking heads button, display "You choose:heads or tails "
-  <br>
-  <button onclick="headsTails('Heads')">Heads </button>
-  <button onclick="headsTails('Tails')">Tails</button>
-  <p class="js-choice"></p>
+    <!-- reset button -->
+    <button onclick="
+    score.win = 0;
+    score.losses =0;
+    score.tie = 0;
 
-  9d. Create a textbox(input) and a submit button. When clicking submit display "Your name is: "name"; 
-  Also whenever you type in the text box, update the page. 
+    // remove the score/local storage
+    localStorage.removeItem('score')
+    updateScore() // updates the score
+    "
+    >Reset Score</button>
+    <hr>
 
-  <input type="name"class="js-input-button" placeholder="Name" onkeyup=handleNameup(event)>
+    <h1>Amazon Shipping Calculator</h1>
+    <p>Order under $40 = $10 added Shipping</p>
+    <p>Order over $40 = FREE Shipping</p>
 
-  <button class="js-submit" onclick="nameText()">Submit</button>
+    <input placeholder="Cost of order" 
+    class="js-cost-input" >
+    <!-- onkeydown="handleKeydown(event) -->
 
-  <p class = "js-display-name"></p>
+    <button onclick ="amazonShip();
+    ">Calculate</button>
 
-  <!-- Key on / Input -->
-  9h. When you type in the text box, it updates the text on the page
+    <!-- display the amount  -->
+    <br>
+    <br>
+    <b>Total Amount: </b>
+    <!-- Total Amount displayed here -->
+    <p class="js-total-cost"></p>
 
-  <input  id="up" type="text" class="js-key-up" onkeyup="handleKey(event)">
+    <hr>
 
-  <p class="p-up"></p>
 
-  9i. Improve cart quantity: add a paragraph to display the quantity. When we updated the quantity, also display the quantity when page first loads 
+    <h3>DOM PROJECT 2</h3>
+    <p>9a. Create a button, Use document.querySelector to get the button from the page, and the display it in the console. 
+    <br>
+    <br>
+    9b. Create another button 9b. below. Using JS change the text in the second button to 9b done
+    <br>
+    <button class="a"></button>
+    <button class = "b"></button>
+    <br>
+    <br>
 
-  9j. We'll improve the calculator project. 
-  - Make a copy of excise 8h(calculator), when we update calculation, display it on the page instead of in the console. 
-  - When page loads, if a calculation exist in local storage, display it on the page.47
-  </p>
+    9c. create 2 buttons heads and tail: when clicking heads button, display "You choose:heads or tails "
+    <br>
+    <button onclick="headsTails('Heads')">Heads </button>
+    <button onclick="headsTails('Tails')">Tails</button>
+    <p class="js-choice"></p>
 
+    9d. Create a textbox(input) and a submit button. When clicking submit display "Your name is: "name"; 
+    Also whenever you type in the text box, update the page. 
+
+    <input type="name"class="js-input-button" placeholder="Name" onkeyup=handleNameup(event)>
+
+    <button class="js-submit" onclick="nameText()">Submit</button>
+
+    <p class = "js-display-name"></p>
+
+    <!-- Key on / Input -->
+    9h. When you type in the text box, it updates the text on the page
+
+    <input  id="up" type="text" class="js-key-up" onkeyup="handleKey(event)">
+
+    <p class="p-up"></p>
+
+    9i. Improve cart quantity: add a paragraph to display the quantity. When we updated the quantity, also display the quantity when page first loads 
+
+    9j. We'll improve the calculator project. 
+    - Make a copy of excise 8h(calculator), when we update calculation, display it on the page instead of in the console. 
+    - When page loads, if a calculation exist in local storage, display it on the page.47
+    </p>
+<!--  -->
 
     </p>
 
-</body>
+  </body>
+ 
 <script src="lessons.js">
 </script>
 </html>
