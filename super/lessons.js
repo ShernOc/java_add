@@ -61,7 +61,7 @@ console.log(`my name is ${elephantName}` ) ;
 const coffee = 5 
 const bagels = 2*3;
 const ting = 9
-const costs = coffee + bagels + ting;
+const costs = coffee + bagels + ting;65;'5636 m'
 const tax2 = cost * 0.1
 console.log(cost);
 console.log(tax2); 
