@@ -10,28 +10,28 @@
 <body>
     <h1>Amazon Cart</h1> 
     <p>
-        1. The cart should show automatic the quantity of the products, that is it should show (quantity 1): 
+        1. The cart should automatically show the quantity of the products/items (quantity 1): 
     </p>
 
     <h4>ITEMS IN THE STORE: </h4>
     <!-- Selected Items -->
      
-    <p><b>update the items: Check the remove cart, before updating the quantity, check if it will go below 0; if it will create a popup saying Not enough items in the cart, and dont update the quantity; 
+    <p>
+        <b>update the items: Check the remove cart,      before updating the quantity, check if it will go below 0; if it will create a popup saying Not enough items in the cart, and don't update the quantity;
+        Also make sure the remove button removes the items that you want to remove specifically.</b>
+    </p> 
 
 <!-- Shoe -->
- <li>Shoes:<span class ="js-shoe-span"> </span>
+    <li>Shoes:<span class ="js-shoe-span"> </span>
     <li>
-    <!-- Show the quantity -->
-    <p class="js-show-quantity"></p>
-
+   
     <button 
      class="cs-add" title="Add to cart" onclick= 
      " console.log(displayQuantity())"
      >Show Quantity
     </button>
 
-    <!-- console.log(`Cart Quantity ${cartQuantity}`)" -->
-     <button 
+    <button 
      class="cs-add" title="Add to cart" onclick="
      console.log(amazonCart(+1))">Add to Cart
     </button>
@@ -56,12 +56,10 @@
         ">
         Buy now
     </button>
-
-    </b></p>
     
     <!-- Basket Ball  -->
      <li>Basketball: <span class ="js-basket-span"></span></li>
-     <button 
+    <button 
      class="cs-add" title="Add to cart" onclick= 
      " console.log(displayQuantity())"
      >Show Quantity
@@ -70,11 +68,11 @@
     <!-- console.log(`Cart Quantity ${cartQuantity}`)" -->
      <button 
      class="cs-add" title="Add to cart" onclick="
-     console.log(amazonCart(+1))">Add to Cart
+     console.log(amazonCart(1))">Add to Cart
     </button>
 
     <button class="cs-order" onclick=" 
-    console.log(amazonCart(+2))"
+    console.log(amazonCart(2))"
     >+2</button>
     
     <button class="cs-order" onclick=" 
@@ -162,6 +160,11 @@
         ">
         Buy now
     </button>
+    
+    <!-- Show the quantity -->
+    <p class="js-show-quantity"></p>
+
+    <!-- console.log(`Cart Quantity ${cartQuantity}`)" -->
 
      <br><br><br>
 

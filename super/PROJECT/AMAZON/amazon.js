@@ -159,7 +159,7 @@ function amazonCart(items){
     return cartQuantity;
 }
 
-console.log(amazonCart(0))
+// console.log(amazonCart(0))
 
 // Calculate the prices 
 // Take the number of quantity in the amazon cart, 
