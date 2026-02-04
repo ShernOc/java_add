@@ -23,42 +23,105 @@ function ShowQuantity(stuff){
   }}
 
 // Add to Cart
-let results = ''; 
+let items = ''; 
 
 function AddCart(results){
   // reassigned a cart quantity
   // if items are 10 
   // ShowQuantity(); // updates the quantity so we 
   const maxItems = 30; // maximum items in the cart 
-  if(cartQuantity + results > maxItems){
+  
+  if(cartQuantity + items > maxItems){
     return alert(`you have ${cartQuantity} items in a cart`)
-  }else if (cartQuantity + results < 0){
+  }else if (cartQuantity + items < 0){
     return alert(`You have ${cartQuantity} \n add items in your cart `)
-  }else {cartQuantity = cartQuantity + results}
+  }else {cartQuantity = cartQuantity + items}
   console.log(`Cart quantity: ${cartQuantity}`) ; 
 }
 
 // CALCULATOR 
+let calculation ='';
 
-
-
-
-
-
-
-
-
-
-
-let calculation = ''; 
-function Calculation(){
+function Calculation(results){
   if(calculation + results){
     return calculation += results ;
   }else {
     return calculation -= results; 
   }
   console.log('life')
+          
 }
 
+// ROCK PAPER SCISSORS 
+/*
+Algorithm/Steps
 
+We have a user and a computer:
+if the computer select a move, 
+We compare the move to get the results, 
+User Selects the move 
+Display the results in a popup 
 
+if the number is between 0 and 1/3, = rock
+if the number is between 1/3 and 2/3 = paper
+if the number is between 2/3 and 1 = Scissors
+ */ 
+
+const randomNumber= Math.random();
+console.log(randomNumber); 
+let computer = '';
+let selected = ''; 
+
+function radNumber(){
+  if(randomNumber >= 0 && randomNumber <= 1/3){
+     return computer = 'Rock';
+  }else if (randomNumber >= 1/3 && randomNumber <= 2/3 ){
+    return computer = 'Paper'; 
+  }else if (randomNumber >= 2/3 && randomNumber <= 1){
+    return computer = 'Scissors';
+  }else {
+    return randomNumber;
+  }
+}
+
+console.log(radNumber())
+
+let results = '';
+
+function PlayTheGame(user){
+  let computerMove = radNumber(); // 
+  console.log(computerMove); 
+  // Rock
+  if(user === 'Rock'){
+    if (computerMove ==='Rock'){
+      results = 'You tie';
+    }else if (computerMove ==='Paper'){
+      results = 'You lose'; 
+    }else if (computerMove ==='Scissors'){
+      results = 'You win';
+    }
+    // Paper
+  }else if(user === 'Paper'){
+     if (computerMove ==='Rock'){
+      results = 'You win';
+    }else if (computerMove ==='Paper'){
+      results = 'You tie'; 
+    }else if (computerMove ==='Scissors'){
+      results = 'You lose';
+    }
+// Scissors 
+  }else if(user === 'Scissors'){
+     if(computerMove ==='Rock'){
+      results = 'You lose';
+    }else if (computerMove ==='Paper'){
+      results = 'You win'; 
+    }else if (computerMove ==='Scissors'){
+      results = 'You tie';
+    } 
+  }else{console.log('select a button')}
+
+   console.log(results); 
+  // create an alert 
+  alert(`You picked ${user}.\nComputer picked ${computerMove}.\n${results}`)
+ 
+}

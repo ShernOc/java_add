@@ -228,3 +228,9 @@ localStorage.setItem('storeProducts', JSON.stringify(storeProducts))
 }
 
 console.log(amazonCalculation(storeProducts.shoe))
+
+
+
+
+
+
