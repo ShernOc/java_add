@@ -76,7 +76,19 @@ function calCulation(number){
     }else{calculator -= number}
 }
 
+
 //LESSON 6. BOOLEANS AND IF STATEMENTS/: 
+const hour = 19 
+const myname = 'Sherlyne'
+ if(hour > 6 && hour < 12){
+    console.log(`Good Morning ${myname} !`)
+ }else if (hour > 13 && hour < 17){
+    console.log(`Good afternoon ${myname}!`)
+ }else{console.log(`Good night ${myname}!`)}
+
+console.log(hour) // Good night Sherlyne! =
+
+
 const shirt = 10;
 const socks = 8; 
 const plate = 20;
@@ -89,11 +101,23 @@ function Total_cost(){
 }
 console.log(Total_cost())
 
+
 //AMUSEMENT PARK
+/* there is a discount for children 6 and below or seniors 65 and above. */
+function amusementPark(){
+    const myAge = 89; 
+    const isHoliday = false;
+    if ((myAge >= 65 || myAge <=6) && isHoliday){
+        return('Discount');  
+    }else{
+        return ('No discount')
+    }
+}
+console.log(amusementPark())
+
+//((ages<= 6 || ages>=65) && isHoliday ) 
     let ages = 0;  // create a constant work. 
     const isHoliday = true;
-    //((ages<= 6 || ages>=65) && isHoliday ) 
-
     function amusement(ages){
         if(isHoliday && (ages<= 6 || ages>=65) ){
             return 'Discount';
@@ -101,38 +125,35 @@ console.log(Total_cost())
             return 'No discount' ;
         }
     }; 
-    
     console.log(amusement(70));
 
     // ternary operator
     let age = 70; 
     const discountTime = isHoliday && (age<=6 || age>=65)?`No Discount`:`Discount`
-
     console.log(discountTime)
 
-// coins; 
-    const randomNu = Math.random(); 
-    let results = '';
-    let guess = 'tails';
-    
+// Flip coin  
+const randomNu = Math.random(); 
  // having two conditions: if number is < 0.5 and if the guess == 'tails' results = 'you win'; 
 
 // return results;
-function randomNumber(){   
+function coin(){   
+    let results = '';
+    let guess = 'Tails'; 
     console.log(randomNu);
-    if(randomNu <=0.5){
-        results = 'heads'; 
-        return 'You loose';
-    }else if(guess === 'tails'){ 
-        results = 'tails'
-        return 'You win'
-    }else{
-        results = 'tails';
-        return 'Lose';
-        }
-}; 
+    if(randomNu < 0.5? 'Heads':'Tails'){
+        results = 'Tails'
+        if(results === guess){
+            console.log('You win');
+        } else if (results !== guess){
+             console.log ('You lose')}
+        } else{console.log('Play again')}
 
-console.log(randomNumber())
+        return results; 
+    }
+
+console.log(coin())
+// I Have messed up this so bad. 
 
 //Ternary Work:
 const num  = randomNu <= 0.5? 'heads':'tails';

@@ -25,12 +25,11 @@ function ShowQuantity(stuff){
 // Add to Cart
 let items = ''; 
 
-function AddCart(results){
+function AddCart(items){
   // reassigned a cart quantity
   // if items are 10 
   // ShowQuantity(); // updates the quantity so we 
   const maxItems = 30; // maximum items in the cart 
-  
   if(cartQuantity + items > maxItems){
     return alert(`you have ${cartQuantity} items in a cart`)
   }else if (cartQuantity + items < 0){
@@ -38,6 +37,7 @@ function AddCart(results){
   }else {cartQuantity = cartQuantity + items}
   console.log(`Cart quantity: ${cartQuantity}`) ; 
 }
+
 
 // CALCULATOR 
 let calculation ='';
@@ -86,7 +86,7 @@ function radNumber(){
 
 console.log(radNumber())
 
-let results = '';
+let result = '';
 
 function PlayTheGame(user){
   let computerMove = radNumber(); // 
@@ -94,34 +94,49 @@ function PlayTheGame(user){
   // Rock
   if(user === 'Rock'){
     if (computerMove ==='Rock'){
-      results = 'You tie';
+      result = 'You tie';
     }else if (computerMove ==='Paper'){
-      results = 'You lose'; 
+      result = 'You lose'; 
     }else if (computerMove ==='Scissors'){
-      results = 'You win';
+      result = 'You win';
     }
     // Paper
   }else if(user === 'Paper'){
      if (computerMove ==='Rock'){
-      results = 'You win';
+      result = 'You win';
     }else if (computerMove ==='Paper'){
-      results = 'You tie'; 
+      result = 'You tie'; 
     }else if (computerMove ==='Scissors'){
-      results = 'You lose';
+      result = 'You lose';
     }
 // Scissors 
   }else if(user === 'Scissors'){
      if(computerMove ==='Rock'){
-      results = 'You lose';
+      result = 'You lose';
     }else if (computerMove ==='Paper'){
-      results = 'You win'; 
+      result = 'You win'; 
     }else if (computerMove ==='Scissors'){
-      results = 'You tie';
+      result = 'You tie';
     } 
   }else{console.log('select a button')}
 
-   console.log(results); 
+   console.log(result); 
   // create an alert 
-  alert(`You picked ${user}.\nComputer picked ${computerMove}.\n${results}`)
+  alert(`You picked ${user}.\nComputer picked ${computerMove}.\n${result}`)
  
 }
+
+// COIN FLIP 
+const randNumb = Math.random(); 
+console.log(randNumb)
+const  results = 'Head';
+const rNumber = randNumb < 0.5? results:'Tails';
+console.log(rNumber); 
+
+/* Lets say we are trying to guess the result. Create a variable called guess and save your guess ('heads' or 'tails') 
+ if your guess matches the results, display 'You win! in the console.
+ if your guess does not match the results, display 'You lose'
+ 
+ try switching to ternary operator*/
+const guess = 'heads or tails'
+
