@@ -52,36 +52,38 @@ function Calculation(results){
           
 }
 
+
+
 // ROCK PAPER SCISSORS 
 /*
 Algorithm/Steps
 
 We have a user and a computer:
-if the computer select a move, 
-We compare the move to get the results, 
+if the computer select a move and a user selects a move(rock,paper,scissor)
+We compare the moves to get the results, 
 User Selects the move 
 Display the results in a popup 
 
+Criteria: 
 if the number is between 0 and 1/3, = rock
 if the number is between 1/3 and 2/3 = paper
 if the number is between 2/3 and 1 = Scissors
  */ 
 
-const randomNumber= Math.random();
-console.log(randomNumber); 
-let computer = '';
-let selected = ''; 
-
 function radNumber(){
-  if(randomNumber >= 0 && randomNumber <= 1/3){
-     return computer = 'Rock';
-  }else if (randomNumber >= 1/3 && randomNumber <= 2/3 ){
-    return computer = 'Paper'; 
-  }else if (randomNumber >= 2/3 && randomNumber <= 1){
-    return computer = 'Scissors';
-  }else {
-    return randomNumber;
+  let computerMove = '';
+  const randomNumber= Math.random();
+  console.log(randomNumber); 
+  
+  if(0 <= randomNumber <=1/3){
+      computerMove = 'Rock';
+  }else if ( 1/3 <= randomNumber <= 2/3 ){
+    computerMove = 'Paper'; 
+  }else if (2/3 <= randomNumber <= 1){
+     computerMove = 'Scissors';
   }
+
+  return computerMove;
 }
 
 console.log(radNumber())

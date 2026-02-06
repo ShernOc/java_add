@@ -1,16 +1,16 @@
 // Rock Paper Scissors 
 
 /*steps 
-1. Computer randomly picks a move 
-    if number between 1-1/3 = 
-2. You pick a move and the results are compared
-4. Update the score 
-3. Display the results and score in a pop-up 
-
 Random numbers: 
 0-1/3 = rock 
 1/3-2/3 = paper 
 2/3-1= scissor
+
+1. Computer randomly picks a move (rock,paper, scissors)
+2. The user picks a a move by pressing the button. 
+3. The win is compared to what a user picks. 
+4. Update the score 
+3. Display the results and score in a pop-up 
 */ 
 
 // scores calculation : OBJECTS
@@ -38,15 +38,17 @@ console.log(score)
 // function displays the DOM element
 updateScore(); 
 
+// Computer move. 
 function pickCompMove(){
     let computerMove = ''; 
     const randomNumber =Math.random();
-    // console.log(number);
-    if (randomNumber>=0 && randomNumber < 1/3){
-        computerMove = 'rock'
-    }else if (randomNumber>=1/3 && randomNumber<2/3){
+    console.log(number); 
+
+    if(randomNumber>=0 && randomNumber <= 1/3){
+        computerMove = 'rock';
+    }else if(randomNumber>=1/3 && randomNumber<=2/3){
         computerMove= 'paper';
-    }else if(randomNumber>=2/3 && randomNumber< 1){
+    }else if(randomNumber>=2/3 && randomNumber<= 1){
         computerMove= 'scissors';
     }  
     return computerMove;
@@ -55,14 +57,14 @@ function pickCompMove(){
 console.log(pickCompMove()); // show if its either scissor,rock or paper
 
 // Compare the move of the computer and the user pick 
-function playTheGame(userPick){
+function playTheGame(user){
     let results = ''; 
-    const computerMove = pickCompMove(); 
+    const computerMove = pickCompMove(); // 
     console.log(computerMove);
 
     // User picked (rock)
-    if(userPick === 'rock'){
-        if (computerMove === 'rock'){
+    if(user === 'rock'){
+        if(computerMove === 'rock'){
             results = 'You tie';
         }else if(computerMove === 'paper'){
             results = 'You loose';
@@ -71,7 +73,7 @@ function playTheGame(userPick){
         }
     
     // User picked(paper)
-    }else if(userPick === 'paper' ){
+    }else if(user === 'paper' ){
         if(computerMove === 'paper'){
             results = 'You tie';
         }else if (computerMove === 'rock'){
@@ -81,7 +83,7 @@ function playTheGame(userPick){
         }
 
         // User picked (scissors)
-    }else if(userPick === 'scissors'){
+    }else if(user === 'scissors'){
         if(computerMove === 'scissors'){
             results = 'You tie';
         }else if (computerMove === 'rock'){
@@ -107,7 +109,7 @@ function playTheGame(userPick){
     // update score function being called. 
     updateScore();
     document.querySelector('.js-results').innerHTML = results; 
-    document.querySelector('.js-moves').innerHTML = `You:${userPick} \n Computer: ${computerMove}`; 
+    document.querySelector('.js-moves').innerHTML = `You:${user} \n Computer: ${computerMove}`; 
 
     return results; 
 }
