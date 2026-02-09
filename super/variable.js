@@ -1,16 +1,26 @@
 console.log('VARIABLE HTML')
 
+
+
 // Cart quantity 
 let cartQuantity = 0; 
 // Items: 
 
 const Vaseline = 4350;
 const Shoes = 2000;
-const cost = (Vaseline + Shoes)/100; 
-console.log(`Cost ${cost}`); 
+
+// Parameters. 
+// how to input the cost of items, that don't have the same amount.i think use an object, a while loop, to hold all the items. 
 const tax = 0.1; 
-const totalCost = cost + tax; 
-console.log(`Total Cost: ${totalCost}`); 
+let cost = '';
+function calculate(cost, tax=0.1){
+  const taxed = ((cost) * tax) ; 
+  const totalCost = taxed + cost; 
+  return `Total Cost: ${totalCost/100}`; 
+  }
+
+console.log(calculate(4567, 0.3))
+console.log(calculate(4567))
 
 // showQuantity and remove cart button 
 function ShowQuantity(stuff){
@@ -22,6 +32,7 @@ function ShowQuantity(stuff){
   } else {console.log(`Cart Quantity: ${cartQuantity}`) ; 
   }}
 
+  
 // Add to Cart
 let items = ''; 
 
@@ -31,27 +42,29 @@ function AddCart(items){
   // ShowQuantity(); // updates the quantity so we 
   const maxItems = 30; // maximum items in the cart 
   if(cartQuantity + items > maxItems){
-    return alert(`you have ${cartQuantity} items in a cart`)
+    alert(`you have ${cartQuantity} The cart is full`)
+    return; 
   }else if (cartQuantity + items < 0){
-    return alert(`You have ${cartQuantity} \n add items in your cart `)
+    alert(`You have ${cartQuantity} \n add items in your cart `)
+    return;
   }else {cartQuantity = cartQuantity + items}
   console.log(`Cart quantity: ${cartQuantity}`) ; 
 }
 
 
 // CALCULATOR 
+// It's not working. 
 let calculation ='';
 
-function Calculation(results){
-  if(calculation + results){
+function Cal(results){
+  if(calculation){
     return calculation += results ;
-  }else {
-    return calculation -= results; 
+  }else if(calculation = eval( `${calculation}`)){
+    return calculation;
   }
-  console.log('life')
-          
+  
+  console.log(calculation)
 }
-
 
 
 // ROCK PAPER SCISSORS 
@@ -88,43 +101,42 @@ function radNumber(){
 
 console.log(radNumber())
 
-let result = '';
-
-function PlayTheGame(user){
+function PlayTheGame(userMove){
+  let result = '';
   let computerMove = radNumber(); // 
   console.log(computerMove); 
   // Rock
-  if(user === 'Rock'){
+  if(userMove === 'Rock'){
     if (computerMove ==='Rock'){
-      result = 'You tie';
+      result = 'You tie.';
     }else if (computerMove ==='Paper'){
-      result = 'You lose'; 
+      result = 'You lose.'; 
     }else if (computerMove ==='Scissors'){
-      result = 'You win';
+      result = 'You win.';
     }
     // Paper
-  }else if(user === 'Paper'){
+  }else if(userMove === 'Paper'){
      if (computerMove ==='Rock'){
-      result = 'You win';
+      result = 'You win.';
     }else if (computerMove ==='Paper'){
-      result = 'You tie'; 
+      result = 'You tie.'; 
     }else if (computerMove ==='Scissors'){
-      result = 'You lose';
+      result = 'You lose.';
     }
 // Scissors 
-  }else if(user === 'Scissors'){
+  }else if(userMove === 'Scissors'){
      if(computerMove ==='Rock'){
-      result = 'You lose';
+      result = 'You lose.';
     }else if (computerMove ==='Paper'){
-      result = 'You win'; 
+      result = 'You win..'; 
     }else if (computerMove ==='Scissors'){
-      result = 'You tie';
+      result = 'You tie.';
     } 
   }else{console.log('select a button')}
 
    console.log(result); 
   // create an alert 
-  alert(`You picked ${user}.\nComputer picked ${computerMove}.\n${result}`)
+  alert(`You picked ${userMove}.\nComputer picked ${computerMove}.\n${result}`)
  
 }
 
@@ -136,9 +148,8 @@ const rNumber = randNumb < 0.5? results:'Tails';
 console.log(rNumber); 
 
 /* Lets say we are trying to guess the result. Create a variable called guess and save your guess ('heads' or 'tails') 
- if your guess matches the results, display 'You win! in the console.
- if your guess does not match the results, display 'You lose'
+ if your guess matches the results, display 'You win.! in the console.
+ if your guess does not match the results, display 'You lose.'
  
  try switching to ternary operator*/
 const guess = 'heads or tails'
-

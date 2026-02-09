@@ -165,31 +165,30 @@ console.log(newCoin)
 //ROCK PAPER SCISSORS: 
 // Pick computer move
 function pickCompMove(){
-    let computerMove = ''; 
+    let computer = ''; 
     const randomNumber = Math.random(); 
-
     if(randomNumber>= 0 && randomNumber< 1/3){
-        computerMove = 'rock';
+        computer = 'rock';
     }else if(randomNumber >=1/3 && randomNumber <2/3){
-        computerMove = 'paper';
+        computer = 'paper';
     }else if(randomNumber >=2/3 && randomNumber <1){
-        computerMove = 'scissors';
+        computer = 'scissors';
     }
 
     // return computerMove; 
-    return computerMove;
+    return computer;
 }; 
 
 // calling a function : pickCompMove(); 
 console.log(pickCompMove()) // Return either rock,scissor,or paper
 
 // userPick= parameter of what the user will pick either rock, paper or scissors 
-function playGame(userPick){
+function playGame(userMove){
     const computerMove = pickCompMove(); // called the computer pick move ; 
     console.log(computerMove)
-    
     let results = ''; 
-    if(userPick ==='rock'){
+
+    if(userMove ==='rock'){
         if(computerMove ==='rock'){
             results = 'You tie';
         }else if(computerMove ==='paper'){
@@ -199,7 +198,7 @@ function playGame(userPick){
         }
     }
     // user pick = paper
-    else if(userPick === 'paper'){
+    else if(userMove === 'paper'){
         if(computerMove === 'paper'){
             results = 'You tie';
         }else if (computerMove ==='rock'){
@@ -208,7 +207,7 @@ function playGame(userPick){
             results = 'You loose'; 
         }
     } // user pick = scissors
-    else if(userPick === 'scissors'){
+    else if(userMove === 'scissors'){
         if(computerMove ==='scissors'){
             results = 'You tie';
         }else if (computerMove === 'rock'){
@@ -217,27 +216,25 @@ function playGame(userPick){
             results ='You win';
     };
 
-    // popup alert 
-    // alert(`You picked ${userPick},\n Computer picked ${computerMove},\n ${results}`);
+ // popup alert 
+    alert(`You picked ${userMove},\n Computer picked ${computerMove},\n ${results}`);
     return results;
 }
 
-// call this functions
-// console.log(playGame('rock'));
-// console.log(playGame('scissors')); 
-// console.log(playGame('paper')); 
-
+//call this functions
+console.log(playGame('rock'));
+console.log(playGame('scissors')); 
+console.log(playGame('paper')); 
 
 // Challenge: learn about, functions, parameter
-function greet(name){
-    if(name ==='Sherlyne'){
-       console.log(`Hello! ${name}`) 
-    }else{
-        console.log('Hi there!')
+function greet(name ='Mary'){
+    if(name){
+       return `Hello! ${name}`;
+    }else if(!name){
+        return('Hi there!');
     }
 }
-// call the function
-greet('Mary');
+console.log(greet()); // 'Hello! Mary' 
 
 function convertBothFahrenheitAndCelsius(number){
     const F = (number * 9/5) +32;
