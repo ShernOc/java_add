@@ -1,26 +1,58 @@
 console.log('VARIABLE HTML')
 
+/* products 
+const Vaseline = 4350;
+const Shoes = 2000;
 
+*/ 
+
+// object: 
+// Array: take the prices, Take each price divide by 1000 and then return each product of the work. 
+
+class Products {
+  constructor(name, price, store) {
+    this.name = name; 
+    this.price = price; 
+    this.store= store;
+
+  }
+}
+
+let products = {
+  name :'Vaseline', 
+  price: 2000,
+  name: 'Shoes', 
+  price: 1090,
+  name: 'Basket', 
+  price: 2095,
+  name: 'toaster', 
+  price: 1890, 
+  name: 'T-shirt', 
+  price: 799,
+}
 
 // Cart quantity 
 let cartQuantity = 0; 
 // Items: 
 
-const Vaseline = 4350;
-const Shoes = 2000;
-
 // Parameters. 
 // how to input the cost of items, that don't have the same amount.i think use an object, a while loop, to hold all the items. 
 const tax = 0.1; 
-let cost = '';
+const cost = products.price;
+
+// Array: take the prices, Take each price divide by 1000 and then return each product of the work. 
+// const stuff = products.price.find()
+
+
 function calculate(cost, tax=0.1){
   const taxed = ((cost) * tax) ; 
   const totalCost = taxed + cost; 
   return `Total Cost: ${totalCost/100}`; 
   }
 
-console.log(calculate(4567, 0.3))
-console.log(calculate(4567))
+console.log(calculate(products.price[1], 0.3))
+
+// console.log(calculate(4567))
 
 // showQuantity and remove cart button 
 function ShowQuantity(stuff){
@@ -62,7 +94,6 @@ function Cal(results){
   }else if(calculation = eval( `${calculation}`)){
     return calculation;
   }
-  
   console.log(calculation)
 }
 
