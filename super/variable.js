@@ -18,7 +18,7 @@ class Products {
   }
 }
 
-let products = {
+const products = {
   name :'Vaseline', 
   price: 2000,
   name: 'Shoes', 
@@ -30,6 +30,8 @@ let products = {
   name: 'T-shirt', 
   price: 799,
 }
+
+console.log(products); // why is it showing only the last items? 
 
 // Cart quantity 
 let cartQuantity = 0; 
@@ -112,8 +114,29 @@ Criteria:
 if the number is between 0 and 1/3, = rock
 if the number is between 1/3 and 2/3 = paper
 if the number is between 2/3 and 1 = Scissors
+
+Steps. 
+1. User clicks the button by selecting a move, 
+2. Computer randomly selects a move, 
+3. Compare the moves to the results
+4. Update the score
+4. Display the results in a pop up and also in the page. 
+
  */ 
 
+// 4. Update the score 
+// store the scores.  
+const score = {
+  wins: 0,
+  losses: 0,
+  ties: 0
+}; 
+
+
+
+
+
+// 1. Computer randomly selects a move, 
 function radNumber(){
   let computerMove = '';
   const randomNumber= Math.random();
@@ -159,15 +182,34 @@ function PlayTheGame(userMove){
      if(computerMove ==='Rock'){
       result = 'You lose.';
     }else if (computerMove ==='Paper'){
-      result = 'You win..'; 
+      result = 'You win.'; 
     }else if (computerMove ==='Scissors'){
       result = 'You tie.';
     } 
   }else{console.log('select a button')}
 
+
+  // update the scores. // How many wins and losses. 
+
+  if(result === 'You win.'){
+    score.wins +=1;
+  }else if (result === 'You lose.'){
+    score.losses +=1; 
+  }else if (result === 'You tie.'){
+    score.ties +=1; 
+  }; 
+
+
    console.log(result); 
-  // create an alert 
-  alert(`You picked ${userMove}.\nComputer picked ${computerMove}.\n${result}`)
+
+  // create an alert  
+   alert(`You picked <b>${userMove}.</b> \nComputer picked <b>${computerMove}.</b> \n<b>${result}</b> \nWins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+
+   // DOM 
+  const scores = document.querySelector('.js-results').innerHTML = `You picked <b>${userMove}.</b> \nComputer picked <b>${computerMove}.</b> \n<b>${result}</b> \nWins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+
+
+
  
 }
 

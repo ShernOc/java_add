@@ -1,6 +1,6 @@
 // object: They group values together
-let wow = {
-  name :'Vaseline', 
+const wow = {
+  name:'Vaseline', 
   price: 2000,
   name: 'Shoes', 
   price: 1090,
@@ -12,9 +12,9 @@ let wow = {
   price: 799,
 
   // method that will display the type of animal. 
-  displayType0(){console.log(this.name);},
+  displayType0(){console.log(this.name);}
 
-}
+};
 
 // Array: take the prices, Take each price divide by 1000 and then return each product of the work. 
 /* 
@@ -47,13 +47,36 @@ console.log(myProduct.name);
 
 //for the prices in wow return prices/100: 
 
-function prices(){
+/*function prices(){
   for (price in wow){
 console.log(`${wow[price]}`)
   }
 }
 
-console.log(prices());
+console.log(prices());*/
+
+console.log(wow)
+
+
+const produce = {
+  name: 'socks', 
+  price: 1090,
+  name: 'basket ball',
+  price: 5690
+}
+
+
+console.log(produce)
+
+const product3= {
+  name: 'shirt'
+
+}
+
+
+console.log(product3)
+
+
 
 
 
