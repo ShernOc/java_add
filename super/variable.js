@@ -19,19 +19,27 @@ class Products {
 }
 
 const products = {
-  name :'Vaseline', 
-  price: 2000,
-  name: 'Shoes', 
+  name :'Vaseline',
+  price:2000,
+  name:'Shoes', 
   price: 1090,
-  name: 'Basket', 
+  name:'Basket', 
   price: 2095,
-  name: 'toaster', 
+  name:'Toaster', 
   price: 1890, 
-  name: 'T-shirt', 
+  name:'T-shirt', 
   price: 799,
 }
 
 console.log(products); // why is it showing only the last items? 
+
+// JSON OBJECTS 
+const json = JSON.stringify(products); 
+console.log(json)
+
+const parse = JSON.parse(json)
+console.log(parse); 
+
 
 // Cart quantity 
 let cartQuantity = 0; 
@@ -52,7 +60,7 @@ function calculate(cost, tax=0.1){
   return `Total Cost: ${totalCost/100}`; 
   }
 
-console.log(calculate(products.price[1], 0.3))
+console.log(calculate(456, 0.3))
 
 // console.log(calculate(4567))
 
@@ -126,14 +134,38 @@ Steps.
 
 // 4. Update the score 
 // store the scores.  
-const score = {
-  wins: 0,
-  losses: 0,
-  ties: 0
-}; 
+// const score = {
+//   wins: 0,
+//   losses: 0,
+//   ties: 0
+// }; 
+
+//JSON convert to JS Object (parse)
+// const getItem = localStorage.getItem('score')
+// const JSobect = JSON.parse(getItem); 
+// console.log(JSobect) // Its now an object and returns the scores.
+
+// Here instead of having the original js-object you want to use the JSON.parse Object 
+
+// We use the default operator   if not the left side which could be null, then we run the right side will be done. which is the original object. 
+let score = JSON.parse(localStorage.getItem('score')) ||{
+      wins: 0,
+      losses: 0,
+      ties: 0
+  };
+
+console.log(score)// 
 
 
+// if the score is null, then will provide a default score as before using the json Object
 
+  // if(!score){
+  //   score = {
+  //     wins: 0,
+  //     losses: 0,
+  //     ties: 0
+  // };
+  // }
 
 
 // 1. Computer randomly selects a move, 
@@ -199,18 +231,26 @@ function PlayTheGame(userMove){
     score.ties +=1; 
   }; 
 
+   // SAVE THE SCORE PERMANENTLY
 
-   console.log(result); 
+   /* 
+   1. Convert the score object to a string 
+   2. Store the string to the localStorage 
+   
+   
+   */ 
+   const scoreString = JSON.stringify(score);
+  // Save the score in the local storage
+  localStorage.setItem('score',scoreString); 
 
+   
+   console.ll
   // create an alert  
    alert(`You picked <b>${userMove}.</b> \nComputer picked <b>${computerMove}.</b> \n<b>${result}</b> \nWins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
 
    // DOM 
   const scores = document.querySelector('.js-results').innerHTML = `You picked <b>${userMove}.</b> \nComputer picked <b>${computerMove}.</b> \n<b>${result}</b> \nWins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
 
-
-
- 
 }
 
 // COIN FLIP 
@@ -226,3 +266,6 @@ console.log(rNumber);
  
  try switching to ternary operator*/
 const guess = 'heads or tails'
+
+
+

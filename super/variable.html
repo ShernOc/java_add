@@ -39,19 +39,21 @@
 
 
   <!-- ROCK PAPER SCISSOR SHOOT  -->
-   <h1>ROCK, PAPER, SCISSORS GAME </h1>
+  <h1>ROCK, PAPER, SCISSORS GAME </h1>
     <h2> <i>Rules of the Game</i></h2>
     <p>Rock beats scissors, Paper beats rocks and Scissors beats paper.</p>
 
-   <button onclick="PlayTheGame('Rock')">Rock</button>
-   <button onclick="PlayTheGame('Paper')">Paper</button>
-   <button onclick="PlayTheGame('Scissors')">Scissors</button>
-   <!-- reset the button// all score back to zero -->
-   <button onclick="
-   score.wins = 0;
-   score.losses = 0; 
-   score.ties =0; 
-   ">Reset Score</button>
+    <button onclick="PlayTheGame('Rock')">Rock</button>
+    <button onclick="PlayTheGame('Paper')">Paper</button>
+    <button onclick="PlayTheGame('Scissors')">Scissors</button>
+    <!-- reset the button// all score back to zero -->
+    <button onclick="
+    score.wins = 0;
+    score.losses = 0; 
+    score.ties =0; 
+    // remove the score 
+    localStorage.removeItem('score');
+    ">Reset Score</button>
 
    <p> <b>Results:</b>
     

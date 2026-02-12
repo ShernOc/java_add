@@ -510,6 +510,9 @@ const family = {
             wins:0,
             losses:0,
             ties:0  }
+    
+
+    // They are all the same
 
     if(!score){
      score={
@@ -571,6 +574,8 @@ console.log('hello'.toUpperCase())
 
     console.log(object6); 
     object6.method();  // this will run the object and display the "method"
+
+    
 
   // LESSON 9 DOM: 
   //  DOM: Document Object Model:</b> its a built in object provided by js. that combines javascript and HTML together 

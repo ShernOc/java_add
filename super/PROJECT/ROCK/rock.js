@@ -13,30 +13,17 @@ Random numbers:
 3. Display the results and score in a pop-up 
 */ 
 
-// scores calculation : OBJECTS
-// Update the score: 
-// 1. create a variable object for score outside the function 
-// const scores= {
-//     wins: 0, 
-//     losses: 0, 
-//     ties: 0 
-// }
 
-//Load the page by getting the items saved and convert string to JS Object (JSON.parse)
-let score= JSON.parse(localStorage.getItem('score'))
-// if the score is null, give a default score which is the object.
-if (score === null ){
-    // You bring the JSON Object to the if statement 
-    score={
+// Update the score. // Use JSON and local storage to store the data. 
+let score= JSON.parse(localStorage.getItem('score')) || {
         wins:0,
         losses:0,
         ties:0
     }
-}
+    
 console.log(score) 
-//returns  back to object {wins: 4, losses: 2, ties: 3}
-// function displays the DOM element
-updateScore(); 
+
+updateScore(); // returns the update functions 
 
 // Computer move. 
 function pickCompMove(){
@@ -103,8 +90,9 @@ function playTheGame(user){
         score.ties +=1;
      }
     
-    //Saved score in the localStorage.setItem() permanently  and convert object a string  using JSON.stringify(object)
-    localStorage.setItem('score',JSON.stringify(score)); 
+    //Saved score in the localStorage.setItem(string) 
+    const scoreObject = JSON.stringify(score)
+    localStorage.setItem('score',scoreObject); 
 
     // update score function being called. 
     updateScore();

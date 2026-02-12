@@ -319,6 +319,16 @@ const product1= {
 
 console.log(product1.price) 
 
+// JSON BUILT IN OBJECT: 
+// JSON.stringify(Object) //convert to JSON BUILT IN OBJECT 
+// JSON.parse(JSON.stringify(Object)) // back to JS Object 
+
+const json = JSON.stringify(product1)// 
+console.log(json); 
+
+const parse = JSON.parse(json)
+console.log(parse);
+
 // increase the price by 500 
 function priceCalculate(){
     const products = product1.price*500
