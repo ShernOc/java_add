@@ -9,7 +9,7 @@ const Shoes = 2000;
 // object: 
 // Array: take the prices, Take each price divide by 1000 and then return each product of the work. 
 
-class Products {
+class Productscd {
   constructor(name, price, store) {
     this.name = name; 
     this.price = price; 
@@ -48,7 +48,7 @@ let cartQuantity = 0;
 // Parameters. 
 // how to input the cost of items, that don't have the same amount.i think use an object, a while loop, to hold all the items. 
 const tax = 0.1; 
-const cost = products.price;
+let cost = products.price;
 
 // Array: take the prices, Take each price divide by 1000 and then return each product of the work. 
 // const stuff = products.price.find()
@@ -254,18 +254,67 @@ function PlayTheGame(userMove){
 }
 
 // COIN FLIP 
-const randNumb = Math.random(); 
-console.log(randNumb)
-const  results = 'Head';
-const rNumber = randNumb < 0.5? results:'Tails';
-console.log(rNumber); 
+/* When clicking 'heads' play the game with guess = 'heads' 
+When clicking 'tails' play the game with guess = 'tails'
+Create a function 'playGame(guess)' to reuse the code. 
+
+Crete a score object {wins:0, losses:0}, update the score each time after playing, and display the score in the console. 
+
+Use local storage to save and load the score(hint: you will need to use JSON.stringify() to convert the score object to a string)
+*/
+
+
+function coin(){
+  const randomNumber = Math.random()
+  let results ='heads'; 
+  let guess = 'tails';
+  const rNumber = randomNumber < 0.5? results:guess;
+ return rNumber; 
+}
+console.log(coin())
+
+let scores = localStorage.getItem(JSON.stringify('scores')) || {
+  win:0,
+  losses:0,
+  ties:0
+}
+
+function coinFlip(users){
+  const flip = coin();
+  let results = '';
+  if(users === 'heads'){
+    if(flip === 'heads'){
+      results = 'You tie'
+    }else if (flip === 'tails'){
+      results = 'You win'
+  }else if (users === 'tails' ){
+    if(flip === 'tails'){
+      results = 'You tie'
+    }else if(flip === 'heads'){
+      results = 'You loose'
+    }
+  }
+}
+return results; 
+
+// Update the score
+
+localStorage.getItem(JSON.stringify('scores'))
+
+}
+
+
+
+
+
+
 
 /* Lets say we are trying to guess the result. Create a variable called guess and save your guess ('heads' or 'tails') 
  if your guess matches the results, display 'You win.! in the console.
  if your guess does not match the results, display 'You lose.'
  
  try switching to ternary operator*/
-const guess = 'heads or tails'
+
 
 
 
