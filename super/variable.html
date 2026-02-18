@@ -6,8 +6,9 @@
   <title>Cart Quantity</title>
 </head>
 <body>
+
    <h1>CART QUANTITY</h1>
-     <p>
+    <p class="js-cart quantity">
     <button onclick="ShowQuantity()">Show quantity</button>
 
     <button onclick="AddCart(1)">Add to cart</button>
@@ -21,7 +22,9 @@
 
   </p>
   
-  <h1>CALCULATOR</h1>
+
+  <p class="js-calculator">
+    <h1>CALCULATOR</h1>
 
   <button onclick="
   Cal('1')"
@@ -36,10 +39,11 @@
   console.log(`${calculation}`)" >=</button> -->
 
   <button onclick="calculation = 0">Reset button</button>
+  </p>
 
-
-  <!-- ROCK PAPER SCISSOR SHOOT  -->
-  <h1>ROCK, PAPER, SCISSORS GAME </h1>
+  <p class="roc_paper">
+      <!-- ROCK PAPER SCISSOR SHOOT  -->
+    <h1>ROCK, PAPER, SCISSORS GAME </h1>
     <h2> <i>Rules of the Game</i></h2>
     <p>Rock beats scissors, Paper beats rocks and Scissors beats paper.</p>
 
@@ -55,22 +59,24 @@
     localStorage.removeItem('score');
     ">Reset Score</button>
 
-   <p> <b>Results:</b>
-    
-    <p class="js-results"></p>
-
-  
-  
+    <p><b>Results:</b></p>
+    <p class="js-results">  </p>
   </p>
   
+   
 
-
-   <h1>COIN FLIP</h1>
+<p class="js-coin_flip">
+  <h1>COIN FLIP</h1>
    <button onclick="coinFlip('heads')">heads</button>
    <button onclick="coinFlip('tails')">tails</button>
 
-   
+</p>
 
+<H2>DOM Manipulation</H2>
+<p class="js-dom">
+  
+</p>
+   
 </body>
 <script src="variable.js"></script>
 <script src="products.js"></script>

@@ -254,6 +254,8 @@ function PlayTheGame(userMove){
 }
 
 // COIN FLIP 
+
+
 /* When clicking 'heads' play the game with guess = 'heads' 
 When clicking 'tails' play the game with guess = 'tails'
 Create a function 'playGame(guess)' to reuse the code. 
@@ -261,7 +263,13 @@ Create a function 'playGame(guess)' to reuse the code.
 Crete a score object {wins:0, losses:0}, update the score each time after playing, and display the score in the console. 
 
 Use local storage to save and load the score(hint: you will need to use JSON.stringify() to convert the score object to a string)
-*/
+
+SECOND SESSION 
+Lets say we are trying to guess the result. Create a variable called guess and save your guess ('heads' or 'tails') 
+ if your guess matches the results, display 'You win.! in the console.
+ if your guess does not match the results, display 'You lose.'
+ 
+ try switching to ternary operator*/
 
 
 function coin(){
@@ -302,18 +310,26 @@ return results;
 localStorage.getItem(JSON.stringify('scores'))
 
 }
-
-
-
-
-
-
-
-/* Lets say we are trying to guess the result. Create a variable called guess and save your guess ('heads' or 'tails') 
- if your guess matches the results, display 'You win.! in the console.
- if your guess does not match the results, display 'You lose.'
  
- try switching to ternary operator*/
+ // DOM: Documents Oject Manipulation 
+ // GET/ SELECT THE ELEMENT USE: Query selector. 
+// const where = document.querySelector('.js-dom'); 
+
+// 1. CREATE AN ELEMENT 
+const newElement = document.createElement('h3');
+
+// 2. ADD CONTENT OR ATTRIBUTE 
+const hiMe = newElement.textContent = 'WHAT IS YOUR NAME '
+// ATTACH IT TO THE PAGE: 
+
+const here = document.body.appendChild(newElement); 
+
+// CREATE OR CHANGE .innerHTML = 'This Button'
+
+
+const but = document.querySelector('button');
+const bT = but.innerHTML = 'file'; 
+
 
 
 
