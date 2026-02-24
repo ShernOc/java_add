@@ -310,9 +310,9 @@ return results;
 localStorage.getItem(JSON.stringify('scores'))
 
 }
- 
- // DOM: Documents Oject Manipulation 
- // GET/ SELECT THE ELEMENT USE: Query selector. 
+
+// DOM: Documents Oject Manipulation 
+// GET/ SELECT THE ELEMENT USE: Query selector. 
 // const where = document.querySelector('.js-dom'); 
 
 // 1. CREATE AN ELEMENT 
@@ -321,14 +321,27 @@ const newElement = document.createElement('h3');
 // 2. ADD CONTENT OR ATTRIBUTE 
 const hiMe = newElement.textContent = 'WHAT IS YOUR NAME '
 // ATTACH IT TO THE PAGE: 
-
 const here = document.body.appendChild(newElement); 
 
 // CREATE OR CHANGE .innerHTML = 'This Button'
-
-
 const but = document.querySelector('button');
 const bT = but.innerHTML = 'file'; 
+
+// 24/02/2026. 
+// Youtube subscribe button 
+function button(){
+  // get the button. 
+  const youtubebutton = document.querySelector('.js-yubutton');
+
+  if (youtubebutton.innerHTML === 'Subscribe'){
+    youtubebutton.innerHtml = 'Subscribed';
+  }
+
+}
+
+console.log('button')
+
+
 
 
 
