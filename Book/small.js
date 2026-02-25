@@ -1,3 +1,4 @@
+// Create the card. and Hold the Card in place. 
 const init = () => {
     // card holding 
     function holdTheCard(book) {
@@ -13,7 +14,7 @@ const init = () => {
          <br>
          <span class = "pages"> Pages:${book.pages}</span>
          <br>
-          <a href="${book.link}" target="_blank">Book-link</a>  
+          <a href="${book.link}" target="_blank">Book link</a>  
         </p>
            <br>
            <button id= "buy">Buy</button>
@@ -26,7 +27,6 @@ const init = () => {
             card.querySelector('span').textContent = `Pages:${book.pages} `
             // call in the update function 
             updateOneBook(book) })
-
 
         //Delete button:
         card.querySelector('#delete').addEventListener('click',()=>{
@@ -107,18 +107,18 @@ function handleDelete(id){
     .then(book=>console.log(book))
 }
 
-
 // initial run of the code/ function calls the cards so that i can be displayed 
 function runTheCode() {
   fetchAllBooks();
 }
 
 runTheCode();
-
 }
-
 
 console.log("life is great"); 
 
 // DOM manipulation: 
 document.addEventListener('DOMContentLoaded', init)
+
+// Remove the image link and Link of where the website is. 
+// I want to show case all the books in the library, That you have read in a while. 

@@ -331,10 +331,13 @@ const bT = but.innerHTML = 'file';
 // Youtube subscribe button 
 function button(){
   // get the button. 
-  const youtubebutton = document.querySelector('.js-yubutton');
+  const subscribeButton = document.querySelector('.js-yubutton');
 
-  if (youtubebutton.innerHTML === 'Subscribe'){
-    youtubebutton.innerHtml = 'Subscribed';
+  if (subscribeButton.innerHTML === 'Subscribe'){
+    subscribeButton.innerHTML = 'Subscribed';
+  }else {
+    subscribeButton.innerHTML = 'Subscribe'
+    
   }
 
 }
