@@ -142,8 +142,8 @@ Steps.
 
 //JSON convert to JS Object (parse)
 // const getItem = localStorage.getItem('score')
-// const JSobect = JSON.parse(getItem); 
-// console.log(JSobect) // Its now an object and returns the scores.
+// const JSobject = JSON.parse(getItem); 
+// console.log(JSobject) // Its now an object and returns the scores.
 
 // Here instead of having the original js-object you want to use the JSON.parse Object 
 
@@ -155,6 +155,8 @@ let score = JSON.parse(localStorage.getItem('score')) ||{
   };
 
 console.log(score)// 
+
+updateScore(); 
 
 
 // if the score is null, then will provide a default score as before using the json Object
@@ -181,7 +183,6 @@ function radNumber(){
   }else if (2/3 <= randomNumber <= 1){
      computerMove = 'Scissors';
   }
-
   return computerMove;
 }
 
@@ -243,14 +244,25 @@ function PlayTheGame(userMove){
   // Save the score in the local storage
   localStorage.setItem('score',scoreString); 
 
-   
-   console.ll
   // create an alert  
-   alert(`You picked <b>${userMove}.</b> \nComputer picked <b>${computerMove}.</b> \n<b>${result}</b> \nWins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
+  //  alert(`${result}
+  //   \n You picked ${userMove}.
+  //   \n Computer picked ${computerMove}.
+  //   \n Wins: ${score.wins},\n Losses: ${score.losses}, \n Ties: ${score.ties}`);
 
-   // DOM 
-  const scores = document.querySelector('.js-results').innerHTML = `You picked <b>${userMove}.</b> \nComputer picked <b>${computerMove}.</b> \n<b>${result}</b> \nWins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+  updateScore(); // will run the function and can be reused. 
 
+  document.querySelector('.js-results').innerHTML = result; 
+
+  document.querySelector('.js-moves').innerHTML =` \n You picked ${userMove}.
+  \n Computer picked ${computerMove}.`; 
+  
+}
+
+// DOM 
+function updateScore(){
+  document.querySelector('.js-scores').innerHTML =`
+  \n Wins: ${score.wins},\n Losses: ${score.losses}, \n Ties: ${score.ties}`; 
 }
 
 // COIN FLIP 
@@ -329,18 +341,19 @@ const bT = but.innerHTML = 'file';
 
 // 24/02/2026. 
 // Youtube subscribe button 
-function button(){
+function SubscribeButton(){
   // get the button. 
-  const subscribeButton = document.querySelector('.js-yubutton');
+  const subscribeButton = document.querySelector('.js-youtube-button');
 
-  if (subscribeButton.innerHTML === 'Subscribe'){
-    subscribeButton.innerHTML = 'Subscribed';
+  if (subscribeButton.innerText === 'Subscribe'){
+    subscribeButton.innerText = 'Subscribed';
   }else {
-    subscribeButton.innerHTML = 'Subscribe'
-    
+    subscribeButton.innerText = 'Subscribe'
   }
 
 }
+
+// 03/03/2026.
 
 console.log('button')
 

@@ -52,18 +52,25 @@
     <button onclick="PlayTheGame('Paper')">Paper</button>
     <button onclick="PlayTheGame('Scissors')">Scissors</button>
     <!-- reset the button// all score back to zero -->
-    <button onclick="
-    score.wins = 0;
-    score.losses = 0; 
-    score.ties =0; 
-    // remove the score 
-    localStorage.removeItem('score');
-    ">Reset Score</button>
-
-    <p><b>Results:</b></p>
-    <p class="js-results">  </p>
+    
+    <p><b>Scores:</b></p>
+    <p class="js-results"> </p>
+    <p class="js-moves"></p>
+    <p class = "js-scores"></p>
   </p>
   
+  <!-- Reset score -->
+  <button onclick="
+  score.wins = 0;
+  score.losses = 0; 
+  score.ties =0; 
+  // remove the score 
+  localStorage.removeItem('score');
+  // update the scores 
+  updateScore(); 
+
+  ">Reset Score</button>
+
 <p class="js-coin_flip">
   <h1>OBJECTS</h1>
   <h2>COIN FLIP</h2>
@@ -74,9 +81,10 @@
 <div>
   <h1>DOM Manipulation</h1>
 <H2>YOUTUBE SUBSCRIBE BUTTON</H2>
-<button class="js-yubutton" onclick="button()">Subscribe</button>
+<button class="js-youtube-button" onclick="SubscribeButton()">Subscribe</button>
 </div>
 
+<!-- Amazon Shipping  -->
 <div>
   <h2>Amazon Shipping Calculator</h2>
   <p>Order under $40 =+ $10 shipping.</p>
@@ -90,3 +98,4 @@
 <script src="variable.js"></script>
 <script src="products.js"></script>
 </html>
+
