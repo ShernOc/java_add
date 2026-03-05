@@ -1,3 +1,7 @@
+window.document
+window.console.log('Sherlyne Window');
+window.alert('What is going on? ')
+
 console.log('VARIABLE HTML')
 
 /* products 
@@ -5,7 +9,6 @@ const Vaseline = 4350;
 const Shoes = 2000;
 
 */ 
-
 // object: 
 // Array: take the prices, Take each price divide by 1000 and then return each product of the work. 
 
@@ -104,7 +107,7 @@ function Cal(results){
   }else if(calculation = eval( `${calculation}`)){
     return calculation;
   }
-  console.log(calculation)
+  console.log(calculation);
 }
 
 
@@ -353,9 +356,37 @@ function SubscribeButton(){
 
 }
 
-// 03/03/2026.
+// 05/03/2026.
+// Amazon shipping 
 
-console.log('button')
+// HandleKeydown event listener 
+
+function handleKeydownEvent(event){
+   if(event.key === 'Enter'){
+    amazonShipping()
+    }
+}
+
+function amazonShipping(){
+  const inputElement = document.querySelector('.js-cost-input');
+  let numberValue = Number(inputElement.value);
+
+  if(numberValue <= 40){
+    numberValue += 10; 
+  }else{
+    numberValue;
+  }
+  
+  // display the cost, grab the html element
+  document.querySelector('.js-total-cost').innerHTML = ` $${numberValue}`; 
+}
+
+
+
+
+
+
+
 
 
 

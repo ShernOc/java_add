@@ -38,7 +38,7 @@ const cost= Math.round(coffee2 + bagel2 + soup);
 const totalTax = cost * tax; 
 const totalCost = totalTax + cost; 
 console.log(`Total Cost: $ ${totalCost}`);
-alert(`Total Cost: $${totalCost} \n Thank you, come again!`);
+// alert(`Total Cost: $${totalCost} \n Thank you, come again!`);
 
 
 const items = '$' + burger; 
@@ -217,7 +217,7 @@ function playGame(userMove){
     };
 
  // popup alert 
-    alert(`You picked ${userMove},\n Computer picked ${computerMove},\n ${results}`);
+    // alert(`You picked ${userMove},\n Computer picked ${computerMove},\n ${results}`);
     return results;
 }
 
@@ -456,7 +456,7 @@ function playerMove(userMove){
     updateScore(); 
     // results: 
     document.querySelector('.js-final-result').innerHTML = `${results}`;
-    document.querySelector('.js-moves').innerHTML=`You:${userMove} -- \n Computer:${compMove}`
+    document.querySelector('.js-moves').innerHTML=`You:${userMove}\n Computer:${compMove}`
 
     //alert 
     //  alert(`You picked:${userMove}.\n Computer picked: ${compMove}. \n Final Results: ${results} \n Wins:${score.win}, \n Ties: ${score.tie}, \n Losses : ${score.losses}`) ; 
@@ -467,7 +467,7 @@ function playerMove(userMove){
 
 function updateScore(){
     // Display the work at the website
-    const displayDom = document.querySelector('.js-result').innerText =`Wins:${score.win}, \n Ties: ${score.tie} \n Losses : ${score.losses}`; 
+    const displayDom = document.querySelector('.js-result').innerText =`Wins:${score.win} \n Ties: ${score.tie} \n Losses : ${score.losses}`; 
 
     // upgrade the work 
     return displayDom; 
@@ -478,7 +478,6 @@ function updateScore(){
 1. Get the text in the text box, 
 2. If amount < 40 add 10 
 3. Display Total on the page 
-
 */ 
 
 function amazonShip(order){
@@ -491,7 +490,73 @@ function amazonShip(order){
     }
 
     const display = document.querySelector('.js-total-cost').innerHTML =` Total: $${cost}`; 
-
     return display; 
 
 }
+
+
+// DOM LESSON 
+ 
+//9a
+document.querySelector('.js-button-a').innerText = 'Button A'; 
+
+//9b
+document.querySelector('.js-button-b').innerText = '9b'; 
+
+// 9d
+function headsTails(click){
+    if(click === 'Heads'){
+        document.querySelector('.js-choice').innerHTML = 'You choose Heads';
+    }else if (click === 'Tails'){
+         document.querySelector('.js-choice').innerHTML = 'You choose Tails';
+    }
+
+}
+
+
+//9d
+
+// HandleEvent 
+function handleNameKeyDown(event){
+    if(event.key ==='Enter'){
+        displayName();
+    }
+}
+
+function displayName(){
+   const name =  document.querySelector('.js-input-button');
+
+  let inputValue = name.value;
+
+  document.querySelector('.js-display-name').innerHTML = `Your name is: ${inputValue.toUpperCase()}`; 
+
+}
+
+// How do update the work every time i work on the job? 
+
+function handleKeyup(event){
+    if(event.key === 'up'){
+        inputUp();
+
+    }
+}
+
+function inputUp(){
+    const up = document.querySelector('.js-pup')
+
+    up.value;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

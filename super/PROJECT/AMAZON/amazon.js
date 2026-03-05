@@ -64,32 +64,42 @@ const amazonProducts =
     stars:3.2,
     count:30},
 
-    id: 3, item:"t-shirt",price:799,quantity:0, 
-        rating:{
+    id: 3, 
+    item:"t-shirt",
+    price:799,
+    quantity:0, 
+    rating:{
         stars:2.1,
         count:20
     },
 
-    id: 4, item:"toaster",price:1899,quantity:0, 
+    id: 4, 
+    item:"toaster",
+    price:1899,
+    quantity:0, 
         rating:{
         stars:3.2,
         count:60
     },
 
-    id: 5, item:"Television", price:3000,quantity:0, 
-        rating:{
+    id:5, 
+    item:"Television", 
+    price:3000,
+    quantity:0, 
+    rating:{
         stars:5,
         count:100
         }
     }
+
+
+console.log(amazonProducts.item)
 
 /*MAIN AMAZON PRODUCT 
  I want to display the quantity that have pressed on the button  * the price of the item  
 // once an item is selected it now able be added as an item.
 
 */
-
-
 
 //Variable for Quantity 
 let cartQuantity = 0;
@@ -122,7 +132,7 @@ console.log(storeProducts) // 10.9
 
 // Display items:
  function displayItems(){
-    const basket_span = document.querySelector('.js-basket-span').innerText = `Price:$ ${storeProducts.basket}`;
+    const basket_span = document.querySelector('.js-basket-span').innerText = `Price:$  ${storeProducts.basket}`;
     const shoe_span = document.querySelector('.js-shoe-span').innerText = ` Price $ ${storeProducts.shoe}`;
     const toaster_span = document.querySelector('.js-toaster-span').innerText =` Price $ ${storeProducts.toaster}`;
     const t_shirt_span = document.querySelector('.js-shirt-span').innerText = `Price $ ${storeProducts.t_shirt}`;
@@ -144,8 +154,8 @@ console.log(displayQuantity())
 function amazonCart(items){
     const maxItems = 10; // maximum items in the cart
     // times (number of times (+1,-1,) its a parameter that hols +1,-2, ...)
-
     displayQuantity();// updates the quantity in the paragraph, 
+
     if(cartQuantity + items > maxItems){
         return alert('Cart is full maximum items = 10')
     }else if (cartQuantity + items < 0){
@@ -188,7 +198,7 @@ function amazonCalculation(){
 localStorage.setItem('storeProducts', JSON.stringify(storeProducts))
 
 // Main Code 
-    let items =quantity*storeProducts.shoe; 
+    let items =quantity *storeProducts.shoe; 
     console.log(items);
 
     // //Array of items
@@ -228,6 +238,8 @@ localStorage.setItem('storeProducts', JSON.stringify(storeProducts))
 }
 
 console.log(amazonCalculation(storeProducts.shoe))
+
+
 
 
 

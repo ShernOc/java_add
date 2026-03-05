@@ -25,11 +25,11 @@
     <li>Shoes:<span class ="js-shoe-span"> </span>
     <li>
    
-    <button 
+    <!-- <button 
      class="cs-add" title="Add to cart" onclick= 
      " console.log(displayQuantity())"
      >Show Quantity
-    </button>
+    </button> -->
 
     <button 
      class="cs-add" title="Add to cart" onclick="
@@ -40,65 +40,65 @@
     console.log(amazonCart(+2))"
     >+2</button>
     
-    <button class="cs-order" onclick=" 
+    <!-- <button class="cs-order" onclick=" 
     console.log(amazonCart(-1))"
-    >Remove from cart</button>
+    >Remove from cart</button> -->
 
-    <button 
+    <!-- <button 
      class="cs-add" title="Add to cart" onclick=
      "cartQuantity=0; amazonCart(0)"
      >Reset Cart
-    </button>
+    </button> -->
 
-    <button 
+    <!-- <button 
         class="cs-buy" onclick="
         console.log('Loading')
         ">
         Buy now
-    </button>
+    </button> -->
     
     <!-- Basket Ball  -->
      <li>Basketball: <span class ="js-basket-span"></span></li>
-    <button 
+    <!-- <button 
      class="cs-add" title="Add to cart" onclick= 
      " console.log(displayQuantity())"
      >Show Quantity
-    </button>
+    </button> -->
 
     <!-- console.log(`Cart Quantity ${cartQuantity}`)" -->
-     <button 
+    <button 
      class="cs-add" title="Add to cart" onclick="
-     console.log(amazonCart(1))">Add to Cart
+     console.log(amazonCart(+1))">Add to Cart
     </button>
 
     <button class="cs-order" onclick=" 
-    console.log(amazonCart(2))"
+    console.log(amazonCart(+2))"
     >+2</button>
     
-    <button class="cs-order" onclick=" 
+    <!-- <button class="cs-order" onclick=" 
     console.log(amazonCart(-1))"
-    >Remove from cart</button>
+    >Remove from cart</button> -->
 
-    <button 
+    <!-- <button 
      class="cs-add" title="Add to cart" onclick=
      "cartQuantity=0; amazonCart(0)"
      >Reset Cart
-    </button>
+    </button> -->
 
-    <button 
+    <!-- <button 
         class="cs-buy" onclick="
         console.log('Loading')
         ">
         Buy now
-    </button>
+    </button> -->
 
     <!-- Toaster -->
     <li>Toaster: <span class ="js-toaster-span"></span></li>
-    <button 
+    <!-- <button 
      class="cs-add" title="Add to cart" onclick= 
      " console.log(displayQuantity())"
      >Show Quantity
-    </button>
+    </button> -->
 
     <!-- console.log(`Cart Quantity ${cartQuantity}`)" -->
      <button 
@@ -110,32 +110,26 @@
     console.log(amazonCart(+2))"
     >+2</button>
     
-    <button class="cs-order" onclick=" 
+    <!-- <button class="cs-order" onclick=" 
     console.log(amazonCart(-1))"
-    >Remove from cart</button>
+    >Remove from cart</button> -->
 
-    <button 
+    <!-- <button 
      class="cs-add" title="Add to cart" onclick=
      "cartQuantity=0; amazonCart(0)"
      >Reset Cart
-    </button>
+    </button> -->
 
-    <button 
+    <!-- <button 
         class="cs-buy" onclick="
         console.log('Loading')
         ">
         Buy now
-    </button>
+    </button> -->
 
     <!-- T-shirt -->
      <li>T-Shirt: <span class ="js-shirt-span"></span></li>
-     <button 
-     class="cs-add" title="Add to cart" onclick= 
-     " console.log(displayQuantity())"
-     >Show Quantity
-    </button>
-
-    <!-- console.log(`Cart Quantity ${cartQuantity}`)" -->
+   
      <button 
      class="cs-add" title="Add to cart" onclick="
      console.log(amazonCart(+1))">Add to Cart
@@ -160,13 +154,20 @@
         ">
         Buy now
     </button>
+
+     <button 
+     class="cs-add" title="Add to cart" onclick= 
+     " console.log(displayQuantity())"
+     >Show Quantity
+    </button>
+
+    <!-- console.log(`Cart Quantity ${cartQuantity}`)" -->
     
     <!-- Show the quantity -->
     <p class="js-show-quantity"></p>
 
     <!-- console.log(`Cart Quantity ${cartQuantity}`)" -->
-
-     <br><br><br>
+     <br>
 
     <h2> Order Summary </h2>
     <li class="js-items">      </li>

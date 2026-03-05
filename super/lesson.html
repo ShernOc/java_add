@@ -180,12 +180,11 @@
     <h3>DOM PROJECT 2</h3>
     <p>9a. Create a button, Use document.querySelector to get the button from the page, and the display it in the console. 
     <br>
+    <button class="js-button-a"></button>
     <br>
     9b. Create another button 9b. below. Using JS change the text in the second button to 9b done
     <br>
-    <button class="a"></button>
-    <button class = "b"></button>
-    <br>
+    <button class = "js-button-b"></button>
     <br>
 
     9c. create 2 buttons heads and tail: when clicking heads button, display "You choose:heads or tails "
@@ -197,18 +196,19 @@
     9d. Create a textbox(input) and a submit button. When clicking submit display "Your name is: "name"; 
     Also whenever you type in the text box, update the page. 
 
-    <input type="name"class="js-input-button" placeholder="Name" onkeyup=handleNameup(event)>
+    <input type="name"class="js-input-button" placeholder="Your Name" onkeydown= "handleNameKeyDown(event)">
 
-    <button class="js-submit" onclick="nameText()">Submit</button>
+    <button class="js-submit" onclick="displayName()">Submit</button>
 
     <p class = "js-display-name"></p>
 
     <!-- Key on / Input -->
     9h. When you type in the text box, it updates the text on the page
+    <b>Onkeyup Event listener</b>
 
-    <input  id="up" type="text" class="js-key-up" onkeyup="handleKey(event)">
+    <input  id="up" type="text" class="js-key-up" onkeyup="handleKeyup(event)">
 
-    <p class="p-up"></p>
+    <p class="js-pup"></p>
 
     9i. Improve cart quantity: add a paragraph to display the quantity. When we updated the quantity, also display the quantity when page first loads 
 
