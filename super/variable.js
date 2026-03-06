@@ -1,6 +1,6 @@
 window.document
 window.console.log('Sherlyne Window');
-window.alert('What is going on? ')
+// window.alert('What is going on? ')
 
 console.log('VARIABLE HTML')
 
@@ -46,6 +46,7 @@ console.log(parse);
 
 // Cart quantity 
 let cartQuantity = 0; 
+
 // Items: 
 
 // Parameters. 
@@ -55,7 +56,6 @@ let cost = products.price;
 
 // Array: take the prices, Take each price divide by 1000 and then return each product of the work. 
 // const stuff = products.price.find()
-
 
 function calculate(cost, tax=0.1){
   const taxed = ((cost) * tax) ; 
@@ -74,7 +74,9 @@ function ShowQuantity(stuff){
   }else if (stuff == 0 ){
     cartQuantity = 0 ; console.log(`Cart was reset \n Cart Quantity : ${cartQuantity}`);
     
-  } else {console.log(`Cart Quantity: ${cartQuantity}`) ; 
+  } else {
+    // display the quantity
+  document.querySelector('.js-display-cart').innerHTML = `Cart quantity: ${cartQuantity}`; 
   }}
 
   
@@ -92,9 +94,21 @@ function AddCart(items){
   }else if (cartQuantity + items < 0){
     alert(`You have ${cartQuantity} \n add items in your cart `)
     return;
-  }else {cartQuantity = cartQuantity + items}
-  console.log(`Cart quantity: ${cartQuantity}`) ; 
+  }else {cartQuantity = cartQuantity + items} 
+
+  // display the quantity
+  document.querySelector('.js-display-cart').innerHTML = `Cart quantity: ${cartQuantity}`;
+
+
 }
+
+// Update cart 
+function updateDomConsole(){
+ ;
+  // display the quantity
+  document.querySelector('.js-display-cart').innerHTML = `Cart quantity: ${cartQuantity} Total Quantity = ${ ShowQuantity()}`;
+}
+
 
 
 // CALCULATOR 
@@ -339,8 +353,9 @@ const hiMe = newElement.textContent = 'WHAT IS YOUR NAME '
 const here = document.body.appendChild(newElement); 
 
 // CREATE OR CHANGE .innerHTML = 'This Button'
-const but = document.querySelector('button');
-const bT = but.innerHTML = 'file'; 
+const but = document.createElement('button');
+const bT = but.innerHTML = 'New Button '; 
+const newButton = document.body.append(but); 
 
 // 24/02/2026. 
 // Youtube subscribe button 

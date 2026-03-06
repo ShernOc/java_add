@@ -13,23 +13,22 @@
 1. Create the 3 buttons ( rocks, paper , scissors)
 2. Display the User Move, computer Move and the results
 
-
 rules of the game: 
 rock beats scissor 
 paper beats rocks 
 scissor beats paper 
  -->
-    <h2> <i>Rules of the Game</i></h2>
+    <h2><i>Rules</i></h2>
     <p>Rock beats scissors, Paper beats rocks and Scissors beats paper.</p>
     <br>
 
     <button onclick="
-    playTheGame('rock')">Rock</button>
+    playTheGame('Rock')">Rock</button>
     
     <button onclick="
-    playTheGame('paper')">Paper</button>
+    playTheGame('Paper')">Paper</button>
     
-    <button onclick="playTheGame('scissors')">Scissors</button>
+    <button onclick="playTheGame('Scissors')">Scissors</button>
 
     <!-- Score area  -->
     <p class="js-results"></p>
@@ -46,7 +45,40 @@ scissor beats paper
     updateScore()
      ">Reset score </button>
 
+<hr>
+    <div class="work on this ">
+    <h1>Rock Paper Scissors GAME 2</h1>
+
+    <h2><i>Rules</i></h2>
+    <p>Rock beats scissors, Paper beats rocks and Scissors beats paper.</p>
+    <br>
+
+    <button onclick="
+    playTheGame2('Rock2')">Rock2</button>
+    
+    <button onclick="
+    playTheGame2('Paper2')">Paper2</button>
+    
+    <button onclick="playTheGame2('Scissors2')">Scissors2</button>
+
+    <!-- Score area  -->
+    <p class="js-results2"></p>
+    <p class="js-moves2"></p>
+    <p class="js-score2"></p>
+
+    <!-- reset button -->
+    <button onclick="
+     score2.wins = 0;
+     score2.losses = 0; 
+     score2.ties = 0; 
+     // remove the score from the local storage 
+    localStorage.removeItem('score2')
+    updateScore2()
+     ">Reset score </button>
+
+     </div>
 
 <script src="rock.js"></script>
+<script src="rock2.js"></script>
 </body>
 </html>

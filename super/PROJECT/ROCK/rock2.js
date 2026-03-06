@@ -15,67 +15,67 @@ Random numbers:
 
 
 // Update the score. // Use JSON and local storage to store the data. 
-let score= JSON.parse(localStorage.getItem('score')) || {
+let score2= JSON.parse(localStorage.getItem('score2')) || {
         wins:0,
         losses:0,
         ties:0
     }
     
-console.log(score) 
+console.log(score2) 
 
-updateScore(); // returns the update functions 
+updateScore2(); // returns the update functions 
 
 // Computer move. 
-function pickCompMove(){
+function pickCompMove2(){
     let computerMove = ''; 
     const randomNumber =Math.random();
     console.log(randomNumber); 
 
     if(randomNumber>=0 && randomNumber <= 1/3){
-        computerMove = 'Rock';
+        computerMove = 'Rock2';
     }else if(randomNumber>=1/3 && randomNumber<=2/3){
-        computerMove= 'Paper';
+        computerMove= 'Paper2';
     }else if(randomNumber>=2/3 && randomNumber<= 1){
-        computerMove= 'Scissors';
+        computerMove= 'Scissors2';
     }  
     return computerMove;
 }
 
-console.log(pickCompMove()); // show if its either scissor,Rock or Paper
+console.log(pickCompMove2()); // show if its either scissor,Rock or Paper
 
 // Compare the move of the computer and the user pick 
-function playTheGame(user){
+function playTheGame2(user){
     let results = ''; 
-    const computerMove = pickCompMove(); // 
+    const computerMove = pickCompMove2(); // 
     console.log(computerMove);
 
     // User picked (Rock)
-    if(user === 'Rock'){
-        if(computerMove === 'Rock'){
+    if(user === 'Rock2'){
+        if(computerMove === 'Rock2'){
             results = 'You tie';
-        }else if(computerMove === 'Paper'){
+        }else if(computerMove === 'Paper2'){
             results = 'You loose';
-        }else if(computerMove ==='Scissors'){
+        }else if(computerMove ==='Scissors2'){
             results = 'You win';
         }
     
     // User picked(Paper)
-    }else if(user === 'Paper' ){
-        if(computerMove === 'Paper'){
+    }else if(user === 'Paper2' ){
+        if(computerMove === 'Paper2'){
             results = 'You tie';
-        }else if (computerMove === 'Rock'){
+        }else if (computerMove === 'Rock2'){
             results = 'You win';
-        }else if(computerMove === 'Scissors'){
+        }else if(computerMove === 'Scissors2'){
             results = 'You loose';
         }
 
         // User picked (Scissors)
-    }else if(user === 'Scissors'){
-        if(computerMove === 'Scissors'){
+    }else if(user === 'Scissors2'){
+        if(computerMove === 'Scissors2'){
             results = 'You tie';
-        }else if (computerMove === 'Rock'){
+        }else if (computerMove === 'Rock2'){
             results = 'You loose';
-        }else if (computerMove === 'Paper'){
+        }else if (computerMove === 'Paper2'){
             results = 'You win';
         }
     }
@@ -83,21 +83,21 @@ function playTheGame(user){
     // Update the score:
     if(results === 'You win'){
         // increase the win by 1. 
-        score.wins +=1; 
+        score2.wins +=1; 
      }else if (results === 'You loose'){
-        score.losses +=1;
+        score2.losses +=1;
      }else if (results === 'You tie'){
-        score.ties +=1;
+        score2.ties +=1;
      }
     
     //Saved score in the localStorage.setItem(string) 
-    const scoreObject = JSON.stringify(score)
-    localStorage.setItem('score',scoreObject); 
+    const scoreObject = JSON.stringify(score2)
+    localStorage.setItem('score2',scoreObject); 
 
     // update score function being called. 
-    updateScore();
-    document.querySelector('.js-results').innerHTML = results; 
-    document.querySelector('.js-moves').innerHTML = `You Picked :${user} \n Computer Picked: ${computerMove}`; 
+    updateScore2();
+    document.querySelector('.js-results2').innerHTML = results; 
+    document.querySelector('.js-moves2').innerHTML = `You Picked :${user} \n Computer Picked: ${computerMove}`; 
 
     return results; 
 }
@@ -105,9 +105,9 @@ function playTheGame(user){
 //console.log(playTheGame('Paper'));
 
 // function to update 
-function updateScore(){
+function updateScore2(){
     //Display on the paragraph below 
-    const displayDown = document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, \n Losses: ${score.losses}, \n Ties: ${score.ties}`; 
+    const displayDown = document.querySelector('.js-score2').innerHTML = `Wins: ${score2.wins}, \n Losses: ${score2.losses}, \n Ties: ${score2.ties}`; 
 
     return displayDown;
 }
