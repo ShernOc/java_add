@@ -47,23 +47,31 @@ scissor beats paper
 
 <hr>
     <div class="work on this ">
-    <h1>Rock Paper Scissors GAME 2</h1>
+    <h1 class="title2">Rock Paper Scissors GAME 2</h1>
 
     <h2><i>Rules</i></h2>
     <p>Rock beats scissors, Paper beats rocks and Scissors beats paper.</p>
     <br>
 
     <button onclick="
-    playTheGame2('Rock2')">Rock2</button>
+    playTheGame2('Rock2')" class="move-button">
+    <img src="Images/rock.jpg" alt="rock image" class="move-image"></button>
     
     <button onclick="
-    playTheGame2('Paper2')">Paper2</button>
+    playTheGame2('Paper2')"  class="move-button">
+    <img src="Images/paper.jpg" alt="paper image" class="move-image"></button>
     
-    <button onclick="playTheGame2('Scissors2')">Scissors2</button>
+    <button onclick="
+    playTheGame2('Scissors2')" class="move-button">
+    <img src="Images/paper.jpg" alt="scissor image" class="move-image"></button>
 
     <!-- Score area  -->
-    <p class="js-results2"></p>
-    <p class="js-moves2"></p>
+    <p class="js-results2 cs-results2"></p>
+    <p class="js-moves2">You 
+        <img src="Images/rock.jpg" class="move-image move-button" >
+        <img src="Images/rock.jpg" alt="" class="move-image move-button" > 
+        Computer
+    </p>
     <p class="js-score2"></p>
 
     <!-- reset button -->
