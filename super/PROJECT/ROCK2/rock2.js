@@ -97,7 +97,10 @@ function playTheGame2(user){
     // update score function being called. 
     updateScore2();
     document.querySelector('.js-results2').innerHTML = results; 
-    document.querySelector('.js-moves2').innerHTML = `You Picked :${user} \n Computer Picked: ${computerMove}`; 
+    document.querySelector('.js-moves2').innerHTML = ` You 
+        <img src="Images/${user}-emoji.jpg" alt="user-move" class="move-image2" >
+        <img src="Images/${computerMove}-emoji.jpg" alt="computer-move" class="move-image2 " > 
+        Computer`
 
     return results; 
 }

@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="rock.css">
     <title>Rock game</title>
+    <link rel="stylesheet" href="rock.css">
 </head>
 <body>
     <h1>Rock Paper Scissors</h1>
-<!-- steps -->
+<!-- steps --> 
  <!-- 
 1. Create the 3 buttons ( rocks, paper , scissors)
 2. Display the User Move, computer Move and the results
@@ -23,17 +23,23 @@ scissor beats paper
     <br>
 
     <button onclick="
-    playTheGame('Rock')">Rock</button>
+    playTheGame('Rock')" class="move-button">
+    <img src="Images/Rock-emoji.jpg" alt="rock image" class="move-image"
+    ></button>
     
     <button onclick="
-    playTheGame('Paper')">Paper</button>
+    playTheGame('Paper')" class="move-button">
+    <img src="Images/Paper-emoji.jpg" alt="paper image" class="move-image"
     
-    <button onclick="playTheGame('Scissors')">Scissors</button>
+    ></button>
+    
+    <button onclick="playTheGame('Scissors')" class="move-button">
+    <img src="Images/Scissors-emoji.jpg" alt="scissors-image" class="move-image"></button>
 
     <!-- Score area  -->
-    <p class="js-results"></p>
+    <p class="js-results cs-results"><p>
     <p class="js-moves"></p>
-    <p class="js-score"></p>
+    <p class="js-score cs-score"></p>
 
     <!-- reset button -->
     <button onclick="
@@ -43,50 +49,8 @@ scissor beats paper
      // remove the score from the local storage 
     localStorage.removeItem('score')
     updateScore()
-     ">Reset score </button>
-
-<hr>
-    <div class="work on this ">
-    <h1 class="title2">Rock Paper Scissors GAME 2</h1>
-
-    <h2><i>Rules</i></h2>
-    <p>Rock beats scissors, Paper beats rocks and Scissors beats paper.</p>
-    <br>
-
-    <button onclick="
-    playTheGame2('Rock2')" class="move-button">
-    <img src="Images/rock.jpg" alt="rock image" class="move-image"></button>
-    
-    <button onclick="
-    playTheGame2('Paper2')"  class="move-button">
-    <img src="Images/paper.jpg" alt="paper image" class="move-image"></button>
-    
-    <button onclick="
-    playTheGame2('Scissors2')" class="move-button">
-    <img src="Images/paper.jpg" alt="scissor image" class="move-image"></button>
-
-    <!-- Score area  -->
-    <p class="js-results2 cs-results2"></p>
-    <p class="js-moves2">You 
-        <img src="Images/rock.jpg" class="move-image move-button" >
-        <img src="Images/rock.jpg" alt="" class="move-image move-button" > 
-        Computer
-    </p>
-    <p class="js-score2"></p>
-
-    <!-- reset button -->
-    <button onclick="
-     score2.wins = 0;
-     score2.losses = 0; 
-     score2.ties = 0; 
-     // remove the score from the local storage 
-    localStorage.removeItem('score2')
-    updateScore2()
-     ">Reset score </button>
-
-     </div>
+      " class="cs-reset-button">Reset score </button>
 
 <script src="rock.js"></script>
-<script src="rock2.js"></script>
 </body>
 </html>

@@ -6,7 +6,7 @@ body{
     font-size: 20px;
 }
 
-.title{
+.title2{
     font-size:30px;
     font-weight: bold;
 }
@@ -14,14 +14,14 @@ body{
 /* image icon
 decrease the size of the image */
 
-.move-image{
+.move-image2{
     height: 50px; 
     background-color: transparent;
     border-radius:18px;
 }
 
 /* button class change the icon*/
-.move-button{
+.move-button2{
     background-color: transparent; /*removes the white background*/ 
     background-color:transparent;
     border-radius:60px;
@@ -33,18 +33,18 @@ decrease the size of the image */
 }
 
 /* Results and the move cs-results */
-.cs-results{
+.cs-results2{
     font-size: 25px;
     font-weight:bold;
     margin-top: 40px;
 
 }
 
-.cs-score{
+.cs-score2{
     margin-top:50px; 
 }
 
-.cs-reset-button{
+.cs-reset-button2{
     background-color: white;
     border:none;
     font-size:16px;
@@ -53,4 +53,5 @@ decrease the size of the image */
     font-weight: bold;
     border-radius:12px;
     cursor: pointer;
+    
 }
