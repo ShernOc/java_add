@@ -1,0 +1,141 @@
+// Rock Paper Scissors 
+
+/*steps 
+Random numbers: 
+0-1/3 = Rock 
+1/3-2/3 = Paper 
+2/3-1= scissor
+
+1. Computer randomly picks a move (Rock,Paper, Scissors)
+2. The user picks a a move by pressing the button. 
+3. The win is compared to what a user picks. 
+4. Update the score 
+3. Display the results and score in a pop-up 
+*/ 
+
+
+// Update the score. // Use JSON and local storage to store the data. 
+let score= JSON.parse(localStorage.getItem('score')) || {
+        wins:0,
+        losses:0,
+        ties:0
+    }
+    
+console.log(score) 
+
+updateScore(); // returns the update functions 
+
+// Computer move. 
+function pickCompMove(){
+    let computerMove = ''; 
+    const randomNumber =Math.random();
+    console.log(randomNumber); 
+
+    if(randomNumber>=0 && randomNumber <= 1/3){
+        computerMove = 'Rock';
+    }else if(randomNumber>=1/3 && randomNumber<=2/3){
+        computerMove= 'Paper';
+    }else if(randomNumber>=2/3 && randomNumber<= 1){
+        computerMove= 'Scissors';
+    }  
+    return computerMove;
+}
+
+console.log(pickCompMove()); // show if its either scissor,Rock or Paper
+
+// Compare the move of the computer and the user pick 
+function playTheGame(user){
+    let results = ''; 
+    const computerMove = pickCompMove(); // 
+    console.log(computerMove);
+
+    // User picked (Rock)
+    if(user === 'Rock'){
+        if(computerMove === 'Rock'){
+            results = 'You tie';
+        }else if(computerMove === 'Paper'){
+            results = 'You loose';
+        }else if(computerMove ==='Scissors'){
+            results = 'You win';
+        }
+    
+    // User picked(Paper)
+    }else if(user === 'Paper' ){
+        if(computerMove === 'Paper'){
+            results = 'You tie';
+        }else if (computerMove === 'Rock'){
+            results = 'You win';
+        }else if(computerMove === 'Scissors'){
+            results = 'You loose';
+        }
+
+        // User picked (Scissors)
+    }else if(user === 'Scissors'){
+        if(computerMove === 'Scissors'){
+            results = 'You tie';
+        }else if (computerMove === 'Rock'){
+            results = 'You loose';
+        }else if (computerMove === 'Paper'){
+            results = 'You win';
+        }
+    }
+
+    // Update the score:
+    if(results === 'You win'){
+        // increase the win by 1. 
+        score.wins +=1; 
+     }else if (results === 'You loose'){
+        score.losses +=1;
+     }else if (results === 'You tie'){
+        score.ties +=1;
+     }
+    
+    //Saved score in the localStorage.setItem(string) 
+    const scoreObject = JSON.stringify(score)
+    localStorage.setItem('score',scoreObject); 
+
+    // update score function being called. 
+    updateScore();
+    document.querySelector('.js-results').innerHTML = results; 
+    document.querySelector('.js-moves').innerHTML = `You 
+        <img src="Images/${user}-emoji.jpg" alt="user-move" class="move-image" >
+        <img src="Images/${computerMove}-emoji.jpg" alt="computer-move" class="move-image " > 
+        Computer`
+    
+    
+    // `You Picked :${user} \n Computer Picked: ${computerMove}`; 
+
+    return results; 
+}
+
+//console.log(playTheGame('Paper'));
+
+// function to update 
+function updateScore(){
+    //Display on the paragraph below 
+    const displayDown = document.querySelector('.js-score').innerHTML = `Wins: ${score.wins}, \n Losses: ${score.losses}, \n Ties: ${score.ties}`; 
+
+    return displayDown;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

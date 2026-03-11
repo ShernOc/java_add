@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin flip</title>
+</head>
+<body>
+    <h1>COIN FLIP</h1>
+    <h3>Guess the coin flip</h3>
+
+    <!-- Two buttons created -->
+    <button onclick="console.log(playGame('Heads'))">Head</button>
+     <button onclick="console.log(playGame('Tails'))">Tails</button>
+      <!-- Reset button -->
+     <button onclick="
+        score.win = 0;
+        score.losses = 0; 
+        score.ties = 0; 
+     ">Reset Button</button>
+
+    <h3>Results: </h3>
+    <p class="js-user-pick"></p>
+
+
+    <script src="coin.js"></script>
+</body>
+</html>

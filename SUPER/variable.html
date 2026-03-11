@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Quantity</title>
+</head>
+<body>
+   <h1>CART QUANTITY</h1>
+    <p class="js-cart quantity">
+    
+    <button onclick="ShowQuantity()">Show quantity</button>
+  <br>
+    <button onclick="AddCart(1)">Add to cart</button>
+    <button onclick="AddCart(2)">+2</button>
+    <button onclick="AddCart(3)">+3</button>
+    <button onclick="AddCart(4)">+4</button>
+    <button onclick="AddCart(5)">+5</button>
+
+    
+    <button onclick="AddCart(-1)">Remove from cart</button>
+     <button onclick="AddCart(-2)">-2</button>
+    <button onclick="AddCart(-3)">-3</button>
+
+    <button onclick="ShowQuantity(0)">Reset cart</button>
+    <p class="js-display-cart"></p>
+
+  </p>
+
+  <p class="js-calculator">
+    <h1>CALCULATOR</h1>
+    <p><b>Make it work Well. </b>We'll improve the calculator project. 
+    - Make a copy of excise 8h(calculator), when we update calculation, display it on the page instead of in the console. 
+    - When page loads, if a calculation exist in local storage, display it on the page.47</p>
+
+  <button onclick="
+  Cal('1')"
+   >1</button>
+  <button onclick="Cal('2')">2</button>
+  <button onclick="calculation +='3'; console.log(calculation)">3</button>
+  <button onclick="Cal(' + ')">+</button>
+
+  <button onclick="Cal(' = ')" >=</button>
+
+  <!-- <button onclick="calculation = eval( `${calculation}`)
+  console.log(`${calculation}`)" >=</button> -->
+
+  <button onclick="calculation = 0">Reset button</button>
+  </p>
+
+  <p class="roc_paper">
+      <!-- ROCK PAPER SCISSOR SHOOT  -->
+    <h1>FUNCTIONS </h1>
+    <h2>ROCK, PAPER, SCISSORS GAME</h2>
+    <h2> <i>Rules of the Game</i></h2>
+    <p>Rock beats scissors, Paper beats rocks and Scissors beats paper.</p>
+
+    <button onclick="PlayTheGame('Rock')">Rock</button>
+    <button onclick="PlayTheGame('Paper')">Paper</button>
+    <button onclick="PlayTheGame('Scissors')">Scissors</button>
+    <!-- reset the button// all score back to zero -->
+    
+    <p><b>Scores:</b></p>
+    <p class="js-results"> </p>
+    <p class="js-moves"></p>
+    <p class = "js-scores"></p>
+  </p>
+  
+  <!-- Reset score -->
+  <button onclick="
+  score.wins = 0;
+  score.losses = 0; 
+  score.ties =0; 
+  // remove the score 
+  localStorage.removeItem('score');
+  // update the scores 
+  updateScore(); 
+
+  ">Reset Score</button>
+
+<p class="js-coin_flip">
+  <h1>OBJECTS</h1>
+  <h2>COIN FLIP</h2>
+   <button   class="js-head" onclick="coinFlip('heads')">heads</button>
+   <button onclick="coinFlip('tails')">tails</button>
+</p>
+
+<div>
+  <h1>DOM Manipulation</h1>
+<H2>YOUTUBE SUBSCRIBE BUTTON</H2>
+<button class="js-youtube-button" onclick="SubscribeButton()">Subscribe</button>
+</div>
+
+<!-- Amazon Shipping  -->
+<div>
+  <h2>Amazon Shipping Calculator</h2>
+  <p>Order under $40 =+ $10 shipping.</p>
+  <p>Order over $40 = Free shipping.</p>
+  <input placeholder="Cost of order" class="js-cost-input" onkeydown=" handleKeydownEvent(event);
+ ">
+  <button onclick="amazonShipping()" >Calculate</button>
+<!-- Display the total -->
+  <p class="js-total-cost "></p>
+</div>
+
+<div> 
+<h1>LESSON 11:ARRAY AND LOOPS</h1>
+
+
+
+</div>
+<!--  -->
+
+
+</body>
+<script src="variable.js"></script>
+<!-- <script src="products.js"></script> -->
+</html>
+

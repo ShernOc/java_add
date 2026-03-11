@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do-schedule</title>
+    <link rel="stylesheet" href="./todo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="todos">
+        <header id="header">
+          <h1 class="heading">ToDo List</h1>
+        </header>
+        <main id="main">
+          <div id="days">
+            <h2 >Monday</h2>  
+          </div>
+          <img src="" alt="">
+          <div id="todolist">
+            <form  id="todoform">
+              <label for="addtodo"><b>Todo:</b></label>
+              <input
+                type="text"
+                name="Add To Do "
+                id="addtodo"
+                placeholder="Add To Do"
+              required/> 
+              <input type="submit" class="submitbtn" placeholder="Add" />
+            </form>
+          </div>
+
+        <div id="addcontainer">
+            <!-- Where the list  will be appended -->
+             <h3>To-Do List</h3>
+        </div>
+
+        <div id="done">
+            <h3>Done List</h3>
+        </div>
+        </main>
+        <footer id="footercopyright"></footer>
+      </div>
+    </div>
+
+    <!-- js  -->
+    <script src="./todo.js"></script>
+  </body>
+</html>
