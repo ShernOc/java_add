@@ -337,7 +337,6 @@ return results;
 // Update the score
 
 localStorage.getItem(JSON.stringify('scores'))
-
 }
 
 // DOM: Documents Oject Manipulation 
@@ -390,8 +389,60 @@ function amazonShipping(){
     numberValue += 10; 
   }else{
     numberValue;
-  }
-  
+  };
   // display the cost, grab the html element
   document.querySelector('.js-total-cost').innerHTML = ` $${numberValue}`; 
 }
+
+// LESSON 11; ARRAY
+const mainArray = [50,69,30,'sherlyne', true];
+const array1 = [90,40,20,16,30,'life', mainArray]
+console.log(array1);
+console.log(array1[4]); // this shows the first index value of the array that is 10. 
+console.log(typeof(array1[3]));
+array1[1]=245; 
+console.log(array1); 4
+
+// To check if an array is an array we use Array.array()
+console.log(Array.isArray(mainArray)) // true meaning that mainArray is an Array. 
+
+// Array Properties
+const newArray = array1.sort() // Sorts an array in place. This method mutates the array and returns a reference to the same array.
+console.log(newArray);// 
+console.log(array1.length) // 5 Gets or sets the length of the array. This is a number one higher than the highest index in the array.
+console.log(mainArray.at(4)) // Returns the item located at the specified index.
+array1.concat
+array1.copyWithin
+array1.every
+array1.filter
+array1.fill()
+array1.forEach
+console.log(array1.find);// 
+console.log(array1.toString());// Returns a string representation of an array.
+console.log(array1.findIndex); 
+console.log(array1.slice());// 
+console.log(array1.splice());// Removes 
+console.log(array1.includes());// checks whether an array includes a certain element, returning true or false as appropriate.
+console.log(mainArray.keys())// Returns an iterable of keys in the array
+
+console.log(array1.map) //Calls a defined callback function on each element of an array, and returns an array that contains the results.
+
+const reverS =mainArray.reverse() //Reverses the elements in an array in place. This method mutates the array and returns a reference to the same array.
+console.log(reverS); 
+const AddElementEnd = mainArray.push('Adhiambo')//Appends new elements to the end of an array, and returns the new length of the array.
+console.log(AddElementEnd); // returns 6 as the new length 
+
+const AddElementBeginning = mainArray.unshift('newList'); // Inserts new elements at the start of an array, and returns the new length of the array.
+console.log(AddElementBeginning); 
+
+const removeElementBeginning = mainArray.shift() //Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+console.log(removeElementBeginning)
+
+const removeElementEnd = mainArray.pop() //Removes the last element from an array and returns it . If the array is empty, undefined is returned and the array is not modified.
+console.log(removeElementEnd) // Adhiambo;
+
+
+
+
+
+

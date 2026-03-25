@@ -611,6 +611,17 @@ console.log('hello'.toUpperCase())
 
   console.log (buttonElement); 
 
+  // LESSON 11; ARRAY
+const array1 = [10,20,30];
+console.log(array1);
+console.log(array1[0]); // this shows the first index value of the array that is 10. 
+console.log(typeof(array1));
+array1[1]=245; 
+console.log(array1); 
+
+//
+
+
 
    
 
