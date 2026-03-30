@@ -30,10 +30,9 @@ input{
      border-radius: 5px;
      padding: 5px;
      font-size: 16px;
-
 }
 
-.addtodo{
+.add-todo{
     padding: 15px;
    }
 
@@ -47,16 +46,14 @@ img{
     border-radius: 10px;
 }
 
-#addcontainer,#done{
+#add-container,#done{
     background: rgb(224, 37, 115);
     border-radius: 10px;
-    
 }
 
 #done{
     background: rgb(255, 2, 107);
     border-radius: 10px;
-    
 }
 
 li{

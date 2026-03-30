@@ -395,23 +395,74 @@ function amazonShipping(){
 }
 
 // LESSON 11; ARRAY
-const mainArray = [50,69,30,'sherlyne', true];
-const array1 = [90,40,20,16,30,'life', mainArray]
+// Array Properties
+const mainArray = [50,69,30,'sherlyne', true]; // An array,
+console.log(mainArray)
+
+const array1 = [90,40,20,16,30,'life']
 console.log(array1);
+
 console.log(array1[4]); // this shows the first index value of the array that is 10. 
-console.log(typeof(array1[3]));
-array1[1]=245; 
-console.log(array1); 4
+
+array1[1]=70; //updates the array of index 1 from 40 to 245
+console.log(array1); //  [90, 245, 20, 16, 30, 'life']
+
+const conCat = array1.concat(mainArray)// combines two arrays together to become one. 
+console.log(conCat) // [90, 70, 20, 16, 30, 'life', 50, 69, 30, 'sherlyne', true]
+
+console.log(conCat.at(4)) // 30; 30 is at index 4. 
 
 // To check if an array is an array we use Array.array()
-console.log(Array.isArray(mainArray)) // true meaning that mainArray is an Array. 
+console.log(Array.isArray(mainArray)) // true meaning that mainArray is an Array.
 
-// Array Properties
-const newArray = array1.sort() // Sorts an array in place. This method mutates the array and returns a reference to the same array.
-console.log(newArray);// 
-console.log(array1.length) // 5 Gets or sets the length of the array. This is a number one higher than the highest index in the array.
-console.log(mainArray.at(4)) // Returns the item located at the specified index.
-// array1.concat
+console.log(conCat.length) // 11 Gets or sets the length of the array. This is a number one higher than the highest index in the array.
+
+const sortedArray= conCat.sort((a, b) => a - b) // Sorts an array in place. This method mutates the array and returns a reference to the same array.
+console.log(sortedArray); //  [16, 20, 30, 30, 50, 69, 70, 90, 'life', 'sherlyne', true]
+
+const li = [11,2,22,1].sort((a, b) => a - b)
+console.log(li) // [1, 2, 11, 22]
+
+const reverseArray= conCat.reverse((a, b) => a - b)
+console.log(reverseArray) // ['sherlyne', 'life', 90, 70, 69, 50, 30, 30, 20, 16, true]
+//Reverses the elements in an array in place. This method mutates the array and returns a reference to the same array.
+
+console.log(conCat.at(4)) // Returns the item located at the specified index. // returned true : 69
+
+console.log(conCat.includes(80));// checks whether an array includes a certain element, returning true or false as appropriate. // false. 
+
+console.log(conCat.slice(2,-1)) // Show this elements: Returns a copy of a section of an array. For both start and end, a negative index can be used to indicate an offset from the end of the array. For example, -2 refers to the second to last element of the array.
+
+//The end index of the specified portion of the array. This is exclusive of the element at the index 'end'. If end is undefined, then the slice extends to the end of the array. 
+// [90, 70, 69, 50, 30, 30, 20, 16] , from index 2, excluding the first to last element of an array. 
+
+//ADD ELEMENTS 
+const AddElementEnd = conCat.push('80',79)//Appends new elements to the end of an array, and returns the new length of the array.
+console.log(AddElementEnd); // returns the length of the array : 12 length. 
+console.log(conCat) // ['sherlyne', 'life', 90, 70, 69, 50, 30, 30, 20, 16, true, '80']
+
+const AddElementBeginningFront = conCat.unshift('Tiger'); // Inserts new elements at the start/Beginning of an array, and returns the new length of the array.
+console.log(AddElementBeginningFront); // 14 is the new length. 
+console.log(conCat) // ['Tiger', 'sherlyne', 'life', 90, 70, 69, 50, 30, 30, 20, 16, true, '80',79]
+
+// REMOVE ELEMENTS 
+const removeElementEnd = conCat.pop() //Removes the last element from an array and returns it . If the array is empty, undefined is returned and the array is not modified.
+console.log(removeElementEnd) // removed 79; // 79 is returned. 
+console.log(conCat) // (13) ['Tiger', 'sherlyne', 'life', 90, 70, 69, 50, 30, 30, 20, 16, true, '80']
+
+const removeElementBeginning = conCat.shift() //Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+console.log(removeElementBeginning) // Tiger
+console.log(conCat) // (12) [ 'sherlyne', 'life', 90, 70, 69, 50, 30, 30, 20, 16, true, '80']
+
+const removeElementsSplice = conCat.splice(0,2); 
+// 1. what index do we want to remove from 0, and remove 2 values, : 'sherlyne', 'life': 
+// 2. What do we want to add 
+//Will return an array containing the elements that were deleted.
+console.log(removeElementsSplice) //['sherlyne', 'life'];
+console.log(conCat); // [90, 70, 69, 50, 30, 30, 20, 16, true]
+
+
+//ADVANCED: 
 // array1.copyWithin
 // array1.every
 // array1.filter
@@ -420,37 +471,19 @@ console.log(mainArray.at(4)) // Returns the item located at the specified index.
 // console.log(array1.find);// 
 // console.log(array1.toString());// Returns a string representation of an array.
 // console.log(array1.findIndex); 
-// console.log(array1.slice()); 
 
-const removeElements = array1.splice(5,2); 
-// 1. what index do we want to remove, 
-// 2. What do we want to add 
-//Will return an array containing the elements that were deleted.
-console.log(removeElements); // [90,40,20,16,30]
+// console.log(conCat.keys())// Returns an iterable of keys in the array
 
-console.log(array1.splice());//Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+// console.log(array1.map) //Calls a defined callback function on each element of an array, and returns an array that contains the results.
+
+const JoinLif =conCat.join(mainArray) //Adds all the elements of an array into a string, separated by the specified separator string.
+
+console.log(JoinLif)
+//9050,69,30,sherlyne,true7050,69,30,sherlyne,true6950,69,30,sherlyne,true5050,69,30,sherlyne,true3050,69,30,sherlyne,true3050,69,30,sherlyne,true2050,69,30,sherlyne,true1650,69,30,sherlyne,truetrue50,69,30,sherlyne,true80
 
 
-console.log(array1.includes());// checks whether an array includes a certain element, returning true or false as appropriate.
-console.log(mainArray.keys())// Returns an iterable of keys in the array
 
-console.log(array1.map) //Calls a defined callback function on each element of an array, and returns an array that contains the results.
 
-const reverS =mainArray.reverse() //Reverses the elements in an array in place. This method mutates the array and returns a reference to the same array.
-console.log(reverS); 
-
-const AddElementEnd = mainArray.push('Adhiambo')//Appends new elements to the end of an array, and returns the new length of the array.
-console.log(AddElementEnd); // returns 6 as the new length 
-console.log(mainArray)
-const removeElementEnd = mainArray.pop() //Removes the last element from an array and returns it . If the array is empty, undefined is returned and the array is not modified.
-console.log(removeElementEnd) // Adhiambo;
-console.log(mainArray)
-
-const AddElementBeginning = mainArray.unshift('newList'); // Inserts new elements at the start of an array, and returns the new length of the array.
-console.log(AddElementBeginning); 
-
-const removeElementBeginning = mainArray.shift() //Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
-console.log(removeElementBeginning)
 
 
 

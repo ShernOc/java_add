@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     }); 
     
-    // handleinput event / that holds the input and the button
+    // handle-input event / that holds the input and the button
     function handleInputButton(todo){
       // grap the ul element
     // const divList = document.querySelector('#list')

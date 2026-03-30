@@ -3,7 +3,7 @@
 function addtodo(e) {
     e.preventDefault(); // Stops the form from submitting
     // grap the input element 
-    const todoInput = document.getElementById("addtodo");
+    const todoInput = document.getElementById("add-todo");
     const todoText = todoInput.value;
 
     //grab the p element that will store our inputs 
@@ -26,7 +26,6 @@ function addtodo(e) {
     }else{
         e.preventDefault();
     }
-
 
     // Create a delete button
     const deleteButton = document.createElement("button");
