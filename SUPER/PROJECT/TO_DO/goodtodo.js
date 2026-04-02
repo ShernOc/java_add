@@ -1,7 +1,7 @@
+// grab the form 
 document.addEventListener("DOMContentLoaded", () => {
-    // grab the form 
     
-    const form = document.querySelector("#create-task-form"); 
+  const form = document.querySelector("#create-task-form"); 
     // event listener for form 
     form.addEventListener('submit', (e)=>{
       e.preventDefault();
@@ -14,15 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // handle-input event / that holds the input and the button
     function handleInputButton(todo){
-      // grap the ul element
+    // grab the ul element
     // const divList = document.querySelector('#list')
     // divList.appendChild(ultag);
-    const ultag = document.querySelector("#tasks");
-    const litag = document.createElement('li');
+    const ul_Tag = document.querySelector("#tasks");
+    const li_Tag = document.createElement('li');
     
     //litag will hold the contents 
-    litag.textContent = todo; 
-    ultag.appendChild(litag); 
+    li_Tag.textContent = todo; 
+    ul_Tag.appendChild(li_Tag); 
     
     // create a button: 
     const button = document.createElement('button'); 
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener('click', handleButton)
     
     //append the button to the li tag.l
-    litag.appendChild(button); 
+    li_Tag.appendChild(button); 
     
     }
     

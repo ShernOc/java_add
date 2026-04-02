@@ -17,16 +17,17 @@ const UpdateWeekday = (day) => {
     h2.id = "day";
     h2.className = day.toLowerCase()
 }
-console.log(UpdateWeekday("Tuesday"))// changes the day from Monday to Sunday
+// console.log(UpdateWeekday("Tuesday"))// changes the day from Monday to Sunday
 
 const addImage = (img_url) => {
     let image = document.querySelector("img");
     image.src = img_url;
-    image.alt = "cow image";
-    image.height = 250;
-    image.width = 300;
+    image.alt = "hand image";
+    image.height = 100;
+    image.width = 150;
 }
-console.log(addImage("/images/pexels-vidalbalielojrfotografia-14457389.jpg"));
+
+console.log(addImage("Images/Paper-emoji.jpg"));
 
 // Add an event listener that takes the submitted input text and appends it at the paragraph element feed list;
 
