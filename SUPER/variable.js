@@ -372,7 +372,6 @@ function SubscribeButton(){
 
 // 05/03/2026.
 // Amazon shipping 
-
 // HandleKeydown event listener 
 
 function handleKeydownEvent(event){
@@ -395,18 +394,24 @@ function amazonShipping(){
 }
 
 // LESSON 11; ARRAY
-// Array Properties
-const mainArray = [50,69,30,'sherlyne', true]; // An array,
+// List of values stored in variables, they are stored in a square brackets []
+// const array = [10,20,'life']
+// Array Properties: 
+const mainArray = [50,69,30,'sherlyne', true]; 
 console.log(mainArray)
 
 const array1 = [90,40,20,16,30,'life']
 console.log(array1);
 
-console.log(array1[4]); // this shows the first index value of the array that is 10. 
+console.log(array1[4]); // this shows the first index value of the array that is 10., its shows the position of 30
 
-array1[1]=70; //updates the array of index 1 from 40 to 245
-console.log(array1); //  [90, 245, 20, 16, 30, 'life']
+array1[1]=70; //updates/changes the array of index 1 from 40 to 80
+console.log(array1); //  [90, 80, 20, 16, 30, 'life']
 
+// Check if an array is an array use Array.isArray[1,3]
+console.log(Array.isArray(array1)) // true
+
+//METHODS OF ARRAY: 
 const conCat = array1.concat(mainArray)// combines two arrays together to become one. 
 console.log(conCat) // [90, 70, 20, 16, 30, 'life', 50, 69, 30, 'sherlyne', true]
 
@@ -415,7 +420,7 @@ console.log(conCat.at(4)) // 30; 30 is at index 4.
 // To check if an array is an array we use Array.array()
 console.log(Array.isArray(mainArray)) // true meaning that mainArray is an Array.
 
-console.log(conCat.length) // 11 Gets or sets the length of the array. This is a number one higher than the highest index in the array.
+console.log(conCat.length) // 11 Gets or sets the length/ number of the array. This is a number one higher than the highest index in the array.
 
 const sortedArray= conCat.sort((a, b) => a - b) // Sorts an array in place. This method mutates the array and returns a reference to the same array.
 console.log(sortedArray); //  [16, 20, 30, 30, 50, 69, 70, 90, 'life', 'sherlyne', true]
@@ -460,7 +465,6 @@ const removeElementsSplice = conCat.splice(0,2);
 //Will return an array containing the elements that were deleted.
 console.log(removeElementsSplice) //['sherlyne', 'life'];
 console.log(conCat); // [90, 70, 69, 50, 30, 30, 20, 16, true]
-
 
 //ADVANCED: 
 // array1.copyWithin
