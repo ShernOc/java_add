@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ul_Tag = document.querySelector("#tasks");
     const li_Tag = document.createElement('li');
     
-    //litag will hold the contents 
+    //li tag will hold the contents 
     li_Tag.textContent = todo; 
     ul_Tag.appendChild(li_Tag); 
     

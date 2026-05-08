@@ -486,6 +486,154 @@ console.log(JoinLif)
 //9050,69,30,sherlyne,true7050,69,30,sherlyne,true6950,69,30,sherlyne,true5050,69,30,sherlyne,true3050,69,30,sherlyne,true3050,69,30,sherlyne,true2050,69,30,sherlyne,true1650,69,30,sherlyne,truetrue50,69,30,sherlyne,true80
 
 
+// LOOPS: 
+
+// This one displays what we have added to the page: 
+//LOOPS 
+// Loops will keep going over and over
+
+//1. While loop 
+let i = 2; 
+while(i <= 10){
+  console.log(i);
+  i= i+2; 
+}
+
+// 2. For Loop 
+// For Loop: The shorter version of While loop
+for(let y = 1; y<=10; y++){
+  console.log(y)
+}
+
+// 1. create a variable, 2. describe the condition, 3 run the code in a loop body. 
+
+//let i = 1; 
+//while(i <= 5 // if the condition is true the code with run){
+    //console.log(i)
+    // where i is equal to itself plus one where we are increasing i by one 
+    // We increase(+) the i to 2. 
+   //i=i +1
+// if condition is false the loop stops 
+// }
+
+// While the condition is true the code will run over and over again. 
+
+let z =3; // variable loop
+while(z<=10){ // condition loop
+  // run this code
+  console.log(i) // Run this/code 
+  // increase the variable by 1 (increment loop)
+  z = z +1 ;
+}
+
+// For Loop: The shorter version of while loop
+for(let y = 1; y<=10; y++){
+  console.log(y)
+}
+
+// Non standard loop use While loop 
+let randomNumber = 0; 
+while(randomNumber <0.5){
+  randomNumber = Math.random();
+}
+console.log(randomNumber); 
+
+// LOOPING THROUGH AN ARRAY: 
+//  Create an array'
+
+const mySchedule = ['Pray', 'Google class', 'Run/Walk', 'Shower', 'Code', 'Write', 'Lunch', 'Job application', 'Youtube', 'Walk', 'Dinner', 'Movie', 'Write', 'Knit', 'Sleep']
+console.log(mySchedule.length) // 15 length 
+
+// The loop will go from the first index of the array to the last index value. 
+
+for (let index = 0; index <= mySchedule.length-1; index ++ ){
+  mySchedule[index]; // this will access the value of the index in the array
+
+  console.log(index); // its going to display all the index of the values. 
+}
+
+// Short form
+let nice = 0; // accumulator: find the total indexes 
+for(let i = 0; i < mySchedule.length; i++){
+  const values = mySchedule[i]; 
+  console.log(values)
+}
+
+// store the to do list 
+let todoListHtml = ''; // accumulator pattern 
+for(let i = 0; i < mySchedule.length; i++){
+    const todo = mySchedule[i]; 
+    // create a html element to hold the list 
+    const pElement = `<li> ${todo}</li>`; 
+   const li =  todoListHtml += pElement; 
+   document.querySelector('.js-list').innerHTML = li
+  
+  }
+
+  // console.log(todoListHtml); 
+
+
+
+
+
+
+
+
+const myNumbers = [2,4,6]; 
+for (let index = 0; index <= myNumbers.length-1; index ++){
+ const showValue= myNumbers[index]; // this will access the value of the index in the array increased by 2
+  console.log(showValue); // its going to display all the values in the array
+}
+
+// Short form
+for(let i = 0; i < myNumbers.length; i++){
+  const values = myNumbers[i]; 
+  console.log(values);
+}
+
+
+// ACCUMULATOR PATTERN 
+// Calculate the total of the numbers in the array 
+/*1. Create a variable to store the results
+2. Loop through the array and update the results 
+
+*/
+// Find the total of the array. 
+const numbs= [3,5,6,7]; 
+let total = 0; // The variable that stores the results.(accumulating the results into the variable)
+for(let i = 0; i <numbs.length;i ++){
+  const num = numbs[i]
+  // total = total + num
+  total += num; 
+}
+console.log(total); 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
