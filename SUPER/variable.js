@@ -8,93 +8,94 @@ console.log('VARIABLE HTML')
 const Vaseline = 4350;
 const Shoes = 2000;
 
-*/ 
+*/
 // object: 
 // Array: take the prices, Take each price divide by 1000 and then return each product of the work. 
 
 class Productscd {
   constructor(name, price, store) {
-    this.name = name; 
-    this.price = price; 
-    this.store= store;
+    this.name = name;
+    this.price = price;
+    this.store = store;
 
   }
 }
 
 const products = {
-  name :'Vaseline',
-  price:2000,
-  name:'Shoes', 
+  name: 'Vaseline',
+  price: 2000,
+  name: 'Shoes',
   price: 1090,
-  name:'Basket', 
+  name: 'Basket',
   price: 2095,
-  name:'Toaster', 
-  price: 1890, 
-  name:'T-shirt', 
+  name: 'Toaster',
+  price: 1890,
+  name: 'T-shirt',
   price: 799,
 }
 
 console.log(products); // why is it showing only the last items? 
 
 // JSON OBJECTS 
-const json = JSON.stringify(products); 
+const json = JSON.stringify(products);
 console.log(json)
 
 const parse = JSON.parse(json)
-console.log(parse); 
+console.log(parse);
 
 
 // Cart quantity 
-let cartQuantity = 0; 
+let cartQuantity = 0;
 
 // Items: 
 
 // Parameters. 
 // how to input the cost of items, that don't have the same amount.i think use an object, a while loop, to hold all the items. 
-const tax = 0.1; 
+const tax = 0.1;
 let cost = products.price;
 
 // Array: take the prices, Take each price divide by 1000 and then return each product of the work. 
 // const stuff = products.price.find()
 
-function calculate(cost, tax=0.1){
-  const taxed = ((cost) * tax) ; 
-  const totalCost = taxed + cost; 
-  return `Total Cost: ${totalCost/100}`; 
-  }
+function calculate(cost, tax = 0.1) {
+  const taxed = ((cost) * tax);
+  const totalCost = taxed + cost;
+  return `Total Cost: ${totalCost / 100}`;
+}
 
 console.log(calculate(456, 0.3))
 
 // console.log(calculate(4567))
 
 // showQuantity and remove cart button 
-function ShowQuantity(stuff){
-  if(stuff > 0 ){
+function ShowQuantity(stuff) {
+  if (stuff > 0) {
     console.log(`Cart quantity:${cartQuantity}`)
-  }else if (stuff == 0 ){
-    cartQuantity = 0 ; console.log(`Cart was reset \n Cart Quantity : ${cartQuantity}`);
-    
+  } else if (stuff == 0) {
+    cartQuantity = 0; console.log(`Cart was reset \n Cart Quantity : ${cartQuantity}`);
+
   } else {
     // display the quantity
-  document.querySelector('.js-display-cart').innerHTML = `Cart quantity: ${cartQuantity}`; 
-  }}
+    document.querySelector('.js-display-cart').innerHTML = `Cart quantity: ${cartQuantity}`;
+  }
+}
 
-  
+
 // Add to Cart
-let items = ''; 
+let items = '';
 
-function AddCart(items){
+function AddCart(items) {
   // reassigned a cart quantity
   // if items are 10 
   // ShowQuantity(); // updates the quantity so we 
   const maxItems = 30; // maximum items in the cart 
-  if(cartQuantity + items > maxItems){
+  if (cartQuantity + items > maxItems) {
     alert(`you have ${cartQuantity} The cart is full`)
-    return; 
-  }else if (cartQuantity + items < 0){
+    return;
+  } else if (cartQuantity + items < 0) {
     alert(`You have ${cartQuantity} \n add items in your cart `)
     return;
-  }else {cartQuantity = cartQuantity + items} 
+  } else { cartQuantity = cartQuantity + items }
 
   // display the quantity
   document.querySelector('.js-display-cart').innerHTML = `Cart quantity: ${cartQuantity}`;
@@ -103,22 +104,22 @@ function AddCart(items){
 }
 
 // Update cart 
-function updateDomConsole(){
- ;
+function updateDomConsole() {
+  ;
   // display the quantity
-  document.querySelector('.js-display-cart').innerHTML = `Cart quantity: ${cartQuantity} Total Quantity = ${ ShowQuantity()}`;
+  document.querySelector('.js-display-cart').innerHTML = `Cart quantity: ${cartQuantity} Total Quantity = ${ShowQuantity()}`;
 }
 
 
 
 // CALCULATOR 
 // It's not working. 
-let calculation ='';
+let calculation = '';
 
-function Cal(results){
-  if(calculation){
-    return calculation += results ;
-  }else if(calculation = eval( `${calculation}`)){
+function Cal(results) {
+  if (calculation) {
+    return calculation += results;
+  } else if (calculation = eval(`${calculation}`)) {
     return calculation;
   }
   console.log(calculation);
@@ -147,7 +148,7 @@ Steps.
 4. Update the score
 4. Display the results in a pop up and also in the page. 
 
- */ 
+ */
 
 // 4. Update the score 
 // store the scores.  
@@ -165,101 +166,101 @@ Steps.
 // Here instead of having the original js-object you want to use the JSON.parse Object 
 
 // We use the default operator   if not the left side which could be null, then we run the right side will be done. which is the original object. 
-let score = JSON.parse(localStorage.getItem('score')) ||{
-      wins: 0,
-      losses: 0,
-      ties: 0
-  };
+let score = JSON.parse(localStorage.getItem('score')) || {
+  wins: 0,
+  losses: 0,
+  ties: 0
+};
 
 console.log(score)// 
 
-updateScore(); 
+updateScore();
 
 
 // if the score is null, then will provide a default score as before using the json Object
 
-  // if(!score){
-  //   score = {
-  //     wins: 0,
-  //     losses: 0,
-  //     ties: 0
-  // };
-  // }
+// if(!score){
+//   score = {
+//     wins: 0,
+//     losses: 0,
+//     ties: 0
+// };
+// }
 
 
 // 1. Computer randomly selects a move, 
-function radNumber(){
+function radNumber() {
   let computerMove = '';
-  const randomNumber= Math.random();
-  console.log(randomNumber); 
-  
-  if(0 <= randomNumber <=1/3){
-      computerMove = 'Rock';
-  }else if ( 1/3 <= randomNumber <= 2/3 ){
-    computerMove = 'Paper'; 
-  }else if (2/3 <= randomNumber <= 1){
-     computerMove = 'Scissors';
+  const randomNumber = Math.random();
+  console.log(randomNumber);
+
+  if (0 <= randomNumber <= 1 / 3) {
+    computerMove = 'Rock';
+  } else if (1 / 3 <= randomNumber <= 2 / 3) {
+    computerMove = 'Paper';
+  } else if (2 / 3 <= randomNumber <= 1) {
+    computerMove = 'Scissors';
   }
   return computerMove;
 }
 
 console.log(radNumber())
 
-function PlayTheGame(userMove){
+function PlayTheGame(userMove) {
   let result = '';
   let computerMove = radNumber(); // 
-  console.log(computerMove); 
+  console.log(computerMove);
   // Rock
-  if(userMove === 'Rock'){
-    if (computerMove ==='Rock'){
+  if (userMove === 'Rock') {
+    if (computerMove === 'Rock') {
       result = 'You tie.';
-    }else if (computerMove ==='Paper'){
-      result = 'You lose.'; 
-    }else if (computerMove ==='Scissors'){
+    } else if (computerMove === 'Paper') {
+      result = 'You lose.';
+    } else if (computerMove === 'Scissors') {
       result = 'You win.';
     }
     // Paper
-  }else if(userMove === 'Paper'){
-     if (computerMove ==='Rock'){
+  } else if (userMove === 'Paper') {
+    if (computerMove === 'Rock') {
       result = 'You win.';
-    }else if (computerMove ==='Paper'){
-      result = 'You tie.'; 
-    }else if (computerMove ==='Scissors'){
+    } else if (computerMove === 'Paper') {
+      result = 'You tie.';
+    } else if (computerMove === 'Scissors') {
       result = 'You lose.';
     }
-// Scissors 
-  }else if(userMove === 'Scissors'){
-     if(computerMove ==='Rock'){
+    // Scissors 
+  } else if (userMove === 'Scissors') {
+    if (computerMove === 'Rock') {
       result = 'You lose.';
-    }else if (computerMove ==='Paper'){
-      result = 'You win.'; 
-    }else if (computerMove ==='Scissors'){
+    } else if (computerMove === 'Paper') {
+      result = 'You win.';
+    } else if (computerMove === 'Scissors') {
       result = 'You tie.';
-    } 
-  }else{console.log('select a button')}
+    }
+  } else { console.log('select a button') }
 
 
   // update the scores. // How many wins and losses. 
 
-  if(result === 'You win.'){
-    score.wins +=1;
-  }else if (result === 'You lose.'){
-    score.losses +=1; 
-  }else if (result === 'You tie.'){
-    score.ties +=1; 
-  }; 
+  if (result === 'You win.') {
+    score.wins += 1;
+  } else if (result === 'You lose.') {
+    score.losses += 1;
+  } else if (result === 'You tie.') {
+    score.ties += 1;
+  };
 
-   // SAVE THE SCORE PERMANENTLY
+  // SAVE THE SCORE PERMANENTLY
 
-   /* 
-   1. Convert the score object to a string 
-   2. Store the string to the localStorage 
-   
-   
-   */ 
-   const scoreString = JSON.stringify(score);
+  /* 
+  1. Convert the score object to a string 
+  2. Store the string to the localStorage 
+  
+  
+  */
+  const scoreString = JSON.stringify(score);
   // Save the score in the local storage
-  localStorage.setItem('score',scoreString); 
+  localStorage.setItem('score', scoreString);
 
   // create an alert  
   //  alert(`${result}
@@ -269,17 +270,17 @@ function PlayTheGame(userMove){
 
   updateScore(); // will run the function and can be reused. 
 
-  document.querySelector('.js-results').innerHTML = result; 
+  document.querySelector('.js-results').innerHTML = result;
 
-  document.querySelector('.js-moves').innerHTML =` \n You picked ${userMove}.
-  \n Computer picked ${computerMove}.`; 
-  
+  document.querySelector('.js-moves').innerHTML = ` \n You picked ${userMove}.
+  \n Computer picked ${computerMove}.`;
+
 }
 
 // DOM 
-function updateScore(){
-  document.querySelector('.js-scores').innerHTML =`
-  \n Wins: ${score.wins},\n Losses: ${score.losses}, \n Ties: ${score.ties}`; 
+function updateScore() {
+  document.querySelector('.js-scores').innerHTML = `
+  \n Wins: ${score.wins},\n Losses: ${score.losses}, \n Ties: ${score.ties}`;
 }
 
 // COIN FLIP 
@@ -301,42 +302,42 @@ Lets say we are trying to guess the result. Create a variable called guess and s
  try switching to ternary operator*/
 
 
-function coin(){
+function coin() {
   const randomNumber = Math.random()
-  let results ='heads'; 
+  let results = 'heads';
   let guess = 'tails';
-  const rNumber = randomNumber < 0.5? results:guess;
- return rNumber; 
+  const rNumber = randomNumber < 0.5 ? results : guess;
+  return rNumber;
 }
 console.log(coin())
 
 let scores = localStorage.getItem(JSON.stringify('scores')) || {
-  win:0,
-  losses:0,
-  ties:0
+  win: 0,
+  losses: 0,
+  ties: 0
 }
 
-function coinFlip(users){
+function coinFlip(users) {
   const flip = coin();
   let results = '';
-  if(users === 'heads'){
-    if(flip === 'heads'){
+  if (users === 'heads') {
+    if (flip === 'heads') {
       results = 'You tie'
-    }else if (flip === 'tails'){
+    } else if (flip === 'tails') {
       results = 'You win'
-  }else if (users === 'tails' ){
-    if(flip === 'tails'){
-      results = 'You tie'
-    }else if(flip === 'heads'){
-      results = 'You loose'
+    } else if (users === 'tails') {
+      if (flip === 'tails') {
+        results = 'You tie'
+      } else if (flip === 'heads') {
+        results = 'You loose'
+      }
     }
   }
-}
-return results; 
+  return results;
 
-// Update the score
+  // Update the score
 
-localStorage.getItem(JSON.stringify('scores'))
+  localStorage.getItem(JSON.stringify('scores'))
 }
 
 // DOM: Documents Oject Manipulation 
@@ -349,22 +350,22 @@ const newElement = document.createElement('h3');
 // 2. ADD CONTENT OR ATTRIBUTE 
 const hiMe = newElement.textContent = 'WHAT IS YOUR NAME '
 // ATTACH IT TO THE PAGE: 
-const here = document.body.appendChild(newElement); 
+const here = document.body.appendChild(newElement);
 
 // CREATE OR CHANGE .innerHTML = 'This Button'
 const but = document.createElement('button');
-const bT = but.innerHTML = 'New Button '; 
-const newButton = document.body.append(but); 
+const bT = but.innerHTML = 'New Button ';
+const newButton = document.body.append(but);
 
 // 24/02/2026. 
 // Youtube subscribe button 
-function SubscribeButton(){
+function SubscribeButton() {
   // get the button. 
   const subscribeButton = document.querySelector('.js-youtube-button');
 
-  if (subscribeButton.innerText === 'Subscribe'){
+  if (subscribeButton.innerText === 'Subscribe') {
     subscribeButton.innerText = 'Subscribed';
-  }else {
+  } else {
     subscribeButton.innerText = 'Subscribe'
   }
 
@@ -374,38 +375,38 @@ function SubscribeButton(){
 // Amazon shipping 
 // HandleKeydown event listener 
 
-function handleKeydownEvent(event){
-   if(event.key === 'Enter'){
+function handleKeydownEvent(event) {
+  if (event.key === 'Enter') {
     amazonShipping()
-    }
+  }
 }
 
-function amazonShipping(){
+function amazonShipping() {
   const inputElement = document.querySelector('.js-cost-input');
   let numberValue = Number(inputElement.value);
 
-  if(numberValue <= 40){
-    numberValue += 10; 
-  }else{
+  if (numberValue <= 40) {
+    numberValue += 10;
+  } else {
     numberValue;
   };
   // display the cost, grab the html element
-  document.querySelector('.js-total-cost').innerHTML = ` $${numberValue}`; 
+  document.querySelector('.js-total-cost').innerHTML = ` $${numberValue}`;
 }
 
 // LESSON 11; ARRAY
 // List of values stored in variables, they are stored in a square brackets []
 // const array = [10,20,'life']
 // Array Properties: 
-const mainArray = [50,69,30,'sherlyne', true]; 
+const mainArray = [50, 69, 30, 'sherlyne', true];
 console.log(mainArray)
 
-const array1 = [90,40,20,16,30,'life']
+const array1 = [90, 40, 20, 16, 30, 'life']
 console.log(array1);
 
 console.log(array1[4]); // this shows the first index value of the array that is 10., its shows the position of 30
 
-array1[1]=70; //updates/changes the array of index 1 from 40 to 80
+array1[1] = 70; //updates/changes the array of index 1 from 40 to 80
 console.log(array1); //  [90, 80, 20, 16, 30, 'life']
 
 // Check if an array is an array use Array.isArray[1,3]
@@ -422,13 +423,13 @@ console.log(Array.isArray(mainArray)) // true meaning that mainArray is an Array
 
 console.log(conCat.length) // 11 Gets or sets the length/ number of the array. This is a number one higher than the highest index in the array.
 
-const sortedArray= conCat.sort((a, b) => a - b) // Sorts an array in place. This method mutates the array and returns a reference to the same array.
+const sortedArray = conCat.sort((a, b) => a - b) // Sorts an array in place. This method mutates the array and returns a reference to the same array.
 console.log(sortedArray); //  [16, 20, 30, 30, 50, 69, 70, 90, 'life', 'sherlyne', true]
 
-const li = [11,2,22,1].sort((a, b) => a - b)
+const li = [11, 2, 22, 1].sort((a, b) => a - b)
 console.log(li) // [1, 2, 11, 22]
 
-const reverseArray= conCat.reverse((a, b) => a - b)
+const reverseArray = conCat.reverse((a, b) => a - b)
 console.log(reverseArray) // ['sherlyne', 'life', 90, 70, 69, 50, 30, 30, 20, 16, true]
 //Reverses the elements in an array in place. This method mutates the array and returns a reference to the same array.
 
@@ -436,13 +437,13 @@ console.log(conCat.at(4)) // Returns the item located at the specified index. //
 
 console.log(conCat.includes(80));// checks whether an array includes a certain element, returning true or false as appropriate. // false. 
 
-console.log(conCat.slice(2,-1)) // Show this elements: Returns a copy of a section of an array. For both start and end, a negative index can be used to indicate an offset from the end of the array. For example, -2 refers to the second to last element of the array.
+console.log(conCat.slice(2, -1)) // Show this elements: Returns a copy of a section of an array. For both start and end, a negative index can be used to indicate an offset from the end of the array. For example, -2 refers to the second to last element of the array.
 
 //The end index of the specified portion of the array. This is exclusive of the element at the index 'end'. If end is undefined, then the slice extends to the end of the array. 
 // [90, 70, 69, 50, 30, 30, 20, 16] , from index 2, excluding the first to last element of an array. 
 
 //ADD ELEMENTS 
-const AddElementEnd = conCat.push('80',79)//Appends new elements to the end of an array, and returns the new length of the array.
+const AddElementEnd = conCat.push('80', 79)//Appends new elements to the end of an array, and returns the new length of the array.
 console.log(AddElementEnd); // returns the length of the array : 12 length. 
 console.log(conCat) // ['sherlyne', 'life', 90, 70, 69, 50, 30, 30, 20, 16, true, '80']
 
@@ -459,7 +460,7 @@ const removeElementBeginning = conCat.shift() //Removes the first element from a
 console.log(removeElementBeginning) // Tiger
 console.log(conCat) // (12) [ 'sherlyne', 'life', 90, 70, 69, 50, 30, 30, 20, 16, true, '80']
 
-const removeElementsSplice = conCat.splice(0,2); 
+const removeElementsSplice = conCat.splice(0, 2);
 // 1. what index do we want to remove from 0, and remove 2 values, : 'sherlyne', 'life': 
 // 2. What do we want to add 
 //Will return an array containing the elements that were deleted.
@@ -480,7 +481,7 @@ console.log(conCat); // [90, 70, 69, 50, 30, 30, 20, 16, true]
 
 // console.log(array1.map) //Calls a defined callback function on each element of an array, and returns an array that contains the results.
 
-const JoinLif =conCat.join(mainArray) //Adds all the elements of an array into a string, separated by the specified separator string.
+const JoinLif = conCat.join(mainArray) //Adds all the elements of an array into a string, separated by the specified separator string.
 
 console.log(JoinLif)
 //9050,69,30,sherlyne,true7050,69,30,sherlyne,true6950,69,30,sherlyne,true5050,69,30,sherlyne,true3050,69,30,sherlyne,true3050,69,30,sherlyne,true2050,69,30,sherlyne,true1650,69,30,sherlyne,truetrue50,69,30,sherlyne,true80
@@ -493,15 +494,15 @@ console.log(JoinLif)
 // Loops will keep going over and over
 
 //1. While loop 
-let i = 2; 
-while(i <= 10){
+let i = 2;
+while (i <= 10) {
   console.log(i);
-  i= i+2; 
+  i = i + 2;
 }
 
 // 2. For Loop 
 // For Loop: The shorter version of While loop
-for(let y = 1; y<=10; y++){
+for (let y = 1; y <= 10; y++) {
   console.log(y)
 }
 
@@ -509,34 +510,34 @@ for(let y = 1; y<=10; y++){
 
 //let i = 1; 
 //while(i <= 5 // if the condition is true the code with run){
-    //console.log(i)
-    // where i is equal to itself plus one where we are increasing i by one 
-    // We increase(+) the i to 2. 
-   //i=i +1
+//console.log(i)
+// where i is equal to itself plus one where we are increasing i by one 
+// We increase(+) the i to 2. 
+//i=i +1
 // if condition is false the loop stops 
 // }
 
 // While the condition is true the code will run over and over again. 
 
-let z =3; // variable loop
-while(z<=10){ // condition loop
+let z = 3; // variable loop
+while (z <= 10) { // condition loop
   // run this code
   console.log(i) // Run this/code 
   // increase the variable by 1 (increment loop)
-  z = z +1 ;
+  z = z + 1;
 }
 
 // For Loop: The shorter version of while loop
-for(let y = 1; y<=10; y++){
+for (let y = 1; y <= 10; y++) {
   console.log(y)
 }
 
 // Non standard loop use While loop 
-let randomNumber = 0; 
-while(randomNumber <0.5){
+let randomNumber = 0;
+while (randomNumber < 0.5) {
   randomNumber = Math.random();
 }
-console.log(randomNumber); 
+console.log(randomNumber);
 
 // LOOPING THROUGH AN ARRAY: 
 //  Create an array'
@@ -546,7 +547,7 @@ console.log(mySchedule.length) // 15 length
 
 // The loop will go from the first index of the array to the last index value. 
 
-for (let index = 0; index <= mySchedule.length-1; index ++ ){
+for (let index = 0; index <= mySchedule.length - 1; index++) {
   mySchedule[index]; // this will access the value of the index in the array
 
   console.log(index); // its going to display all the index of the values. 
@@ -554,40 +555,33 @@ for (let index = 0; index <= mySchedule.length-1; index ++ ){
 
 // Short form
 let nice = 0; // accumulator: find the total indexes 
-for(let i = 0; i < mySchedule.length; i++){
-  const values = mySchedule[i]; 
+for (let i = 0; i < mySchedule.length; i++) {
+  const values = mySchedule[i];
   console.log(values)
 }
 
 // store the to do list 
 let todoListHtml = ''; // accumulator pattern 
-for(let i = 0; i < mySchedule.length; i++){
-    const todo = mySchedule[i]; 
-    // create a html element to hold the list 
-    const pElement = `<li> ${todo}</li>`; 
-   const li =  todoListHtml += pElement; 
-   document.querySelector('.js-list').innerHTML = li
-  
-  }
+for (let i = 0; i < mySchedule.length; i++) {
+  const todo = mySchedule[i];
+  // create a html element to hold the list 
+  const pElement = `<li> ${todo}</li>`;
+  const li = todoListHtml += pElement;
+  document.querySelector('.js-list').innerHTML = li
 
-  // console.log(todoListHtml); 
+}
 
+// console.log(todoListHtml); 
 
-
-
-
-
-
-
-const myNumbers = [2,4,6]; 
-for (let index = 0; index <= myNumbers.length-1; index ++){
- const showValue= myNumbers[index]; // this will access the value of the index in the array increased by 2
+const myNumbers = [2, 4, 6];
+for (let index = 0; index <= myNumbers.length - 1; index++) {
+  const showValue = myNumbers[index]; // this will access the value of the index in the array increased by 2
   console.log(showValue); // its going to display all the values in the array
 }
 
 // Short form
-for(let i = 0; i < myNumbers.length; i++){
-  const values = myNumbers[i]; 
+for (let i = 0; i < myNumbers.length; i++) {
+  const values = myNumbers[i];
   console.log(values);
 }
 
@@ -599,14 +593,90 @@ for(let i = 0; i < myNumbers.length; i++){
 
 */
 // Find the total of the array. 
-const numbs= [3,5,6,7]; 
+const numbs = [3, 5, 6, 7];
 let total = 0; // The variable that stores the results.(accumulating the results into the variable)
-for(let i = 0; i <numbs.length;i ++){
+for (let i = 0; i < numbs.length; i++) {
   const num = numbs[i]
   // total = total + num
-  total += num; 
+  total += num;
 }
-console.log(total); 
+console.log(total);
+
+
+/* Test the work
+  // const new_h1 = document.body.innerHTML = 'SHERLYNE SUCKS '; 
+  // console.log(new_h1); 
+  // // Create the array of all the list that we need to do. 
+
+STEPS (ALGORITHM)
+  1. Create an empty array to store the to do list 
+  2. When we click add, 
+  3. Get text from textbox(input)
+  4. Add it to array 
+  5. Console.log()the array or return them
+
+
+// SECOND TODO2 : LOOPS INCLUDED
+// display the schedule list 
+// call the display function 
+
+const mySchedule =  ['Code','Run']
+function displayList(){ 
+  let todoListHtml = ''; // accumulator pattern 
+
+  // LOOP 
+    for(let i = 0; i< mySchedule.length; i++){
+      const todo= mySchedule[i]; 
+      // create a html element to hold the list 
+      const htmlElement= `<li> ${todo}</li>`; 
+       //todoListHtml += htmlElement;
+
+    }
+
+    document.querySelector('.js-list-here').innerHTML = todoListHtml;
+
+  };
+
+ // FIRST TODO1. 
+  // 1. Create an Empty Array to store the todo list 
+  const empty_list = []; 
+  // const new_list = empty_list.push('Mary')
+  // console.log(empty_list)
+  // console.log(empty_list.push("sherlyne")); // adds a value at the end of an array : Use the Push
+  // console.log(empty_list.unshift("tiger")); // add at the start/beginning 
+  // console.log(empty_list);
+  
+  function addList(){ 
+      // The user input using the DOM. 
+      const user_Input = document.querySelector(".js-user-input");
+      const the_Input = user_Input.value; 
+      // console.log(the_Input); 
+      // 2. Push the user_input into the empty array 
+      // take the empty array and push the user input 
+      empty_list.push(the_Input); // adds at the end of array
+        // empty_list.unshift(the_Input); adds at the start 
+        //Return the new list
+      console.log(empty_list)// This will return all the values that have been added to the array 
+
+      // reset the input value text box : make it equal to a string
+      user_Input.value =''; 
+
+       for(let i = 0; i< mySchedule.length; i++){
+        const schedule = mySchedule[i]; 
+        empty_list.push(mySchedule)
+      }
+      // console.log the results 
+      console.log(empty_list); 
+  };
+    
+      // we are going to show/display and run the list too.  
+  };
+
+  // every time we add 
+  */
+
+
+
 
 
 
