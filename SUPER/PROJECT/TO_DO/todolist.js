@@ -1,21 +1,31 @@
 /*
 STEPS (ALGORITHM)
  1. Create an empty array to store the to do list 
- 2. When we click add, 
+ 2. When we click Add button the value is added to the array: (array.push)
  3. Get text from textbox(input)
  4. Add it to the empty array. 
  5. Console.log()the array or return them
  6.Display the schedule list on the website 
   */
 
-// SECOND TODO2 : LOOPS INCLUDED
+ const emptyArray = [];
+//FIRST TODO1: 
+function addList() {
+  // input 
+  const user_Input = document.querySelector(".js-user-input");
+  const input_name = user_Input.value;
+  emptyArray.push(input_name);
+  console.log(emptyArray) // return the list
+  user_Input.value = ''; // resets the input value 
+ 
+}
 
+// SECOND TODO2 : LOOPS INCLUDED
 const mySchedule = ['Make bed', 'Shower'] // empty array
 renderTodoList();
 
 function renderTodoList() {
   let todoListHtml = ''; // accumulator pattern 
-
   // LOOP through the schedule 
   for (let i = 0; i < mySchedule.length; i++) {
     const todo = mySchedule[i];
@@ -28,10 +38,9 @@ function renderTodoList() {
   document.querySelector('.js-list-here').innerHTML = todoListHtml;
 }
 
-
-function addList() {
+function mainList() {
   // input 
-  const user_Input = document.querySelector(".js-user-input");
+  const user_Input = document.querySelector(".js-main-user-input");
   const input_name = user_Input.value;
   mySchedule.push(input_name);
   console.log(mySchedule) // return the list
@@ -41,6 +50,36 @@ function addList() {
 
 }
 
+// THIRD TODO3 : LOOPS INCLUDED
 
+const mySchedule3 = ['Create video', 'Make Dinner']
+addAndDeleteButton(); // Run the function
+
+function addAndDeleteButton() {
+  let todoListHtml = ''; // accumulator pattern 
+  // LOOP through the schedule 
+  for (let i = 0; i < mySchedule3.length; i++) {
+    const todo = mySchedule3[i];
+    // create a html element to hold the list 
+    const html = `<p>${todo}</p>`;
+    todoListHtml += html; // add to the variable todoList
+  }
+  console.log(todoListHtml);
+
+  document.querySelector('.js-delete-add-list').innerHTML = todoListHtml;
+}
+
+
+function mainAddDeleteButton() {
+  // input 
+  const user_Input = document.querySelector(".js-user-delete-add");
+  const input_name = user_Input.value;
+  mySchedule3.push(input_name);
+  console.log(mySchedule3) // return the list
+  user_Input.value = ''; // resets the input value 
+  // Every time we add a todolist, we are also going to display the list again
+  addAndDeleteButton();
+
+}
 
 

@@ -548,14 +548,130 @@ function inputUp(){
 }
 
 
+// LESSON 11: ARRAY AND LOOPS 
+
+// 11a. 
+const nums = [10,20,30]; 
+console.log(nums.reverse())
+
+nums[2]= 99; 
+console.log(nums); // [10, 20, 99]
+
+//11b 
+// const array = []; 
+function getLastValue(array){
+   const lastArray = array.splice(-1); // or 
+   // const lastArray = array.splice(4,1)
+   return lastArray;
+}
+console.log(getLastValue(['hi', 'hello', 'good']))
+
+//11c. array and returns an array switched position
+
+function arraySwap(array){
+    const swap = array.reverse();
+    return swap; 
+}
+console.log(arraySwap(['hi', 'hello', 'good'])) // ['good', 'hello', 'hi']
+console.log(arraySwap([1,20,22,24,5])) // [5, 24, 22, 20, 1]
 
 
+/*
+    11d. Create a for loop that counts up from 0 to 10 but counts up by 2. (0,2,4....,8,10)
+
+    11e. Create a for loop that counts down from 5 to 0. 
+
+    11f. Do exercise 11d and 11e but using while loops. 
+    */ 
+
+// 11d for loop 
+for(i=0; i<11; i+=2){
+    console.log(i)
+}
+
+// 11f. while loop 
+let y = 0; 
+while(y<10){
+    y+=2;
+    console.log(y);
+}
+
+//11e.  (5 to 0. )
+// for(i=5; i<=0; i=-1){
+//     console.log('what')
+// }
+
+//11g While loop. 
+let z=0; 
+while(z<=5){
+    console.log(z)
+    z++; 
+}
+
+// 11h. Add one to the array. addOne([1,2,3])=>[2,3,4], addOne([-2,-1,0,99])=>[-1,0,1,100]
+
+function addOne(array){
+    for(let i = 0; i < array.length; i++) {
+        const values = array[i]+1;
+        console.log(values); }
+};
+
+console.log(addOne([1,2,3])); //[2,3,4] however it's undefined. 
+console.log(addOne([-2,-1,0,99])); //[-1,0,1,100] // it's undefined 
+
+// 11i. Add a number to the array. 
+function addNum(array, num){
+    for(let i = 0; i < array.length; i++) {
+        const values = array[i]+ num;
+        console.log(values); }
+};
+
+console.log(addNum([1,2,3], 2)) // [3,4,5]
+console.log(addNum([1,2,3], 3)) // [4,5,6]
+// console.log(addNum([-2,-1,0,99],2)) // [0,1,2,101]
+
+// 11j. take two arrays and add each number together 
+// function addArray(array1, array2){
+//     for(i=0; i<=(array1.length && i<=array1.length); i++){
+//         const arr =(array1[i]) + (array2[i]); 
+//         console.log(arr);
+//     }
+// }
+
+// console.log(addArray([1,1,2]),[1,1,3]); //[2,2,5] // undefined
+// console.log(addArray([1,2,3]),[4,5,6]); //[5,7,9] // undefined 
+
+// 11k.return how many numbers are greater than 0; 
+function countPositive(nums){
+    numb = 0; 
+    for(i=0; i<nums.length; i++){
+        const arr = nums[i].length > 0;
+        
+        console.log(arr)
+    }
+        
+}
+countPositive([[1,-3,5]])
+// console.log(countPositive([1,-3,5])) // 
+
+const numm= [1,-3,5]
+const me = numm.length;
+if (numm[i]>0){
+    k= numm.length;
+    console.log(k);
+}
+console.log(me>0)
+
+for(i=0; i<numm.length; i++){
+        const arr = numm[i]>0;
+        if(numm[i]>0){
+            console.log(arr.length);
+        }
+    console.log(arr.length)
+    }
 
 
-
-
-
-
+    
 
 
 

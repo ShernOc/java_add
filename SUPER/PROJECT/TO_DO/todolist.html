@@ -7,9 +7,9 @@
 </head>
 <body>
   <div class="todo1">
-    <p>To do list comes here and an Image</p>
+    <h2>CREATE AN ARRAY OF TODO LIST </h2>
     <h2>My To do list practice 1 </h2>
-    <input id="user_life" placeholder="Todo name"  type="text" class="js-user-input">
+    <input id="user_input" placeholder="Todo name"  type="text" class="js-user-input">
   
     <button onclick="addList()"> Add </button>
 </p>
@@ -18,12 +18,11 @@
 
 <!-- To do list display  -->
   <div class="todo2"> 
-    <h2>My To do list practice 2 </h2>
-  <p>To do list comes here and an Image</p>
-  
-    <input id="user_life" placeholder="Todo name"  type="text" class="js-user-input">
+    <h2>TO DO LIST DISPLAY ON THE WEBSITE  </h2>
 
-    <button onclick="addList()"> Add </button>
+    <input id="user_info placeholder="Todo name"  type="text" class="js-main-user-input">
+
+    <button onclick="mainList()"> Add </button>
 
     <p><b>Display The list of items below</b></p>
    
@@ -34,17 +33,19 @@
 <hr>
 <!-- Done button  -->
   <div class="todo3">
-    <h2>My To do list practice 3 </h2>
-  <p>To do list comes here and an Image</p>
+    <h2>TO DO LIST WITH BUTTON</h2>
+
+    <input id="delete_add" placeholder="Todo name"  type="text" class="js-user-delete-add">
   
-    <input id="user_life" placeholder="Todo name"  type="text" class="js-user-input">
-  
-    <button onclick="addList()"> Add </button>
+    <button onclick="mainAddDeleteButton()"> Add </button>
+
+    <p><b>Display The list of items below with a delete and add button, </b></p>
+   
+    <div class="js-delete-add-list"></div>
+
     <p>Add a <b>Done button </b> close the task so that once done you can click add and it's remove/delete button</b>
 </p>
-
   </div>
-  
 </body>
 
 <script src="todolist.js"></script>

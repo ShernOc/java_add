@@ -522,7 +522,7 @@ for (let y = 1; y <= 10; y++) {
 let z = 3; // variable loop
 while (z <= 10) { // condition loop
   // run this code
-  console.log(i) // Run this/code 
+  console.log(z) // Run this/code 
   // increase the variable by 1 (increment loop)
   z = z + 1;
 }
@@ -594,6 +594,7 @@ for (let i = 0; i < myNumbers.length; i++) {
 */
 // Find the total of the array. 
 const numbs = [3, 5, 6, 7];
+console.log(numbs)
 let total = 0; // The variable that stores the results.(accumulating the results into the variable)
 for (let i = 0; i < numbs.length; i++) {
   const num = numbs[i]
