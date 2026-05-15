@@ -551,13 +551,13 @@ function inputUp(){
 // LESSON 11: ARRAY AND LOOPS 
 
 // 11a. 
-const nums = [10,20,30]; 
-console.log(nums.reverse())
+const arrayNumbers= [10,20,30]; 
+console.log(arrayNumbers.reverse())
 
-nums[2]= 99; 
-console.log(nums); // [10, 20, 99]
+arrayNumbers[2]= 99; 
+console.log(arrayNumbers); // [10, 20, 99]
 
-//11b 
+//11b. 
 // const array = []; 
 function getLastValue(array){
    const lastArray = array.splice(-1); // or 
@@ -609,58 +609,67 @@ while(z<=5){
 }
 
 // 11h. Add one to the array. addOne([1,2,3])=>[2,3,4], addOne([-2,-1,0,99])=>[-1,0,1,100]
-
 function addOne(array){
+    let store = []; // store the new array 
+    // created the empty array to store the number 
     for(let i = 0; i < array.length; i++) {
-        const values = array[i]+1;
-        console.log(values); }
+        const values = array[i];
+        // take the empty array and store/add values
+        store.push(values+1)}; 
+        return store; 
 };
-
-console.log(addOne([1,2,3])); //[2,3,4] however it's undefined. 
-console.log(addOne([-2,-1,0,99])); //[-1,0,1,100] // it's undefined 
+    console.log(addOne([1,2,3])); //[2,3,4] however it's undefined. 
+    console.log(addOne([-2,-1,0,99])); //[-1,0,1,100] // it's undefined 
 
 // 11i. Add a number to the array. 
 function addNum(array, num){
-    for(let i = 0; i < array.length; i++) {
-        const values = array[i]+ num;
-        console.log(values); }
-};
+    const addNumber = [];
+    for(let i = 0; i<array.length; i++) {
+        const values = array[i];
+        addNumber.push(values + num);
+    }
+    return addNumber;
+}
 
-console.log(addNum([1,2,3], 2)) // [3,4,5]
+console.log(addNum([1,2,3], 2)) // [3,4,5] 
 console.log(addNum([1,2,3], 3)) // [4,5,6]
-// console.log(addNum([-2,-1,0,99],2)) // [0,1,2,101]
+console.log(addNum([-2,-1,0,99],2)) // [0,1,2,101]
 
-// 11j. take two arrays and add each number together 
-// function addArray(array1, array2){
-//     for(i=0; i<=(array1.length && i<=array1.length); i++){
-//         const arr =(array1[i]) + (array2[i]); 
-//         console.log(arr);
-//     }
-// }
 
-// console.log(addArray([1,1,2]),[1,1,3]); //[2,2,5] // undefined
-// console.log(addArray([1,2,3]),[4,5,6]); //[5,7,9] // undefined 
+// 11j. take two arrays and add each number together/ sum them 
+
+function addArray(array1, array2){
+    const addA =[]; // store the array
+    for(let i=0; i< array1.length; i++){
+        addA.push(array1[i] + array2[i]); 
+    }; 
+    return addA; 
+}
+
+console.log(addArray([1, 1, 2], [1, 1, 3])); //[2,2,5] 
+console.log(addArray( [1, 2, 3], [1, 2, 3]))// [2,4,6]
+console.log(addArray([1, 2, 3], [4, 5, 6])); //[5,7,9] 
+
+// Another Formula two: 
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+let sumArray = arr1.map((value, index) => value + arr2[index]);
+console.log(sumArray);
+
 
 // 11k.return how many numbers are greater than 0; 
 function countPositive(nums){
-    numb = 0; 
+    let numb = [];
     for(i=0; i<nums.length; i++){
-        const arr = nums[i].length > 0;
-        
-        console.log(arr)
-    }
-        
+        const arr = nums[i];
+        numb.push(nums>0);
+    };
+    return numb;
 }
+
 countPositive([[1,-3,5]])
 // console.log(countPositive([1,-3,5])) // 
 
-const numm= [1,-3,5]
-const me = numm.length;
-if (numm[i]>0){
-    k= numm.length;
-    console.log(k);
-}
-console.log(me>0)
 
 for(i=0; i<numm.length; i++){
         const arr = numm[i]>0;
@@ -669,10 +678,3 @@ for(i=0; i<numm.length; i++){
         }
     console.log(arr.length)
     }
-
-
-    
-
-
-
-

@@ -677,6 +677,54 @@ function displayList(){
   */
 
 
+// Loop through an array2
+
+const toDo = ['Pray','Google_class', 'Run/Walk', 'Shower', 'Code', 'Write', 'Lunch', 'Job application', 'Youtube', 'Walk', 'Dinner', 'Movie', 'Write', 'Knit', 'Sleep']
+
+for(let i=0 ; i<=toDo.length; i++){
+  const eachValue = toDo[i];
+  console.log(eachValue);
+}; 
+
+const dig = [1,1,3]
+// to calculate the total of numbers
+let total3 = 0; 
+for(let i=0; i< dig.length;i++){
+  const numb =dig[i];
+  // add each number to the total 
+  total3+= numb; 
+}
+console.log(total3); 
+
+// Where an array is doubled 
+// 1. create a variable to store the results/ empty arry
+//2. loop through the array and update the result
+
+
+const doubelDig = []; //
+for(let i =0; i <dig.length; i++){
+  const double = dig[i];
+  // take the empty array and push, add the array
+  doubelDig.push(double*2)}
+  
+  console.log(doubelDig); // 
+
+
+function addOne(array){
+    const store = [];
+    // created the empty array to store the number 
+    for(let i = 0; i <array.length; i++) {
+      const values = array[i];
+      // take the empty array and store/add values
+      store.push(values+1);}
+
+      console.log(store); 
+};
+
+console.log(addOne([1,2,3])); //[2,3,4] however it's undefined. 
+console.log(addOne([-2,-1,0,99])); //[-1,0,1,100] // it's undefined 
+
+ 
 
 
 

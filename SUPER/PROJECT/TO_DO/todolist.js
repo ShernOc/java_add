@@ -60,7 +60,7 @@ function addAndDeleteButton() {
   // LOOP through the schedule 
   for (let i = 0; i < mySchedule3.length; i++) {
     const todo = mySchedule3[i];
-    // create a html element to hold the list 
+    // create a html element code to hold the list 
     const html = `<p>${todo}</p>`;
     todoListHtml += html; // add to the variable todoList
   }
@@ -81,5 +81,7 @@ function mainAddDeleteButton() {
   addAndDeleteButton();
 
 }
+
+
 
 
