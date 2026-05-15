@@ -658,23 +658,23 @@ console.log(sumArray);
 
 
 // 11k.return how many numbers are greater than 0; 
-function countPositive(nums){
-    let numb = [];
-    for(i=0; i<nums.length; i++){
-        const arr = nums[i];
-        numb.push(nums>0);
-    };
-    return numb;
-}
-
-countPositive([[1,-3,5]])
-// console.log(countPositive([1,-3,5])) // 
-
-
-for(i=0; i<numm.length; i++){
-        const arr = numm[i]>0;
-        if(numm[i]>0){
-            console.log(arr.length);
+function countPositive(array){
+    let count = 0; // stores the numbers.
+    for(let i=0; i<array.length; i++){ // loops through each values
+        if(array[i]>0){ // if each value is greater than 0, 
+            count++; 
         }
-    console.log(arr.length)
     }
+    return count;
+
+
+
+       
+    };
+
+console.log(countPositive([5, -1, 6]));// 2
+console.log(countPositive([1, -3, 5])) // 2
+console.log(countPositive([-2, 3,-5,7,10])) // 3
+
+
+
