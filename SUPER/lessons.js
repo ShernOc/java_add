@@ -666,10 +666,6 @@ function countPositive(array){
         }
     }
     return count;
-
-
-
-       
     };
 
 console.log(countPositive([5, -1, 6]));// 2
