@@ -488,7 +488,6 @@ console.log(JoinLif)
 
 
 // LOOPS: 
-
 // This one displays what we have added to the page: 
 //LOOPS 
 // Loops will keep going over and over

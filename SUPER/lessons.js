@@ -549,7 +549,6 @@ function inputUp(){
 
 
 // LESSON 11: ARRAY AND LOOPS 
-
 // 11a. 
 const arrayNumbers= [10,20,30]; 
 console.log(arrayNumbers.reverse())
@@ -557,7 +556,7 @@ console.log(arrayNumbers.reverse())
 arrayNumbers[2]= 99; 
 console.log(arrayNumbers); // [10, 20, 99]
 
-//11b. 
+//11b.  get an array return the last value
 // const array = []; 
 function getLastValue(array){
    const lastArray = array.splice(-1); // or 
@@ -567,7 +566,6 @@ function getLastValue(array){
 console.log(getLastValue(['hi', 'hello', 'good']))
 
 //11c. array and returns an array switched position
-
 function arraySwap(array){
     const swap = array.reverse();
     return swap; 
@@ -576,17 +574,34 @@ console.log(arraySwap(['hi', 'hello', 'good'])) // ['good', 'hello', 'hi']
 console.log(arraySwap([1,20,22,24,5])) // [5, 24, 22, 20, 1]
 
 
-/*
-    11d. Create a for loop that counts up from 0 to 10 but counts up by 2. (0,2,4....,8,10)
-
-    11e. Create a for loop that counts down from 5 to 0. 
-
-    11f. Do exercise 11d and 11e but using while loops. 
-    */ 
-
-// 11d for loop 
-for(i=0; i<11; i+=2){
+//11d. Create a for loop that counts up from 0 to 10 but counts up by 2. (0,2,4....,8,10)
+let i = 2
+while(i<=10){
     console.log(i)
+    i+=2;
+}
+
+//11e. Create a for loop that counts down from 5 to 0. 
+let i = 5
+while(i>=0){
+    console.log(i)
+    i-=1;
+}
+
+
+// 11f. Do exercise 11d and 11e but using while loops. 
+// 11d while loop 
+let i = 2
+while(i<=10){
+    console.log(i)
+    i=i+2;
+}
+
+// 11d for while loop 
+let i = 5
+while(i>=0){
+    console.log(i)
+    i-=1;
 }
 
 // 11f. while loop 
