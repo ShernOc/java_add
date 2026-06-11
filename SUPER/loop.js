@@ -48,16 +48,13 @@ function addTodoList2(){
    inputElement.value =''; // returns an empty list again 
 }
 
-
 // LOOP while the condition is true keep running the code. 
 //WHILE LOOP
 /* let i = 3 // loop variable 
 while(loop condition is true){
 run this code(loop body)
 i=i+1; increment step
-
 }
-
 */
 
 // let i=2; // Make the variable i and its equal to one 
@@ -72,6 +69,23 @@ while(i>=0){
     console.log(i)
     i-=1;
 }
+
+let y = 1; // create a variable
+while(y<=10){ // if condition is true the code will continuously run 
+  console.log(y) 
+  y= y+1; // increase the index value by one, two or three( run the code 10 times)
+}
+
+// FOR LOOP 
+
+
+
+
+
+
+
+
+
 
 
 
