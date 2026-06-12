@@ -70,13 +70,73 @@ while(i>=0){
     i-=1;
 }
 
+
 let y = 1; // create a variable
-while(y<=10){ // if condition is true the code will continuously run 
-  console.log(y) 
+while(y<=10){ // if condition is true the code will continuously run (loop condition)
+  console.log(y) // (loop body)
   y= y+1; // increase the index value by one, two or three( run the code 10 times)
 }
 
 // FOR LOOP 
+for(let z=5; z>=0; z-=1){
+  console.log(z)
+}
+
+
+let randNumber = 0; 
+while(randNumber > 0.5){
+  randNumber = Math.random(); 
+}
+
+console.log(randNumber)
+
+
+function randomNumber(){
+    const randomNumber = Math.random()
+    let computerMove = '';
+
+    if(randomNumber >= 0 && randomNumber<1/3){
+         computerMove = 'Rock';
+    }else if (randomNumber>=1/3 && randomNumber<2/3 ){
+        computerMove ='Paper';
+    }else if(randomNumber>= 2/3 && randomNumber < 1){
+        computerMove = 'Scissor';
+    }
+    
+    return computerMove; 
+}
+
+// try to use the while loop to create a random number: 
+
+// functions using the while loop in rock paper
+// Question can you have conditional operators in a while loop?
+function whileLoop(){
+  let randoNum = Math.random()
+  let comp ='';
+  while(randoNum >=0 && randoNum <1/3){
+    comp = 'rock'; 
+  }
+   while(randoNum >=1/3 && randoNum <2/3){
+    comp = 'paper'; 
+  }
+   while(randoNum >= 2/3 && randoNum <1){
+    comp = 'scissors'; 
+  }
+
+  return comp;
+
+  console.log(randoNum)
+}
+console.log(whileLoop())
+
+
+
+
+
+
+
+
+
 
 
 

@@ -278,7 +278,6 @@ console.log(convertBothFahrenheitAndCelsius(90));
 
 
 // MISSELENOUS: 
-
 // How i spend the money
 const bank = 100; 
 const lunch = 20;
@@ -386,6 +385,8 @@ if(score === null ){
 
     // update the score ; 
 updateScore(); 
+
+
  
 function randomNumber(){
     const randomNumber = Math.random()
@@ -401,6 +402,8 @@ function randomNumber(){
     
     return computerMove; 
 }
+
+
 
 console.log(randomNumber()) // returns the random object , rock, paper, or scissor
 
@@ -491,9 +494,7 @@ function amazonShip(order){
 
     const display = document.querySelector('.js-total-cost').innerHTML =` Total: $${cost}`; 
     return display; 
-
 }
-
 
 // DOM LESSON 
  
@@ -575,59 +576,42 @@ console.log(arraySwap([1,20,22,24,5])) // [5, 24, 22, 20, 1]
 
 
 //11d. Create a for loop that counts up from 0 to 10 but counts up by 2. (0,2,4....,8,10)
+
+for(i=2; i<10; i+=2){
+    console.log(i)
+}
+
+
+//11e. Create a for loop that counts down from 5 to 0. 
+for(i=5; i>=0; i-=1){
+    console.log(i)
+}
+
+// 11f. Do exercise 11d and 11e but using while loops. 
 let i = 2
 while(i<=10){
     console.log(i)
     i+=2;
 }
 
-//11e. Create a for loop that counts down from 5 to 0. 
-let i = 5
-while(i>=0){
-    console.log(i)
-    i-=1;
-}
-
-
-// 11f. Do exercise 11d and 11e but using while loops. 
-// 11d while loop 
-let i = 2
-while(i<=10){
-    console.log(i)
-    i=i+2;
-}
-
-// 11d for while loop 
-let i = 5
-while(i>=0){
-    console.log(i)
-    i-=1;
-}
-
-// 11f. while loop 
-let y = 0; 
-while(y<10){
+let y = 10; 
+while(y>0){
     y+=2;
     console.log(y);
 }
 
-//11e.  (5 to 0. )
-// for(i=5; i<=0; i=-1){
-//     console.log('what')
-// }
-
-//11g While loop. 
-let z=0; 
-while(z<=5){
-    console.log(z)
-    z++; 
+let i = 5
+while(i>=0){
+    console.log(i)
+    i-=1;
 }
+
 
 // 11h. Add one to the array. addOne([1,2,3])=>[2,3,4], addOne([-2,-1,0,99])=>[-1,0,1,100]
 function addOne(array){
     let store = []; // store the new array 
     // created the empty array to store the number 
-    for(let i = 0; i < array.length; i++) {
+    for(let i = 0; i <= array.length; i++) {
         const values = array[i];
         // take the empty array and store/add values
         store.push(values+1)}; 
@@ -655,7 +639,7 @@ console.log(addNum([-2,-1,0,99],2)) // [0,1,2,101]
 
 function addArray(array1, array2){
     const addA =[]; // store the array
-    for(let i=0; i< array1.length; i++){
+    for(let i=0; i<= array1.length; i++){
         addA.push(array1[i] + array2[i]); 
     }; 
     return addA; 
@@ -686,6 +670,3 @@ function countPositive(array){
 console.log(countPositive([5, -1, 6]));// 2
 console.log(countPositive([1, -3, 5])) // 2
 console.log(countPositive([-2, 3,-5,7,10])) // 3
-
-
-
