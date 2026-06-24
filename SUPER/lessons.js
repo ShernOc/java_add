@@ -514,9 +514,7 @@ function headsTails(click){
 
 }
 
-
 //9d
-
 // HandleEvent 
 function handleNameKeyDown(event){
     if(event.key ==='Enter'){
@@ -537,17 +535,13 @@ function displayName(){
 
 function handleKeyup(event){
     if(event.key === 'up'){
-        inputUp();
-
-    }
+        inputUp();}
 }
 
 function inputUp(){
     const up = document.querySelector('.js-pup')
-
     up.value;
 }
-
 
 // LESSON 11: ARRAY AND LOOPS 
 // 11a. 
@@ -574,16 +568,14 @@ function arraySwap(array){
 console.log(arraySwap(['hi', 'hello', 'good'])) // ['good', 'hello', 'hi']
 console.log(arraySwap([1,20,22,24,5])) // [5, 24, 22, 20, 1]
 
-
 //11d. Create a for loop that counts up from 0 to 10 but counts up by 2. (0,2,4....,8,10)
 
-for(i=2; i<10; i+=2){
+for(let i=2; i<10; i+=2){
     console.log(i)
 }
 
-
 //11e. Create a for loop that counts down from 5 to 0. 
-for(i=5; i>=0; i-=1){
+for(let i=5; i>=0; i-=1){
     console.log(i)
 }
 
@@ -594,38 +586,41 @@ while(i<=10){
     i+=2;
 }
 
-let y = 10; 
-while(y>0){
-    y+=2;
-    console.log(y);
-}
+// let y = 10; 
+// while(y>=0){
+//     y+=2;
+//     console.log(y);
+// }
 
-let i = 5
-while(i>=0){
+let u = 5
+while(u>=0){
     console.log(i)
-    i-=1;
+    u-=1;
 }
 
+for(let z=5; z>=0; z-=1){
+  console.log(z)
+}
 
 // 11h. Add one to the array. addOne([1,2,3])=>[2,3,4], addOne([-2,-1,0,99])=>[-1,0,1,100]
 function addOne(array){
     let store = []; // store the new array 
     // created the empty array to store the number 
-    for(let i = 0; i <= array.length; i++) {
-        const values = array[i];
+    for(let i = 0; i <array.length; i++) {
+        const values = array[i] +1;
         // take the empty array and store/add values
-        store.push(values+1)}; 
+        store.push(values)}; 
         return store; 
 };
-    console.log(addOne([1,2,3])); //[2,3,4] however it's undefined. 
-    console.log(addOne([-2,-1,0,99])); //[-1,0,1,100] // it's undefined 
+    console.log(addOne([1,2,3])); //[2,3,4] 
+    console.log(addOne([-2,-1,0,99])); //[-1,0,1,100] 
 
 // 11i. Add a number to the array. 
 function addNum(array, num){
     const addNumber = [];
     for(let i = 0; i<array.length; i++) {
-        const values = array[i];
-        addNumber.push(values + num);
+        const values = array[i]+ num;
+        addNumber.push(values);
     }
     return addNumber;
 }
@@ -633,7 +628,6 @@ function addNum(array, num){
 console.log(addNum([1,2,3], 2)) // [3,4,5] 
 console.log(addNum([1,2,3], 3)) // [4,5,6]
 console.log(addNum([-2,-1,0,99],2)) // [0,1,2,101]
-
 
 // 11j. take two arrays and add each number together/ sum them 
 
@@ -655,7 +649,6 @@ let arr2 = [4, 5, 6];
 let sumArray = arr1.map((value, index) => value + arr2[index]);
 console.log(sumArray);
 
-
 // 11k.return how many numbers are greater than 0; 
 function countPositive(array){
     let count = 0; // stores the numbers.
@@ -670,3 +663,9 @@ function countPositive(array){
 console.log(countPositive([5, -1, 6]));// 2
 console.log(countPositive([1, -3, 5])) // 2
 console.log(countPositive([-2, 3,-5,7,10])) // 3
+
+
+
+
+
+

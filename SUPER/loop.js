@@ -64,6 +64,7 @@ i=i+1; increment step
 // }
 
 //Create a for loop that counts down from 5 to 0. hello please tengeneza. 
+
 let i=5; 
 while(i>=0){
     console.log(i)
@@ -83,51 +84,80 @@ for(let z=5; z>=0; z-=1){
 }
 
 
-let randNumber = 0; 
-while(randNumber > 0.5){
-  randNumber = Math.random(); 
-}
+// let randNumber = 0; 
+// while(randNumber > 0.5){
+//   randNumber = Math.random(); 
+// }
 
-console.log(randNumber)
+// console.log(randNumber)
 
 
-function randomNumber(){
-    const randomNumber = Math.random()
-    let computerMove = '';
+// function randomNumber(){
+//     const randomNumber = Math.random()
+//     let computerMove = '';
 
-    if(randomNumber >= 0 && randomNumber<1/3){
-         computerMove = 'Rock';
-    }else if (randomNumber>=1/3 && randomNumber<2/3 ){
-        computerMove ='Paper';
-    }else if(randomNumber>= 2/3 && randomNumber < 1){
-        computerMove = 'Scissor';
-    }
+//     if(randomNumber >= 0 && randomNumber<1/3){
+//          computerMove = 'Rock';
+//     }else if (randomNumber>=1/3 && randomNumber<2/3 ){
+//         computerMove ='Paper';
+//     }else if(randomNumber>= 2/3 && randomNumber < 1){
+//         computerMove = 'Scissor';
+//     }
     
-    return computerMove; 
+//     return computerMove; 
+// }
+
+// // try to use the while loop to create a random number: 
+
+// // functions using the while loop in rock paper
+// // Question can you have conditional operators in a while loop?
+// function whileLoop(){
+//   let randoNum = Math.random()
+//   let comp ='';
+//   while(randoNum >=0 && randoNum <1/3){
+//     comp = 'rock'; 
+//   }
+//    while(randoNum >=1/3 && randoNum <2/3){
+//     comp = 'paper'; 
+//   }
+//    while(randoNum >= 2/3 && randoNum <1){
+//     comp = 'scissors'; 
+//   }
+
+//   return comp;
+
+//   console.log(randoNum)
+// }
+// console.log(whileLoop())
+
+
+// Looping through an array(): going through each value of an array. 
+
+const todoList =[
+  'make dinner', 'clean dishes', 'make a code', 'make food']
+
+// use a for loop 
+for(let i = 0; i<= todoList.length-1 ; i+=1){
+  // for each index we can do something. 
+  // const me = todoList *2; 
+  // console.log(me); 
+  // [i] = index 
+  todoList[i] // this will access whats on that index: on each index. 
+  const value = todoList[i].toUpperCase();  // in each index make it uppercase 
+  console.log(value); 
+}
+const array = [3,4,5,6,7]
+// shortcut to loop through an array. 
+for(let i=0; i<array.length; i+=1){
+  const multiplyByTwo =  array[i]*2; 
+  console.log(multiplyByTwo)
 }
 
-// try to use the while loop to create a random number: 
 
-// functions using the while loop in rock paper
-// Question can you have conditional operators in a while loop?
-function whileLoop(){
-  let randoNum = Math.random()
-  let comp ='';
-  while(randoNum >=0 && randoNum <1/3){
-    comp = 'rock'; 
-  }
-   while(randoNum >=1/3 && randoNum <2/3){
-    comp = 'paper'; 
-  }
-   while(randoNum >= 2/3 && randoNum <1){
-    comp = 'scissors'; 
-  }
 
-  return comp;
 
-  console.log(randoNum)
-}
-console.log(whileLoop())
+
+
 
 
 
