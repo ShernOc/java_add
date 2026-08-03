@@ -27,7 +27,6 @@ Get text from text box
 Add it to array
 */
 
-
 // LOOP while the condition is true keep running the code. 
 
 // 1.  WHILE LOOP : Non-standard loop : used to generate Random numbers. 
@@ -42,7 +41,7 @@ while (i <= 50) {
 for (
   let i = 1;/* loop variable */
   i <= 5; /* loop condition*/
-  i += 1 /* loop increament */) {
+  i += 1 /* loop increment */) {
 
   /* loop body*/
   console.log(i)
@@ -51,6 +50,8 @@ for (
 for (i = 1; i <= 10; i += 2) {
   console.log('sherlyne is amazing')
 }
+
+
 
 //3. GENERATE RANDOM NUMBER: variable to store the random number 
 
@@ -191,7 +192,7 @@ console.log(numsDoubled) //  [4, 8, 10]
 // To do practice 1. 
 
 // create an accumulator to store the results 
-const emptyTodoList= ['clean dishes', 'make dinner' ]; 
+const emptyTodoList= ['workout', 'run' ]; 
 renderTodoList(); 
 
 function renderTodoList(){
@@ -204,8 +205,8 @@ function renderTodoList(){
       const html =`<ul><li>${todo}</li></ul>`; 
       todoListHtml += html; 
     }
-    console.log(todoListHtml); 
-
+    // console.log(todoListHtml); 
+    // DOM  display the website
     document.querySelector('.js-todo-list').innerHTML = todoListHtml; // will show the list into the document. 
 }
 
@@ -221,4 +222,52 @@ function addTodoList(){
 
 // Next create a remove button 
 // Store them properly: 
+
+// exercise
+// 11a. 
+const nums = [10,20,30]
+nums[2]=99
+console.log(nums) // [10,20,99]
+
+//11b. 
+function getLastValue(array){
+  const lastValue = array.splice(-1)
+  return lastValue;
+}
+console.log(getLastValue([34,56,45])) // [45]
+
+//11c
+function arraySwap(array){
+  const reverseArray= array.reverse();
+  return reverseArray;
+}
+console.log(arraySwap([34,56,45])); //[45, 56, 34]
+
+//11d. 
+
+for(let i=0; i<=10; i+=2){
+  console.log(i)
+}
+
+// 11e. countdown from 5 to 0
+for(let i=5; i>=0; i-=1){
+  console.log(i)
+}
+
+// llfd while loop
+let t=0;
+while(t<=10){
+  console.log(t)
+  t+=2;
+}
+
+//11fe
+let r=5;
+while(r>=0){
+  console.log(r);
+  i-=1
+}
+// 11g 8:42
+
+
 
