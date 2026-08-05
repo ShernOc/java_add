@@ -615,6 +615,7 @@ function addOne(array){
     console.log(addOne([1,2,3])); //[2,3,4] 
     console.log(addOne([-2,-1,0,99])); //[-1,0,1,100] 
 
+
 // 11i. Add a number to the array. 
 function addNum(array, num){
     const addNumber = [];
@@ -663,6 +664,24 @@ function countPositive(array){
 console.log(countPositive([5, -1, 6]));// 2
 console.log(countPositive([1, -3, 5])) // 2
 console.log(countPositive([-2, 3,-5,7,10])) // 3
+
+// Challenging 
+  // 11l: 
+  function minMax(nums){
+    for(let i=0; i<nums.length; i++){
+      if(nums[i]>nums[i]){
+        console.log(`min:${nums}`)
+      }else{
+        console.log(`min:${nums}`)
+      }
+      
+    }
+  }
+
+  console.log(minMax([1,-3,5]))
+  console.log(minMax([-2,3,7,10]))
+
+  
 
 
 

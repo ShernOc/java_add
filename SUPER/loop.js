@@ -223,51 +223,119 @@ function addTodoList(){
 // Next create a remove button 
 // Store them properly: 
 
-// exercise
-// 11a. 
-const nums = [10,20,30]
-nums[2]=99
-console.log(nums) // [10,20,99]
+// // exercise
+// // 11a. 
+// const nums = [10,20,30]
+// nums[2]=99
+// console.log(nums) // [10,20,99]
 
-//11b. 
-function getLastValue(array){
-  const lastValue = array.splice(-1)
-  return lastValue;
+// //11b. 
+// function getLastValue(array){
+//   const lastValue = array.splice(-1)
+//   return lastValue;
+// }
+// console.log(getLastValue([34,56,45])) // [45]
+
+// //11c
+// function arraySwap(array){
+//   const reverseArray= array.reverse();
+//   return reverseArray;
+// }
+// console.log(arraySwap([34,56,45])); //[45, 56, 34]
+
+// //11d. 
+
+// for(let i=0; i<=10; i+=2){
+//   console.log(i)
+// }
+
+// // 11e. countdown from 5 to 0
+// for(let i=5; i>=0; i-=1){
+//   console.log(i)
+// }
+
+// // llfd while loop
+// let t=0;
+// while(t<=10){
+//   console.log(t)
+//   t+=2;
+// }
+
+// //11fe
+// let r=5;
+// while(r>=0){
+//   console.log(r);
+//   i-=1
+// }
+
+// 11g  increase an array by one 
+function increaseOne(array){
+  let value = []; 
+  for(let i=0; i< array.length; i++){
+    const oneray = array[i]+1;
+    value.push(oneray);
+  }
+  return value;
 }
-console.log(getLastValue([34,56,45])) // [45]
+ console.log(increaseOne([20,56,34])); //[21,57,35] 
 
-//11c
-function arraySwap(array){
-  const reverseArray= array.reverse();
-  return reverseArray;
-}
-console.log(arraySwap([34,56,45])); //[45, 56, 34]
 
-//11d. 
+// 11i
+function addOneNum(array,num){
+    let store = []; // store the new array 
+    // created the empty array to store the number 
+    for(let i = 0; i <array.length; i++) {
+        const values = array[i] + num;
+        // take the empty array and store/add values
+        store.push(values)}; 
+        return store; 
+};
+    console.log(addOneNum([45,67,34],4)); //[49, 71, 38]
 
-for(let i=0; i<=10; i+=2){
-  console.log(i)
-}
+// 11j
+function addArrays(array1,array2,){
+    let numA = []; // store the new array 
+    // created the empty array to store the number 
+    for(let i = 0; i <array1.length; i++) {
+        const values = array1[i] + array2[i];
+        // take the empty array and store/add values
+        numA.push(values)}; 
+        return numA; 
+};
+    console.log(addArrays([45,67,34],[20,56,34])); //[49, 71, 38]
 
-// 11e. countdown from 5 to 0
-for(let i=5; i>=0; i-=1){
-  console.log(i)
-}
+// 11k returns how many are greater than one
+  function countPositive(nums){
+    let count = 0; 
+    for(let i=0; i<nums.length; i++){
+      if(nums[i]>0){
+        count ++;
+      }
+    }
+    return count;
+  }
+  console.log(countPositive([45,-9,2]))// 2
+  console.log(countPositive([-2,3,-5,7,10]))// 3
 
-// llfd while loop
-let t=0;
-while(t<=10){
-  console.log(t)
-  t+=2;
-}
+  // Challenging 
+  // 11l: 
+  function minMax(nums){
+    for(let i=0; i<nums.length; i++){
+      if(nums[i]>nums[i]){
+        console.log(`min:${nums}`)
+      }else{
+        console.log(`min:${nums}`)
+      }
+      
+    }
+  }
 
-//11fe
-let r=5;
-while(r>=0){
-  console.log(r);
-  i-=1
-}
-// 11g 8:42
+  console.log(minMax([1,-3,5]))
+  console.log(minMax([-2,3,7,10]))
 
+
+
+
+    
 
 
