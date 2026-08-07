@@ -1,3 +1,4 @@
+// ARRAY AND LOOPS
 //Array is a list of values in a bracket 
 const myArray = [12,13,"sherlyne", 78]
 console.log(myArray[2]) // will return the value of the index 2 which is the position. 
@@ -20,6 +21,18 @@ myArray.splice(-2)
 myArray.splice(1)
 console.log(myArray)
 
+
+//CALCULATE THE SUM: 
+
+const prices = [19.99, 25.50, 12.75]
+const totals = prices.reduce((totals, price) => totals + price, 0)
+console.log(totals); // Result: 58.24
+
+// Calculate total sum
+const Sums= [5, -1, 6];
+const totalSum= Sums.reduce((totalSum,sumarray) => totalSum+ sumarray,0);
+console.log(totalSum); // 10
+
 // Algorithm
 /* Create an array to store todos 
 When we click 'ADD' we call it in the button element
@@ -27,43 +40,13 @@ Get text from text box
 Add it to array
 */
 
+// WHILE AND FOR LOOP
 // LOOP while the condition is true keep running the code. 
 
 // 1.  WHILE LOOP : Non-standard loop : used to generate Random numbers. 
-let i = 1;
-while (i <= 50) {
-  console.log(i)
-  i += 1.
-}
-
-// 2. FOR LOOP : Used for standard loop. shorter and more organized
-
-for (
-  let i = 1;/* loop variable */
-  i <= 5; /* loop condition*/
-  i += 1 /* loop increment */) {
-
-  /* loop body*/
-  console.log(i)
-}
-
-for (i = 1; i <= 10; i += 2) {
-  console.log('sherlyne is amazing')
-}
-
-
-
-//3. GENERATE RANDOM NUMBER: variable to store the random number 
-
-let randomNumber = 0;
-/* We are going to keep running the loop until the number is 0.5, the loop will end */
-while (randomNumber < 0.5) {
-  randomNumber = Math.random();
-  console.log(randomNumber);
-}
 
 //WHILE LOOP
-/* let i = 3 // loop variable 
+/* let i = 1 // loop variable 
 while(loop condition is true){
 run this code(loop body)
 i=i+1; increment step
@@ -75,34 +58,54 @@ i=i+1; increment step
 //   console.log(i)
 // i += 2 ; // we will increase the index by one 
 // }
-
-//Create a for loop that counts down from 5 to 0. hello please tengeneza. 
-
-let u=5; 
-while(u>=0){
-    console.log(i)
-    u-=1;
-}
-
-
+ // EXAMPLE 1 
 let y = 1; // create a variable
 while(y<=10){ // if condition is true the code will continuously run (loop condition)
   console.log(y) // (loop body)
   y= y+1; // increase the index value by one, two or three( run the code 10 times)
 }
 
-// FOR LOOP 
+//Example: Create a for loop that counts down from 5 to 0. hello 
+let u=5; 
+while(u>=0){
+    console.log(u)
+    u-=1;
+} // 5,4,3,2,1 0 
+
+let i = 1;
+while (i<=5) {
+  console.log(i)
+  i += 1.
+} // 1,2,3,4,5,
+
+// 2. FOR LOOP : Used for standard loop. shorter and more organized
+
+for (
+  let i = 1;/* loop variable */
+  i <= 5; /* loop condition*/
+  i += 1 /* loop increment */) {
+
+  /* loop body*/
+  console.log(i)
+} // 1,2,3,4,5,
+
+for (i = 1; i <= 10; i += 2) {
+  console.log('sherlyne is amazing')
+} //'sherlyne is amazing'
+
 for(let z=5; z>=0; z-=1){
   console.log(z)
-}
+} // 5,4,3,2,1 0 
 
-const todoList3 = ['clean shoes']
-// Looping through an array 
-for (i = 0; i < todoList3.length; i++) // they are the same
-for (index = 0; index <= todoList3.length - 1; index++) {
-    const value = todoList3[index] // access the index of the value (in each index )
-    console.log(value); // do something in each value 
-  }
+//3. GENERATE RANDOM NUMBER: variable to store the random number 
+// try to use the while loop to create a random number: 
+
+let randomNumber = 0;
+/* We are going to keep running the loop until the number is 0.5, the loop will end */
+while (randomNumber < 0.5) {
+  randomNumber = Math.random();
+}
+console.log(randomNumber);
 
 //4.  ACCUMULATOR PATTERN 
 // accumulator pattern used in looping through an array. 
@@ -139,59 +142,17 @@ for (let i =0; i< mynum.length; i++){
 }
 console.log(numsDoubled) //  [4, 8, 10]
 
-
-// let randNumber = 0; 
-// while(randNumber > 0.5){
-//   randNumber = Math.random(); 
-// }
-
-// console.log(randNumber)
-
-
-// function randomNumber(){
-//     const randomNumber = Math.random()
-//     let computerMove = '';
-
-//     if(randomNumber >= 0 && randomNumber<1/3){
-//          computerMove = 'Rock';
-//     }else if (randomNumber>=1/3 && randomNumber<2/3 ){
-//         computerMove ='Paper';
-//     }else if(randomNumber>= 2/3 && randomNumber < 1){
-//         computerMove = 'Scissor';
-//     }
-    
-//     return computerMove; 
-// }
-
-// // try to use the while loop to create a random number: 
-
-// // functions using the while loop in rock paper
-// // Question can you have conditional operators in a while loop?
-// function whileLoop(){
-//   let randoNum = Math.random()
-//   let comp ='';
-//   while(randoNum >=0 && randoNum <1/3){
-//     comp = 'rock'; 
-//   }
-//    while(randoNum >=1/3 && randoNum <2/3){
-//     comp = 'paper'; 
-//   }
-//    while(randoNum >= 2/3 && randoNum <1){
-//     comp = 'scissors'; 
-//   }
-
-//   return comp;
-
-//   console.log(randoNum)
-// }
-// console.log(whileLoop())
-
-
-// Looping through an array(): going through each value of an array. 
-
 // To do practice 1. 
+const todoList3 = ['clean shoes']
+// Looping through an array 
+for (i = 0; i < todoList3.length; i++) // they are the same
+for (index = 0; index <= todoList3.length - 1; index++) {
+    const value = todoList3[index] // access the index of the value (in each index )
+    console.log(value); // do something in each value 
+  }
 
 // create an accumulator to store the results 
+
 const emptyTodoList= ['workout', 'run' ]; 
 renderTodoList(); 
 
@@ -220,118 +181,11 @@ function addTodoList(){
    renderTodoList(); // call the function again to display 
 }
 
+
+// Looping through an array(): going through each value of an array. 
+
 // Next create a remove button 
 // Store them properly: 
-
-// // exercise
-// // 11a. 
-// const nums = [10,20,30]
-// nums[2]=99
-// console.log(nums) // [10,20,99]
-
-// //11b. 
-// function getLastValue(array){
-//   const lastValue = array.splice(-1)
-//   return lastValue;
-// }
-// console.log(getLastValue([34,56,45])) // [45]
-
-// //11c
-// function arraySwap(array){
-//   const reverseArray= array.reverse();
-//   return reverseArray;
-// }
-// console.log(arraySwap([34,56,45])); //[45, 56, 34]
-
-// //11d. 
-
-// for(let i=0; i<=10; i+=2){
-//   console.log(i)
-// }
-
-// // 11e. countdown from 5 to 0
-// for(let i=5; i>=0; i-=1){
-//   console.log(i)
-// }
-
-// // llfd while loop
-// let t=0;
-// while(t<=10){
-//   console.log(t)
-//   t+=2;
-// }
-
-// //11fe
-// let r=5;
-// while(r>=0){
-//   console.log(r);
-//   i-=1
-// }
-
-// 11g  increase an array by one 
-function increaseOne(array){
-  let value = []; 
-  for(let i=0; i< array.length; i++){
-    const oneray = array[i]+1;
-    value.push(oneray);
-  }
-  return value;
-}
- console.log(increaseOne([20,56,34])); //[21,57,35] 
-
-
-// 11i
-function addOneNum(array,num){
-    let store = []; // store the new array 
-    // created the empty array to store the number 
-    for(let i = 0; i <array.length; i++) {
-        const values = array[i] + num;
-        // take the empty array and store/add values
-        store.push(values)}; 
-        return store; 
-};
-    console.log(addOneNum([45,67,34],4)); //[49, 71, 38]
-
-// 11j
-function addArrays(array1,array2,){
-    let numA = []; // store the new array 
-    // created the empty array to store the number 
-    for(let i = 0; i <array1.length; i++) {
-        const values = array1[i] + array2[i];
-        // take the empty array and store/add values
-        numA.push(values)}; 
-        return numA; 
-};
-    console.log(addArrays([45,67,34],[20,56,34])); //[49, 71, 38]
-
-// 11k returns how many are greater than one
-  function countPositive(nums){
-    let count = 0; 
-    for(let i=0; i<nums.length; i++){
-      if(nums[i]>0){
-        count ++;
-      }
-    }
-    return count;
-  }
-  console.log(countPositive([45,-9,2]))// 2
-  console.log(countPositive([-2,3,-5,7,10]))// 3
-
-  // Challenging 
-  // 11l: 
-  function minMax(nums){
-    for(let i=0; i<nums.length; i++){
-      if(nums[i]>nums[i]){
-        console.log(`min:${nums}`)
-      }else{
-        console.log(`min:${nums}`)
-      }
-      
-    }
-  }
-
-  console.log(minMax([1,-3,5]))
-  console.log(minMax([-2,3,7,10]))
 
 
 

@@ -668,33 +668,135 @@ console.log(countPositive([-2, 3,-5,7,10])) // 3
 
 // Challenging 
   // 11l: 
-  function minMax(nums){
-    // initialized to the first element of the array. 
-    let max= nums[0]; 
-    let min = nums[0];
-    for(let i=1; i<nums.length; i++){
-      if(nums[i] > max){
-        max = nums[i];
+function minMax(num){
+    let min = num[0];
+    let max = num[0];
+  for (let i = 1; i < num.length; i++) {
+    if (num[i] > max) {
+      max = num[i];
     }
-    if(nums[i]<min){
-        min = nums[i];
+    if (num[i] < min) {
+      min = num[i];
+    }
+  }
+    return { min: min, max: max };
+}
+console.log(minMax([1,-3,5]))
+
+
+// SECOND EXERCISE 
+// // exercise
+// // 11a. 
+// const nums = [10,20,30]
+// nums[2]=99
+// console.log(nums) // [10,20,99]
+
+// //11b. 
+// function getLastValue(array){
+//   const lastValue = array.splice(-1)
+//   return lastValue;
+// }
+// console.log(getLastValue([34,56,45])) // [45]
+
+// //11c
+// function arraySwap(array){
+//   const reverseArray= array.reverse();
+//   return reverseArray;
+// }
+// console.log(arraySwap([34,56,45])); //[45, 56, 34]
+
+// //11d. 
+
+// for(let i=0; i<=10; i+=2){
+//   console.log(i)
+// }
+
+// // 11e. countdown from 5 to 0
+// for(let i=5; i>=0; i-=1){
+//   console.log(i)
+// }
+
+// // llfd while loop
+// let t=0;
+// while(t<=10){
+//   console.log(t)
+//   t+=2;
+// }
+
+// //11fe
+// let r=5;
+// while(r>=0){
+//   console.log(r);
+//   i-=1
+// }
+
+// 11g  increase an array by one 
+function increaseOne(array){
+  let value = []; 
+  for(let i=0; i< array.length; i++){
+    const oneray = array[i]+1;
+    value.push(oneray);
+  }
+  return value;
+}
+ console.log(increaseOne([20,56,34])); //[21,57,35] 
+
+
+// 11i
+function addOneNum(array,num){
+    let store = []; // store the new array 
+    // created the empty array to store the number 
+    for(let i = 0; i <array.length; i++) {
+        const values = array[i] + num;
+        // take the empty array and store/add values
+        store.push(values)}; 
+        return store; 
+};
+    console.log(addOneNum([45,67,34],4)); //[49, 71, 38]
+
+// 11j
+function addArrays(array1,array2,){
+    let numA = []; // store the new array 
+    // created the empty array to store the number 
+    for(let i = 0; i <array1.length; i++) {
+        const values = array1[i] + array2[i];
+        // take the empty array and store/add values
+        numA.push(values)}; 
+        return numA; 
+};
+    console.log(addArrays([45,67,34],[20,56,34])); //[49, 71, 38]
+
+// 11k returns how many are greater than one
+  function countPositive(nums){
+    let count = 0; 
+    for(let i=0; i<nums.length; i++){
+      if(nums[i]>0){
+        count ++;
       }
     }
-
-    return `max:${max}, min:${min}`
+    return count;
   }
+  console.log(countPositive([45,-9,2]))// 2
+  console.log(countPositive([-2,3,-5,7,10]))// 3
 
-  console.log(minMax([1,-3,5]))
-  console.log(minMax([-2,3,7,10]))
-
-const prices = [19.99, 25.50, 12.75]
-const totals = prices.reduce((totals, price) => totals + price, 0)
-console.log(totals); // Result: 58.24
-
-// Calculate total sum
-const Sums= [5, -1, 6];
-const totalSum= Sums.reduce((totalSum,sumarray) => totalSum+ sumarray,0);
-console.log(totalSum); // 10
+  // Challenging 
+  // 11l:  Find the min and max of an array
+function minMax(nu){
+    let min = [0]; 
+    let max = [0]; // initialize by the first index number
+    for(let i=1; i<nu.length; i++){
+      if(nu[i]> max){
+        max= nu[i];
+    }
+    if(nu[i]< min){
+        min = nu[i]
+      }
+      
+    }
+    return `min:${nu}, max:${nu}`; 
+}
+  console.log(minMax([67,9,0]))
+//   console.log(minMax([-2,3,7,10]))
 
 
 
