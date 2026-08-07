@@ -283,6 +283,7 @@ const bank = 100;
 const lunch = 20;
 const dinner = 50; 
 const earn = 200; 
+
 // Use the Array.reduce to add ([].reduce((a+b)=>a+b,0))
 function moneyHave(){
     // const lif= bank+lunch+dinner+earn
@@ -615,16 +616,15 @@ function addOne(array){
     console.log(addOne([1,2,3])); //[2,3,4] 
     console.log(addOne([-2,-1,0,99])); //[-1,0,1,100] 
 
-
 // 11i. Add a number to the array. 
 function addNum(array, num){
     const addNumber = [];
     for(let i = 0; i<array.length; i++) {
-        const values = array[i]+ num;
+        const values = array[i]+num;
         addNumber.push(values);
     }
     return addNumber;
-}
+};
 
 console.log(addNum([1,2,3], 2)) // [3,4,5] 
 console.log(addNum([1,2,3], 3)) // [4,5,6]
@@ -635,8 +635,9 @@ console.log(addNum([-2,-1,0,99],2)) // [0,1,2,101]
 function addArray(array1, array2){
     const addA =[]; // store the array
     for(let i=0; i<= array1.length; i++){
-        addA.push(array1[i] + array2[i]); 
-    }; 
+        const life =(array1[i] + array2[i]); 
+        addA.push(life);
+    } 
     return addA; 
 }
 
@@ -668,18 +669,35 @@ console.log(countPositive([-2, 3,-5,7,10])) // 3
 // Challenging 
   // 11l: 
   function minMax(nums){
-    for(let i=0; i<nums.length; i++){
-      if(nums[i]>nums[i]){
-        console.log(`min:${nums}`)
-      }else{
-        console.log(`min:${nums}`)
-      }
-      
+    // initialized to the first element of the array. 
+    let max= nums[0]; 
+    let min = nums[0];
+    for(let i=1; i<nums.length; i++){
+      if(nums[i] > max){
+        max = nums[i];
     }
+    if(nums[i]<min){
+        min = nums[i];
+      }
+    }
+
+    return `max:${max}, min:${min}`
   }
 
   console.log(minMax([1,-3,5]))
   console.log(minMax([-2,3,7,10]))
+
+const prices = [19.99, 25.50, 12.75]
+const totals = prices.reduce((totals, price) => totals + price, 0)
+console.log(totals); // Result: 58.24
+
+// Calculate total sum
+const Sums= [5, -1, 6];
+const totalSum= Sums.reduce((totalSum,sumarray) => totalSum+ sumarray,0);
+console.log(totalSum); // 10
+
+
+
 
   
 
