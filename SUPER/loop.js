@@ -163,7 +163,14 @@ function renderTodoList(){
     for(let i = 0; i<emptyTodoList.length; i++){
       const todo = emptyTodoList[i]; 
       // create a html code. 
-      const html =`<ul><li>${todo}</li></ul>`; 
+      // We are adding a button
+      const html =`
+      <ul>
+      <li>
+      ${todo} 
+      <button>Delete</button>
+      </li>
+      </ul>`; 
       todoListHtml += html; 
     }
     // console.log(todoListHtml); 
@@ -186,6 +193,18 @@ function addTodoList(){
 
 // Next create a remove button 
 // Store them properly: 
+
+// Creating a todo list with  Date, Add and delete button in each 
+/* 1. CREATE A DELETE BUTTON next to the html list
+2. Add an onclick event listener on the delete button 
+onclick"todolist.splice($);
+
+
+*/
+
+
+
+
 
 
 

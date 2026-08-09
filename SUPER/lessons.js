@@ -798,13 +798,42 @@ function minMax(nu){
   console.log(minMax([67,9,0]))
 //   console.log(minMax([-2,3,7,10]))
 
+// update exercise 11l to handle this cases:
+// minMax([])=>{min:null, max:null}
+//minMax([3)=>{min:3 max:3
+function minMax(nu){
+    let min = [0]; 
+    let max = [0]; // initialize by the first index number
+    for(let i=1; i<nu.length; i++){
+      if(nu[i]> max){
+        max= nu[i];
+    }else if(nu[i]!=max){
+       max=0; 
+    }
+    
+    if(nu[i]< min){
+        min = nu[i]
+    } else if(nu[i]!=min){
+        min=0;
+    }
+      
+    }
+    return `min:${nu}, max:${nu}`; 
+}
+  console.log(minMax([3]))
+console.log(minMax([]))
+//   console.log(minMax([-2,3,7,10]))
 
+// 11n. create a function countWords (words)that takes any array of string and returns an object with how many times each strands appeared. countWords(['apple','grape', 'apple', 'apple'])=>{apple:3,grape:1} (Hint: you can access property using variable: object[variable];This uses the value inside the variable as a the property name). 
 
+function countWords(words){
+    let variable = '';
+    for(let i = 0; i<words.length; i++){
+        const eachWord= words[].length;
+        return eachWord;
+    }
+}
 
-  
-
-
-
-
+console.log(countWords(['apple']))
 
 
