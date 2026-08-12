@@ -826,14 +826,34 @@ console.log(minMax([]))
 
 // 11n. create a function countWords (words)that takes any array of string and returns an object with how many times each strands appeared. countWords(['apple','grape', 'apple', 'apple'])=>{apple:3,grape:1} (Hint: you can access property using variable: object[variable];This uses the value inside the variable as a the property name). 
 
-function countWords(words){
-    let variable = '';
-    for(let i = 0; i<words.length; i++){
-        const eachWord= words[].length;
-        return eachWord;
+// Use the Array.reduce to add ([].reduce((a+b)=>a+b,0))
+function countElement(words, value){
+    const numberOfWords = words.reduce((what, now)=> what +(now === value),0);
+    return `${value}:${numberOfWords}`;
+}
+console.log(countElement(['apple','mango', 'banana', 'apple'], 'apple')) ; 
+
+// Using the for loop method
+function countWords2(words,value){
+    let count = 0; // initializing the work
+    for(let i = 0 ; i<words.length; i++){
+        if(words[i] === value){
+            count++;
+        }
     }
+    return `${value}: ${count}`;
+
+}
+console.log(countWords2([2, 1, 4, 2, 1, 1, 4, 5], 1)); 
+
+// Using the filter method 
+function countWords(words, value){
+    const howManyTimes = words.filter(item=>item === value).length; 
+    return `${value}:${howManyTimes}`;
 }
 
-console.log(countWords(['apple']))
+console.log(countWords(['apple','mango', 'banana', 'apple' ], 'mango')); 
+
+
 
 
