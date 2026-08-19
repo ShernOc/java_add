@@ -199,17 +199,15 @@ function renderTodoList() {
     // const name = todoObject.name;
     // const dueDate = todoObject.dueDate;
     // Deconstructing 
-    const { name, dueDate } = todoObject;
+    const {name, dueDate } = todoObject;
     const html = `
-      <ul>
-      <li>
       <!-- we are going to insert the dueDate, and name : we use the splice method to allow to remove one value at a certain index[i]-->
-      ${name} ${dueDate}
-      <button onclick = "emptyTodoList.splice(${i},1);
+     <div> ${name}</div>
+     <div> ${dueDate} </div>
+     <button onclick = "emptyTodoList.splice(${i},1);
       renderTodoList();
-      " >Delete</button>
-      </li>
-      </ul>`;
+      " >Delete
+      </button>`;
     todoListHtml += html;
   }
 
@@ -263,6 +261,8 @@ Remember to remove the console log:
 
 
 */
+
+
 
 
 
