@@ -1,40 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Array and Loops </title>
-  <link rel="stylesheet" href="loop.css">
-</head>
-<body>
-<h1>LOOP RECAP</h1>
-<p>
-  <b>Array a type of value and object, a list of other values</b>
-  <br>
-  Array = [12,13,"sherlyne"]
-  <br>
-  console.log(array1[2]) // will return the value of the index 2. sherlyne// 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array and Loops</title>
+    <link rel="stylesheet" href="loop.css" />
+  </head>
+  <body>
+    <h1>LOOP RECAP</h1>
+    <p>
+      <b>Array a type of value and object, a list of other values</b>
+      <br />
+      Array = [12,13,"sherlyne"]
+      <br />
+      console.log(array1[2]) // will return the value of the index 2. sherlyne//
 
- <br><br>
-<b>To change the value of a index which represents the position of a value</b>
-<br>
-array1[2] = 'Sultan' we are changing the name from sherlyne to Sultan<br>
-console.log(array1) // (4) [12, 13, 'Sultan', 78]
-</p>
+      <br /><br />
+      <b
+        >To change the value of a index which represents the position of a
+        value</b
+      >
+      <br />
+      array1[2] = 'Sultan' we are changing the name from sherlyne to Sultan<br />
+      console.log(array1) // (4) [12, 13, 'Sultan', 78]
+    </p>
+      Todo List practice 1
+      <br />
+      <div class="todo-input-grid">
+        <input type="text" placeholder="Todo name" class="js-name-input name-input" />
+        <!-- This will display the date right next to the do do list : input type = "date" -->
+        <input type="date" class="js-due-date-input due-date-input" />
+        <button onclick="addTodoList()">Add</button>
+  </div>
 
-<p>Todo List practice 1
-  <br>
-    <input type="text" placeholder="Todo name"  class="js-name-input" >
-    <!-- This will display the date right next to the do do list : input type = "date" -->
-    <input type="date" class="js-due-date-input" >
-    <button onclick=" addTodoList()">Add</button>
-</p>
+    <!-- create a div element to store the added start --->
+    <div class="js-todo-list todo-grid"></div>
+  </body>
 
-<!-- create a div element to store the added start --->
-<div class="js-todo-list todo-grid"></div>
-  
-</body>
-
-<script src="loop.js"></script>
-
+  <script src="loop.js"></script>
 </html>
