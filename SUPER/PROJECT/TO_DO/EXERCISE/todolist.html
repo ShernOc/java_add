@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To do list</title>
+</head>
+<body>
+
+  <div class="todo1">
+    <h2>Create an array of todo list below </h2>
+    <p> <b>My To do list practice 1</b> </p>
+    <input id="user_input1" placeholder="Todo name"  type="text" class="js-user-input1">
+    <button onclick="addList()"> Add </button>
+  </div>
+<hr>
+
+<!-- To do list display  -->
+  <div class="todo2"> 
+    <h2> To do list display on the website</h2>
+    <p> <b>My To do list practice 2</b> </p>
+    <input id="user_input2  placeholder="Todo name"  type="text" class="js-main-user-input2">
+
+    <button onclick="mainList()"> Add </button>
+
+    <div>
+      <b>Display The list of items below</b>
+    </div>
+    <div class="js-display-list"></div>
+</div>
+<hr>
+
+<!-- Done button  -->
+ 
+  <div class="todo3">
+    <h2>To do list with delete button </h2>
+
+    <input id="user-input3" placeholder="Todo name"  type="text" class="js-user-input3">
+
+    <input type="date" class="js-due-date-input due-date-input" />
+  
+    <button onclick="mainAddDeleteButton()"> Add </button>
+
+    <p><b>Display The list of items below with a delete button, </b></p>
+   
+    <div class="js-todo-list3"></div>
+ </div>
+
+ <div><p> <b>Next task </b>
+      Add a <b>Done button </b> close the task so that once done you can click add and it's remove/delete button</b>
+    </p></div>
+
+
+  Todo List practice 1
+      <br />
+      <div class="todo-input-grid">
+        <input type="text" placeholder="Todo name" class="js-name-input name-input" />
+        <!-- This will display the date right next to the do do list : input type = "date" -->
+        <input type="date" class="js-due-date-input due-date-input" />
+        <button onclick="addTodoList()" class="add-todo-button">Add</button>
+  </div>
+
+    <!-- create a div element to store the added start --->
+    <div class="js-todo-list todo-grid "></div>
+    
+
+</body>
+
+<script src="todolist.js"></script>
+</html>

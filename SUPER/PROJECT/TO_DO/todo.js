@@ -10,106 +10,106 @@ Something of your choice! The main objective is to add a feature that allows the
 ll*/
 
 document.addEventListener('DOMContentLoaded', () => {
-// Function that updates the day of the week. 
-const UpdateWeekday = (day) => {
-    let h2 = document.querySelector("h2");
-    h2.innerText = day
-    h2.id = "day";
-    h2.className = day.toLowerCase()
-}
-// console.log(UpdateWeekday("Tuesday"))// changes the day from Monday to Sunday
+    // Function that updates the day of the week. 
+    const UpdateWeekday = (day) => {
+        let h2 = document.querySelector("h2");
+        h2.innerText = day
+        h2.id = "day";
+        h2.className = day.toLowerCase()
+    }
+    console.log(UpdateWeekday("Tuesday"))// changes the day from Monday to Sunday
 
-const addImage = (img_url) => {
-    let image = document.querySelector("img");
-    image.src = img_url;
-    image.alt = "hand image";
-    image.height = 100;
-    image.width = 150;
-}
+    const addImage = (img_url) => {
+        let image = document.querySelector("img");
+        image.src = img_url;
+        image.alt = "hand image";
+        image.height = 100;
+        image.width = 150;
+    }
 
-console.log(addImage("Images/Paper-emoji.jpg"));
+    console.log(addImage("Images/Paper-emoji.jpg"));
 
-// Add an event listener that takes the submitted input text and appends it at the paragraph element feed list;
+    // Add an event listener that takes the submitted input text and appends it at the paragraph element feed list;
 
     // grab the form 
-    const form = document.querySelector("#todoform");
+    const form = document.querySelector("#todoForm");
 
     // Event listener for the form 
     form.addEventListener('submit', (e) => {
         e.preventDefault(); // prevent default behavior 
-        AddTodo(e.target.addtodo.value); // addtodo is the id input that we are grabbing and targeting the input of the user 
+        AddTodo(e.target.addTodo.value); // addTodo is the id input that we are grabbing and targeting the input of the user 
 
         // reset the form 
         form.reset();
     })
 
-// create a function that handles to add list 
-const ol = document.createElement("ol");
-const AddTodo = (todo) => { // passes 
-    // create the p element that handles the add list. 
-    let p = document.createElement('p'); // 
-    document.querySelector('#addcontainer').appendChild(p) // appends/ adds p element to the div: todo container 
-  
-    p.appendChild(ol);
-    const li = document.createElement("li");
-    ol.id = "ordered list";
-    ol.appendChild(li);
+    // create a function that handles to add list 
+    const ol = document.createElement("ol");
+    const AddTodo = (todo) => { // passes 
+        // create the p element that handles the add list. 
+        let p = document.createElement('p'); // 
+        document.querySelector('#addcontainer').appendChild(p) // appends/ adds p element to the div: todo container 
 
-    // create a button that will be used to delete the items. 
-    const btn = document.createElement("button");
+        p.appendChild(ol);
+        const li = document.createElement("li");
+        ol.id = "ordered list";
+        ol.appendChild(li);
 
-    // create a handle event for the delete button 
-    btn.addEventListener('click', handleDeletebtn)
+        // create a button that will be used to delete the items. 
+        const btn = document.createElement("button");
 
-    // the button will be named done 
-    btn.textContent = "Done";
+        // create a handle event for the delete button 
+        btn.addEventListener('click', handleDeletebtn)
 
-    // li that holds the todo text. 
-    li.textContent = `${todo}`;
+        // the button will be named done 
+        btn.textContent = "Done";
 
-    // append the button to the p element. 
-    li.appendChild(btn);
+        // li that holds the todo text. 
+        li.textContent = `${todo}`;
 
-};
-AddTodo;
+        // append the button to the p element. 
+        li.appendChild(btn);
 
-// created a handle delete event (pass the event, get the parent Node and call in the remove() 
-// This will activate delete action. 
-   // create ol/p element to handle the done list. 
+    };
+    AddTodo;
 
-   const donP = document.createElement('ol');
-   function handleDeletebtn(e) {
-    e.preventDefault();
-    const doneDiv = document.querySelector("#done"); 
-   
-   donP.className = "donelist"; 
-   doneDiv.appendChild(donP);
+    // created a handle delete event (pass the event, get the parent Node and call in the remove() 
+    // This will activate delete action. 
+    // create ol/p element to handle the done list. 
 
-   // li element is created. 
-    const toList = document.createElement('li');
+    const donP = document.createElement('ol');
+    function handleDeletebtn(e) {
+        e.preventDefault();
+        const doneDiv = document.querySelector("#done");
 
-   // Removes the button from the list item. 
-    const removetask = e.target.parentNode;
+        donP.className = "donelist";
+        doneDiv.appendChild(donP);
 
-    // Where the list item will be stored. 
-    toList.textContent =removetask.textContent.replace("Done", "");//replacing "Done" with an empty string.
+        // li element is created. 
+        const toList = document.createElement('li');
 
-    // Append the p element to div. 
-    removetask.remove();
-    donP.appendChild(toList); 
-    e.target.parentNode.remove(); //Task is removed from the list 
-}
-handleDeletebtn;
+        // Removes the button from the list item. 
+        const removetask = e.target.parentNode;
+
+        // Where the list item will be stored. 
+        toList.textContent = removetask.textContent.replace("Done", "");//replacing "Done" with an empty string.
+
+        // Append the p element to div. 
+        removetask.remove();
+        donP.appendChild(toList);
+        e.target.parentNode.remove(); //Task is removed from the list 
+    }
+    handleDeletebtn;
 
 
-function footerSection(){
-const footer = document.getElementById('footercopyright');
-if(footer){
-    const PresentYear = new Date().getFullYear();
-    const text = ` Copyright &copy;${PresentYear}, All rights reserved `;
-    footer.innerHTML = text; 
-}
-}
-footerSection;
+    function footerSection() {
+        const footer = document.getElementById('footerCopyright');
+        if (footer) {
+            const PresentYear = new Date().getFullYear();
+            const text = ` Copyright &copy;${PresentYear}, All rights reserved `;
+            footer.innerHTML = text;
+        }
+    }
+    footerSection;
 
 });

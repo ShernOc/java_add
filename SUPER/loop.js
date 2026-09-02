@@ -142,125 +142,12 @@ for (let i = 0; i < mynum.length; i++) {
 }
 console.log(numsDoubled) //  [4, 8, 10]
 
-// To do practice 1. 
-const todoList3 = ['clean shoes']
-// Looping through an array 
-for (i = 0; i < todoList3.length; i++) // they are the same
-  for (index = 0; index <= todoList3.length - 1; index++) {
-    const value = todoList3[index] // access the index of the value (in each index )
-    console.log(value); // do something in each value 
-  }
-
-// create an accumulator to store the results 
-
-// const emptyTodoList= ['workout', 'run' ]; 
-// renderTodoList(); 
-
-// Change the array to an object
-const emptyTodoList = [
-  { name: 'workout', dueDate: '10-08-2026' },
-  { name: 'run', dueDate: '20-08-2026' }];
-
-renderTodoList();
-
-// function renderTodoList(){
-//     // combine html and put it on the page use the accumulator 
-//     let todoListHtml = ``; 
-//     // loop through the array. 
-//     for(let i = 0; i<emptyTodoList.length; i++){
-//       const todo = emptyTodoList[i]; 
-//       // create a html code. // generating the html code
-//       // We are adding a button 
-//       const html =`
-//       <ul>
-//       <li>
-//       ${todo} 
-//       <button onclick = "emptyTodoList.splice(${i},1);
-//       renderTodoList();
-//       " >Delete</button>
-//       </li>
-//       </ul>`; 
-//       todoListHtml += html; 
-//     }
-//     // console.log(todoListHtml); 
-//     // DOM  display the website
-//     document.querySelector('.js-todo-list').innerHTML = todoListHtml; // will show the list into the document. 
-// }
-
-function renderTodoList() {
-  // combine html and put it on the page use the accumulator 
-  let todoListHtml = ``;
-  // loop through the array. 
-  for (let i = 0; i < emptyTodoList.length; i++) {
-    const todoObject = emptyTodoList[i];
-    // create a html code. // generating the html code
-    // We are adding a button 
-    // we want to get the name and due date out of the todoObject
-    // const name = todoObject.name;
-    // const dueDate = todoObject.dueDate;
-    // Deconstructing 
-    const {name, dueDate } = todoObject;
-    const html = `
-      <!-- we are going to insert the dueDate, and name : we use the splice method to allow to remove one value at a certain index[i]-->
-     <div> ${name}</div>
-     <div> ${dueDate} </div>
-     <button onclick = "emptyTodoList.splice(${i},1);
-      renderTodoList();
-      " >Delete
-      </button>`;
-    todoListHtml += html;
-  }
-
-  // DOM  display the website
-  document.querySelector('.js-todo-list').innerHTML = todoListHtml; // will show the list into the document. 
-}
-
-// function addTodoList(){
-//   const inputElement = document.querySelector(".js-name-input");
-//    // get the text out
-//    const name = inputElement.value ; 
-//    emptyTodoList.push(name) // push the list to the empty array list.  
-//    console.log(emptyTodoList); 
-//    inputElement.value =''; // returns an empty list again 
-//    renderTodoList(); // call the function again to display the list again. 
-// }
-// Looping through an array(): going through each value of an array. 
-
-// Update 
-function addTodoList() {
-  const nameInputElement = document.querySelector(".js-name-input");
-  // get the text out
-  const name = nameInputElement.value;
-  // add the class for due date to the javascript 
-  const dateInputElement = document.querySelector('.js-due-date-input');
-  // get the dueDate out of the js element. 
-  const dueDate = dateInputElement.value;
-
-  // WHEN we add todoList, we also add a name, dueDate object property values : 
-  // emptyTodoList.push({name:name, dueDate:dueDate}); // still the same as below
-  emptyTodoList.push({ name, dueDate }) // push the list to the empty array list.  
-
-  nameInputElement.value = ''; // returns an empty list again 
-  renderTodoList(); // call the function again to display 
-}
-
-// Next create a remove button 
-// Store them properly: 
-
-// Creating a todo list with  Date, Add and delete button in each 
-/* 1. CREATE A DELETE BUTTON next to the html list
-2. Add an onclick event listener on the delete button 
-onclick"todolist.splice(${i},1);
-3. Render the todolist again
-3. Add an input with type = "date": this will display a calendar
-4. ADD an input element to add the date (duedate): input type="date"
-4. Add an object property: that is change an array to an object the array: that has variables of name and due date: TodoList = [{name: 'workout', dueDate:'10-08-2026'},{name: 'run', dueDate:'20-08-2026'} ]
-
-Remember to remove the console log: 
-6. Work on the CSS! 
 
 
-*/
+
+
+
+
 
 
 
