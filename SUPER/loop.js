@@ -131,33 +131,66 @@ for (let i = 0; i < array.length; i += 1) {
 console.log(mul); //  [6, 8, 10, 12, 14]
 
 //  Accumulator pattern by pushing through an empty array. 
-const mynum = [2, 4, 5] // we want to find doubled number
+const myNum = [2, 4, 5] // we want to find doubled number
 const numsDoubled = []; // this is used to accumulate/ store the doubled numbers [4,8,10]
 
 // to loop through an array
-for (let i = 0; i < mynum.length; i++) {
+for (let i = 0; i < myNum.length; i++) {
   // access the array 
-  const numb = mynum[i];
+  const numb = myNum[i];
   numsDoubled.push(numb * 2) // take empty array and push the indexed items *2 
 }
 console.log(numsDoubled) //  [4, 8, 10]
 
+// ARRAY AND LOOPS 2 CONTINUATION: 
+/*Array are references: 
+create a value of the number use the slice(); */
+const array1  = [1,2,3] // it has a references: has a copy but not the value  
+const array2 = array1
+array2.push(4)
+console.log(array2); //  [1, 2, 3, 4]
+console.log(array1) //  [1, 2, 3, 4]
+// Both the arrays were modified. They point to the same array in memory
+// We create a copy of array values using the slice method slice(). 
+const array3 = [4,5,6]
+const array4 = array3.slice() 
+array4.push(5)
+console.log(array3) // [4,5,6]
+console.log(array4) // [4,5,6,5] // only this will be affected
+ // destructuring: 
+// if you want to get the first and second value of an array  you can use use the index; also you can use destructuring 
+ const ThisValue = array3[0]; 
+ // destructuring: 
+ const[firstValue, secondValue] = [2,4,5]
+ console.log(firstValue, secondValue)
+
+ // Breaks and Continue
+//  Break let's us break the loop early,(stop)
+  for(let i=1; i<=10; i++){
+    console.log(i);
+  if(i==8){
+    break; // This stops the loop 
+  }
+}
+
+// Continue: allows us to skip one iteration
+// skip number 3 
+ for(let i=1; i<=10; i++){
+  if(i==3){
+    continue; // skip this value 
+  }
+    console.log(i);
+  if(i==8){
+    break; // This stops the loop 
+  }
+}
+
+// count from one to ten 
+while (i<)
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 

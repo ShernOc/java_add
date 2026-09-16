@@ -57,7 +57,7 @@ renderTodoList3(); // Run the function
 function renderTodoList3() {
   let todoListHtml = ''; // accumulator pattern 
   // LOOP through the schedule 
-  for (let i = 0; i < mySchedule3.length; i++) {
+  for (let i = 0; i <mySchedule3.length; i++) {
     const todo = mySchedule3[i];
     // create a html element code to hold the list 
     const { name, dueDate } = todo;
@@ -108,11 +108,11 @@ for (i = 0; i < todoList3.length; i++) // they are the same
 
 
 // Change the array to an object
-const emptyTodoList4 = [{ name: 'Workout', dueDate: '10-08-2026' }, { name: 'Run', dueDate: '20-08-2026' }];
+const emptyTodoList4 = [{name:'Workout', dueDate: '10-08-2026'}, {name:'Run', dueDate:'20-08-2026'}];
 renderTodoList();
 
 // function renderTodoList(){
-//     // combine html and put it on the page use the accumulator 
+// // combine html and put it on the page use the accumulator 
 //     let todoListHtml = ``; 
 //     // loop through the array. 
 //     for(let i = 0; i<emptyTodoList.length; i++){
@@ -139,7 +139,7 @@ function renderTodoList() {
   // combine html and put it on the page use the accumulator 
   let todoListHtml = ``;
   // loop through the array. 
-  for (let i = 0; i < emptyTodoList4.length; i++) {
+    for (let i = 0; i < emptyTodoList4.length; i++) {
     const todoObject = emptyTodoList4[i];
     // create a html code. // generating the html code
     // We are adding a button 
@@ -147,8 +147,8 @@ function renderTodoList() {
     // const name = todoObject.name;
     // const dueDate = todoObject.dueDate;
     // Deconstructing 
-    const { name, dueDate } = todoObject;
-    const html = `
+    const {name, dueDate} = todoObject;
+    const html = `;
         <!-- we are going to insert the dueDate, and name : we use the splice method to allow to remove one value at a certain index[i]-->
       <div> ${name}</div>
       <div> ${dueDate} </div>
