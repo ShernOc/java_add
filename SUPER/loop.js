@@ -175,18 +175,47 @@ console.log(array4) // [4,5,6,5] // only this will be affected
 
 // Continue: allows us to skip one iteration
 // skip number 3 
- for(let i=1; i<=10; i++){
-  if(i==3){
-    continue; // skip this value 
+  for(let i=1; i<=10; i++){
+    if(i%3 ===0){
+      continue; // skip this value 
+    }
+      console.log(i);
+    if(i==8){
+      break; // This stops the loop 
+    }
   }
-    console.log(i);
-  if(i==8){
-    break; // This stops the loop 
+
+  // count from one to ten using a while loop 
+  let t=1; 
+  while(t<=10){
+    if(t%3===0){
+      t++;
+      continue; // skip number divisible by 3 
+    }
+    console.log(t);
+    t++; 
+  } // 12457810
+
+
+// 2. How to use loop with a function 
+// to loop through an array
+function doubleArray(myNums){
+  const numsDoubleds = []; // this stores the array of numbers
+  for (let i = 0; i < myNums.length; i++) {
+    // access the array 
+    const numb = myNums[i];
+    // end the loop with break and return 
+    if(numb === 0){
+      return numsDoubleds;
+    }
+    numsDoubleds.push(numb * 2) // take empty array and push the indexed items *2 
   }
+  return numsDoubleds; 
 }
 
-// count from one to ten 
-while (i<)
+// Call the function
+console.log(doubleArray([8,1,0,2]))
+
 
 
 

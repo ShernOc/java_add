@@ -854,8 +854,18 @@ function countWords(words, value){
 
 console.log(countWords(['apple','mango', 'banana', 'apple' ], 'mango')); 
 
+// 11o Create an array of strings, loop over the array, and check if the string 'Search' is inside the array. if it is, console.log() the index of the search in the array. If not console.log(-1)
 
+function ArrayStrings(string){
+    for(let i=0; i<string.length; i++){
+        const st = string[i]
+        if(st === 'Search'){
+            console.log(i)
+            return ; // break the loop  
+        }
+    }
+    console.log (-1)
 
+}
 
-
-
+ArrayStrings(['Hello', 'world','Search', 'good'])
