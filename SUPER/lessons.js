@@ -859,7 +859,7 @@ console.log(countWords(['apple','mango', 'banana', 'apple' ], 'mango'));
 function ArrayStrings(string){
     for(let i=0; i<string.length; i++){
         const st = string[i]
-        if(st === 'Search'){
+        if(st ==='Search'){
             console.log(i)
             return ; // break the loop  
         }
@@ -868,4 +868,42 @@ function ArrayStrings(string){
 
 }
 
-ArrayStrings(['Hello', 'world','Search', 'good'])
+ArrayStrings(['Hello', 'world', 'good', 'food', 'Search'])
+
+// 11p.Modify 11o so that if "search " appears multiple times in the array, it will console.log the index of the first appearance of "search". Use break; eg: ['hello','search','good','search'] => console.log(2)
+
+function ArrayStrings2(string,word){
+    for(let i=0; i<string.length; i++){
+        const st = string[i]
+        if(st === word){
+            console.log(i) 
+            break; // break the loop  
+        }
+    }
+
+}
+
+ArrayStrings2(['Hello','life', 'good','Search', 'Search'], 'Search')
+
+//11q. Create a function findIndex(array,word) that searches an array for a string(in the 'word' parameter) and returns the index of the first appearance of the string. If it doesn't exit in the array, return -1. FindIndex(['green','red','blue','red']), 'red'=>1
+// FindIndex(['green','red','blue','red']), 'yellow'=>-1
+
+
+function findIndex(array,word){
+    for(let i=0; i<array.length; i++){
+        const words = array[i];
+        if(words === word ){
+            return i;
+        }else{
+            return -1;
+        }
+        
+        
+    }
+
+}
+console.log(findIndex(['green','red','blue','red'], 'blue'));  // 2 // why am i getting -1 in both: and not 2?
+console.log(findIndex(['green','red','blue','red'], 'yellow'));  // -1 // why am i getting -1 in both: and not 2?  
+ git 
+
+
