@@ -897,13 +897,36 @@ function findIndex(array,word){
         }else{
             return -1;
         }
-        
-        
     }
-
 }
 console.log(findIndex(['green','red','blue','red'], 'blue'));  // 2 // why am i getting -1 in both: and not 2?
 console.log(findIndex(['green','red','blue','red'], 'yellow'));  // -1 // why am i getting -1 in both: and not 2?  
- git 
+
+// llr  Create a function removeEgg(foods) that takes an array of strings and returns an array where the string 'egg' is removed. (Hint:loop through the array and check if each string is  'egg'. If its is 'egg' use 'continue' to skip it. It it's not 'egg' add it to the results.) removeEgg(['egg','apple','egg', 'egg', 'ham'])=>['apple', 'ham']
+
+function removeEgg(foods){
+    const putFood = []; // empty array stores the results
+    for(let i =1; i<foods.length; i++){
+        const food = foods[i];
+        if(food ==='egg'){
+            continue; // stops the loop
+        }
+
+        putFood.push(food);
+    }
+
+    return putFood; 
+    }
+console.log(removeEgg(['egg','ham','egg','egg','apple']));
+
+// lls. Update exercise llr to only remove the first 2eggs form the array. removeEgg(['egg','apple','egg', 'egg', 'ham'])=>['apple', 'ham']
+
+
+
+
+
+
+
+ 
 
 

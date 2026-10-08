@@ -27,7 +27,7 @@ console.log(welcomeMessage);
 console.log(excitedWelcomeMessage);
 console.log(welcomeMessage);
 
-// Conitionals 
+// Conditionals 
 // IF else, else if 
 function isRose(cat){
   if (cat==='rose'){
