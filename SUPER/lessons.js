@@ -865,7 +865,6 @@ function ArrayStrings(string){
         }
     }
     console.log (-1)
-
 }
 
 ArrayStrings(['Hello', 'world', 'good', 'food', 'Search'])
@@ -917,9 +916,53 @@ function removeEgg(foods){
 
     return putFood; 
     }
-console.log(removeEgg(['egg','ham','egg','egg','apple']));
+console.log(removeEgg(['egg','apple','egg','egg','ham']));
 
-// lls. Update exercise llr to only remove the first 2eggs form the array. removeEgg(['egg','apple','egg', 'egg', 'ham'])=>['apple', 'ham']
+//lls. Update exercise llr to only remove the first 2eggs form the array. removeEgg(['egg','apple','egg', 'egg', 'ham'])=>['apple', 'ham']
+
+function removeEggs(foods){
+    const putFood = []; // empty array stores the results
+    for(let i =1; i<foods.length; i++){
+        const food = foods[i].splice(0,2);
+        if(food === 'egg'){
+            continue; // stops the loop
+        }
+    
+        putFood.push(food);
+    }
+
+    return putFood; 
+    }
+console.log(removeEggs(['egg','apple','egg','egg','ham']));
+
+// llt. Array have a method called .reversal(), which reverses the order of the values in the array. Using .reversal(), Update exercise 11s to only remove the last 2 eggs from the array removeEggs(['egg','apple','egg','egg','ham'])=> ['egg', 'apple', 'ham']);
+
+function removeEggs(foods){
+    const putFood = []; // empty array stores the results
+    for(let i =1; i<foods.length; i++){
+        const food = foods.reverse();
+        if(food === 'egg'){
+            continue; // stops the loop 
+        }
+        putFood.push(food);
+    }
+
+    return putFood; 
+    }
+console.log(removeEggs(['egg','apple','egg','egg','ham']));
+
+//llu. In exercise llt. one problem with reverse() is that it doesn't create a copy of the array it reversing. It modifies the original array. Update the code so that the function does not modify the original array. (Hint: use the slice() method to create a copy of an array's values)
+// const foods = ['eggs', 'apple','egg','egg','ham']
+// console.log(removeEgg(foods))=>['egg','apple','ham']
+// console.log(foods))=>['egg','apple','egg', 'egg','ham']
+
+
+// Challenge Exercise: 
+// llv. Well'd do the famous FizzBuzz problem. Create a loop that display 1 to 20 in  the console. If the number is divisible by 3, display 'Fizz' instead of the number. if it's divisible by 5, display 'Buzz' instead. If it's divisible by 3 and 5, display 'FizzBuzz' instead. (Reminder: divisible by 3 means num% 3 ===0), 
+// 1,2,Fizz,4,Buzz, Fizz,7,8,....13,14,FizzBuzz,16,17,....
+
+
+
 
 
 

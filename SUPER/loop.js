@@ -196,7 +196,6 @@ console.log(array4) // [4,5,6,5] // only this will be affected
     t++; 
   } // 12457810
 
-
 // 2. How to use loop with a function 
 // to loop through an array
 function doubleArray(myNums){
@@ -215,6 +214,8 @@ function doubleArray(myNums){
 
 // Call the function
 console.log(doubleArray([8,1,0,2]))
+
+
 
 
 
