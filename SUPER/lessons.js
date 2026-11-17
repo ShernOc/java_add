@@ -1,3 +1,9 @@
+//alert('Hello')
+// Lesson 1: 
+
+console.log(2+2)
+// document.body.innerHTML = 'Hello'; 
+
 // LESSON 2 : NUMBERS AND MATH
 // items 
 const chicken_soup = 10;
