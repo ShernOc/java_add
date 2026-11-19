@@ -1,8 +1,32 @@
-//alert('Hello')
 // Lesson 1: 
+alert('good morning');
+alert('Sherlyne Ochieng')
+console.log(10 + 5);
+console.log(2 + 2)
 
-console.log(2+2)
-// document.body.innerHTML = 'Hello'; 
+const doc = document.body.innerHTML = 'Good morning';
+console.log(doc);
+const doc2 = document.body.innerHTML = 'Sherlyne';
+console.log(doc2);
+
+// Challenge exercise
+const Tshirt = 10;
+const Socks = 8;
+const Plate = 20;
+const total = (Tshirt + Socks + Plate)
+console.log(total);
+
+const bank = 100;
+const lunch = 20;
+const dinner = 50;
+const use = lunch + dinner;
+const job = 200;
+const totalAmount = (bank - use + job)
+console.log(totalAmount);
+
+const docum = document.body.innerHTML = 'blank'
+console.log(docum)
+
 
 // LESSON 2 : NUMBERS AND MATH
 // items 
